@@ -6,7 +6,7 @@ module.exports = {
     host: "arras-seige.onrender.com",
 
     // Which port to run the web server on.
-    port:3230,
+    port:3030,
 
     // How often to update the list of the entities that players can see.
     // Has effects of when entities are activated.

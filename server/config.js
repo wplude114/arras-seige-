@@ -58,8 +58,7 @@ module.exports = {
 
     // Welcome message once a player spawns.
     WELCOME_MESSAGE: "You have spawned! Welcome to the game.\n"
-                    +"You will be invulnerable until you move or shoot.\n"
-                    +"Please report any bugs you encounter!",
+                    +"You will be invulnerable until you move or shoot."
     
     // How long a popup message lasts before fading out in milliseconds.
     MESSAGE_DISPLAY_TIME: 10_000,
@@ -119,10 +118,10 @@ module.exports = {
     LEVEL_CHEAT_CAP: 45,
 
     // Amount of player-bots to spawn.
-    BOTS: 0,
+    BOTS: 7,
 
     // How much XP player-bots get per second until they reach LEVEL_CAP.
-    BOT_XP: 125,
+    BOT_XP: 0,
 
     // How much XP player-bots will receive when first created.
     BOT_START_XP: 0,

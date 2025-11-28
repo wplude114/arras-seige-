@@ -1114,7 +1114,7 @@ ageal.addLayer({turret: {
 }}, true, 8);
 
 // Terrestrials
-let agease = new LayeredBoss(null, "Agease", "Terrestrial", 7, "Aqua", "terrestrialTrapTurret", 7, 5.5);
+let agease = new LayeredBoss(null, "Agease", "terrestrial", 7, "Aqua", "terrestrialTrapTurret", 7, 5.5);
 agease.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
@@ -3472,6 +3472,7 @@ Class.helenaBoss = {
         },
     ]
 }
+
 
 
 

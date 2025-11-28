@@ -1039,8 +1039,8 @@ Class.protoTerrestrial = {
         FOV: 1,
         HEALTH: 650,
         SHIELD: 30,
-        REGEN: base.REGEN * 0.1,
-        SPEED: base.SPEED * 0.3,
+        REGEN: base.REGEN * 0.03,
+        SPEED: base.SPEED * 0.8,
         DAMAGE: 7,
     },
 };
@@ -1104,8 +1104,8 @@ Class.eternal = {
 let gersemoid = new LayeredBoss(null, "Gersemoid", "protoTerrestrial", 5, "lightGreen", "terrestrialTrapTurret", 7, 5.5);
 gersemoid.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
-    TYPE: ["basicTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
-}}, true, 6.5);
+    TYPE: ["swarmTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
+}}, true, 6);
 
 // Terrestrials
 let ares = new LayeredBoss(null, "Ares", "terrestrial", 7, "purple", "terrestrialTrapTurret", 7, 5.5);
@@ -3456,5 +3456,6 @@ Class.helenaBoss = {
         },
     ]
 }
+
 
 

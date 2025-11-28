@@ -4,7 +4,7 @@ const g = require('../gunvals.js');
 
 // extras guns
 Class.shotgunTurret = makeTurret('shotgun', {canRepel: true, limitFov: true, extraStats: []})
-Class.tentashotTurret = makeTurret('pentaShot', {canRepel: true, limitFov: true, extraStats: []})
+Class.pentashotTurret = makeTurret('pentaShot', {canRepel: true, limitFov: true, extraStats: []})
 
 // Radial Auto Guns
 Class.autoTankGun = makeTurret({

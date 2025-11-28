@@ -3946,5 +3946,7 @@ Class.basic.UPGRADES_TIER_1 = ["twin", "sniper", "machineGun", "flankGuard", "di
         Class.triTrapper.UPGRADES_TIER_3 = ["fortress", "hexaTrapper", "septaTrapper", "architect"]
         Class.trapGuard.UPGRADES_TIER_3 = ["bushwhacker", "gunnerTrapper", "bomber", "conqueror", "bulwark"]
 
-    Class.desmos.UPGRADES_TIER_3 = ["triplex", "quadruplex"]
+    Class.desmos.UPGRADES_TIER_2 = ["helix"]
+        Class.helix.UPGRADES_TIER_3 = ["triplex", "quadruplex"]
+
 

@@ -1,5 +1,5 @@
 {
-  "name": "aras.io [Siege++]",
+  "name": "arras.io siege expansion",
   "version": "1.0.0",
   "main": "server/index.js",
   "scripts": {

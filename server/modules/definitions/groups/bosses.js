@@ -1027,23 +1027,6 @@ Class.defender = {
 };
 
 // CELESTIALS
-Class.protoTerrestrial = {
-    PARENT: "miniboss",
-    LABEL: "Proto-Terrestrial",
-    SKILL: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
-    VALUE: 1e5,
-    SHAPE: 5,
-    SIZE: 20,
-    CONTROLLERS: [["minion", {orbit: 170}]],
-    BODY: {
-        FOV: 1,
-        HEALTH: 650,
-        SHIELD: 30,
-        REGEN: base.REGEN * 0.03,
-        SPEED: base.SPEED * 0.8,
-        DAMAGE: 7,
-    },
-};
 Class.terrestrial = {
     PARENT: "miniboss",
     LABEL: "Terrestrial",
@@ -1100,18 +1083,6 @@ Class.eternal = {
         DAMAGE: 18,
     },
 };
-// Proto-Terrestrials
-let pgersemi = new LayeredBoss(null, "Proto-Gersemi", "protoTerrestrial", 5, "lightGreen", "terrestrialTrapTurret", 7, 5.5);
-pgersemi.addLayer({turret: {
-    POSITION: [9.5, 7.5, 0, null, 160, 0],
-    TYPE: ["swarmTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
-}}, true, 6.5);
-
-let prokna = new LayeredBoss(null, "Proto-Rokna", "protoTerrestrial", 5, "aqua", "terrestrialTrapTurret", 7, 5.5);
-prokna.addLayer({turret: {
-    POSITION: [9.5, 7.5, 0, null, 160, 0],
-    TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
-}}, true, 6.5);
 
 // Terrestrials
 let rokna = new LayeredBoss(null, "Rokna", "terrestrial", 7, "aqua", "terrestrialTrapTurret", 7, 5.5);
@@ -3472,6 +3443,7 @@ Class.helenaBoss = {
         },
     ]
 }
+
 
 
 

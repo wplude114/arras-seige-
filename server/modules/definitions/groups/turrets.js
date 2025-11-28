@@ -2,10 +2,6 @@ const { combineStats, makeDeco, weaponArray, makeTurret } = require('../facilita
 const { base } = require('../constants.js');
 const g = require('../gunvals.js');
 
-// extras guns
-Class.shotgunTurret = makeTurret('shotgun', {canRepel: true, limitFov: true, extraStats: []})
-Class.pentashotTurret = makeTurret('pentaShot', {canRepel: true, limitFov: true, extraStats: []})
-
 // Radial Auto Guns
 Class.autoTankGun = makeTurret({
     GUNS: [
@@ -204,6 +200,11 @@ Class.machineTripleTurret = {
 }
 Class.launcherTurret = makeTurret('launcher', {canRepel: true, limitFov: true, extraStats: []})
 Class.skimmerTurret = makeTurret('skimmer', {canRepel: true, limitFov: true, extraStats: [], color: 'mirror'})
+
+// extras guns
+Class.shotgunTurret = makeTurret('shotgun', {canRepel: true, limitFov: true, extraStats: []})
+Class.pentashotTurret = makeTurret('pentaShot', {canRepel: true, limitFov: true, extraStats: []})
+
 Class.kronosSkimmerTurret = makeTurret({
     GUNS: [
         {

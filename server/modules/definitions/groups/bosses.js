@@ -1101,17 +1101,17 @@ Class.eternal = {
     },
 };
 // Proto-Terrestrials
-let pgersemi = new LayeredBoss(null, "Proto - Gersemi", "protoTerrestrial", 5, "lightGreen", "terrestrialTrapTurret", 7, 5.5);
+let pgersemi = new LayeredBoss(null, "Proto-Gersemi", "protoTerrestrial", 5, "lightGreen", "terrestrialTrapTurret", 7, 5.5);
 pgersemi.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["swarmTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
-}}, true, 8);
+}}, true, 6.5);
 
-let prokna = new LayeredBoss(null, "Proto - Rokna", "protoTerrestrial", 5, "aqua", "terrestrialTrapTurret", 7, 5.5);
+let prokna = new LayeredBoss(null, "Proto-Rokna", "protoTerrestrial", 5, "aqua", "terrestrialTrapTurret", 7, 5.5);
 prokna.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
-}}, true, 8);
+}}, true, 6.5);
 
 // Terrestrials
 let rokna = new LayeredBoss(null, "Rokna", "terrestrial", 7, "aqua", "terrestrialTrapTurret", 7, 5.5);
@@ -3472,6 +3472,7 @@ Class.helenaBoss = {
         },
     ]
 }
+
 
 
 

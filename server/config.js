@@ -100,7 +100,7 @@ module.exports = {
         return 0;
     },
     // Show the health bar text or not.
-    SHOW_HEALTHBAR_TEXT: false,
+    SHOW_HEALTHBAR_TEXT: true,
 
     // Default skill caps.
     MAX_SKILL: 9,
@@ -118,7 +118,7 @@ module.exports = {
     LEVEL_CHEAT_CAP: 45,
 
     // Amount of player-bots to spawn.
-    BOTS: 7,
+    BOTS: 0,
 
     // How much XP player-bots get per second until they reach LEVEL_CAP.
     BOT_XP: 0,

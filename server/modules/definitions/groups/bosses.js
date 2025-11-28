@@ -675,16 +675,6 @@ Class.shaman = {
         DAMAGE: 5 * base.DAMAGE,
     },
     GUNS: weaponArray({
-        POSITION: [3.7, 8.4, 1.2, 8, 0, 0, 0.5],
-        PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.destroyer, { size: 1, maxSpeed: 1, damage: 0.8 }]),
-            TYPE: "realchip",
-            AUTOFIRE: true,
-            SYNCS_SKILLS: true,
-            STAT_CALCULATOR: "drone",
-            WAIT_TO_CYCLE: true,
-        },
-		{
         POSITION: [3.5, 8.65, 1.2, 8, 0, 0, 0],
         PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.destroyer, { size: 1.1, maxSpeed: 1.2, damage: 1.1 }]),
@@ -1037,6 +1027,23 @@ Class.defender = {
 };
 
 // CELESTIALS
+Class.protoTerrestrial = {
+    PARENT: "miniboss",
+    LABEL: "Proto-Terrestrial",
+    SKILL: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
+    VALUE: 1e5,
+    SHAPE: 5,
+    SIZE: 20,
+    CONTROLLERS: [["minion", {orbit: 170}]],
+    BODY: {
+        FOV: 1,
+        HEALTH: 650,
+        SHIELD: 30,
+        REGEN: base.REGEN * 0.1,
+        SPEED: base.SPEED * 0.3,
+        DAMAGE: 7,
+    },
+};
 Class.terrestrial = {
     PARENT: "miniboss",
     LABEL: "Terrestrial",
@@ -1044,7 +1051,7 @@ Class.terrestrial = {
     VALUE: 5e5,
     SHAPE: 7,
     SIZE: 35,
-    CONTROLLERS: [["minion", {orbit: 170}]],
+    CONTROLLERS: [["minion", {orbit: 60}]],
     BODY: {
         FOV: 1,
         HEALTH: 1000,
@@ -1093,6 +1100,12 @@ Class.eternal = {
         DAMAGE: 18,
     },
 };
+// Proto-Terrestrials
+let gersemoid = new LayeredBoss(null, "Gersemoid", "protoTerrestrial", 5, "lightGreen", "terrestrialTrapTurret", 7, 5.5);
+gersemoid.addLayer({turret: {
+    POSITION: [9.5, 7.5, 0, null, 160, 0],
+    TYPE: ["basicTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
+}}, true, 6.5);
 
 // Terrestrials
 let ares = new LayeredBoss(null, "Ares", "terrestrial", 7, "purple", "terrestrialTrapTurret", 7, 5.5);
@@ -3443,4 +3456,5 @@ Class.helenaBoss = {
         },
     ]
 }
+
 

@@ -6,7 +6,7 @@ module.exports = {
     host: "https://arras-seige.onrender.com",
 
     // Which port to run the web server on.
-    port: 3000,
+    port: 8080,
 
     // How often to update the list of the entities that players can see.
     // Has effects of when entities are activated.
@@ -23,7 +23,7 @@ module.exports = {
 
     // The \modules\setup\gamemodeconfigs\ files to load.
     // To change specific things about specific gamemodes (such as team count for tdm), edit their config file in \modules\setup\gamemodeconfigs\.
-    GAME_MODES: ['siege'],
+    GAME_MODES: ['ffa'],
 
     // The room files to load in the setup/rooms folder.
     // NOTE: If a /gamemodeconfig/ file "replaces" the value of ROOM_SETUP, it just adds its own ROOM_SETUP's content to this array.

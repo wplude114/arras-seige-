@@ -8,6 +8,8 @@ let calculatePoints = wave => 5 + wave * 3;
 let oldGroups = {
     elites: [ "eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner" ],
     strange: [ "summoner", "eliteSkimmer", "nestKeeper", "roguePalisade" ],
+    protoTerrestrials: ["gersemoid"],
+    terrestrials: ["gersemi"],
     celestials: [ "paladin", "freyja", "zaphkiel", "nyx", "theia" ],
     eternals: [ "legionaryCrasher", "kronos", "odin" ],
 };
@@ -15,6 +17,7 @@ let oldGroups = {
 class BossRush {
     constructor() {
         this.waveCodes = [
+            ran.chooseN(oldGroups.protoTerrestrials, 1)
             ran.chooseN(oldGroups.elites, 1),
             ran.chooseN(oldGroups.elites, 2),
             ran.chooseN(oldGroups.elites, 3),
@@ -22,7 +25,7 @@ class BossRush {
             ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.strange, 1)),
             ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.strange, 2)),
             ran.chooseN(oldGroups.elites, 1).concat(ran.chooseN(oldGroups.strange, 3)),
-            ran.chooseN(oldGroups.strange, 4),
+            ran.chooseN(oldGroups.strange, 4).concat(ran.chooseN(oldGroups.protoTerrestrials, 1)),
             ran.chooseN(oldGroups.elites, 1).concat(ran.chooseN(oldGroups.strange, 4)),
             ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.strange, 4)),
             ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.strange, 4)),

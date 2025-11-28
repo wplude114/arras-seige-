@@ -1101,25 +1101,25 @@ Class.eternal = {
     },
 };
 // Proto-Terrestrials
-let gersemoid = new LayeredBoss(null, "Gersemoid", "protoTerrestrial", 5, "lightGreen", "terrestrialTrapTurret", 7, 5.5);
-gersemoid.addLayer({turret: {
+let protogersemi = new LayeredBoss(null, "Proto-Gersemi", "protoTerrestrial", 5, "lightGreen", "terrestrialTrapTurret", 7, 5.5);
+protogersemi.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["swarmTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
 }}, true, 8);
 
-let ageal = new LayeredBoss(null, "Ageal", "protoTerrestrial", 5, "aqua", "terrestrialTrapTurret", 7, 5.5);
-ageal.addLayer({turret: {
+let protorokna = new LayeredBoss(null, "Proto-Rokna", "protoTerrestrial", 5, "aqua", "terrestrialTrapTurret", 7, 5.5);
+protorokna.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
 }}, true, 8);
 
 // Terrestrials
-let agease = new LayeredBoss(null, "Agease", "terrestrial", 7, "aqua", "terrestrialTrapTurret", 7, 5.5);
-agease.addLayer({turret: {
+let rokna = new LayeredBoss(null, "Rokna", "terrestrial", 7, "aqua", "terrestrialTrapTurret", 7, 5.5);
+rokna.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
 }}, true, 6.5);
-agease.addLayer({turret: {
+rokna.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["pentashotTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
 }}, true, 6.5);
@@ -3472,6 +3472,7 @@ Class.helenaBoss = {
         },
     ]
 }
+
 
 
 

@@ -8,8 +8,6 @@ let calculatePoints = wave => 5 + wave * 3;
 let oldGroups = {
     elites: [ "eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner" ],
     strange: [ "summoner", "eliteSkimmer", "nestKeeper", "roguePalisade" ],
-    //protoTerrestrials: ["gersemoid"], //verywip
-    //terrestrials: ["gersemi"], //wip
     celestials: [ "paladin", "freyja", "zaphkiel", "nyx", "theia" ],
     eternals: [ "legionaryCrasher", "kronos", "odin" ],
 };

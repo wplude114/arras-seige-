@@ -1034,7 +1034,7 @@ Class.terrestrial = {
     VALUE: 5e5,
     SHAPE: 7,
     SIZE: 35,
-    CONTROLLERS: [["minion", {orbit: 60}]],
+    CONTROLLERS: [["minion", {orbit: 160}]],
     BODY: {
         FOV: 1,
         HEALTH: 1000,
@@ -1085,17 +1085,7 @@ Class.eternal = {
 };
 
 // Terrestrials
-let rokna = new LayeredBoss(null, "Rokna", "terrestrial", 7, "aqua", "terrestrialTrapTurret", 7, 5.5);
-rokna.addLayer({turret: {
-    POSITION: [9.5, 7.5, 0, null, 160, 0],
-    TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
-}}, true, 6.5);
-rokna.addLayer({turret: {
-    POSITION: [9.5, 7.5, 0, null, 160, 0],
-    TYPE: ["pentashotTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
-}}, true, 6.5);
-
-let ares = new LayeredBoss(null, "Ares", "terrestrial", 7, "purple", "terrestrialTrapTurret", 7, 5.5);
+ let ares = new LayeredBoss(null, "Ares", "terrestrial", 7, "purple", "terrestrialTrapTurret", 7, 5.5);
 ares.addLayer({gun: {
     POSITION: [3.75, 7, 1.2, 8, 0, null, 0],
     PROPERTIES: {
@@ -3443,6 +3433,7 @@ Class.helenaBoss = {
         },
     ]
 }
+
 
 
 

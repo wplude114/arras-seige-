@@ -1107,7 +1107,23 @@ gersemoid.addLayer({turret: {
     TYPE: ["swarmTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
 }}, true, 8);
 
+let ageal = new LayeredBoss(null, "Ageal", "protoTerrestrial", 5, "Aqua", "terrestrialTrapTurret", 7, 5.5);
+ageal.addLayer({turret: {
+    POSITION: [9.5, 7.5, 0, null, 160, 0],
+    TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
+}}, true, 8);
+
 // Terrestrials
+let agease = new LayeredBoss(null, "Agease", "Terrestrial", 7, "Aqua", "terrestrialTrapTurret", 7, 5.5);
+agease.addLayer({turret: {
+    POSITION: [9.5, 7.5, 0, null, 160, 0],
+    TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
+}}, true, 6.5);
+agease.addLayer({turret: {
+    POSITION: [9.5, 7.5, 0, null, 160, 0],
+    TYPE: ["pentashotTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
+}}, true, 6.5);
+
 let ares = new LayeredBoss(null, "Ares", "terrestrial", 7, "purple", "terrestrialTrapTurret", 7, 5.5);
 ares.addLayer({gun: {
     POSITION: [3.75, 7, 1.2, 8, 0, null, 0],
@@ -3456,6 +3472,7 @@ Class.helenaBoss = {
         },
     ]
 }
+
 
 
 

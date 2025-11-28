@@ -6,7 +6,7 @@ module.exports = {
     host: "arras-seige.onrender.com",
 
     // Which port to run the web server on.
-    port:3030,
+    port: 8000,
 
     // How often to update the list of the entities that players can see.
     // Has effects of when entities are activated.
@@ -119,13 +119,13 @@ module.exports = {
     LEVEL_CHEAT_CAP: 45,
 
     // Amount of player-bots to spawn.
-    BOTS: 0,
+    BOTS: 4,
 
     // How much XP player-bots get per second until they reach LEVEL_CAP.
-    BOT_XP: 125,
+    BOT_XP: 0,
 
     // How much XP player-bots will receive when first created.
-    BOT_START_XP: 0,
+    BOT_START_XP: 26263,
 
     // The chances of a player-bot upgrading a specific skill when skill upgrades are available.
     BOT_SKILL_UPGRADE_CHANCES: [ 1, 1, 3, 4, 4, 4, 4, 2, 1, 1],
@@ -134,7 +134,7 @@ module.exports = {
     BOT_CLASS_UPGRADE_CHANCES: [ 1, 5, 20, 37, 37],
 
     // The prefix of the player-bots' names.
-    BOT_NAME_PREFIX: '§#888§[AI]§reset§ ',
+    BOT_NAME_PREFIX: '§#888§[Developer]§reset§ ',
 
     // The class that players and player-bots spawn as.
     SPAWN_CLASS: 'basic',

@@ -660,13 +660,13 @@ Class.exorcistor = {
 };
 Class.shaman = {
     PARENT: "miniboss",
-    LABEL: "Shaman",
-    DANGER: 8,
+    LABEL: "Necromancer",
+    DANGER: 9,
     SHAPE: 6,
     COLOR: "hexagon",
     UPGRADE_COLOR: "hexagon",
-    SIZE: 26,
-    MAX_CHILDREN: 20,
+    SIZE: 25,
+    MAX_CHILDREN: 16,
     VALUE: 6e5,
     BODY: {
         FOV: 0.5,
@@ -675,6 +675,16 @@ Class.shaman = {
         DAMAGE: 5 * base.DAMAGE,
     },
     GUNS: weaponArray({
+        POSITION: [3.7, 8.4, 1.2, 8, 0, 0, 0.5],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.destroyer, { size: 1, maxSpeed: 1, damage: 0.8 }]),
+            TYPE: "realchip",
+            AUTOFIRE: true,
+            SYNCS_SKILLS: true,
+            STAT_CALCULATOR: "drone",
+            WAIT_TO_CYCLE: true,
+        },
+		{
         POSITION: [3.5, 8.65, 1.2, 8, 0, 0, 0],
         PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.destroyer, { size: 1.1, maxSpeed: 1.2, damage: 1.1 }]),
@@ -3433,3 +3443,4 @@ Class.helenaBoss = {
         },
     ]
 }
+

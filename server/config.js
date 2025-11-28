@@ -59,7 +59,7 @@ module.exports = {
     // Welcome message once a player spawns.
     WELCOME_MESSAGE: "You have spawned! Welcome to the game.\n"
                     +"You will be invulnerable until you move or shoot.\n"
-                    +"This is testing, nothing in final."
+                    +"This is a test version, nothing here is final.",
     
     // How long a popup message lasts before fading out in milliseconds.
     MESSAGE_DISPLAY_TIME: 10_000,
@@ -101,7 +101,7 @@ module.exports = {
         return 0;
     },
     // Show the health bar text or not.
-    SHOW_HEALTHBAR_TEXT: true,
+    SHOW_HEALTHBAR_TEXT: false,
 
     // Default skill caps.
     MAX_SKILL: 9,
@@ -122,7 +122,7 @@ module.exports = {
     BOTS: 0,
 
     // How much XP player-bots get per second until they reach LEVEL_CAP.
-    BOT_XP: 0,
+    BOT_XP: 125,
 
     // How much XP player-bots will receive when first created.
     BOT_START_XP: 0,

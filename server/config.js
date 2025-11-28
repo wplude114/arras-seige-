@@ -6,7 +6,7 @@ module.exports = {
     host: "https://arras-seige.onrender.com",
 
     // Which port to run the web server on.
-    port: 8080,
+    port: 3000,
 
     // How often to update the list of the entities that players can see.
     // Has effects of when entities are activated.
@@ -32,8 +32,8 @@ module.exports = {
     ROOM_SETUP: ['map_apspp_default'],
 
     // The dimensions of a single tile on the map.
-    TILE_WIDTH: 300,
-    TILE_HEIGHT: 300,
+    TILE_WIDTH: 400,
+    TILE_HEIGHT: 400,
 
 
 

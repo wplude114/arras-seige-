@@ -6,7 +6,7 @@ let calculatePoints = wave => 5 + wave * 3;
 // Then it picks a boss at random, with all choices being equally likely.
 
 let oldGroups = {
-    elites: [ "eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner" ], // 2 points
+    elites: [ "eliteDestroyer", "eliteGunner", "eliteTrapGuard", "eliteBattleship", "eliteSpawner" ], // 2 points
     mysticals: [ "sorcerer", "summoner", "enchantress", "exorcistor" ], // 2 points
     strange: [ "summoner", "eliteSkimmer", "nestKeeper" ], // 2-3 points
     nesters: [ "nestKeeper", "nestWarden", "nestGuardian" ], // 3 points

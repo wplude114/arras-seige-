@@ -103,6 +103,7 @@ rokna.addLayer({turret: {
     TYPE: ["boomerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
 }}, true, 6.5);
 
+// Celestials
 let tyr = new LayeredBoss(null, "Tyr", "celestial", 9, "mustard", "baseTrapTurret", 9, 5.5);
 tyr.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
@@ -110,7 +111,7 @@ tyr.addLayer({turret: {
 }}, true, 6.5);
 tyr.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
-    TYPE: ["machineTripleTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.5} }],
+    TYPE: ["cruiserTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.5} }],
 }}, true, 6.5);
 
 // Eternal
@@ -125,7 +126,7 @@ menace.addLayer({turret: {
 }}, true, 6.5);
 menace.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
-    TYPE: ["machineTripleTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
+    TYPE: ["cruiserTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
 }}, true, 6.5);
 menace.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],

@@ -7,9 +7,9 @@ let calculatePoints = wave => 5 + wave * 3;
 
 let oldGroups = {
     elites: [ "eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner" ],
-    mysticals: [ "sorcerer", "summoner", "enchantress", "exorcistor"],
-    terrestrials: [ "ares", "gersemi", "ezekiel", "eris", "selene", "rokna"],
-    celestials: [ "paladin", "freyja", "zaphkiel", "nyx", "theia"],
+    mysticals: ["sorcerer", "summoner", "enchantress", "exorcistor"],
+    terrestrials: ["ares", "gersemi", "ezekiel", "eris", "selene"],
+    celestials: [ "paladin", "freyja", "zaphkiel", "nyx", "theia", "rokna"],
     eternals: [ "legionaryCrasher", "kronos", "odin" ],
 };
 
@@ -81,7 +81,6 @@ class BossRush {
             [ 15, "ezekiel"],
             [ 15, "eris"],
             [ 15, "selene"],
-            [ 15, "rokna"],
 
             //celestials
             [ 35, "paladin"],
@@ -89,6 +88,7 @@ class BossRush {
             [ 35, "zaphkiel"],
             [ 35, "nyx"],
             [ 35, "theia"],
+            [35, "rokna"],
 
             //eternals
             [100, "legionaryCrasher"],
@@ -276,6 +276,7 @@ class BossRush {
             } else {
                 this.playerWin();
             }
+            if (ran.dice(0,10) == 0) {spawnFriendlyBoss()}
         //if the timer has not ran out and there arent any remaining enemies left, decrease the timer
         } else if (!this.remainingEnemies) {
             this.timer--;

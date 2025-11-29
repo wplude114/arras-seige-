@@ -1027,6 +1027,24 @@ Class.defender = {
 };
 
 // CELESTIALS
+Class.Pterrestrial = {
+    // Proto-Terrestrial: A weak 2-layer miniboss.
+    PARENT: "miniboss",
+    LABEL: "Proto-Terrestrial",
+    SKILL: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
+    VALUE: 3500000,
+    SHAPE: 5,
+    SIZE: 25,
+    CONTROLLERS: [["minion", {orbit: 75}]],
+    BODY: {
+        FOV: 0.9,
+        HEALTH: 650,
+        SHIELD: 30,
+        REGEN: base.REGEN * 0.05,
+        SPEED: base.SPEED * 0.7,
+        DAMAGE: 7,
+    },
+};
 Class.terrestrial = {
     PARENT: "miniboss",
     LABEL: "Terrestrial",
@@ -3433,6 +3451,7 @@ Class.helenaBoss = {
         },
     ]
 }
+
 
 
 

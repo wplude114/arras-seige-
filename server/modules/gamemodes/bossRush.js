@@ -6,14 +6,11 @@ let calculatePoints = wave => 5 + wave * 3;
 // Then it picks a boss at random, with all choices being equally likely.
 
 let oldGroups = {
-    elites: ["eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner" ],
-    mysticals: ["sorcerer", "summoner", "enchantress", "exorcistor"],
-    terrestrials: ["ares", "gersemi", "ezekiel", "eris", "selene", "rokna"],
-    celestials: ["paladin", "freyja", "zaphkiel", "nyx", "theia"],
-    eternals: ["legionaryCrasher", "kronos", "odin" ],
-    anyweak: ["eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner", "sorcerer", "summoner", "enchantress", "exorcistor"],
-    anymiddleclass: ["ares", "gersemi", "ezekiel", "eris", "selene", "rokna", "paladin", "freyja", "zaphkiel", "nyx", "theia"],
-    anystrong: ["ares", "gersemi", "ezekiel", "eris", "selene", "rokna", "paladin", "freyja", "zaphkiel", "nyx", "theia", "legionaryCrasher", "kronos", "odin"],
+    elites: [ "eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner" ],
+    mysticals: [ "sorcerer", "summoner", "enchantress", "exorcistor"],
+    terrestrials: [ "ares", "gersemi", "ezekiel", "eris", "selene", "rokna"],
+    celestials: [ "paladin", "freyja", "zaphkiel", "nyx", "theia"],
+    eternals: [ "legionaryCrasher", "kronos", "odin" ],
 };
 
 class BossRush {
@@ -84,6 +81,7 @@ class BossRush {
             [ 15, "ezekiel"],
             [ 15, "eris"],
             [ 15, "selene"],
+            [ 15, "rokna"],
 
             //celestials
             [ 35, "paladin"],
@@ -91,7 +89,6 @@ class BossRush {
             [ 35, "zaphkiel"],
             [ 35, "nyx"],
             [ 35, "theia"],
-            [35, "rokna"],
 
             //eternals
             [100, "legionaryCrasher"],

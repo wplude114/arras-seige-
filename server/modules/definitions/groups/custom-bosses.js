@@ -103,12 +103,12 @@ rokna.addLayer({turret: {
     TYPE: ["boomerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
 }}, true, 6.5);
 
-let atlas = new LayeredBoss(null, "Atlas", "celestial", 9, "mustard", "terrestrialTrapTurret", 9, 5.5);
-atlas.addLayer({turret: {
+let tyr = new LayeredBoss(null, "Tyr", "celestial", 9, "mustard", "terrestrialTrapTurret", 9, 5.5);
+tyr.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.5} }],
 }}, true, 6.5);
-atlas.addLayer({turret: {
+tyr.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["crasherSpawner", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.5} }],
 }}, true, 6.5);

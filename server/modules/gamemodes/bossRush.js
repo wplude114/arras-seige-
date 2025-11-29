@@ -20,9 +20,9 @@ let oldGroups = {
 class BossRush {
     constructor() {
         this.waveCodes = [
-            ran.chooseN(oldGroups.elites, 1),
-            ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.mystical, 1)),
-            ran.chooseN(oldGroups.mysticals, 4),
+            ran.chooseN(oldGroups.terrestrials, 1),
+            ran.chooseN(oldGroups.elites, 1).concat(ran.chooseN(oldGroups.mysticals, 1)),
+            ran.chooseN(oldGroups.elites, 3),
             ran.chooseN(oldGroups.elites, 4),
             ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.strange, 1)),
             ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.terrestrials, 1)),

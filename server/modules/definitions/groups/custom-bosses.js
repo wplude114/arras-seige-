@@ -111,7 +111,7 @@ tyr.addLayer(turret: {
 }}, true, null, 16);
 tyr.addLayer({turret: {
     POSITION: [10, 7.5, 0, null, 160, 0],
-    TYPE: ["atomizerTurret", {GUN_STAT_SCALE: {health: 1.4, damage: 1.4}}],
+    TYPE: ["pentashotTurret", {GUN_STAT_SCALE: {health: 1.4, damage: 1.4}}],
 }}, true, 6);
 // Eternal
 let menace = new LayeredBoss(null, "Menace", "eternal", 13, "grey", "terrestrialTrapTurret", 13, 5.5);
@@ -126,10 +126,6 @@ menace.addLayer({turret: {
 menace.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["cruiserTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
-}}, true, 6.5);
-menace.addLayer({turret: {
-    POSITION: [9.5, 7.5, 0, null, 160, 0],
-    TYPE: ["boomerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
 }}, true, 6.5);
 
 let zeus = new LayeredBoss(null, "Zeus", "eternal", 15, "mustard", "terrestrialTrapTurret", 15, 5.5);

@@ -47,14 +47,14 @@ Pares.addLayer({gun: {
     },
 }}, false, null, 18);
 // --- Rokna
-let Prokna = new LayeredBoss(null, "Proto-Rokna", "Pterrestrial", 5, "brown", "terrestrialTrapTurret", 5, 5.5);
+let Prokna = new LayeredBoss(null, "Proto-Rokna", "Pterrestrial", 5, "aqua", "terrestrialTrapTurret", 5, 5.5);
 Prokna.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
 }}, true, 6.5);
 
 // Terrestrials
-let rokna = new LayeredBoss(null, "Rokna", "terrestrial", 7, "brown", "terrestrialTrapTurret", 7, 5.5);
+let rokna = new LayeredBoss(null, "Rokna", "terrestrial", 7, "aqua", "terrestrialTrapTurret", 7, 5.5);
 rokna.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],

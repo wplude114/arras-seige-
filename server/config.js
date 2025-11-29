@@ -134,10 +134,10 @@ module.exports = {
     BOT_CLASS_UPGRADE_CHANCES: [ 1, 5, 20, 37, 37],
 
     // The prefix of the player-bots' names.
-    BOT_NAME_PREFIX: '§#888§[Developer]§reset§ ',
+    BOT_NAME_PREFIX: '§#888§[Boss]§reset§ ',
 
     // The class that players and player-bots spawn as.
-    SPAWN_CLASS: 'basic',
+    SPAWN_CLASS: 'bosses',
 
     // How every entity regenerates their health.
     REGENERATE_TICK: 200,
@@ -152,7 +152,7 @@ module.exports = {
 
     // Allow foods to be spawned or not.
     // NOTE: Disabling it decreases lagness, also very useful if you don't need foods to be spawned.
-    ENABLE_FOOD: true,
+    ENABLE_FOOD: false,
 
     FOOD_CAP: 3, // Max normal food per normal tile.
     FOOD_SPAWN_CHANCE: 0.875, // Likeliness of normal food spawn attempts succeeding.

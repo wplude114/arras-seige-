@@ -137,7 +137,7 @@ module.exports = {
     BOT_NAME_PREFIX: '§#888§[Boss]§reset§ ',
 
     // The class that players and player-bots spawn as.
-    SPAWN_CLASS: 'bosses',
+    SPAWN_CLASS: 'basic',
 
     // How every entity regenerates their health.
     REGENERATE_TICK: 200,

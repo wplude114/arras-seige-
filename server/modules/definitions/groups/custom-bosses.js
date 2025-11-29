@@ -5,27 +5,6 @@ require('./generics.js');
 require('./tanks.js');
 require('./turrets.js');
 require('./bosses.js');
-
-// bosstypes
-Class.Pterrestrial = {
-    // Proto-Terrestrial: A weak 2-layer miniboss.
-    PARENT: "miniboss",
-    LABEL: "Proto-Terrestrial",
-    SKILL: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
-    VALUE: 3500000,
-    SHAPE: 5,
-    SIZE: 25,
-    CONTROLLERS: [["minion", {orbit: 75}]],
-    BODY: {
-        FOV: 0.9,
-        HEALTH: 650,
-        SHIELD: 30,
-        REGEN: base.REGEN * 0.05,
-        SPEED: base.SPEED * 0.7,
-        DAMAGE: 7,
-    },
-};
-
 // Proto-Terrestrials
 // --- Gersemi
 let Pgersemi = new LayeredBoss(null, "Proto-Gersemi", "Pterrestrial", 5, "lightGreen", "terrestrialTrapTurret", 5, 5.5);

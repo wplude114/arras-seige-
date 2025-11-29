@@ -6,17 +6,19 @@ let calculatePoints = wave => 5 + wave * 3;
 // Then it picks a boss at random, with all choices being equally likely.
 
 let oldGroups = {
-    elites: [ "eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner" ],
-    strange: [ "summoner", "eliteSkimmer", "nestKeeper" ],
-    terrestrials: [ "ares", "gersemi", "ezekiel", "eris", "selene", "rokna" ],
-    celestials: [ "paladin", "freyja", "zaphkiel", "nyx", "theia" ],
-    eternals: [ "legionaryCrasher", "kronos", "odin" ],
+    elites: [ "eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner" ], // 2 points
+    mysticals: [ "sorcerer", "summoner", "enchantress", "exorcistor" ], // 2 points
+    strange: [ "summoner", "eliteSkimmer", "nestKeeper" ], // 2-3 points
+    nesters: [ "nestKeeper", "nestWarden", "nestGuardian" ], // 3 points
+    terrestrials: [ "ares", "gersemi", "ezekiel", "eris", "selene", "rokna" ], // 15 points
+    celestials: [ "paladin", "freyja", "zaphkiel", "nyx", "theia" ], // 35 points
+    eternals: [ "legionaryCrasher", "kronos", "odin" ], // 100 points
 };
 
 class BossRush {
     constructor() {
         this.waveCodes = [
-            ran.chooseN(oldGroups.elites, 1),
+            ran.chooseN(oldGroups.terrestrials, 1),
             ran.chooseN(oldGroups.elites, 2),
             ran.chooseN(oldGroups.elites, 3),
             ran.chooseN(oldGroups.elites, 4),

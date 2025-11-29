@@ -32,8 +32,8 @@ module.exports = {
     ROOM_SETUP: ['map_apspp_default'],
 
     // The dimensions of a single tile on the map.
-    TILE_WIDTH: 400,
-    TILE_HEIGHT: 400,
+    TILE_WIDTH: 200,
+    TILE_HEIGHT: 200,
 
 
 
@@ -134,7 +134,7 @@ module.exports = {
     BOT_CLASS_UPGRADE_CHANCES: [ 1, 5, 20, 37, 37],
 
     // The prefix of the player-bots' names.
-    BOT_NAME_PREFIX: '§#059§[AI] ▪ ',
+    BOT_NAME_PREFIX: '§#089§[AI] ▪ ',
 
     // The class that players and player-bots spawn as.
     SPAWN_CLASS: 'basic',

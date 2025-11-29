@@ -48,7 +48,7 @@ p_ares.addLayer({gun: {
     },
 }}, false, null, 18);
 // --- Rokna
-let p_rokna = new LayeredBoss(null, "Proro-Rokna", "Pterrestrial", 5, "aqua", "terrestrialTrapTurret", 5, 5.5);
+let p_rokna = new LayeredBoss(null, "Proto-Rokna", "Pterrestrial", 5, "aqua", "terrestrialTrapTurret", 5, 5.5);
 p_rokna.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],

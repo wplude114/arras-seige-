@@ -6,9 +6,9 @@ let calculatePoints = wave => 5 + wave * 3;
 // Then it picks a boss at random, with all choices being equally likely.
 
 let oldGroups = {
-    elites: [ "eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner" ],
-    strange: [ "summoner", "eliteSkimmer", "nestKeeper", "roguePalisade" ],
-    celestials: [ "paladin", "freyja", "zaphkiel", "nyx", "theia" ],
+    elites: [ "eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner" ],
+    strange: ["ares", "gersemi", "ezekeil", "eris", "selene"],
+    celestials: [ "paladin", "freyja", "zaphkiel", "nyx", "theia", "rokna"],
     eternals: [ "legionaryCrasher", "kronos", "odin" ],
 };
 
@@ -17,7 +17,6 @@ class BossRush {
         this.waveCodes = [
             ran.chooseN(oldGroups.elites, 1),
             ran.chooseN(oldGroups.elites, 2),
-            ran.chooseN(oldGroups.elites, 3),
             ran.chooseN(oldGroups.elites, 4),
             ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.strange, 1)),
             ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.strange, 2)),
@@ -63,11 +62,10 @@ class BossRush {
             //elites
             [  2, "eliteDestroyer"],
             [  2, "eliteGunner"],
-            [  2, "eliteSprayer"],
             [  2, "eliteBattleship"],
             [  2, "eliteSpawner"],
             [  2, "eliteTrapGuard"],
-            [  2, "eliteSpinner"],
+            [  10, "eliteSpinner"],
             [  2, "eliteSkimmer"],
 
             //nesters
@@ -88,6 +86,7 @@ class BossRush {
             [ 35, "zaphkiel"],
             [ 35, "nyx"],
             [ 35, "theia"],
+            [35, "rokna"],
 
             //eternals
             [100, "legionaryCrasher"],
@@ -275,7 +274,7 @@ class BossRush {
             } else {
                 this.playerWin();
             }
-
+            if (ran.dice(0,10) == 0) {spawnFriendlyBoss()}
         //if the timer has not ran out and there arent any remaining enemies left, decrease the timer
         } else if (!this.remainingEnemies) {
             this.timer--;

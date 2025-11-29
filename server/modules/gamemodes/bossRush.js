@@ -262,7 +262,6 @@ class BossRush {
             } else {
                 this.playerWin();
             }
-            if (ran.dice(0,10) == 0) {spawnFriendlyBoss()}
         //if the timer has not ran out and there arent any remaining enemies left, decrease the timer
         } else if (!this.remainingEnemies) {
             this.timer--;

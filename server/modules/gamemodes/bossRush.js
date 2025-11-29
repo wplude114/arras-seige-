@@ -33,7 +33,7 @@ class BossRush {
             ran.chooseN(oldGroups.anymiddleclass, 2).concat(ran.chooseN(oldGroups.anyweak, 1)),
             ran.chooseN(oldGroups.anymiddleclass, 3).concat(ran.chooseN(oldGroups.elite, 3)),
             ran.chooseN(oldGroups.anystrong, 1).concat(ran.chooseN(oldGroups.anyweak, 3)),
-            ran.chooseN(oldGroups.anymiddleclass, 4).concat(ran.chooseN(oldGroups.anyweak, 3)).concat(ran.chooseN(oldGroups.mysticals, 2)),
+            ran.chooseN(oldGroups.anymiddleclass, 4).concat(ran.chooseN(oldGroups.anyweak, 3)),
             ran.chooseN(oldGroups.anystrong, 1).concat(ran.chooseN(oldGroups.anyweak, 5)),
             ran.chooseN(oldGroups.anymiddleclass, 3).concat(ran.chooseN(oldGroups.anyweak, 4)),
         ];

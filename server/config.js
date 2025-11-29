@@ -3,10 +3,10 @@ module.exports = {
 
     // Game server domain.
     // If the host is 'localhost:NUMBER', the NUMBER must be the port setting.
-    host: "arras-seige.onrender.com",
+    host: "arras-seige.onrender.com/",
 
     // Which port to run the web server on.
-    port: 8080,
+    port: 3000,
 
     // How often to update the list of the entities that players can see.
     // Has effects of when entities are activated.

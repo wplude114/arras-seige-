@@ -8,7 +8,6 @@ let calculatePoints = wave => 5 + wave * 3;
 let oldGroups = {
     elites: [ "eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner" ], // 2 points
     mysticals: [ "sorcerer", "summoner", "enchantress", "exorcistor" ], // 2 points
-    weak: [ "eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner", "sorcerer", "summoner", "enchantress", "exorcistor" ], // 2 points
     strange: [ "summoner", "eliteSkimmer", "nestKeeper" ], // 2-3 points
     nesters: [ "nestKeeper", "nestWarden", "nestGuardian" ], // 3 points
     terrestrials: [ "ares", "gersemi", "ezekiel", "eris", "selene", "rokna" ], // 15 points
@@ -23,7 +22,7 @@ class BossRush {
         this.waveCodes = [
             ran.chooseN(oldGroups.elites, 1),
             ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.mystical, 1)),
-            ran.chooseN(oldGroups.weak, 4),
+            ran.chooseN(oldGroups.mysticals, 4),
             ran.chooseN(oldGroups.elites, 4),
             ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.strange, 1)),
             ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.terrestrials, 1)),

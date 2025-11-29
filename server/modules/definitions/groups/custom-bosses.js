@@ -107,7 +107,7 @@ rokna.addLayer({turret: {
 let tyr = new LayeredBoss(null, "Tyr", "celestial", 9, "mustard", "baseTrapTurret", 6.5, 5.5);
 tyr.addLayer({turret: {
     POSITION: [10, 7.5, 0, null, 160, 0],
-    TYPE: ["myptherTwisterTurret", {GUN_STAT_SCALE: {health: 1.4, damage: 1.4}}],
+    TYPE: ["hyperTwisterTurret", {GUN_STAT_SCALE: {health: 1.4, damage: 1.4}}],
 }}, true, 16);
 tyr.addLayer({turret: {
     POSITION: [10, 7.5, 0, null, 160, 0],

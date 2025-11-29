@@ -25,7 +25,7 @@ menace.addLayer({turret: {
 }}, true, 6.5);
 menace.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
-    TYPE: ["bigAuto4Gun", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
+    TYPE: ["bigauto4gun", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
 }}, true, 6.5);
 menace.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],

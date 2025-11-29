@@ -104,7 +104,7 @@ rokna.addLayer({turret: {
 }}, true, 6.5);
 
 // Celestials
-let tyr = new LayeredBoss(null, "Tyr", "celestial", 10, "lavender", "baseTrapTurret", 6.5, 5.5);
+let tyr = new LayeredBoss(null, "Tyr", "celestial", 10, "mustard", "baseTrapTurret", 6.5, 5.5);
 tyr.addLayer(turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.4, damage: 1.4} }],

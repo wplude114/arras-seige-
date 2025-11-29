@@ -147,7 +147,6 @@ Class.p_terrestrials = menu("Proto-Terrestrials", "orange", 5)
 Class.terrestrials = menu("Terrestrials", "orange", 7)
 Class.celestials = menu("Celestials", "lightGreen", 9)
 Class.eternals = menu("Eternals", "veryLightGrey", 11)
-Class.etherials = menu("Etherials", "mustard", 15)
 Class.devBosses = menu("Developers", "lightGreen", 4)
 Class.devBosses.UPGRADE_COLOR = "rainbow"
 
@@ -2741,7 +2740,7 @@ Class.developer.UPGRADES_TIER_0 = ["tanks", "bosses", "spectator", "levels", "te
         Class.dominators.UPGRADES_TIER_0 = ["destroyerDominator", "gunnerDominator", "trapperDominator"]
         Class.sanctuaries.UPGRADES_TIER_0 = ["sanctuaryTier1", "sanctuaryTier2", "sanctuaryTier3", "sanctuaryTier4", "sanctuaryTier5", "sanctuaryTier6"]
 
-    Class.bosses.UPGRADES_TIER_0 = ["sentries", "elites", "mysticals", "nesters", "rogues", "rammers", "terrestrials", "celestials", "eternals", "etherials", "devBosses"]
+    Class.bosses.UPGRADES_TIER_0 = ["sentries", "elites", "mysticals", "nesters", "rogues", "rammers", "terrestrials", "celestials", "eternals", "devBosses"]
         Class.sentries.UPGRADES_TIER_0 = ["sentrySwarm", "sentryGun", "sentryTrap", "shinySentrySwarm", "shinySentryGun", "shinySentryTrap", "sentinelMinigun", "sentinelLauncher", "sentinelCrossbow"]
         Class.elites.UPGRADES_TIER_0 = ["eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner", "eliteTrapGuard", "eliteSpinner", "eliteSkimmer", "legionaryCrasher", "guardian", "defender", "sprayerLegion"]
         Class.mysticals.UPGRADES_TIER_0 = ["sorcerer", "summoner", "enchantress", "exorcistor", "shaman", "shinysorcerer", "shinysummoner", "shinyenchantress"]

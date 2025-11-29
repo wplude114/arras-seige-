@@ -3,6 +3,7 @@ const { base, basePolygonDamage, basePolygonHealth, dfltskl, statnames } = requi
 const g = require('../gunvals.js');
 require('./tanks.js');
 require('./food.js');
+require('./custom-bosses.js')
 
 // Menus
 Class.developer = {

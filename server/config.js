@@ -119,7 +119,7 @@ module.exports = {
     LEVEL_CHEAT_CAP: 45,
 
     // Amount of player-bots to spawn.
-    BOTS: 4,
+    BOTS: 7,
 
     // How much XP player-bots get per second until they reach LEVEL_CAP.
     BOT_XP: 0,
@@ -134,7 +134,7 @@ module.exports = {
     BOT_CLASS_UPGRADE_CHANCES: [ 1, 5, 20, 37, 37],
 
     // The prefix of the player-bots' names.
-    BOT_NAME_PREFIX: '§#788§[AI] ▪ ',
+    BOT_NAME_PREFIX: '§#059§[AI] ▪ ',
 
     // The class that players and player-bots spawn as.
     SPAWN_CLASS: 'basic',

@@ -6,49 +6,48 @@ let calculatePoints = wave => 5 + wave * 3;
 // Then it picks a boss at random, with all choices being equally likely.
 
 let oldGroups = {
-    elites: [ "eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner" ],
-    mysticals: ["sorcerer", "summoner", "enchantress", "exorcistor"],
-    terrestrials: ["ares", "gersemi", "ezekiel", "eris", "selene"],
-    celestials: [ "paladin", "freyja", "zaphkiel", "nyx", "theia", "rokna"],
+    elites: [ "eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner" ],
+    strange: [ "summoner", "eliteSkimmer", "nestKeeper", "roguePalisade" ],
+    celestials: [ "paladin", "freyja", "zaphkiel", "nyx", "theia" ],
     eternals: [ "legionaryCrasher", "kronos", "odin" ],
 };
 
 class BossRush {
     constructor() {
         this.waveCodes = [
+            ran.chooseN(oldGroups.elites, 1),
             ran.chooseN(oldGroups.elites, 2),
-            ran.chooseN(oldGroups.mysticals, 1).concat(ran.chooseN(oldGroups.elites, 1)),
-            ran.chooseN(oldGroups.mysticals, 3),
-            ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.mysticals, 1)),
-            ran.chooseN(oldGroups.elites, 5).concat(ran.chooseN(oldGroups.terrestrials, 2)),
-            ran.chooseN(oldGroups.elites, 4).concat(ran.chooseN(oldGroups.mysticals, 2)),
-            ran.chooseN(oldGroups.elites, 8).concat(ran.chooseN(oldGroups.mysticals, 3)),
-            ran.chooseN(oldGroups.terrestrials, 4),
-            ran.chooseN(oldGroups.elites, 1).concat(ran.chooseN(oldGroups.terrestrials, 4)),
-            ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.mysticals, 4)),
-            ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.terrestrials, 4)),
-            ran.chooseN(oldGroups.mysticals, 4).concat(ran.chooseN(oldGroups.terrestrials, 4)),
+            ran.chooseN(oldGroups.elites, 3),
+            ran.chooseN(oldGroups.elites, 4),
+            ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.strange, 1)),
+            ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.strange, 2)),
+            ran.chooseN(oldGroups.elites, 1).concat(ran.chooseN(oldGroups.strange, 3)),
+            ran.chooseN(oldGroups.strange, 4),
+            ran.chooseN(oldGroups.elites, 1).concat(ran.chooseN(oldGroups.strange, 4)),
+            ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.strange, 4)),
+            ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.strange, 4)),
+            ran.chooseN(oldGroups.elites, 4).concat(ran.chooseN(oldGroups.strange, 4)),
             [ oldGroups.celestials[0] ],
             [ oldGroups.celestials[1] ],
             [ oldGroups.celestials[2] ],
             [ oldGroups.celestials[3] ],
             [ oldGroups.celestials[4] ],
-            ran.chooseN(oldGroups.elites, 1).concat(ran.chooseN(oldGroups.mysticals, 1)).concat(ran.chooseN(oldGroups.celestials, 1)),
-            ran.chooseN(oldGroups.mysticals, 3).concat(ran.chooseN(oldGroups.terrestrials, 1)).concat(ran.chooseN(oldGroups.celestials, 1)),
-            ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.mysticals, 3)).concat(ran.chooseN(oldGroups.celestials, 1)),
-            ran.chooseN(oldGroups.elites, 4).concat(ran.chooseN(oldGroups.terrestrials, 4)).concat(ran.chooseN(oldGroups.celestials, 1)),
+            ran.chooseN(oldGroups.elites, 1).concat(ran.chooseN(oldGroups.strange, 1)).concat(ran.chooseN(oldGroups.celestials, 1)),
+            ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.strange, 1)).concat(ran.chooseN(oldGroups.celestials, 1)),
+            ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.strange, 3)).concat(ran.chooseN(oldGroups.celestials, 1)),
+            ran.chooseN(oldGroups.elites, 4).concat(ran.chooseN(oldGroups.strange, 4)).concat(ran.chooseN(oldGroups.celestials, 1)),
             ran.chooseN(oldGroups.celestials, 2),
-            ran.chooseN(oldGroups.elites, 1).concat(ran.chooseN(oldGroups.terrestrials, 2)).concat(ran.chooseN(oldGroups.celestials, 2)),
-            ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.mysticals, 3)).concat(ran.chooseN(oldGroups.celestials, 2)),
-            ran.chooseN(oldGroups.elites, 4).concat(ran.chooseN(oldGroups.mysticals, 4)).concat(ran.chooseN(oldGroups.celestials, 2)),
+            ran.chooseN(oldGroups.elites, 1).concat(ran.chooseN(oldGroups.strange, 2)).concat(ran.chooseN(oldGroups.celestials, 2)),
+            ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.strange, 3)).concat(ran.chooseN(oldGroups.celestials, 2)),
+            ran.chooseN(oldGroups.elites, 4).concat(ran.chooseN(oldGroups.strange, 4)).concat(ran.chooseN(oldGroups.celestials, 2)),
             ran.chooseN(oldGroups.celestials, 3),
-            ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.terrestrials, 3)).concat(ran.chooseN(oldGroups.celestials, 3)),
-            ran.chooseN(oldGroups.elites, 4).concat(ran.chooseN(oldGroups.mysticals, 4)).concat(ran.chooseN(oldGroups.terrestrials, 3)),
+            ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.strange, 3)).concat(ran.chooseN(oldGroups.celestials, 3)),
+            ran.chooseN(oldGroups.elites, 4).concat(ran.chooseN(oldGroups.strange, 4)).concat(ran.chooseN(oldGroups.celestials, 3)),
             ran.chooseN(oldGroups.celestials, 4),
-            ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.terrestrials, 2)).concat(ran.chooseN(oldGroups.celestials, 4)),
-            ran.chooseN(oldGroups.elites, 4).concat(ran.chooseN(oldGroups.mysticals, 4)).concat(ran.chooseN(oldGroups.celestials, 4)),
+            ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.strange, 2)).concat(ran.chooseN(oldGroups.celestials, 4)),
+            ran.chooseN(oldGroups.elites, 4).concat(ran.chooseN(oldGroups.strange, 4)).concat(ran.chooseN(oldGroups.celestials, 4)),
             ran.chooseN(oldGroups.celestials, 5),
-            ran.chooseN(oldGroups.elites, 4).concat(ran.chooseN(oldGroups.terrestrials, 4)).concat(ran.chooseN(oldGroups.celestials, 5)),
+            ran.chooseN(oldGroups.elites, 4).concat(ran.chooseN(oldGroups.strange, 4)).concat(ran.chooseN(oldGroups.celestials, 5)),
             ran.chooseN(oldGroups.eternals, 1),
         ];
         this.bossChoices = [
@@ -59,15 +58,16 @@ class BossRush {
             [  2, "summoner"],
             [  2, "enchantress"],
             [  2, "exorcistor"],
-            //[  2, "shaman"],
+            [  2, "shaman"],
 
             //elites
             [  2, "eliteDestroyer"],
             [  2, "eliteGunner"],
+            [  2, "eliteSprayer"],
             [  2, "eliteBattleship"],
             [  2, "eliteSpawner"],
             [  2, "eliteTrapGuard"],
-            [  10, "eliteSpinner"],
+            [  2, "eliteSpinner"],
             [  2, "eliteSkimmer"],
 
             //nesters
@@ -88,7 +88,6 @@ class BossRush {
             [ 35, "zaphkiel"],
             [ 35, "nyx"],
             [ 35, "theia"],
-            [35, "rokna"],
 
             //eternals
             [100, "legionaryCrasher"],
@@ -276,7 +275,7 @@ class BossRush {
             } else {
                 this.playerWin();
             }
-            if (ran.dice(0,10) == 0) {spawnFriendlyBoss()}
+
         //if the timer has not ran out and there arent any remaining enemies left, decrease the timer
         } else if (!this.remainingEnemies) {
             this.timer--;

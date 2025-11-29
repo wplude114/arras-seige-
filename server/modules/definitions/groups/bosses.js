@@ -1259,28 +1259,6 @@ theia.addLayer({turret: {
     TYPE: ["twisterTurret", {INDEPENDENT: true, COLOR: "grey", GUN_STAT_SCALE: {health: 1.3, damage: 1.1, resist: 1.2, speed: 1.1, maxSpeed: 0.8}}],
 }}, true, 6);
 
-// ATLAS
-let atlas = new LayeredBoss(null, "Atlas", "celestial", 9, "purple", "baseTrapTurret", 6.5, 5.5);
-atlas.addLayer({turret: {
-    POSITION: [7, 9, 0, null, 180, 0],
-    TYPE: "artilleryTurret",
-}});
-atlas.addLayer({turret: {
-    POSITION: [10.5, 8, 0, null, 160, 0],
-    TYPE: ["nailgunTurret", {GUN_STAT_SCALE: {speed: 1.1, maxSpeed: 1.1, resist: 1.3}}],
-}}, true, 6);
-
-// RHEA
-let rhea = new LayeredBoss(null, "Rhea", "celestial", 9, "darkGrey", "baseTrapTurret", 6.5, 5.5);
-rhea.addLayer({turret: {
-    POSITION: [8.5, 9, 0, null, 180, 0],
-    TYPE: "wrenchTurret",
-}});
-rhea.addLayer({turret: {
-    POSITION: [10.5, 8, 0, null, 160, 0],
-    TYPE: "crowbarTurret",
-}}, true, 6);
-
 // JULIUS
 let julius = new LayeredBoss(null, "Julius", "celestial", 9, "darkGrey", "baseTrapTurret", 6.5, 5.5);
 julius.addLayer({turret: {
@@ -3451,6 +3429,7 @@ Class.helenaBoss = {
         },
     ]
 }
+
 
 
 

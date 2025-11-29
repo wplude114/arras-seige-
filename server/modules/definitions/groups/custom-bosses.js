@@ -7,14 +7,14 @@ require('./turrets.js');
 require('./bosses.js');
 // Proto-Terrestrials
 // --- Gersemi
-let Pgersemi = new LayeredBoss(null, "Proto-Gersemi", "Pterrestrial", 5, "lightGreen", "terrestrialTrapTurret", 5, 5.5);
-Pgersemi.addLayer({turret: {
+let pgersemi = new LayeredBoss(null, "Proto-Gersemi", "Pterrestrial", 5, "lightGreen", "terrestrialTrapTurret", 5, 5.5);
+pgersemi.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
     TYPE: ["swarmTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2} }],
 }});
 // --- Ares
-let Pares = new LayeredBoss(null, "Proto-Ares", "Pterrestrial", 5, "purple", "terrestrialTrapTurret", 5, 5.5);
-Pares.addLayer({gun: {
+let pares = new LayeredBoss(null, "Proto-Ares", "Pterrestrial", 5, "purple", "terrestrialTrapTurret", 5, 5.5);
+pares.addLayer({gun: {
     POSITION: [3.75, 7, 1.2, 8, 0, null, 0],
     PROPERTIES: {
         SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.destroyer, {health: 1.2, damage: 1.1, resist: 1.1, density: 1.5, maxSpeed: 1.25}]),
@@ -26,8 +26,8 @@ Pares.addLayer({gun: {
     },
 }}, false, null, 18);
 // --- Rokna
-let Prokna = new LayeredBoss(null, "Proto-Rokna", "Pterrestrial", 5, "aqua", "terrestrialTrapTurret", 5, 5.5);
-Prokna.addLayer({turret: {
+let prokna = new LayeredBoss(null, "Proto-Rokna", "Pterrestrial", 5, "aqua", "terrestrialTrapTurret", 5, 5.5);
+prokna.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
 }}, true, 6.5);

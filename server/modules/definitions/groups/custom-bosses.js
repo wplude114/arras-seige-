@@ -103,6 +103,12 @@ rokna.addLayer({turret: {
     TYPE: ["boomerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
 }}, true, 6.5);
 
+let protogersemi = new LayeredBoss(null, "Proto Gersemi", "terrestrial", 5, "lightGreen", "terrestrialTrapTurret", 3, 5);
+protogersemi.addLayer({turret: {
+    POSITION: [9, 8, 0, null, 160, 0],
+    TYPE: ["swarmTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2} }],
+}}, true, 3, 10);
+
 // Celestials
 let tyr = new LayeredBoss(null, "Tyr", "celestial", 9, "mustard", "baseTrapTurret", 6.5, 5.5);
 tyr.addLayer({turret: {

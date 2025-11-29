@@ -12,8 +12,8 @@ Class.shinysorcerer = {
     LABEL: "Sorcerer",
     DANGER: 8,
     SHAPE: 0,
-    COLOR: "lightgreen",
-    UPGRADE_COLOR: "veryLightGrey",
+    COLOR: "lightGreen",
+    UPGRADE_COLOR: "lightGreen",
     SIZE: 28,
     MAX_CHILDREN: 75,
     VALUE: 5e5,
@@ -26,7 +26,7 @@ Class.shinysorcerer = {
     GUNS: weaponArray({
         POSITION: [3.5, 8.65, 1.2, 8, 0, 0, 0],
         PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.machineGun, g.machineGunner, { damage: 1.8, size: 0.5, spray: 150, speed: 2, shudder: 1.75, color: "lightgreen" }]),
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.machineGun, g.machineGunner, { damage: 1.8, size: 0.5, spray: 150, speed: 2, shudder: 1.75, color: "lightGreen" }]),
             TYPE: "minichip",
             AUTOFIRE: true,
             SYNCS_SKILLS: true,
@@ -40,8 +40,8 @@ Class.shinysummoner = {
     LABEL: "Summoner",
     DANGER: 8,
     SHAPE: 4,
-    COLOR: "lightgreen",
-    UPGRADE_COLOR: "gold",
+    COLOR: "lightGreen",
+    UPGRADE_COLOR: "lightGreen",
     SIZE: 28,
     MAX_CHILDREN: 35,
     VALUE: 7e5,
@@ -54,7 +54,7 @@ Class.shinysummoner = {
     GUNS: weaponArray({
         POSITION: [3.5, 8.65, 1.2, 8, 0, 0, 0],
         PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, { size: 0.8, color: "lightgreen" }]),
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, { size: 0.8, color: "lightGreen" }]),
             TYPE: "summonerDrone",
             AUTOFIRE: true,
             SYNCS_SKILLS: true,
@@ -68,8 +68,8 @@ Class.shinyenchantress = {
     LABEL: "Enchantress",
     DANGER: 8,
     SHAPE: 3.5,
-    COLOR: "lightgreen",
-    UPGRADE_COLOR: "orange",
+    COLOR: "lightGreen",
+    UPGRADE_COLOR: "lightGreen",
     SIZE: 26,
     MAX_CHILDREN: 28,
     VALUE: 1e6,
@@ -82,7 +82,7 @@ Class.shinyenchantress = {
     GUNS: weaponArray({
         POSITION: [3.5, 8.65, 1.2, 8, 0, 0, 0],
         PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, { size: 1, damage: 1.1, color: "lightgreen" }]),
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, { size: 1, damage: 1.1, color: "lightGreen" }]),
             TYPE: "dorito",
             AUTOFIRE: true,
             SYNCS_SKILLS: true,

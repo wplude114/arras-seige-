@@ -6,17 +6,14 @@ let calculatePoints = wave => 5 + wave * 3;
 // Then it picks a boss at random, with all choices being equally likely.
 
 let oldGroups = {
-    // main stuff
     elites: ["eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner" ],
     mysticals: ["sorcerer", "summoner", "enchantress", "exorcistor"],
     terrestrials: ["ares", "gersemi", "ezekiel", "eris", "selene", "rokna"],
     celestials: ["paladin", "freyja", "zaphkiel", "nyx", "theia"],
     eternals: ["legionaryCrasher", "kronos", "odin" ],
-    // other things
     anyweak: ["eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner", "sorcerer", "summoner", "enchantress", "exorcistor"],
     anymiddleclass: ["ares", "gersemi", "ezekiel", "eris", "selene", "rokna", "paladin", "freyja", "zaphkiel", "nyx", "theia"],
-    anystrong: ["ares", "gersemi", "ezekiel", "eris", "selene", "rokna", "paladin", "freyja", "zaphkiel", "nyx", "theia", "legionaryCrasher", "kronos", "odin"]
-    
+    anystrong: ["ares", "gersemi", "ezekiel", "eris", "selene", "rokna", "paladin", "freyja", "zaphkiel", "nyx", "theia", "legionaryCrasher", "kronos", "odin"],
 };
 
 class BossRush {
@@ -34,7 +31,7 @@ class BossRush {
             ran.chooseN(oldGroups.anymiddleclass, 3).concat(ran.chooseN(oldGroups.elite, 3)),
             ran.chooseN(oldGroups.anystrong, 1).concat(ran.chooseN(oldGroups.anyweak, 3)),
             ran.chooseN(oldGroups.anymiddleclass, 4).concat(ran.chooseN(oldGroups.anyweak, 3)),
-            ran.chooseN(oldGroups.anystrong, 1).concat(ran.chooseN(oldGroups.anyweak, 5)),
+            ran.chooseN(oldGroups.eternal, 1).concat(ran.chooseN(oldGroups.anyweak, 5)),
             ran.chooseN(oldGroups.anymiddleclass, 3).concat(ran.chooseN(oldGroups.anyweak, 4)),
         ];
         this.bossChoices = [

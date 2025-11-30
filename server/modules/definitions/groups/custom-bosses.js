@@ -14,14 +14,14 @@ Class.entrestrial = {
     SKILL: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
     VALUE: 3500000,
     SHAPE: 5,
-    SIZE: 25,
+    SIZE: 23,
     CONTROLLERS: [["minion", {orbit: 75}]],
     BODY: {
         FOV: 1.1,
         HEALTH: 450,
         SHIELD: 30,
         REGEN: base.REGEN * 0.05,
-        SPEED: base.SPEED * 10,
+        SPEED: base.SPEED * 9,
         DAMAGE: 7,
     },
 };
@@ -112,6 +112,19 @@ Class.shinyenchantress = {
     }, 3)
 };
 
+// Entrestirals
+let thor = new LayeredBoss("th", "Thor", "entrestrial", 5, "purple", "terrestrialTrapTurret", 3, 5);
+thor.addLayer({turret: {
+    POSITION: [9, 8, 0, null, 160, 0],
+    TYPE: ["boomerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2} }],
+}}, true, 10, 10);
+
+let zeus = new LayeredBoss("ze", "Zeus", "entrestrial", 5, "gold", "terrestrialTrapTurret", 3, 5);
+zeus.addLayer({turret: {
+    POSITION: [9, 8, 0, null, 160, 0],
+    TYPE: ["cruiserTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2} }],
+}}, true, 10, 10);
+
 // Terrestrials
 let rokna = new LayeredBoss(null, "Rokna", "terrestrial", 7, "aqua", "terrestrialTrapTurret", 6.5, 5.5);
 rokna.addLayer({turret: {
@@ -122,15 +135,3 @@ rokna.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["boomerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
 }}, true, 6.5);
-
-let thor = new LayeredBoss("th", "Thor", "entrestrial", 5, "purple", "terrestrialTrapTurret", 3, 5);
-thor.addLayer({turret: {
-    POSITION: [9, 8, 0, null, 160, 0],
-    TYPE: ["boomerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2} }],
-}}, true, 10, 10);
-
-let zeus = new LayeredBoss("ze", "Zeus", "entrestrial", 6, "gold", "terrestrialTrapTurret", 3, 5);
-zeus.addLayer({turret: {
-    POSITION: [9, 8, 0, null, 160, 0],
-    TYPE: ["architectGun", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2} }],
-}}, true, 10, 10);

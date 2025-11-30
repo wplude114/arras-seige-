@@ -123,9 +123,9 @@ rokna.addLayer({turret: {
     TYPE: ["boomerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
 }}, true, 6.5);
 
-let protogersemi = new LayeredBoss("th", "Thor", "entrestrial", 5, "purple", "terrestrialTrapTurret", 3, 5);
-protogersemi.addLayer({turret: {
+let thor = new LayeredBoss("th", "Thor", "entrestrial", 5, "purple", "terrestrialTrapTurret", 3, 5);
+thor.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
-    TYPE: ["swarmTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2} }],
+    TYPE: ["boomerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2} }],
 }}, true, 10, 10);
 

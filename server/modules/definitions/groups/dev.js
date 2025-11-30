@@ -2748,10 +2748,9 @@ Class.developer.UPGRADES_TIER_0 = ["tanks", "bosses", "spectator", "levels", "te
         Class.nesters.UPGRADES_TIER_0 = ["nestKeeper", "nestWarden", "nestGuardian"]
         Class.rogues.UPGRADES_TIER_0 = ["roguePalisade", "rogueArmada", "julius", "genghis", "napoleon"]
 	    Class.rammers.UPGRADES_TIER_0 = ["bob", "nemesis"]
-        Class.terrestrials.UPGRADES_TIER_0 = ["protogersemi", "ares", "gersemi", "ezekiel", "eris", "selene","rokna"]
-        Class.celestials.UPGRADES_TIER_0 = ["paladin", "freyja", "zaphkiel", "nyx", "theia", "tyr", "julius", "genghis", "napoleon"]
-        Class.eternals.UPGRADES_TIER_0 = ["odin", "kronos", 'menace']
-		Class.etherials.UPGRADES_TIER_0 = ["zeus"]
+        Class.terrestrials.UPGRADES_TIER_0 = ["pg", "ares", "gersemi", "ezekiel", "eris", "selene","rokna"]
+        Class.celestials.UPGRADES_TIER_0 = ["paladin", "freyja", "zaphkiel", "nyx", "theia", "julius", "genghis", "napoleon"]
+        Class.eternals.UPGRADES_TIER_0 = ["odin", "kronos"]
         Class.devBosses.UPGRADES_TIER_0 = ["taureonBoss", "zephiBoss", "dogeiscutBoss", "trplnrBoss", "frostBoss", "toothlessBoss", "AEMKShipBoss", "helenaBoss"]
 
     Class.testing.UPGRADES_TIER_0 = ["diamondShape", "miscTest", "mmaTest", "vulnturrettest", "onTest", "alphaGunTest", "strokeWidthTest", "testLayeredBoss", "tooltipTank", "turretLayerTesting", "bulletSpawnTest", "propTest", "weaponArrayTest", "radialAutoTest", "makeAutoTest", "imageShapeTest", "turretStatScaleTest", "auraBasic", "auraHealer", "weirdAutoBasic", "ghoster", "gunBenchmark", "switcheroo", ["developer", "developer"], "armyOfOne", "vanquisher", "mummifier"]

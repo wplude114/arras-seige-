@@ -107,5 +107,5 @@ let protogersemi = new LayeredBoss("pg", "Proto Gersemi", "terrestrial", 5, "lig
 protogersemi.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
     TYPE: ["swarmTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2} }],
-}}, true, 3, 10);
+}}, true, 0.8, 10);
 

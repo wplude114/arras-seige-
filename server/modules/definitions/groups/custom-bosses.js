@@ -17,11 +17,11 @@ Class.Pterrestrial = {
     SIZE: 25,
     CONTROLLERS: [["minion", {orbit: 75}]],
     BODY: {
-        FOV: 1,
-        HEALTH: 650,
+        FOV: 1.1,
+        HEALTH: 450,
         SHIELD: 30,
         REGEN: base.REGEN * 0.05,
-        SPEED: base.SPEED * 3,
+        SPEED: base.SPEED * 10,
         DAMAGE: 7,
     },
 };
@@ -127,5 +127,5 @@ let protogersemi = new LayeredBoss("pg", "Proto Gersemi", "terrestrial", 5, "lig
 protogersemi.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
     TYPE: ["swarmTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2} }],
-}}, true, 8, 10);
+}}, true, 10, 10);
 

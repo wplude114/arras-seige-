@@ -10,7 +10,7 @@ require('./bosses.js');
 Class.entrestrial = {
     // Proto-Terrestrial: A weak 2-layer miniboss.
     PARENT: "miniboss",
-    LABEL: "Unknown Entrestrial",
+    LABEL: "Entrestrial",
     SKILL: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
     VALUE: 3500000,
     SHAPE: 5,

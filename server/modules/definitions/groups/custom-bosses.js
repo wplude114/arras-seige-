@@ -6,6 +6,26 @@ require('./tanks.js');
 require('./turrets.js');
 require('./bosses.js');
 
+// bases
+Class.Pterrestrial = {
+    // Proto-Terrestrial: A weak 2-layer miniboss.
+    PARENT: "miniboss",
+    LABEL: "Proto-Terrestrial",
+    SKILL: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
+    VALUE: 3500000,
+    SHAPE: 5,
+    SIZE: 25,
+    CONTROLLERS: [["minion", {orbit: 75}]],
+    BODY: {
+        FOV: 1,
+        HEALTH: 650,
+        SHIELD: 30,
+        REGEN: base.REGEN * 0.05,
+        SPEED: base.SPEED * 3,
+        DAMAGE: 7,
+    },
+};
+
 //shiny mysticals
 Class.shinysorcerer = {
     PARENT: "miniboss",

@@ -103,51 +103,9 @@ rokna.addLayer({turret: {
     TYPE: ["boomerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
 }}, true, 6.5);
 
-let protogersemi = new LayeredBoss(null, "Proto Gersemi", "terrestrial", 5, "lightGreen", "terrestrialTrapTurret", 3, 5);
+let protogersemi = new LayeredBoss("pg", "Proto Gersemi", "terrestrial", 5, "lightGreen", "terrestrialTrapTurret", 3, 5);
 protogersemi.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
     TYPE: ["swarmTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2} }],
 }}, true, 3, 10);
 
-// Celestials
-let tyr = new LayeredBoss(null, "Tyr", "celestial", 9, "mustard", "baseTrapTurret", 6.5, 5.5);
-tyr.addLayer({turret: {
-    POSITION: [10, 7.5, 0, null, 160, 0],
-    TYPE: ["hyperTwisterTurret", {GUN_STAT_SCALE: {health: 1.4, damage: 1.4}}],
-}}, true, 16);
-tyr.addLayer({turret: {
-    POSITION: [10, 7.5, 0, null, 160, 0],
-    TYPE: ["pentashotTurret", {GUN_STAT_SCALE: {health: 1.4, damage: 1.4}}],
-}}, true, 6);
-// Eternal
-let menace = new LayeredBoss(null, "Menace", "eternal", 13, "grey", "terrestrialTrapTurret", 13, 5.5);
-menace.addLayer({turret: {
-    POSITION: [9.5, 7.5, 0, null, 160, 0],
-    TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
-}}, true, 6.5);
-menace.addLayer({turret: {
-    POSITION: [9.5, 7.5, 0, null, 160, 0],
-    TYPE: ["pentashotTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
-}}, true, 6.5);
-menace.addLayer({turret: {
-    POSITION: [9.5, 7.5, 0, null, 160, 0],
-    TYPE: ["cruiserTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
-}}, true, 6.5);
-
-let zeus = new LayeredBoss(null, "Zeus", "eternal", 15, "mustard", "terrestrialTrapTurret", 15, 5.5);
-zeus.addLayer({turret: {
-    POSITION: [9.5, 7.5, 0, null, 160, 0],
-    TYPE: ["hyperTwisterTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 2.8, damage: 3.3} }],
-}}, true, 6.5);
-zeus.addLayer({turret: {
-    POSITION: [9.5, 7.5, 0, null, 160, 0],
-    TYPE: ["nailgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 2.8, damage: 3.3} }],
-}}, true, 6.5);
-zeus.addLayer({turret: {
-    POSITION: [9.5, 7.5, 0, null, 160, 0],
-    TYPE: ["carrierTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 2.8, damage: 3.3} }],
-}}, true, 6.5);
-zeus.addLayer({turret: {
-    POSITION: [9.5, 7.5, 0, null, 160, 0],
-    TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 2.8, damage: 3.3} }],
-}}, true, 6.5);

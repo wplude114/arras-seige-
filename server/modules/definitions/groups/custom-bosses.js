@@ -129,3 +129,8 @@ thor.addLayer({turret: {
     TYPE: ["boomerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2} }],
 }}, true, 10, 10);
 
+let zeus = new LayeredBoss("ze", "Zeus", "entrestrial", 6, "gold", "terrestrialTrapTurret", 3, 5);
+zeus.addLayer({turret: {
+    POSITION: [9, 8, 0, null, 160, 0],
+    TYPE: ["architectGun", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2} }],
+}}, true, 10, 10);

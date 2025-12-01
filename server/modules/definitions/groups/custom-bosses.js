@@ -121,13 +121,13 @@ thor.addLayer({turret: {
 let zeus = new LayeredBoss("ze", "Zeus", "entrestrial", 5, "gold", "terrestrialTrapTurret", 4, 5);
 zeus.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
-    TYPE: ["cruiserTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
+    TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
 }}, true, 10, 10);
 
 let gaia = new LayeredBoss("ga", "Gaia", "entrestrial", 5, "lightGreen", "terrestrialTrapTurret", 4, 5);
 gaia.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
-    TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
+    TYPE: ["cruiserTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
 }}, true, 10, 10);
 
 let hades = new LayeredBoss("ha", "Hades", "entrestrial", 5, "orange", "terrestrialTrapTurret", 4, 5);

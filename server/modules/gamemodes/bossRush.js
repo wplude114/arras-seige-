@@ -122,7 +122,7 @@ class BossRush {
             [100, "kronos"],
             [100, "odin"],
         ];
-        this.friendlyBossChoices = [ [3, "roguePalisade"], [3, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"] ];
+        this.friendlyBossChoices = [ [3, "roguePalisade"], [3, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"], [2, "finalent"] ];
         this.bigFodderChoices = ["sentryGun", "sentrySwarm", "sentryTrap", "sentinelCrossbow", "sentinelMinigun", "sentinelLauncher"];
         this.ShinyFodderChoices = ["shinySentryGun", "shinySentrySwarm", "shinySentryTrap"];
         this.smallFodderChoices = ["crasher"];

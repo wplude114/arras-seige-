@@ -112,11 +112,11 @@ Class.shinyenchantress = {
 };
 
 // Entrestirals
-let thor = new LayeredBoss("th", "Thor", "entrestrial", 5, "purple", "terrestrialTrapTurret", 4, 5);
+let thor = new LayeredBoss("th", "Thor", "entrestrial", 7, "purple", "terrestrialTrapTurret", 4, 5);
 thor.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
     TYPE: ["boomerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
-}}, false, 10, 10);
+}}, true, 10, 10);
 
 let zeus = new LayeredBoss("ze", "Zeus", "entrestrial", 5, "gold", "terrestrialTrapTurret", 4, 5);
 zeus.addLayer({turret: {
@@ -142,11 +142,11 @@ demeter.addLayer({turret: {
     TYPE: ["tripletTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
 }}, true, 10, 10);
 
-let themis = new LayeredBoss("the", "Themis", "entrestrial", 5, "aqua", "terrestrialTrapTurret", 4, 5);
+let themis = new LayeredBoss("the", "Themis", "entrestrial", 7, "aqua", "terrestrialTrapTurret", 4, 5);
 themis.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
     TYPE: ["rocketeerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
-}}, false, 10, 10);
+}}, true, 10, 10);
 
 let testent = new LayeredBoss("testent", "Test Entrestrial", "entrestrial", 5, 3, "terrestrialTrapTurret", 4, 5);
 testent.addLayer({turret: {

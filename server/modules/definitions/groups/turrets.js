@@ -203,7 +203,7 @@ Class.skimmerTurret = makeTurret('skimmer', {canRepel: true, limitFov: true, ext
 
 // extras guns
 Class.shotgunTurret = makeTurret('shotgun', {canRepel: true, limitFov: true, extraStats: []})
-Class.pentashotTurret = makeTurret('pentaShot', {canRepel: true, limitFov: true, extraStats: []})
+Class.pentashotTurret = makeTurret('triplex', {canRepel: true, limitFov: true, extraStats: []})
 Class.atomizerTurret = makeTurret('atomizer', {canRepel: true, limitFov: true, extraStats: []})
 
 Class.kronosSkimmerTurret = makeTurret({

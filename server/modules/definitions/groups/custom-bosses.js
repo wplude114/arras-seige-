@@ -159,14 +159,6 @@ finalent.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
     TYPE: ["pentashotTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.7, color: "mirror"} }],
 }}, true, 10, 10);
-finalent.BODY = {
-        FOV: 1.3,
-        HEALTH: 450,
-        SHIELD: 50,
-        REGEN: base.REGEN * 15,
-        SPEED: base.SPEED * 10,
-        DAMAGE: 10,
-    },
 
 // Terrestrials
 let rokna = new LayeredBoss("rokna", "Hestia", "terrestrial", 7, "aqua", "terrestrialTrapTurret", 6.5, 5.5);

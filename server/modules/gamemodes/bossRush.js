@@ -118,9 +118,9 @@ class BossRush {
             [100, "odin"],
         ];
         this.friendlyBossChoices = [ [9, "roguePalisade"], [8, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"] ];
-        this.bigFodderChoices = ["sentryGun", "sentrySwarm", "sentryTrap"];
+        this.bigFodderChoices = ["sentryGun", "sentryTrap", "sentinelCrossbow", "sentinelMinigun", "sentinelLauncher"];
         this.ShinyFodderChoices = ["shinySentryGun", "shinySentrySwarm", "shinySentryTrap"];
-        this.smallFodderChoices = ["crasher"];
+        this.smallFodderChoices = ["crasher", "sentrySwarm"];
         this.length = Config.CLASSIC_SIEGE ? this.waveCodes.length : Config.WAVES;
         this.waves = this.generateWaves();
         this.waveId = -1;

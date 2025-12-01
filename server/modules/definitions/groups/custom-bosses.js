@@ -12,17 +12,17 @@ Class.entrestrial = {
     PARENT: "miniboss",
     LABEL: "Entrestrial",
     SKILL: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
-    VALUE: 3500000,
+    VALUE: 350000,
     SHAPE: 5,
-    SIZE: 23,
+    SIZE: 24,
     CONTROLLERS: [["minion", {orbit: 75}]],
     BODY: {
         FOV: 1.1,
         HEALTH: 450,
-        SHIELD: 30,
-        REGEN: base.REGEN * 0.05,
-        SPEED: base.SPEED * 9,
-        DAMAGE: 7,
+        SHIELD: 50,
+        REGEN: base.REGEN * 1.3,
+        SPEED: base.SPEED * 5,
+        DAMAGE: 5,
     },
 };
 

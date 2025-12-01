@@ -117,7 +117,7 @@ let thor = new LayeredBoss("th", "Thor", "entrestrial", 5, "purple", "terrestria
 thor.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
     TYPE: ["boomerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
-}}, true, 10, 10);
+}}, false, 10, 10);
 
 let zeus = new LayeredBoss("ze", "Zeus", "entrestrial", 5, "gold", "terrestrialTrapTurret", 4, 5);
 zeus.addLayer({turret: {
@@ -147,7 +147,7 @@ let themis = new LayeredBoss("the", "Themis", "entrestrial", 5, "aqua", "terrest
 themis.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
     TYPE: ["rocketeerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
-}}, false, 10, 10);
+}}, true, 10, 10);
 
 // Terrestrials
 let rokna = new LayeredBoss("rokna", "Hestia", "terrestrial", 7, "aqua", "terrestrialTrapTurret", 6.5, 5.5);

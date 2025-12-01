@@ -137,8 +137,20 @@ hades.addLayer({turret: {
     TYPE: ["launcherTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
 }}, true, 10, 10);
 
+let demeter = new LayeredBoss("de", "Demeter", "entrestrial", 5, "pink", "terrestrialTrapTurret", 4, 5);
+demeter.addLayer({turret: {
+    POSITION: [9, 8, 0, null, 160, 0],
+    TYPE: ["tripletTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
+}}, false, 10, 10);
+
+let themis = new LayeredBoss("the", "Themis", "entrestrial", 5, "aqua", "terrestrialTrapTurret", 4, 5);
+themis.addLayer({turret: {
+    POSITION: [9, 8, 0, null, 160, 0],
+    TYPE: ["swarmerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
+}}, false, 10, 10);
+
 // Terrestrials
-let rokna = new LayeredBoss(null, "Rokna", "terrestrial", 7, "aqua", "terrestrialTrapTurret", 6.5, 5.5);
+let rokna = new LayeredBoss(null, "Hestia", "terrestrial", 7, "aqua", "terrestrialTrapTurret", 6.5, 5.5);
 rokna.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],

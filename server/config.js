@@ -3,7 +3,7 @@ module.exports = {
 
     // Game server domain.
     // If the host is 'localhost:NUMBER', the NUMBER must be the port setting.
-    host: "arras-seige.onrender.com",
+    host: "arrasultimateseige.onrender.com",
 
     // Which port to run the web server on.
     port: 8080,
@@ -32,8 +32,8 @@ module.exports = {
     ROOM_SETUP: ['map_apspp_default'],
 
     // The dimensions of a single tile on the map.
-    TILE_WIDTH: 100,
-    TILE_HEIGHT: 100,
+    TILE_WIDTH: 20,
+    TILE_HEIGHT: 20,
 
 
 
@@ -65,7 +65,7 @@ module.exports = {
     MESSAGE_DISPLAY_TIME: 10_000,
 
     // How long you have to wait to respawn in seconds.
-    RESPAWN_TIMEOUT: 0,
+    RESPAWN_TIMEOUT: 1,
     
 
 
@@ -119,7 +119,7 @@ module.exports = {
     LEVEL_CHEAT_CAP: 45,
 
     // Amount of player-bots to spawn.
-    BOTS: 7,
+    BOTS: 2,
 
     // How much XP player-bots get per second until they reach LEVEL_CAP.
     BOT_XP: 0,
@@ -134,7 +134,7 @@ module.exports = {
     BOT_CLASS_UPGRADE_CHANCES: [ 1, 5, 20, 37, 37],
 
     // The prefix of the player-bots' names.
-    BOT_NAME_PREFIX: '§#089§[AI] ▪ ',
+    BOT_NAME_PREFIX: null,
 
     // The class that players and player-bots spawn as.
     SPAWN_CLASS: 'basic',
@@ -154,11 +154,11 @@ module.exports = {
     // NOTE: Disabling it decreases lagness, also very useful if you don't need foods to be spawned.
     ENABLE_FOOD: false,
 
-    FOOD_CAP: 3, // Max normal food per normal tile.
+    FOOD_CAP: 1, // Max normal food per normal tile.
     FOOD_SPAWN_CHANCE: 0.875, // Likeliness of normal food spawn attempts succeeding.
     FOOD_SPAWN_COOLDOWN: 30, // Cooldown (in game ticks) of food spawn attempts being made.
 
-    FOOD_CAP_NEST: 3, // Max nest food per nest tile.
+    FOOD_CAP_NEST: 2, // Max nest food per nest tile.
     FOOD_SPAWN_CHANCE_NEST: 0.25, // Likeliness of nest food spawn attempts succeeding.
     FOOD_SPAWN_COOLDOWN_NEST: 45, // Cooldown (in game ticks) of nest food spawn attempts being made.
 

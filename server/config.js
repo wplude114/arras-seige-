@@ -152,11 +152,11 @@ module.exports = {
 
     // Allow foods to be spawned or not.
     // NOTE: Disabling it decreases lagness, also very useful if you don't need foods to be spawned.
-    ENABLE_FOOD: false,
+    ENABLE_FOOD: true,
 
     FOOD_CAP: 1, // Max normal food per normal tile.
-    FOOD_SPAWN_CHANCE: 0.875, // Likeliness of normal food spawn attempts succeeding.
-    FOOD_SPAWN_COOLDOWN: 30, // Cooldown (in game ticks) of food spawn attempts being made.
+    FOOD_SPAWN_CHANCE: 0.075, // Likeliness of normal food spawn attempts succeeding.
+    FOOD_SPAWN_COOLDOWN: 300, // Cooldown (in game ticks) of food spawn attempts being made.
 
     FOOD_CAP_NEST: 2, // Max nest food per nest tile.
     FOOD_SPAWN_CHANCE_NEST: 0.25, // Likeliness of nest food spawn attempts succeeding.
@@ -175,7 +175,7 @@ module.exports = {
     // The possible food types that can spawn.
     FOOD_TYPES: [
         [2000, [
-            [1024, 'egg'], [256, 'square'], [64, 'triangle'], [16, 'pentagon'], [4, 'betaPentagon'], [1, 'alphaPentagon']
+            [1024, 'egg'], [256, 'square'], [64, 'triangle'], [16, 'pentagon'], [10, 'flash'], [4, 'betaPentagon'], [1, 'alphaPentagon']
         ]],
         [1, [
             [3125, 'gem'], [625, 'shinySquare'], [125, 'shinyTriangle'], [25, 'shinyPentagon'], [5, 'shinyBetaPentagon'], [1, 'shinyAlphaPentagon']

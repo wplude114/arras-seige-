@@ -65,7 +65,26 @@ Class.legendaryEgg = makeRare("egg", 1);
 Class.shadowEgg = makeRare("egg", 2);
 Class.rainbowEgg = makeRare("egg", 3);
 Class.transEgg = makeRare("egg", 4); //ironic
-
+// CONTROLLERS: [["minion", {orbit: 125}]],
+Class.flash = {
+    PARENT: "food",
+    LABEL: "Flasher",
+    VALUE: 300,
+    SHAPE: 2,
+    SIZE: 14,
+    COLOR: "pink",
+    CONTROLLERS: [["minion", {orbit: 125}]],
+    BODY: {
+        DAMAGE: basePolygonDamage,
+        DENSITY: 4,
+        HEALTH: basePolygonHealth * 5,
+        PENETRATION: 2,
+        ACCELERATION: 0.2,
+        SPEED: base.SPEED * 5
+    },
+    DRAW_HEALTH: true,
+    INTANGIBLE: false,
+};
 // SQUARES
 Class.square = {
     PARENT: "food",

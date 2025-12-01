@@ -1,5 +1,5 @@
-let { bossSpawn:   b  , atmg:  A  , outside:   o , nest:  n } = require('../tiles/siege.js'),
-    { wall: WALL, normal:   _  } = require('../tiles/misc.js'),
+let { bossSpawn:   b  , atmg:  A  , outside:   o } = require('../tiles/siege.js'),
+    { wall: WALL, normal:   _  , nest:  n } = require('../tiles/misc.js'),
 	{ base1:   s  } = require('../tiles/tdm.js'),
 
 room = [

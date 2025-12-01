@@ -10,7 +10,7 @@ let oldGroups = {
     mysticals: [ "sorcerer", "summoner", "enchantress", "exorcistor" ], // 2 points
     strange: [ "summoner", "eliteSkimmer", "nestKeeper" ], // 2-3 points
     nesters: [ "nestKeeper", "nestWarden", "nestGuardian" ], // 3 points
-    terrestrials: [ "thor", "zeus", "gaia", "hades", "ares", "gersemi", "ezekiel", "eris", "selene", "rokna" ], // 5-15 points
+    terrestrials: [ "thor", "zeus", "gaia", "hades", "ares" "de", "the", "gersemi", "ezekiel", "eris", "selene", "rokna" ], // 5-15 points
     celestials: [ "paladin", "freyja", "zaphkiel", "nyx", "theia" ], // 35 points
     eternals: [ "legionaryCrasher", "kronos", "odin" ], // 100 points
 
@@ -85,6 +85,8 @@ class BossRush {
             [ 5, "zeus"],
             [ 5, "gaia"],
             [ 5, "hades"],
+            [ 5, "de"],
+            [ 5, "the"],
 
             //terrestrials
             [ 15, "ares"],

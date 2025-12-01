@@ -118,7 +118,8 @@ class BossRush {
             [100, "odin"],
         ];
         this.friendlyBossChoices = [ [9, "roguePalisade"], [8, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"] ];
-        this.bigFodderChoices = ["sentryGun", "sentrySwarm", "sentryTrap", "shinySentryGun"];
+        this.bigFodderChoices = ["sentryGun", "sentrySwarm", "sentryTrap"];
+        this.ShinyFodderChoices = ["shinySentryGun", "shinySentrySwarm", "shinySentryTrap"];
         this.smallFodderChoices = ["crasher"];
         this.length = Config.CLASSIC_SIEGE ? this.waveCodes.length : Config.WAVES;
         this.waves = this.generateWaves();
@@ -258,8 +259,7 @@ class BossRush {
                 this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.smallFodderChoices));
             }
 
-            //spawn a friendly boss every 20 waves
-            if (waveId % 10 == 9) {
+            if (waveId % 15 == 14) {
                 setTimeout(() => this.spawnFriendlyBoss(), 5000);
             }
         }

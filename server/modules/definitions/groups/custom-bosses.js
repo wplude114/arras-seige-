@@ -152,8 +152,8 @@ themis.addLayer({turret: {
 let testent = new LayeredBoss("testent", "Test Entrestrial", "entrestrial", 5, 3, "terrestrialTrapTurret", 4, 5);
 testent.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
-    TYPE: ["crowbarTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
-}}, false, 10, 10);
+    TYPE: ["wrenchTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
+}}, true, 10, 10);
 
 // Terrestrials
 let rokna = new LayeredBoss("rokna", "Hestia", "terrestrial", 7, "aqua", "terrestrialTrapTurret", 6.5, 5.5);

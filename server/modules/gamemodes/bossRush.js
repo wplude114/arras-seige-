@@ -8,7 +8,7 @@ let calculatePoints = wave => 5 + wave * 3;
 let oldGroups = {
     elites: [ "eliteDestroyer", "eliteGunner", "eliteTrapGuard", "eliteBattleship", "eliteSpawner" ], // 2 points
     mysticals: [ "sorcerer", "summoner", "enchantress", "exorcistor" ], // 2 points
-    strange: [ "summoner", "eliteSkimmer", "nestKeeper" ], // 2-3 points
+    strange: [ "shaman", "eliteSkimmer", "nestKeeper" ], // 2-3 points
     nesters: [ "nestKeeper", "nestWarden", "nestGuardian" ], // 3 points
     ohhh: [ 'th', 'ze', 'ga', 'ha', 'de', 'the'], // 5 points
     terrestrials: [ "ares", "gersemi", "ezekiel", "eris", "selene", "rokna" ], // 15 points

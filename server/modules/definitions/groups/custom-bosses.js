@@ -17,10 +17,10 @@ Class.entrestrial = {
     CONTROLLERS: [["minion", {orbit: 175}]],
     BODY: {
         FOV: 1.1,
-        HEALTH: 450,
+        HEALTH: 350,
         SHIELD: 50,
         REGEN: base.REGEN * 10,
-        SPEED: base.SPEED * 5,
+        SPEED: base.SPEED * 3,
         DAMAGE: 4,
     },
 };

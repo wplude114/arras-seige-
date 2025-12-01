@@ -4,9 +4,9 @@ module.exports = {
     SPECIAL_BOSS_SPAWNS: true,
     BOSS_SPAWN_COOLDOWN: Number.MAX_SAFE_INTEGER,
     WAVES: 100, // CLASSIC_SIEGE: false to use this setting
-    CLASSIC_SIEGE: true,
-    TILE_WIDTH: 300,
-    TILE_HEIGHT: 300,
+    CLASSIC_SIEGE: false,
+    TILE_WIDTH: 30,
+    TILE_HEIGHT: 30,
     ROOM_SETUP: ['map_siege_legacy'],
-    BOT_XP: 500,
+    //BOT_XP: 500,
 };

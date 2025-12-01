@@ -80,7 +80,7 @@ Class.flash = {
         HEALTH: basePolygonHealth * 5,
         PENETRATION: 2,
         ACCELERATION: 0.2,
-        SPEED: base.SPEED * 5
+        SPEED: 5
     },
     DRAW_HEALTH: true,
     INTANGIBLE: false,

@@ -8,7 +8,7 @@ room = [
     [  o ,  o ,  o ,  o ,  o ,  o ,  o ,  o ,  o ,  o ,  o ,  o ,  o ,  o ,  o ,  o ,  o ,  o ,  o ],
     [  o ,  o ,  o ,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,  o ,  o ,  o ],
     [  o ,  o ,  o ,WALL,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,WALL,  o ,  o ,  o ],
-    [  o ,  o ,  o ,WALL,  _ ,  _ ,  s ,  _ ,  s ,  _ ,  s ,  _ ,  s ,  _ ,  _ ,WALL,  o ,  o ,  o ],
+    [  o ,  o ,  o ,WALL,  _ ,  _ ,  s ,  _ ,  _ ,  _ ,  _ ,  _ ,  s ,  _ ,  _ ,WALL,  o ,  o ,  o ],
     [  o ,  o ,  o ,WALL,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,WALL,  o ,  o ,  o ],
     [  o ,  o ,  o ,WALL,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,WALL,  o ,  o ,  o ],
     [  o ,  o ,  o ,WALL,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,WALL,  o ,  o ,  o ],

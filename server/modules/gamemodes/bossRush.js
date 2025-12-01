@@ -204,7 +204,7 @@ class BossRush {
         entity.color.base = getTeamColor(team);
         entity.skill.score = 111069;
         entity.name = 'Sanctuary';
-        entity.SIZE = room.tileWidth / 7.5;
+        entity.SIZE = room.tileWidth / 10;
         entity.isDominator = true;
         entity.nameColor = "#ffffff";
         entity.define({ DANGER: 11 });

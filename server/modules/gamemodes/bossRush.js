@@ -299,6 +299,11 @@ class BossRush {
             if (this.waves[this.waveId]) {
                 this.spawnWave(this.waveId);
 
+            // spawn a boss to help the team!
+             if (this.waveId % 15 == 14) {
+                setTimeout(() => this.spawnFriendlyBoss(), 5000);
+            }
+
             //if there is no next wave then simply let the players win
             } else {
                 this.playerWin();

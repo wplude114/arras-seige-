@@ -82,11 +82,11 @@ class BossRush {
             //elites
             [  2, "eliteDestroyer"],
             [  2, "eliteGunner"],
-            [  3, "eliteSprayer"],
-            [  2, "eliteBattleship"],
+            [  6, "eliteSprayer"],
+            [  4, "eliteBattleship"],
             [  2, "eliteSpawner"],
             [  2, "eliteTrapGuard"],
-            [  3, "eliteSpinner"], // higher cost bc of lag (sorry)
+            [  6, "eliteSpinner"], // higher cost bc of lag (sorry)
             [  2, "eliteSkimmer"],
 
             //nesters
@@ -122,10 +122,10 @@ class BossRush {
             [100, "kronos"],
             [100, "odin"],
         ];
-        this.friendlyBossChoices = [ [9, "roguePalisade"], [8, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"] ];
-        this.bigFodderChoices = ["sentryGun", "sentryTrap", "sentinelCrossbow", "sentinelMinigun", "sentinelLauncher"];
+        this.friendlyBossChoices = [ [3, "roguePalisade"], [3, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"] ];
+        this.bigFodderChoices = ["sentryGun", "sentrySwarm", "sentryTrap", "sentinelCrossbow", "sentinelMinigun", "sentinelLauncher"];
         this.ShinyFodderChoices = ["shinySentryGun", "shinySentrySwarm", "shinySentryTrap"];
-        this.smallFodderChoices = ["crasher", "sentrySwarm"];
+        this.smallFodderChoices = ["crasher"];
         this.length = Config.CLASSIC_SIEGE ? this.waveCodes.length : Config.WAVES;
         this.waves = this.generateWaves();
         this.waveId = -1;

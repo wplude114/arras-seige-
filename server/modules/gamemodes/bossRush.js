@@ -5,65 +5,8 @@ let calculatePoints = wave => 3 + wave * 2;
 // It picks a boss to buy by filtering the list of boss choices by if they are affordable.
 // Then it picks a boss at random, with all choices being equally likely.
 
-let oldGroups = {
-    elites: [ "eliteDestroyer", "eliteGunner", "eliteTrapGuard", "eliteBattleship", "eliteSpawner" ], // 2 points
-    mysticals: [ "sorcerer", "summoner", "enchantress", "exorcistor" ], // 2 points
-    strange: [ "shaman", "eliteSkimmer", "nestKeeper", "eliteSpinner" ], // 2-3 points
-    nesters: [ "nestKeeper", "nestWarden", "nestGuardian" ], // 3 points
-    ohhh: [ 'th', 'ze', 'ga', 'ha', 'de', 'the'], // 5 points
-    terrestrials: [ "ares", "gersemi", "ezekiel", "eris", "selene", "rokna" ], // 15 points
-    celestials: [ "paladin", "freyja", "zaphkiel", "nyx", "theia" ], // 35 points
-    eternals: [ "legionaryCrasher", "kronos", "odin" ], // 100 points
-
-    
-};
-
 class BossRush {
     constructor() {
-        this.waveCodes = [
-            ran.chooseN(oldGroups.elites, 1),
-            ran.chooseN(oldGroups.elites, 1).concat(ran.chooseN(oldGroups.mysticals, 1)),
-            ran.chooseN(oldGroups.elites, 3),
-            ran.chooseN(oldGroups.mysticals, 4),
-            ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.ohhh, 1)),
-            ran.chooseN(oldGroups.terrestrials, 1).concat(ran.chooseN(oldGroups.ohhh, 1)),
-            ran.chooseN(oldGroups.ohhh, 1).concat(ran.chooseN(oldGroups.nesters, 2)),
-            ran.chooseN(oldGroups.terrestrials, 4),
-            ran.chooseN(oldGroups.elites, 1).concat(ran.chooseN(oldGroups.strange, 4)),
-            ran.chooseN(oldGroups.mysticals, 1).concat(ran.chooseN(oldGroups.ohhh, 2)),
-            ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.ohhh, 1)),
-            ran.chooseN(oldGroups.elites, 4).concat(ran.chooseN(oldGroups.strange, 4)),
-            ran.chooseN(oldGroups.celestials, 1),
-            ran.chooseN(oldGroups.celestials, 1).concat(ran.chooseN(oldGroups.ohhh, 2)),
-            [ oldGroups.celestials[2] ],
-            ran.chooseN(oldGroups.celestials, 2).concat(ran.chooseN(oldGroups.ohhh, 1)),
-            [ oldGroups.celestials[4] ],
-            ran.chooseN(oldGroups.elites, 1).concat(ran.chooseN(oldGroups.ohhh, 1)).concat(ran.chooseN(oldGroups.celestials, 1)),
-            ran.chooseN(oldGroups.mysticals, 3).concat(ran.chooseN(oldGroups.strange, 1)).concat(ran.chooseN(oldGroups.celestials, 1)),
-            ran.chooseN(oldGroups.mysticals, 3).concat(ran.chooseN(oldGroups.strange, 3)).concat(ran.chooseN(oldGroups.celestials, 1)),
-            ran.chooseN(oldGroups.elites, 4).concat(ran.chooseN(oldGroups.strange, 4)).concat(ran.chooseN(oldGroups.celestials, 1)),
-            ran.chooseN(oldGroups.celestials, 2),
-            ran.chooseN(oldGroups.elites, 1).concat(ran.chooseN(oldGroups.ohhh, 2)).concat(ran.chooseN(oldGroups.celestials, 2)),
-            ran.chooseN(oldGroups.mysticals, 3).concat(ran.chooseN(oldGroups.strange, 3)).concat(ran.chooseN(oldGroups.celestials, 2)),
-            ran.chooseN(oldGroups.elites, 4).concat(ran.chooseN(oldGroups.strange, 4)).concat(ran.chooseN(oldGroups.celestials, 2)),
-            ran.chooseN(oldGroups.celestials, 3),
-            ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.ohhh, 3)).concat(ran.chooseN(oldGroups.celestials, 3)),
-            ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.ohhh, 4)).concat(ran.chooseN(oldGroups.celestials, 3)),
-            ran.chooseN(oldGroups.celestials, 4),
-            ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.strange, 2)).concat(ran.chooseN(oldGroups.celestials, 4)),
-            ran.chooseN(oldGroups.mysticals, 4).concat(ran.chooseN(oldGroups.strange, 4)).concat(ran.chooseN(oldGroups.celestials, 4)),
-            ran.chooseN(oldGroups.celestials, 5),
-            ran.chooseN(oldGroups.nesters, 4).concat(ran.chooseN(oldGroups.celestials, 3)),
-            ran.chooseN(oldGroups.elites, 2),
-            ran.chooseN(oldGroups.eternals, 1),
-            /*
-            ran.chooseN(oldGroups.mysticals, 3).concat(ran.chooseN(oldGroups.celestials, 2)),
-            ran.chooseN(oldGroups.mysticals, 2).concat(ran.chooseN(oldGroups.strange, 1)).concat(ran.chooseN(oldGroups.ohhh, 3)),
-            ran.chooseN(oldGroups.elite, 5).concat(ran.chooseN(oldGroups.celestials, 2)),
-            ran.chooseN(oldGroups.eternals, 1),
-            ran.chooseN(oldGroups.mysticals, 3).concat(ran.chooseN(oldGroups.strange, 2)),
-            */
-        ];
         this.bossChoices = [
             // [ cost , definition reference ],
 
@@ -109,7 +52,6 @@ class BossRush {
             [ 15, "eris"],
             [ 15, "selene"],
             [ 15, "rokna"],
-            [ 1, "he"],
 
             //celestials
             [ 35, "paladin"],
@@ -123,7 +65,7 @@ class BossRush {
             [100, "kronos"],
             [100, "odin"],
         ];
-        this.friendlyBossChoices = [ [5, "roguePalisade"], [5, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"], [2, "finalent"] ];
+        this.friendlyBossChoices = [ [10, "finalent"], [5, "roguePalisade"], [5, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"] ];
         this.bigFodderChoices = ["sentryGun", "sentrySwarm", "sentryTrap", "sentinelCrossbow", "sentinelMinigun", "sentinelLauncher"];
         this.ShinyFodderChoices = ["shinySentryGun", "shinySentrySwarm", "shinySentryTrap"];
         this.smallFodderChoices = ["crasher"];
@@ -264,10 +206,6 @@ class BossRush {
             for (let i = 0; i < this.waveId / 2; i++) {
                 this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.smallFodderChoices));
             }
-
-            if (waveId % 15 == 14) {
-                setTimeout(() => this.spawnFriendlyBoss(), 5000);
-            }
         }
 
         // Update sanctuary tiers
@@ -301,7 +239,7 @@ class BossRush {
                 this.spawnWave(this.waveId);
 
             // spawn a boss to help the team!
-             if (this.waveId % 15 == 14) {
+             if (this.waveId % 10 == 9) {
                 setTimeout(() => this.spawnFriendlyBoss(), 5000);
             }
 

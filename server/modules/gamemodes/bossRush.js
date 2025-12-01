@@ -75,9 +75,9 @@ class BossRush {
             [  3, "shaman"],
 
             //shiny
-            [  4, "shinysorcerer"],
-            [  4, "shinysummoner"],
-            [  4, "shinyenchantress"],
+            [  6, "shinysorcerer"],
+            [  6, "shinysummoner"],
+            [  6, "shinyenchantress"],
 
             //elites
             [  2, "eliteDestroyer"],
@@ -90,17 +90,17 @@ class BossRush {
             [  2, "eliteSkimmer"],
 
             //nesters
-            [  3, "nestKeeper"],
-            [  3, "nestWarden"],
-            [  3, "nestGuardian"],
+            [  5, "nestKeeper"],
+            [  5, "nestWarden"],
+            [  5, "nestGuardian"],
 
             //entrestrials
-            [ 5, "th"],
-            [ 5, "ze"],
-            [ 5, "ga"],
-            [ 5, "ha"],
-            [ 5, "de"],
-            [ 5, "the"],
+            [ 10, "th"],
+            [ 10, "ze"],
+            [ 10, "ga"],
+            [ 10, "ha"],
+            [ 10, "de"],
+            [ 10, "the"],
 
             //terrestrials
             [ 15, "ares"],

@@ -77,11 +77,11 @@ class BossRush {
             //elites
             [  2, "eliteDestroyer"],
             [  2, "eliteGunner"],
-            [  2, "eliteSprayer"],
+            [  3, "eliteSprayer"],
             [  2, "eliteBattleship"],
             [  2, "eliteSpawner"],
             [  2, "eliteTrapGuard"],
-            [  2, "eliteSpinner"],
+            [  3, "eliteSpinner"], // higher cost bc of lag (sorry)
             [  2, "eliteSkimmer"],
 
             //nesters

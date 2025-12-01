@@ -141,13 +141,13 @@ let demeter = new LayeredBoss("de", "Demeter", "entrestrial", 5, "pink", "terres
 demeter.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
     TYPE: ["tripletTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
-}}, false, 10, 10);
+}}, true, 10, 10);
 
 let themis = new LayeredBoss("the", "Themis", "entrestrial", 5, "aqua", "terrestrialTrapTurret", 4, 5);
 themis.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
     TYPE: ["rocketeerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
-}}, true, 10, 10);
+}}, false, 10, 10);
 
 // Terrestrials
 let rokna = new LayeredBoss("rokna", "Hestia", "terrestrial", 7, "aqua", "terrestrialTrapTurret", 6.5, 5.5);

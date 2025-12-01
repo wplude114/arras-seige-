@@ -146,7 +146,7 @@ demeter.addLayer({turret: {
 let themis = new LayeredBoss("the", "Themis", "entrestrial", 5, "aqua", "terrestrialTrapTurret", 4, 5);
 themis.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
-    TYPE: ["swarmerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
+    TYPE: ["rocketeerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
 }}, false, 10, 10);
 
 // Terrestrials

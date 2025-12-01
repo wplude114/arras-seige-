@@ -10,7 +10,8 @@ let oldGroups = {
     mysticals: [ "sorcerer", "summoner", "enchantress", "exorcistor" ], // 2 points
     strange: [ "summoner", "eliteSkimmer", "nestKeeper" ], // 2-3 points
     nesters: [ "nestKeeper", "nestWarden", "nestGuardian" ], // 3 points
-    terrestrials: [ "ares", "gersemi", "ezekiel", "eris", "selene", "rokna" ], // 5-15 points
+    ohhh: [ 'th', 'ze', 'ga', 'ha', 'de', 'the'], // 5 points
+    terrestrials: [ "ares", "gersemi", "ezekiel", "eris", "selene", "rokna" ], // 15 points
     celestials: [ "paladin", "freyja", "zaphkiel", "nyx", "theia" ], // 35 points
     eternals: [ "legionaryCrasher", "kronos", "odin" ], // 100 points
 
@@ -24,7 +25,7 @@ class BossRush {
             ran.chooseN(oldGroups.elites, 1).concat(ran.chooseN(oldGroups.mysticals, 1)),
             ran.chooseN(oldGroups.elites, 3),
             ran.chooseN(oldGroups.mysticals, 4),
-            ran.chooseN(oldGroups.elites, 3).concat(ran.chooseN(oldGroups.strange, 1)),
+            ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.ohhh, 1)),
             ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.terrestrials, 1)),
             ran.chooseN(oldGroups.elites, 1).concat(ran.chooseN(oldGroups.nesters, 3)),
             ran.chooseN(oldGroups.terrestrials, 4),
@@ -81,12 +82,12 @@ class BossRush {
             [  3, "nestGuardian"],
 
             //entrestrials
-            [ 5, "thor"],
-            [ 5, "zeus"],
-            [ 5, "gaia"],
-            [ 5, "hades"],
-            [ 5, "demeter"],
-            [ 5, "themis"],
+            [ 5, "th"],
+            [ 5, "ze"],
+            [ 5, "ga"],
+            [ 5, "ha"],
+            [ 5, "de"],
+            [ 5, "the"],
 
             //terrestrials
             [ 15, "ares"],

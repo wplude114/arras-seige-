@@ -154,7 +154,7 @@ testent.addLayer({turret: {
     TYPE: ["crowbarTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
 }}, true, 10, 10);
 
-let finalent = new LayeredBoss("finalent", "Final Entrestrial", "entrestrial", 7, 'dgrey', "terrestrialTrapTurret", 4, 5);
+let finalent = new LayeredBoss("finalent", "Final Entrestrial", "entrestrial", 7, 18, "terrestrialTrapTurret", 4, 5);
 finalent.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
     TYPE: ["pentashotTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.7, color: "mirror"} }],

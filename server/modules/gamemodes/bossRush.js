@@ -1,4 +1,4 @@
-let calculatePoints = wave => 2 + wave * 3;
+let calculatePoints = wave => wave * 3;
 // Each wave has a certain amount of "points" that it can spend on bosses, calculated above.
 // Each boss costs an amount of points.
 // It will always buy as many bosses until it has no points or else can't spend them.
@@ -8,7 +8,7 @@ let calculatePoints = wave => 2 + wave * 3;
 let oldGroups = {
     elites: [ "eliteDestroyer", "eliteGunner", "eliteTrapGuard", "eliteBattleship", "eliteSpawner" ], // 2 points
     mysticals: [ "sorcerer", "summoner", "enchantress", "exorcistor" ], // 2 points
-    strange: [ "shaman", "eliteSkimmer", "nestKeeper" ], // 2-3 points
+    strange: [ "shaman", "eliteSkimmer", "nestKeeper", "eliteSpinner" ], // 2-3 points
     nesters: [ "nestKeeper", "nestWarden", "nestGuardian" ], // 3 points
     ohhh: [ 'th', 'ze', 'ga', 'ha', 'de', 'the'], // 5 points
     terrestrials: [ "ares", "gersemi", "ezekiel", "eris", "selene", "rokna" ], // 15 points
@@ -72,7 +72,7 @@ class BossRush {
             [  2, "summoner"],
             [  2, "enchantress"],
             [  2, "exorcistor"],
-            [  2, "shaman"],
+            [  3, "shaman"],
 
             //elites
             [  2, "eliteDestroyer"],

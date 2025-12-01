@@ -14,15 +14,15 @@ Class.entrestrial = {
     SKILL: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
     VALUE: 350000,
     SHAPE: 5,
-    SIZE: 24,
+    SIZE: 23,
     CONTROLLERS: [["minion", {orbit: 75}]],
     BODY: {
         FOV: 1.1,
         HEALTH: 450,
         SHIELD: 50,
-        REGEN: base.REGEN * 1.3,
+        REGEN: base.REGEN * 5,
         SPEED: base.SPEED * 5,
-        DAMAGE: 5,
+        DAMAGE: 4,
     },
 };
 
@@ -147,6 +147,12 @@ let themis = new LayeredBoss("the", "Themis", "entrestrial", 5, "aqua", "terrest
 themis.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
     TYPE: ["rocketeerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
+}}, false, 10, 10);
+
+let testent = new LayeredBoss("testent", "Test Entrestrial", "entrestrial", 5, 3, "terrestrialTrapTurret", 4, 5);
+testent.addLayer({turret: {
+    POSITION: [9, 8, 0, null, 160, 0],
+    TYPE: ["crowbarTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
 }}, false, 10, 10);
 
 // Terrestrials

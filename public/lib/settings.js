@@ -16,14 +16,14 @@ const settings = {
         neon: false,
         coloredHealthbars: false,
         seperatedHealthbars: false,
-        showHealthText: false,
+        showHealthText: true,
     },
     lag: {
         unresponsive: false,
         memory: 500
     },
     game: {
-        autoLevelUp: false
+        autoLevelUp: true
     }
 };
 export { settings }

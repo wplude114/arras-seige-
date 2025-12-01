@@ -53,13 +53,13 @@ class BossRush {
             ran.chooseN(oldGroups.elites, 2).concat(ran.chooseN(oldGroups.strange, 2)).concat(ran.chooseN(oldGroups.celestials, 4)),
             ran.chooseN(oldGroups.mysticals, 4).concat(ran.chooseN(oldGroups.strange, 4)).concat(ran.chooseN(oldGroups.celestials, 4)),
             ran.chooseN(oldGroups.celestials, 5),
-            ran.chooseN(oldGroups.nesters, 4).concat(ran.chooseN(oldGroups.celestials, 5)),
+            ran.chooseN(oldGroups.nesters, 4).concat(ran.chooseN(oldGroups.celestials, 3)),
             ran.chooseN(oldGroups.elites, 2)
             ran.chooseN(oldGroups.eternals, 1),
-            ran.chooseN(oldGroups.mysticals, 7).concat(ran.chooseN(oldGroups.celestials, 4)),
-            ran.chooseN(oldGroups.mysticals, 3).concat(ran.chooseN(oldGroups.strange, 2)).concat(ran.chooseN(oldGroups.ohhh, 4)),
-            ran.chooseN(oldGroups.elite, 5).concat(ran.chooseN(oldGroups.celestials, 2)).concat(ran.chooseN(oldGroups.ohhh, 3)),
-            ran.chooseN(oldGroups.eternals, 1).concat(ran.chooseN(oldGroups.celestials, 1)),
+            ran.chooseN(oldGroups.mysticals, 3).concat(ran.chooseN(oldGroups.celestials, 2)),
+            ran.chooseN(oldGroups.mysticals, 2).concat(ran.chooseN(oldGroups.strange, 1)).concat(ran.chooseN(oldGroups.ohhh, 3)),
+            ran.chooseN(oldGroups.elite, 5).concat(ran.chooseN(oldGroups.celestials, 2)),
+            ran.chooseN(oldGroups.eternals, 1),
             ran.chooseN(oldGroups.mysticals, 3).concat(ran.chooseN(oldGroups.strange, 2)),
         ];
         this.bossChoices = [

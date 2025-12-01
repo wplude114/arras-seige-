@@ -3897,23 +3897,10 @@ Class.autoSmasher = makeAuto({
     ],
     SKILL_CAP: [smshskl, smshskl, smshskl, smshskl, smshskl, smshskl, smshskl, smshskl, smshskl, smshskl]
 }, "Auto-Smasher", {type: "autoSmasherTurret", size: 11})
-Class.swarmerSmasher = makeAuto({
-    PARENT: "genericSmasher",
-    DANGER: 6.5,
-    TURRETS: [
-        {
-            POSITION: [21.5, 0, 0, 0, 360, 0],
-            TYPE: "smasherBody"
-        }
-    ],
-    SKILL_CAP: [smshskl, smshskl, smshskl, smshskl, smshskl, smshskl, smshskl, smshskl, smshskl, smshskl]
-}, "Swarmer-Smasher", {type: "cruiserTurret", size: 11})
 
 // Upgrade Paths
 Class.basic.UPGRADES_TIER_1 = ["twin", "sniper", "machineGun", "flankGuard", "director", "pounder", "trapper", "smasher"]
-        Class.smasher.UPGRADES_TIER_2 = ["autoSmasher"]
-        Class.smasher.UPGRADES_TIER_3 = ["megaSmasher", "spike", "landmine"]
-            Class.autoSmasher.UPGRADES_TIER_3 = ["swarmerSmasher"]
+        Class.smasher.UPGRADES_TIER_3 = ["megaSmasher", "spike", "landmine", "autoSmasher"]
         Class.healer.UPGRADES_TIER_3 = ["medic", "ambulance", "surgeon", "paramedic"]
 
     Class.twin.UPGRADES_TIER_2 = ["doubleTwin", "tripleShot", "gunner", "hexaTank", "helix"]
@@ -3960,6 +3947,7 @@ Class.basic.UPGRADES_TIER_1 = ["twin", "sniper", "machineGun", "flankGuard", "di
 
     Class.desmos.UPGRADES_TIER_2 = ["helix"]
         Class.helix.UPGRADES_TIER_3 = ["triplex", "quadruplex"]
+
 
 
 

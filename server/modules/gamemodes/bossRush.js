@@ -1,4 +1,4 @@
-let calculatePoints = wave => wave * 3;
+let calculatePoints = wave => 3 + wave * 2;
 // Each wave has a certain amount of "points" that it can spend on bosses, calculated above.
 // Each boss costs an amount of points.
 // It will always buy as many bosses until it has no points or else can't spend them.

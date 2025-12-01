@@ -160,7 +160,7 @@ finalent.addLayer({turret: {
     TYPE: ["pentashotTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.7, color: "mirror"} }],
 }}, true, 10, 10);
 
-let hera = new LayeredBoss("he", "Hera", "entrestrial", 3, 'pink', "terrestrialTrapTurret", 4, 5);
+let hera = new LayeredBoss("he", "Hera", "entrestrial", 3, 'pink', "tripletTurret", 4, 5);
 hera.addLayer({gun: {
     POSITION: [2.25, 3.25, -1.6, 9, 0, null, 0],
     PROPERTIES: {

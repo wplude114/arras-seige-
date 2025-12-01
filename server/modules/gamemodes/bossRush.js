@@ -74,6 +74,11 @@ class BossRush {
             [  2, "exorcistor"],
             [  3, "shaman"],
 
+            //shiny
+            [  4, "shinysorcerer"],
+            [  4, "shinysummoner"],
+            [  4, "shinyenchantress"],
+
             //elites
             [  2, "eliteDestroyer"],
             [  2, "eliteGunner"],

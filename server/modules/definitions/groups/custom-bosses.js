@@ -125,9 +125,14 @@ zeus.addLayer({turret: {
 }}, true, 10, 10);
 
 let gaia = new LayeredBoss("ga", "Gaia", "entrestrial", 5, "lightGreen", "terrestrialTrapTurret", 4, 5);
-gaia.addLayer({turret: {
-    POSITION: [9, 8, 0, null, 160, 0],
-    TYPE: ["cruiserTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
+gaia.addLayer({gun: {
+    POSITION: [2.25, 3.25, -1.6, 9, 0, null, 0],
+    PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.pounder, g.destroyer, {speed: 1.25, maxSpeed: 1.25}]),
+        TYPE: ["realchip", {INDEPENDENT: true, DRAW_HEALTH: true, COLOR: 'pink'}],
+        AUTOFIRE: true,
+        SYNCS_SKILLS: true,
+    },
 }}, true, 10, 10);
 
 let hades = new LayeredBoss("ha", "Hades", "entrestrial", 5, "orange", "terrestrialTrapTurret", 4, 5);
@@ -159,17 +164,6 @@ finalent.addLayer({turret: {
     POSITION: [9, 8, 0, null, 160, 0],
     TYPE: ["pentashotTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.7, color: "mirror"} }],
 }}, true, 10, 10);
-
-let hera = new LayeredBoss("he", "Hera", "entrestrial", 3, 'pink', "tripletTurret", 4, 5);
-hera.addLayer({gun: {
-    POSITION: [2.25, 3.25, -1.6, 9, 0, null, 0],
-    PROPERTIES: {
-        SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.pounder, g.destroyer, {speed: 1.25, maxSpeed: 1.25}]),
-        TYPE: ["realchip", {INDEPENDENT: true, DRAW_HEALTH: true, COLOR: 'pink'}],
-        AUTOFIRE: true,
-        SYNCS_SKILLS: true,
-    },
-}}, false, 10, 10);
 
 // Terrestrials
 let rokna = new LayeredBoss("rokna", "Hestia", "terrestrial", 7, "aqua", "terrestrialTrapTurret", 6.5, 5.5);

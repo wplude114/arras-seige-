@@ -82,11 +82,11 @@ class BossRush {
             //elites
             [  2, "eliteDestroyer"],
             [  2, "eliteGunner"],
-            [  6, "eliteSprayer"],
+            [  3, "eliteSprayer"],
             [  4, "eliteBattleship"],
             [  2, "eliteSpawner"],
             [  2, "eliteTrapGuard"],
-            [  6, "eliteSpinner"], // higher cost bc of lag (sorry)
+            [  3, "eliteSpinner"], // higher cost bc of lag (sorry)
             [  2, "eliteSkimmer"],
 
             //nesters
@@ -109,6 +109,7 @@ class BossRush {
             [ 15, "eris"],
             [ 15, "selene"],
             [ 15, "rokna"],
+            [ 1, "he"],
 
             //celestials
             [ 35, "paladin"],
@@ -122,7 +123,7 @@ class BossRush {
             [100, "kronos"],
             [100, "odin"],
         ];
-        this.friendlyBossChoices = [ [3, "roguePalisade"], [3, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"], [2, "finalent"] ];
+        this.friendlyBossChoices = [ [5, "roguePalisade"], [5, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"], [2, "finalent"] ];
         this.bigFodderChoices = ["sentryGun", "sentrySwarm", "sentryTrap", "sentinelCrossbow", "sentinelMinigun", "sentinelLauncher"];
         this.ShinyFodderChoices = ["shinySentryGun", "shinySentrySwarm", "shinySentryTrap"];
         this.smallFodderChoices = ["crasher"];

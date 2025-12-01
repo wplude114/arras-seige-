@@ -1,4 +1,4 @@
-let { bossSpawn:   b  , atmg:  A  , outside:   o  } = require('../tiles/siege.js'),
+let { bossSpawn:   b  , atmg:  A  , outside:   o , nest:  n } = require('../tiles/siege.js'),
     { wall: WALL, normal:   _  } = require('../tiles/misc.js'),
 	{ base1:   s  } = require('../tiles/tdm.js'),
 
@@ -12,7 +12,7 @@ room = [
     [  o ,  o ,  o ,WALL,  _ ,  _ ,WALL,  _ ,  _ ,  _ ,  _ ,  _ ,WALL,  _ ,  _ ,WALL,  o ,  o ,  o ],
     [  o ,WALL,WALL,WALL,WALL,  _ ,  _ ,  _ ,  _ ,  s ,  _ ,  _ ,  _ ,  _ ,WALL,WALL,WALL,WALL,  o ],
     [  o ,WALL,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,WALL,  o ],
-    [  o ,WALL,  _ ,  s ,  _ ,  _ ,  _ ,  _ ,  _ ,WALL,  _ ,  _ ,  _ ,  _ ,  _ ,  s ,  _ ,WALL,  o ],
+    [  o ,WALL,  _ ,  s ,  _ ,  _ ,  _ ,  _ ,  _ ,  n ,  _ ,  _ ,  _ ,  _ ,  _ ,  s ,  _ ,WALL,  o ],
     [  o ,WALL,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,  _ ,WALL,  o ],
     [  o ,WALL,WALL,WALL,WALL,  _ ,  _ ,  _ ,  _ ,  s ,  _ ,  _ ,  _ ,  _ ,WALL,WALL,WALL,WALL,  o ],
     [  o ,  o ,  o ,WALL,  _ ,  _ ,WALL,  _ ,  _ ,  _ ,  _ ,  _ ,WALL,  _ ,  _ ,WALL,  o ,  o ,  o ],

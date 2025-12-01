@@ -14,7 +14,7 @@ Class.entrestrial = {
     VALUE: 350000,
     SHAPE: 5,
     SIZE: 23,
-    CONTROLLERS: [["minion", {orbit: 175}]],
+    CONTROLLERS: [["minion", {orbit: 125}]],
     BODY: {
         FOV: 1.1,
         HEALTH: 350,

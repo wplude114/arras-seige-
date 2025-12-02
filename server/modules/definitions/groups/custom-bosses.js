@@ -46,7 +46,7 @@ Class.nestWatcher = {
         {
             POSITION: [1.5, 6, 0.8, 9.8, 0, 36, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.trap, g.setTrap, g.constructor {SIZE: 0.8}]),
+                SHOOT_SETTINGS: combineStats([g.trap, g.setTrap, g.constructor, {SIZE: 0.8}]),
                 TYPE: "boomerang",
                 STAT_CALCULATOR: "block"
             },

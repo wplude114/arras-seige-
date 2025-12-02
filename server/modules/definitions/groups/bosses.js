@@ -660,13 +660,13 @@ Class.exorcistor = {
 };
 Class.shaman = {
     PARENT: "miniboss",
-    LABEL: "Necromancer",
+    LABEL: "Shaman",
     DANGER: 9,
     SHAPE: 6,
     COLOR: "hexagon",
     UPGRADE_COLOR: "hexagon",
-    SIZE: 25,
-    MAX_CHILDREN: 16,
+    SIZE: 28,
+    MAX_CHILDREN: 14,
     VALUE: 6e5,
     BODY: {
         FOV: 0.5,
@@ -3411,6 +3411,7 @@ Class.helenaBoss = {
         },
     ]
 }
+
 
 
 

@@ -126,7 +126,7 @@ zeus.addLayer({turret: {
 
 let gaia = new LayeredBoss("ga", "Gaia", "entrestrial", 5, "lightGreen", "terrestrialTrapTurret", 4, 5);
 gaia.addLayer({gun: {
-    POSITION: [2, 10, -1.6, 8.85, 0, null, 0],
+    POSITION: [2, 7, -1.6, 8.85, 0, null, 0],
     PROPERTIES: {
         SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.pounder, g.destroyer, {speed: 6.25, maxSpeed: 8}]),
         TYPE: ["realchip", {INDEPENDENT: true, DRAW_HEALTH: true, COLOR: 'lightGreen', SHAPE: 5}],

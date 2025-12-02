@@ -59,7 +59,7 @@ Class.growBullet = {
 Class.flare = {
     PARENT: "growBullet",
     LABEL: "Flare",
-    SHAPE: 4,
+    SHAPE: -4,
 }
 Class.developerBullet = {
     PARENT: "bullet",

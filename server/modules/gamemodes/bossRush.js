@@ -10,6 +10,11 @@ class BossRush {
         this.bossChoices = [
             // [ cost , definition reference ],
 
+            //large fodder
+            [ 0.5, "sentinelCrossbow"],
+            [ 0.5, "sentinelLauncher"],
+            [ 0.75, "sentinelMinigun"],
+            
             //mysticals
             [  2, "sorcerer"],
             [  2, "summoner"],
@@ -66,7 +71,7 @@ class BossRush {
             [100, "odin"],
         ];
         this.friendlyBossChoices = [ [5, "roguePalisade"], [5, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"] ];
-        this.bigFodderChoices = ["sentryGun", "sentrySwarm", "sentryTrap", "sentinelCrossbow", "sentinelMinigun", "sentinelLauncher"];
+        this.bigFodderChoices = ["sentryGun", "sentrySwarm", "sentryTrap"];
         this.ShinyFodderChoices = ["shinySentryGun", "shinySentrySwarm", "shinySentryTrap"];
         this.smallFodderChoices = ["crasher"];
         this.length = Config.CLASSIC_SIEGE ? this.waveCodes.length : Config.WAVES;

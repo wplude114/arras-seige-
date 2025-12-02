@@ -32,7 +32,7 @@ Class.nestWatcher = {
     COLOR: "purple",
     UPGRADE_COLOR: "purple",
     SHAPE: 5,
-    SIZE: 50,
+    SIZE: 40,
     BODY: {
         FOV: 1.3,
         SPEED: base.SPEED * 0.45,
@@ -44,12 +44,10 @@ Class.nestWatcher = {
     VALUE: 3e5,
     GUNS: weaponArray([
         {
-            POSITION: [10.7, 5, 1, 0, 0, 36, 0],
-        }, {
-            POSITION: [1.5, 5, 0.7, 10.7, 0, 36, 0],
+            POSITION: [1.5, 6, 0.8, 10.7, 0, 36, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.trap, { speed: 1.5 }, g.setTrap, g.constructor]),
-                TYPE: "flare",
+                SHOOT_SETTINGS: combineStats([g.trap, g.setTrap, g.constructor]),
+                TYPE: "boomerang",
                 STAT_CALCULATOR: "block"
             },
         }

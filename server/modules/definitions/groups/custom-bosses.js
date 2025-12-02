@@ -70,13 +70,13 @@ Class.nestWatcher = {
 let thor = new LayeredBoss("th", "Thor", "entrestrial", 7, "purple", "terrestrialTrapTurret", 4, 5);
 thor.addLayer({turret: {
     POSITION: [9, 8, 0, null, 120, 0],
-    TYPE: ["boomerTurret", { INDEPENDENT: true, COLOR: -1 } }],
+    TYPE: ["boomerTurret", { INDEPENDENT: true, COLOR: -1 } ],
 }}, true, 10, 10);
 
 let zeus = new LayeredBoss("ze", "Zeus", "entrestrial", 5, "gold", "terrestrialTrapTurret", 4, 5);
 zeus.addLayer({turret: {
     POSITION: [9, 8, 0, null, 120, 0],
-    TYPE: ["shotgunTurret", { INDEPENDENT: true, COLOR: -1 } }],
+    TYPE: ["shotgunTurret", { INDEPENDENT: true, COLOR: -1 } ],
 }}, true, 10, 10);
 
 let gaia = new LayeredBoss("ga", "Gaia", "entrestrial", 5, "lightGreen", "terrestrialTrapTurret", 4, 5);
@@ -93,31 +93,31 @@ gaia.addLayer({gun: {
 let hades = new LayeredBoss("ha", "Hades", "entrestrial", 5, "orange", "terrestrialTrapTurret", 4, 5);
 hades.addLayer({turret: {
     POSITION: [9, 8, 0, null, 120, 0],
-    TYPE: ["launcherTurret", { INDEPENDENT: true, COLOR: -1 } }],
+    TYPE: ["launcherTurret", { INDEPENDENT: true, COLOR: -1 } ],
 }}, true, 10, 10);
 
 let demeter = new LayeredBoss("de", "Demeter", "entrestrial", 5, "pink", "terrestrialTrapTurret", 4, 5);
 demeter.addLayer({turret: {
     POSITION: [9, 8, 0, null, 120, 0],
-    TYPE: ["tripletTurret", { INDEPENDENT: true, COLOR: -1 } }],
+    TYPE: ["tripletTurret", { INDEPENDENT: true, COLOR: -1 } ],
 }}, true, 10, 10);
 
 let themis = new LayeredBoss("the", "Themis", "entrestrial", 7, "aqua", "terrestrialTrapTurret", 4, 5);
 themis.addLayer({turret: {
     POSITION: [9, 8, 0, null, 120, 0],
-    TYPE: ["rocketeerTurret", { INDEPENDENT: true, COLOR: -1 } }],
+    TYPE: ["rocketeerTurret", { INDEPENDENT: true, COLOR: -1 } ],
 }}, true, 10, 10);
 
 let testent = new LayeredBoss("testent", "Test Entrestrial", "entrestrial", 5, 3, "terrestrialTrapTurret", 4, 5);
 testent.addLayer({turret: {
     POSITION: [9, 8, 0, null, 120, 0],
-    TYPE: ["crowbarTurret", { INDEPENDENT: true, COLOR: -1 } }],
+    TYPE: ["crowbarTurret", { INDEPENDENT: true, COLOR: -1 } ],
 }}, true, 10, 10);
 
 let finalent = new LayeredBoss("finalent", "The Menace", "entrestrial", 7, 17, "terrestrialTrapTurret", 4, 5);
 finalent.addLayer({turret: {
     POSITION: [9, 8, 0, null, 120, 0],
-    TYPE: ["pentashotTurret", { INDEPENDENT: true, COLOR: -1 } }],
+    TYPE: ["pentashotTurret", { INDEPENDENT: true, COLOR: -1 } ],
 }}, true, 10, 10);
 
 // Terrestrials

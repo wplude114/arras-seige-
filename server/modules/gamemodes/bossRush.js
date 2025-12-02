@@ -203,7 +203,7 @@ class BossRush {
             for (let i = 0; i < this.waveId / 3; i++) {
                 this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.bigFodderChoices));
             }
-            for (let i = 0; i < this.waveId; i++) {
+            for (let i = 0; i < this.waveId * 3; i++) {
                 this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.smallFodderChoices));
             }
         }

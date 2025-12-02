@@ -9,18 +9,11 @@ class BossRush {
     constructor() {
         this.bossChoices = [
             // [ cost , definition reference ],
-
-            //mysticals
             [  2, "sorcerer"],
             [  2, "summoner"],
             [  3, "enchantress"],
             [  4, "exorcistor"],
             [  5, "shaman"],
-
-            //shiny
-            [  6, "shinysorcerer"],
-            [  6, "shinysummoner"],
-            [  7, "shinyenchantress"],
 
             //elites
             [  2, "eliteDestroyer"],
@@ -65,7 +58,7 @@ class BossRush {
             [100, "kronos"],
             [100, "odin"],
         ];
-        this.friendlyBossChoices = [ [10, "finalent"], [5, "roguePalisade"], [5, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"] ];
+        this.friendlyBossChoices = [ [5, "roguePalisade"], [5, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"] ];
         this.bigFodderChoices = ["sentryGun", "sentrySwarm", "sentryTrap", "sentinelCrossbow", "sentinelMinigun", "sentinelLauncher"];
         this.ShinyFodderChoices = ["shinySentryGun", "shinySentrySwarm", "shinySentryTrap"];
         this.smallFodderChoices = ["crasher"];
@@ -94,8 +87,6 @@ class BossRush {
                 points -= cost;
                 wave.push(boss);
             }
-
-            waves.push(Config.CLASSIC_SIEGE ? this.waveCodes[i] : wave);
         }
         return waves;
     }
@@ -110,7 +101,7 @@ class BossRush {
         o.name = ran.chooseBossName('castle');
         o.FOV = 10;
         o.settings.broadcastMessage = `${o.name} has fallen!`;
-        sockets.broadcast(o.name + ' has arrived and joined your team!');
+        sockets.broadcast('A strange trembling..');
     }
 
     spawnSanctuary(tile, team, type = false) {
@@ -200,12 +191,18 @@ class BossRush {
 
         if (!Config.CLASSIC_SIEGE) {
             //spawn fodder enemies
-            for (let i = 0; i < this.waveId / 5; i++) {
-                this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.bigFodderChoices));
-            }
-            for (let i = 0; i < this.waveId / 2; i++) {
-                this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.smallFodderChoices));
-            }
+			if (getRandomInt(10) == 0) { //1 in 10 chance.
+				for (let i = 0; i < this.waveId * 5; i++) {
+                this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.shinyFodderChoices)); //Shiny sentries ONLY.
+            } else { //If not the 1 in 10, spawn normally.
+				}
+  	          for (let i = 0; i < this.waveId / 2; i++) {
+    	            this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.bigFodderChoices)); //Sentries and sentinels.
+        	    }
+            	for (let i = 0; i < this.waveId * 2; i++) {
+         	       this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.smallFodderChoices)); //Crashers.
+            	}
+			}
         }
 
         // Update sanctuary tiers

@@ -786,6 +786,7 @@ Class.spikeBody = {
     PARENT: "smasherBody",
     SHAPE: 3
 }
+Class.triDeco = makeDeco(3)
 Class.dominationBody = {
     LABEL: "",
     FACING_TYPE: ["noFacing", { angle: Math.PI / 2 }],

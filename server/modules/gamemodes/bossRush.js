@@ -13,7 +13,7 @@ class BossRush {
             //large fodder
             [ 0.5, "sentinelCrossbow"],
             [ 0.5, "sentinelLauncher"],
-            [ 0.75, "sentinelMinigun"],
+            [ 0.5, "sentinelMinigun"],
             
             //mysticals
             [  2, "sorcerer"],
@@ -21,11 +21,6 @@ class BossRush {
             [  3, "enchantress"],
             [  4, "exorcistor"],
             [  5, "shaman"],
-
-            //shiny
-            [  6, "shinysorcerer"],
-            [  6, "shinysummoner"],
-            [  7, "shinyenchantress"],
 
             //elites
             [  2, "eliteDestroyer"],

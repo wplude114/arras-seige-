@@ -13,23 +13,23 @@ class BossRush {
             //mysticals
             [  2, "sorcerer"],
             [  2, "summoner"],
-            [  2, "enchantress"],
-            [  2, "exorcistor"],
-            [  3, "shaman"],
+            [  3, "enchantress"],
+            [  4, "exorcistor"],
+            [  5, "shaman"],
 
             //shiny
             [  6, "shinysorcerer"],
             [  6, "shinysummoner"],
-            [  6, "shinyenchantress"],
+            [  7, "shinyenchantress"],
 
             //elites
             [  2, "eliteDestroyer"],
             [  2, "eliteGunner"],
-            [  3, "eliteSprayer"],
+            [  4, "eliteSprayer"],
             [  4, "eliteBattleship"],
             [  2, "eliteSpawner"],
             [  2, "eliteTrapGuard"],
-            [  3, "eliteSpinner"], // higher cost bc of lag (sorry)
+            [  4, "eliteSpinner"], // higher cost bc of lag (sorry)
             [  2, "eliteSkimmer"],
 
             //nesters

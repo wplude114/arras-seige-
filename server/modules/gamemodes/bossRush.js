@@ -196,15 +196,15 @@ class BossRush {
 
         if (!Config.CLASSIC_SIEGE) {
             //spawn fodder enemies
-            if (waveId > 5) {
+            if (waveId > 4) {
                 for (let i = 0; i < this.waveId / 5; i++) {
                     this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.largeFodderChoices));
                 }
             }
-            for (let i = 0; i < this.waveId / 3; i++) {
+            for (let i = 0; i < this.waveId / 2; i++) {
                 this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.bigFodderChoices));
             }
-            for (let i = 0; i < this.waveId * 5; i++) {
+            for (let i = 0; i < this.waveId * 15; i++) {
                 this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.smallFodderChoices));
             }
         }

@@ -266,7 +266,6 @@ Class.crasher = {
 
 Class.crashler = {
     PARENT: "crasher",
-    SIZE: 3,
     UPGRADE_LABEL: "Crashler",
     UPGRADE_COLOR: "pink",
 }
@@ -275,6 +274,12 @@ Class.crashlet = {
     PARENT: "crasher",
     UPGRADE_LABEL: "Crashlet",
     UPGRADE_COLOR: "pink",
+    TURRETS: [
+        {
+            POSITION: [8, 0, 0, 0, 360, 1],
+            TYPE: "triDeco"
+        }
+    ],
     GUNS: [
         {
             POSITION: [8, 8, 1, 0, 0, 0, 0],

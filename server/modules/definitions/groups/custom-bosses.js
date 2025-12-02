@@ -58,7 +58,7 @@ Class.nestWatcher = {
             TYPE: [ "shotgunTurret", { INDEPENDENT: true, COLOR: -1 } ],
         },
         ...weaponArray({
-            POSITION: [8, 9, 0, 0, 120, 0],
+            POSITION: [7, 9, 0, 0, 120, 0],
             TYPE: [ "minigunNesterTurret", { INDEPENDENT: true, COLOR: -1 } ],
         }, 5)
     ],

@@ -64,7 +64,7 @@ class BossRush {
         this.friendlyBossChoices = [ [5, "roguePalisade"], [5, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"] ];
         this.bigFodderChoices = [ "sentryGun", "sentrySwarm", "sentryTrap" ];
         this.ShinyFodderChoices = [ "shinySentryGun", "shinySentrySwarm", "shinySentryTrap" ];
-        this.smallFodderChoices = [ "crasher", "crashlet" ];
+        this.smallFodderChoices = [ "crasher" ];
         this.length = Config.CLASSIC_SIEGE ? this.waveCodes.length : Config.WAVES;
         this.waves = this.generateWaves();
         this.waveId = -1;
@@ -196,13 +196,15 @@ class BossRush {
 
         if (!Config.CLASSIC_SIEGE) {
             //spawn fodder enemies
-            for (let i = 0; i < this.waveId / 5; i++) {
-                this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.largeFodderChoices));
+            if (waveId > 5) {
+                for (let i = 0; i < this.waveId / 5; i++) {
+                    this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.largeFodderChoices));
+                }
             }
             for (let i = 0; i < this.waveId / 3; i++) {
                 this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.bigFodderChoices));
             }
-            for (let i = 0; i < this.waveId * 3; i++) {
+            for (let i = 0; i < this.waveId * 5; i++) {
                 this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.smallFodderChoices));
             }
         }

@@ -189,14 +189,15 @@ class BossRush {
             enemy.isBoss = true;
         }
 
-        if (!Config.CLASSIC_SIEGE) {			
-			for (let i = 0; i < this.waveId / 2 + 2; i++) {
-    	        this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.bigFodderChoices)); //Sentries and sentinels.
-        	}				
-        	for (let i = 0; i < this.waveId * 2 + 10; i++) {
-    	      this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.smallFodderChoices)); //Crashers.
-        	}
-		}
+        if (!Config.CLASSIC_SIEGE) {
+            //spawn fodder enemies
+            for (let i = 0; i < this.waveId / 2; i++) {
+                this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.bigFodderChoices));
+            }
+            for (let i = 0; i < 10 + this.waveId * 2; i++) {
+                this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.smallFodderChoices));
+            }
+        }
 
         // Update sanctuary tiers
         let newSancTier = Math.min(Math.floor(this.waveId / 5) + 1, 6);

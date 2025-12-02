@@ -264,23 +264,23 @@ Class.crasher = {
     DRAW_HEALTH: true,
 }
 
+Class.crashler = {
+    PARENT: "crasher",
+    SIZE: 3,
+    UPGRADE_LABEL: "Crashler",
+    UPGRADE_COLOR: "pink",
+}
+
 Class.crashlet = {
     PARENT: "crasher",
     UPGRADE_LABEL: "Crashlet",
     UPGRADE_COLOR: "pink",
-    SIZE: 7.5,
-    TURRETS: [
-        {
-            POSITION: [8, 0, 0, 0, 180, 1],
-            TYPE: "triDeco"
-        }
-    ],
     GUNS: [
         {
             POSITION: [8, 8, 1, 0, 0, 0, 0],
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic]),
-                TYPE: ["crasher", { PERSISTS_AFTER_DEATH: true }],
+                TYPE: ["crashler", { PERSISTS_AFTER_DEATH: true }],
                 SHOOT_ON_DEATH: true,
             }
         },
@@ -288,7 +288,7 @@ Class.crashlet = {
             POSITION: [8, 8, 1, 0, 0, 120, 0],
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic]),
-                TYPE: ["crasher", { PERSISTS_AFTER_DEATH: true }],
+                TYPE: ["crashler", { PERSISTS_AFTER_DEATH: true }],
                 SHOOT_ON_DEATH: true,
             }
         },
@@ -296,20 +296,12 @@ Class.crashlet = {
             POSITION: [8, 8, 1, 0, 0, -120, 0],
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic]),
-                TYPE: ["crasher", { PERSISTS_AFTER_DEATH: true }],
-                SHOOT_ON_DEATH: true,
-            }
-        },
-        {
-            POSITION: [8, 8, 1, 0, 0, 180, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic]),
-                TYPE: ["crasher", { PERSISTS_AFTER_DEATH: true }],
+                TYPE: ["crashler", { PERSISTS_AFTER_DEATH: true }],
                 SHOOT_ON_DEATH: true,
             }
         },
     ]
-};
+}
 
 // SENTRIES
 Class.sentry = {

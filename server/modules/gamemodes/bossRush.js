@@ -31,6 +31,7 @@ class BossRush {
             [  5, "nestKeeper"],
             [  5, "nestWarden"],
             [  5, "nestGuardian"],
+            [  4, "nestWatcher"],
 
             //entrestrials
             [ 10, "th"],

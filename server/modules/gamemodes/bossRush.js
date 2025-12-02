@@ -65,7 +65,7 @@ class BossRush {
             [100, "kronos"],
             [100, "odin"],
         ];
-        this.friendlyBossChoices = [ [10, "finalent"], [5, "roguePalisade"], [5, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"] ];
+        this.friendlyBossChoices = [ [5, "roguePalisade"], [5, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"] ];
         this.bigFodderChoices = ["sentryGun", "sentrySwarm", "sentryTrap", "sentinelCrossbow", "sentinelMinigun", "sentinelLauncher"];
         this.ShinyFodderChoices = ["shinySentryGun", "shinySentrySwarm", "shinySentryTrap"];
         this.smallFodderChoices = ["crasher"];
@@ -200,10 +200,10 @@ class BossRush {
 
         if (!Config.CLASSIC_SIEGE) {
             //spawn fodder enemies
-            for (let i = 0; i < this.waveId / 5 + 3; i++) {
+            for (let i = 0; i < this.waveId / 3; i++) {
                 this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.bigFodderChoices));
             }
-            for (let i = 0; i < this.waveId / 2 + 10; i++) {
+            for (let i = 0; i < this.waveId; i++) {
                 this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.smallFodderChoices));
             }
         }

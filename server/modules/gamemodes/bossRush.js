@@ -191,6 +191,7 @@ class BossRush {
 
         if (!Config.CLASSIC_SIEGE) {
             //spawn fodder enemies
+			/*
 			if (getRandomInt(10) == 0) { //1 in 10 chance.
 				for (let i = 0; i < this.waveId * 5; i++) {
                 this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.shinyFodderChoices)); //Shiny sentries ONLY.
@@ -206,6 +207,16 @@ class BossRush {
             	}
   			}
         }
+		*/
+
+			//Only normal bc my code doees not work 😡
+			for (let i = 0; i < this.waveId / 2; i++) {
+    	            this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.bigFodderChoices)); //Sentries and sentinels.
+        	    }
+				
+            	for (let i = 0; i < this.waveId * 2; i++) {
+         	       this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.smallFodderChoices)); //Crashers.
+            	}
 
         // Update sanctuary tiers
         let newSancTier = Math.min(Math.floor(this.waveId / 5) + 1, 6);

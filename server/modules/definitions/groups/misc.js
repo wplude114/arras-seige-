@@ -268,7 +268,7 @@ Class.crashlet = {
     PARENT: "crasher",
     UPGRADE_LABEL: "Crashlet",
     UPGRADE_COLOR: "pink",
-    SIZE = 7.5,
+    SIZE: 7.5,
     TURRETS: [
         {
             POSITION: [8, 0, 0, 0, 180, 1],

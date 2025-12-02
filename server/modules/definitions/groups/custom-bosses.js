@@ -25,16 +25,57 @@ Class.entrestrial = {
     },
 };
 
+// Nesters
+Class.nestWatcher = {
+    PARENT: "miniboss",
+    LABEL: "Nest Watcher",
+    COLOR: "purple",
+    UPGRADE_COLOR: "purple",
+    SHAPE: 5,
+    SIZE: 50,
+    BODY: {
+        FOV: 1.3,
+        SPEED: base.SPEED * 0.45,
+        HEALTH: base.HEALTH * 9,
+        SHIELD: base.SHIELD * 1.5,
+        REGEN: base.REGEN,
+        DAMAGE: base.DAMAGE * 2.5,
+    },
+    VALUE: 3e5,
+    GUNS: weaponArray([
+        {
+            POSITION: [10.7, 8, 1, 0, 0, 36, 0],
+        }, {
+            POSITION: [1.5, 8, 0.7, 10.7, 0, 36, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.trap, { speed: 1.5 }, g.setTrap, g.constructor]),
+                TYPE: "flare",
+                STAT_CALCULATOR: "block"
+            },
+        }
+    ], 5),
+    TURRETS: [
+        {
+            POSITION: [9, 0, 0, 0, 360, 1],
+            TYPE: [ "shotgunTurret", { INDEPENDENT: true, COLOR: -1 } ],
+        },
+        ...weaponArray({
+            POSITION: [8, 9, 0, 0, 120, 0],
+            TYPE: [ "minigunNesterTurret", { INDEPENDENT: true, COLOR: -1 } ],
+        }, 5)
+    ],
+}
+
 // Entrestirals
 let thor = new LayeredBoss("th", "Thor", "entrestrial", 7, "purple", "terrestrialTrapTurret", 4, 5);
 thor.addLayer({turret: {
-    POSITION: [9, 8, 0, null, 160, 0],
+    POSITION: [9, 8, 0, null, 120, 0],
     TYPE: ["boomerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
 }}, true, 10, 10);
 
 let zeus = new LayeredBoss("ze", "Zeus", "entrestrial", 5, "gold", "terrestrialTrapTurret", 4, 5);
 zeus.addLayer({turret: {
-    POSITION: [9, 8, 0, null, 160, 0],
+    POSITION: [9, 8, 0, null, 120, 0],
     TYPE: ["shotgunTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
 }}, true, 10, 10);
 
@@ -51,31 +92,31 @@ gaia.addLayer({gun: {
 
 let hades = new LayeredBoss("ha", "Hades", "entrestrial", 5, "orange", "terrestrialTrapTurret", 4, 5);
 hades.addLayer({turret: {
-    POSITION: [9, 8, 0, null, 160, 0],
+    POSITION: [9, 8, 0, null, 120, 0],
     TYPE: ["launcherTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
 }}, true, 10, 10);
 
 let demeter = new LayeredBoss("de", "Demeter", "entrestrial", 5, "pink", "terrestrialTrapTurret", 4, 5);
 demeter.addLayer({turret: {
-    POSITION: [9, 8, 0, null, 160, 0],
+    POSITION: [9, 8, 0, null, 120, 0],
     TYPE: ["tripletTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
 }}, true, 10, 10);
 
 let themis = new LayeredBoss("the", "Themis", "entrestrial", 7, "aqua", "terrestrialTrapTurret", 4, 5);
 themis.addLayer({turret: {
-    POSITION: [9, 8, 0, null, 160, 0],
+    POSITION: [9, 8, 0, null, 120, 0],
     TYPE: ["rocketeerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
 }}, true, 10, 10);
 
 let testent = new LayeredBoss("testent", "Test Entrestrial", "entrestrial", 5, 3, "terrestrialTrapTurret", 4, 5);
 testent.addLayer({turret: {
-    POSITION: [9, 8, 0, null, 160, 0],
+    POSITION: [9, 8, 0, null, 120, 0],
     TYPE: ["crowbarTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.2, color: "mirror"} }],
 }}, true, 10, 10);
 
 let finalent = new LayeredBoss("finalent", "The Menace", "entrestrial", 7, 17, "terrestrialTrapTurret", 4, 5);
 finalent.addLayer({turret: {
-    POSITION: [9, 8, 0, null, 160, 0],
+    POSITION: [9, 8, 0, null, 120, 0],
     TYPE: ["pentashotTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.7, damage: 1.7, color: "mirror"} }],
 }}, true, 10, 10);
 

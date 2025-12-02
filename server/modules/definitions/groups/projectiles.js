@@ -60,7 +60,7 @@ Class.flare = {
     PARENT: "growBullet",
     LABEL: "Flare",
     SHAPE: -4,
-    CONTROLLERS: [["spin2", {speed: 0.5}]],
+    CONTROLLERS: [["spin2", {speed: 0.1}]],
 }
 Class.developerBullet = {
     PARENT: "bullet",

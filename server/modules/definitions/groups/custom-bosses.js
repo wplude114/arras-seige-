@@ -20,7 +20,7 @@ Class.entrestrial = {
         HEALTH: 350,
         SHIELD: 50,
         REGEN: base.REGEN * 10,
-        SPEED: base.SPEED * 3,
+        SPEED: base.SPEED * 2,
         DAMAGE: 4,
     },
 };

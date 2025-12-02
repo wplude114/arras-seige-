@@ -195,8 +195,7 @@ class BossRush {
 				for (let i = 0; i < this.waveId * 5; i++) {
                 this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.shinyFodderChoices)); //Shiny sentries ONLY.
             } else { //If not the 1 in 10, spawn normally.
-				}
-  	          for (let i = 0; i < this.waveId / 2; i++) {
+				for (let i = 0; i < this.waveId / 2; i++) {
     	            this.spawnEnemyWrapper(getSpawnableArea(TEAM_ENEMIES), ran.choose(this.bigFodderChoices)); //Sentries and sentinels.
         	    }
             	for (let i = 0; i < this.waveId * 2; i++) {

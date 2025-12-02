@@ -44,9 +44,9 @@ Class.nestWatcher = {
     VALUE: 3e5,
     GUNS: weaponArray([
         {
-            POSITION: [1.5, 6, 0.8, 10, 0, 36, 0],
+            POSITION: [1.5, 6, 0.8, 9.8, 0, 36, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.trap, g.setTrap, g.constructor]),
+                SHOOT_SETTINGS: combineStats([g.trap, g.setTrap, g.constructor {SIZE: 0.8}]),
                 TYPE: "boomerang",
                 STAT_CALCULATOR: "block"
             },

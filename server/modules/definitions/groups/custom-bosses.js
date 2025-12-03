@@ -27,6 +27,55 @@ Class.entrestrial = {
 };
 Class.pentdeco = makeDeco(5.5);
 
+// Beta Mysticals
+Class.betaExorcistor = {
+    PARENT: "miniboss",
+    LABEL: "Beta Exorcistor",
+    DANGER: 9,
+    SHAPE: 5,
+    COLOR: "purple",
+    UPGRADE_COLOR: "purple",
+    SIZE: 30,
+    MAX_CHILDREN: 20,
+    VALUE: 4e6,
+    BODY: {
+        FOV: 0.75,
+        SPEED: 0.05 * base.SPEED,
+        HEALTH: 17 * base.HEALTH,
+        DAMAGE: 10 * base.DAMAGE,
+    },
+    GUNS: weaponArray([
+        {
+            POSITION: [2.2, 9, 1.2, 9.8, 0, 36, 0.5],
+            PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
+                TYPE: "demonchip",
+                AUTOFIRE: true,
+                SYNCS_SKILLS: true,
+                STAT_CALCULATOR: "drone",
+                WAIT_TO_CYCLE: true,
+            },
+        },
+         {
+            POSITION: [1.5, 12, 1.2, 9.8, 0, 36, 0],
+            PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
+                TYPE: "demonchip",
+                AUTOFIRE: true,
+                SYNCS_SKILLS: true,
+                STAT_CALCULATOR: "drone",
+                WAIT_TO_CYCLE: true,
+            },
+        }
+    ], 5),
+    TURRETS: [
+        {
+            POSITION: [16, 0, 0, 0, 0, 1],
+            TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
+        },
+    ],
+};
+
 // Nesters
 Class.nestWatcher = {
     PARENT: "miniboss",
@@ -63,56 +112,6 @@ Class.nestWatcher = {
             POSITION: [7, 9, 0, 0, 120, 0],
             TYPE: [ "minigunNesterTurret", { INDEPENDENT: true, COLOR: -1 } ],
         }, 5)
-    ],
-}
-
-//??
-Class.thingy = {
-    PARENT: "miniboss",
-    LABEL: "Beta Exorcistor",
-    COLOR: "purple",
-    UPGRADE_COLOR: "purple",
-    SHAPE: 5,
-    SIZE: 30,
-    MAX_CHILDREN: 20,
-    BODY: {
-        FOV: 1.3,
-        SPEED: base.SPEED,
-        HEALTH: base.HEALTH * 9,
-        SHIELD: base.SHIELD * 1.5,
-        REGEN: base.REGEN,
-        DAMAGE: base.DAMAGE * 30,
-    },
-    VALUE: 1e4,
-     GUNS: weaponArray([
-        {
-            POSITION: [2.2, 9, 1.2, 9.8, 0, 36, 0.5],
-            PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
-                TYPE: "demonchip",
-                AUTOFIRE: true,
-                SYNCS_SKILLS: true,
-                STAT_CALCULATOR: "drone",
-                WAIT_TO_CYCLE: true,
-            },
-        },
-         {
-            POSITION: [1.5, 12, 1.2, 9.8, 0, 36, 0],
-            PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
-                TYPE: "demonchip",
-                AUTOFIRE: true,
-                SYNCS_SKILLS: true,
-                STAT_CALCULATOR: "drone",
-                WAIT_TO_CYCLE: true,
-            },
-        }
-    ], 5),
-    TURRETS: [
-        {
-            POSITION: [16, 0, 0, 0, 0, 1],
-            TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
-        },
     ],
 }
 

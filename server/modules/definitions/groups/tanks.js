@@ -4024,7 +4024,7 @@ Class.basic.UPGRADES_TIER_1 = ["twin", "sniper", "machineGun", "flankGuard", "di
 
     Class.machineGun.UPGRADES_TIER_2 = ["artillery", "minigun", "gunner", "sprayer"]
         Class.minigun.UPGRADES_TIER_3 = ["enlister", "streamliner", "nailgun", "cropDuster", "barricade", "vulture"]
-            Class.streamliner.UPGRADES_TIER_3 = ["lunker"]
+            Class.streamliner.UPGRADES_TIER_4 = ["lunker"]
         Class.gunner.UPGRADES_TIER_3 = ["autoGunner", "nailgun", "auto4", "machineGunner", "gunnerTrapper", "cyclone", "overgunner"]
         Class.sprayer.UPGRADES_TIER_3 = ["redistributor", "phoenix", "atomizer", "focal"]
 
@@ -4055,4 +4055,5 @@ Class.basic.UPGRADES_TIER_1 = ["twin", "sniper", "machineGun", "flankGuard", "di
 
     Class.desmos.UPGRADES_TIER_2 = ["helix"]
         Class.helix.UPGRADES_TIER_3 = ["triplex", "quadruplex"]
+
 

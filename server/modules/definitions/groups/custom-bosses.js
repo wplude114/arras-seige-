@@ -6,6 +6,7 @@ require('./tanks.js');
 require('./turrets.js');
 require('./bosses.js');
 
+Class.auraforbosses = addAura(1.2, 1.45);
 // bases
 Class.entrestrial = {
     PARENT: "miniboss",
@@ -61,6 +62,36 @@ Class.nestWatcher = {
             POSITION: [7, 9, 0, 0, 120, 0],
             TYPE: [ "minigunNesterTurret", { INDEPENDENT: true, COLOR: -1 } ],
         }, 5)
+    ],
+}
+
+//??
+Class.thingy = {
+    PARENT: "miniboss",
+    LABEL: "test boss2",
+    COLOR: "purple",
+    UPGRADE_COLOR: "purple",
+    SHAPE: 5,
+    SIZE: 30,
+    BODY: {
+        FOV: 1.3,
+        SPEED: base.SPEED * 0.45,
+        HEALTH: base.HEALTH * 9,
+        SHIELD: base.SHIELD * 1.5,
+        REGEN: base.REGEN,
+        DAMAGE: base.DAMAGE * 2.5,
+    },
+    VALUE: 3e5,
+     GUNS: weaponArray([
+        {
+            [2, 10, -1.6, 8.85, 0, null, 0],
+        }
+    ], 5),
+    TURRETS: [
+        {
+            POSITION: [5, 0, 0, 0, 360, 1],
+            TYPE: [ "auraforbosses", { INDEPENDENT: true, COLOR: -1 } ],
+        },
     ],
 }
 

@@ -159,17 +159,16 @@ class BossRush {
                 points = calculatePoints(i)
                 let choices = this.b_normal
                 let r = Math.random()
-                if(r<0.10 && i>39){choices = this.b_eternal;} //only eternals, idk odds lol
-                if(r<0.025 && i>24){choices = this.b_celestial;} //celestial wave
+                if(r<0.005 && i>14){choices = this.b_shiny;} // rarest wave, all shiny color things
+                else if(r<0.01 && i>9){choices = this.b_shinySentry;} // shiny sentry wave
+                else if(r<0.02 && i>39){choices = this.b_eternal sockets.broadcast('Yall are so cooked 💀');} //only eternals, idk odds lol
+                else if(r<0.025 && i>24){choices = this.b_celestial sockets.broadcast('The next wave will be a deadly wave.');} //celestial wave
                 else if(r<0.05 && i>1){choices = this.b_crasher;} //crasher wave
                 else if(r<0.075 && i>4){choices = this.b_sentry;} //sentry wave
-                else if(r<0.1 && i>9){choices = this.b_nest;} //nest wave
-                else if(r<0.15 && i>9){choices = this.b_elite;} //elite wave
-                else if(r<0.25 && i>4){choices = this.b_mystical;} //mystical wave
-                    //rareest waves
-                else if(r<0.95 && i>9){choices = this.b_shinySentry;} // shiny sentry wave
-                else if(r<0.99 && i>14){choices = this.b_shiny;} // rarest wave, all shiny color things
-                else{choices = this.b_normal}
+                else if(r<0.1 && i>9){choices = this.b_nest sockets.broadcast('The next wave will be a nester wave.');} //nest wave
+                else if(r<0.25 && i>9){choices = this.b_elite sockets.broadcast('The next wave will be a elite wave.');} //elite wave
+                else if(r<0.35 && i>4){choices = this.b_mystical sockets.broadcast('The next wave will be a mystical wave.');} //mystical wave
+                else{choices = this.b_normal sockets.broadcast('The next wave will be normal.')}
 
             while (points > 0 && choices.length) {
                 choices = choices.filter(([ cost ]) => cost <= points);

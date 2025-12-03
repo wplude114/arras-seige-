@@ -75,7 +75,7 @@ Class.betaExorcistor = {
             TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
         },
     ],
-};
+}
 Class.alphaExorcistor = {
     PARENT: "miniboss",
     LABEL: "Alpha Exorcistor",
@@ -114,7 +114,7 @@ Class.alphaExorcistor = {
                 STAT_CALCULATOR: "drone",
                 WAIT_TO_CYCLE: true,
             },
-        }
+        },
          {
             POSITION: [1.5, 12, 0.8, 9.8, 0, 36, 1],
             PROPERTIES: {
@@ -137,7 +137,7 @@ Class.alphaExorcistor = {
             TYPE: [ "pentdeco2", { INDEPENDENT: true, COLOR: -1} ],
         },
     ],
-};
+}
 
 // Nesters
 Class.nestWatcher = {

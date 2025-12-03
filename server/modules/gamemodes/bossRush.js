@@ -102,6 +102,11 @@ class BossRush {
             [100, "kronos"],
             [100, "odin"],
         ];
+        this.b_eternal = [
+            [100, "legionaryCrasher"],
+            [100, "kronos"],
+            [100, "odin"],
+        ];
         this.b_sentry = [
             [  0.5, "sentryGun"],
             [  0.5, "sentrySwarm"],
@@ -135,6 +140,7 @@ class BossRush {
                 points = calculatePoints(i)
                 let choices = this.b_normal
                 let r = Math.random()
+                if(r<0.01 && i>40){choices = this.b_celestial;} //only eternals, idk odds lol
                 if(r<0.025 && i>24){choices = this.b_celestial;} //celestial wave (2.5%, 25+)
                 else if(r<0.05 && i>2){choices = this.b_crasher;} //crasher wave (2.5%, 2+)
                 else if(r<0.075 && i>4){choices = this.b_sentry;} //sentry wave (2.5%, 5+)

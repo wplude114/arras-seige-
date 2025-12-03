@@ -85,7 +85,7 @@ Class.thingy = {
     VALUE: 1e4,
      GUNS: weaponArray([
         {
-            POSITION: [2.7, 7, 0.7, 9.8, 0, 36, 0.5],
+            POSITION: [2.2, 9, 0.8, 9.8, 0, 36, 0.5],
             PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1.2}]),
                 TYPE: "demonchip",
@@ -96,7 +96,7 @@ Class.thingy = {
             },
         },
          {
-            POSITION: [1.5, 10, 0.8, 9.8, 0, 36, 0],
+            POSITION: [1.5, 12, 0.8, 9.8, 0, 36, 0],
             PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1.2}]),
                 TYPE: "demonchip",

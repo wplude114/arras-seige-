@@ -116,6 +116,13 @@ Class.nestWatcher = {
 }
 
 // Entrestirals
+let crash = new LayeredBoss("OHNOES", "o no", "entrestrial", 700, "aqua", "terrestrialTrapTurret", 4, 5);
+crash.addLayer({turret: {
+    POSITION: [9, 8, 0, null, 120, 0],
+    TYPE: ["boomerTurret", { INDEPENDENT: true, COLOR: -1 } ],
+}}, false, 10, 10);
+
+
 let thor = new LayeredBoss("th", "Thor", "entrestrial", 7, "purple", "terrestrialTrapTurret", 4, 5);
 thor.addLayer({turret: {
     POSITION: [9, 8, 0, null, 120, 0],

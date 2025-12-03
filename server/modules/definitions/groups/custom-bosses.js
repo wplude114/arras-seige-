@@ -69,11 +69,11 @@ Class.nestWatcher = {
 //??
 Class.thingy = {
     PARENT: "miniboss",
-    LABEL: "test boss2",
+    LABEL: "Beta Exorcistor",
     COLOR: "purple",
     UPGRADE_COLOR: "purple",
     SHAPE: 5,
-    SIZE: 15,
+    SIZE: 35,
     BODY: {
         FOV: 1.3,
         SPEED: base.SPEED,
@@ -85,7 +85,26 @@ Class.thingy = {
     VALUE: 1e4,
      GUNS: weaponArray([
         {
+            POSITION: [2.7, 7, 0.7, 9.8, 0, 36, 0.5],
+            PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1.2}]),
+                TYPE: "demonchip",
+                AUTOFIRE: true,
+                SYNCS_SKILLS: true,
+                STAT_CALCULATOR: "drone",
+                WAIT_TO_CYCLE: true,
+            },
+        },
+         {
             POSITION: [1.5, 10, 0.8, 9.8, 0, 36, 0],
+            PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1.2}]),
+                TYPE: "demonchip",
+                AUTOFIRE: true,
+                SYNCS_SKILLS: true,
+                STAT_CALCULATOR: "drone",
+                WAIT_TO_CYCLE: true,
+            },
         }
     ], 5),
     TURRETS: [

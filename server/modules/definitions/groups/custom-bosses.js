@@ -72,7 +72,7 @@ Class.thingy = {
     COLOR: "purple",
     UPGRADE_COLOR: "purple",
     SHAPE: 5,
-    SIZE: 30,
+    SIZE: 20,
     BODY: {
         FOV: 1.3,
         SPEED: base.SPEED * 0.45,
@@ -89,8 +89,8 @@ Class.thingy = {
     ], 5),
     TURRETS: [
         {
-            POSITION: [5, 0, 0, 0, 360, 1],
-            TYPE: [ "auraforbosses", { INDEPENDENT: true, COLOR: -1 } ],
+            POSITION: [10, 0, 0, 0, 360, 1],
+            TYPE: [ "auraforbosses", { INDEPENDENT: true } ],
         },
     ],
 }

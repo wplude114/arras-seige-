@@ -25,7 +25,7 @@ Class.entrestrial = {
         DAMAGE: 4,
     },
 };
-Class.pentdeco = makeDeco(5.5);
+Class.pentdeco = makeDeco(5.2);
 
 // Nesters
 Class.nestWatcher = {
@@ -90,11 +90,11 @@ Class.thingy = {
     ], 5),
     TURRETS: [
         {
-            POSITION: [15, 0, 0, 0, 0, 1],
-            TYPE: [ "pentdeco", { INDEPENDENT: true } ],
+            POSITION: [16, 0, 0, 0, 0, 1],
+            TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
         },
         {
-            POSITION: [13, 0, 0, 0, 360, 1],
+            POSITION: [12, 0, 0, 0, 360, 1],
             TYPE: [ "auraforbosses", { INDEPENDENT: true } ],
         },
     ],

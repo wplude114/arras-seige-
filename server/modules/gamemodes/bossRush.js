@@ -1,4 +1,4 @@
-let calculatePoints = wave => 3 + wave * 2;
+let calculatePoints = wave => 2 + wave * 3;
 // Each wave has a certain amount of "points" that it can spend on bosses, calculated above.
 // Each boss costs an amount of points.
 // It will always buy as many bosses until it has no points or else can't spend them.
@@ -16,6 +16,9 @@ class BossRush {
             [  3, "enchantress"],
             [  4, "exorcistor"],
             [  5, "shaman"],
+
+            //betamysticals (sorry ki07craft)
+            [ 10, "betaExorcistor"]
 
             //elites
             [  2, "eliteDestroyer"],

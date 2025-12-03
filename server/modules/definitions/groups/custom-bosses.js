@@ -73,8 +73,8 @@ Class.thingy = {
     COLOR: "purple",
     UPGRADE_COLOR: "purple",
     SHAPE: 5,
-    SIZE: 35,
-    MAX_CHILDREN: 10,
+    SIZE: 30,
+    MAX_CHILDREN: 20,
     BODY: {
         FOV: 1.3,
         SPEED: base.SPEED,
@@ -86,7 +86,7 @@ Class.thingy = {
     VALUE: 1e4,
      GUNS: weaponArray([
         {
-            POSITION: [2.2, 9, 0.8, 9.8, 0, 36, 0.5],
+            POSITION: [2.2, 9, 1.2, 9.8, 0, 36, 0.5],
             PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
                 TYPE: "demonchip",
@@ -97,7 +97,7 @@ Class.thingy = {
             },
         },
          {
-            POSITION: [1.5, 12, 0.8, 9.8, 0, 36, 0],
+            POSITION: [1.5, 12, 1.2, 9.8, 0, 36, 0],
             PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
                 TYPE: "demonchip",

@@ -78,6 +78,9 @@ class BossRush {
             [  5, "nestKeeper"],
             [  5, "nestWarden"],
             [  5, "nestGuardian"],
+            [  1, "sentinelCrossbow"],
+            [  1, "sentinelLauncher"],
+            [  1, "sentinelMinigun"],
         ];
         this.b_celestial = [
             //entrestrials

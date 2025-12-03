@@ -1295,6 +1295,59 @@ Class.streamliner = {
         },
     ],
 }
+//streamliner+
+Class.lunker = {
+    PARENT: "genericTank",
+    LABEL: "Lunker",
+    DANGER: 8,
+    BODY: {
+        FOV: 1.3,
+    },
+    GUNS: [
+        {
+            POSITION: [27, 8, 1, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                TYPE: "bullet",
+            },
+        },
+        {
+            POSITION: [25, 8, 1, 0, 0, 0, 0.2],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                TYPE: "bullet",
+            },
+        },
+        {
+            POSITION: [23, 8, 1, 0, 0, 0, 0.3],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                TYPE: "bullet",
+            },
+        },
+        {
+            POSITION: [21, 8, 1, 0, 0, 0, 0.5],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                TYPE: "bullet",
+            },
+        },
+        {
+            POSITION: [19, 8, 1, 0, 0, 0, 0.6],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                TYPE: "bullet",
+            },
+        },
+        {
+            POSITION: [17, 8, 1, 0, 0, 0, 0.8],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                TYPE: "bullet",
+            },
+        },
+    ],
+}
 Class.barricade = {
     PARENT: "genericTank",
     DANGER: 7,
@@ -3918,6 +3971,7 @@ Class.basic.UPGRADES_TIER_1 = ["twin", "sniper", "machineGun", "flankGuard", "di
 
     Class.machineGun.UPGRADES_TIER_2 = ["artillery", "minigun", "gunner", "sprayer"]
         Class.minigun.UPGRADES_TIER_3 = ["streamliner", "nailgun", "cropDuster", "barricade", "vulture"]
+            Class.streamliner.UPGRADES_TIER_3 = ["lunker"]
         Class.gunner.UPGRADES_TIER_3 = ["autoGunner", "nailgun", "auto4", "machineGunner", "gunnerTrapper", "cyclone", "overgunner"]
         Class.sprayer.UPGRADES_TIER_3 = ["redistributor", "phoenix", "atomizer", "focal"]
 
@@ -3948,9 +4002,3 @@ Class.basic.UPGRADES_TIER_1 = ["twin", "sniper", "machineGun", "flankGuard", "di
 
     Class.desmos.UPGRADES_TIER_2 = ["helix"]
         Class.helix.UPGRADES_TIER_3 = ["triplex", "quadruplex"]
-
-
-
-
-
-

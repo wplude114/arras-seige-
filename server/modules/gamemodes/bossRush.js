@@ -7,7 +7,10 @@ let calculatePoints = wave => 2 + wave * 3;
 
 class BossRush {
     constructor() {
-        this.bossChoices = [
+        this.b_temp = [
+            [  1, "miniboss"],
+        ];
+        this.b_norm = [
             // [ cost , definition reference ],
             
             //mysticals
@@ -16,26 +19,20 @@ class BossRush {
             [  3, "enchantress"],
             [  4, "exorcistor"],
             [  5, "shaman"],
-
-            //betamysticals (sorry ki07craft)
-            [ 10, "betaExorcistor"]
-
             //elites
             [  2, "eliteDestroyer"],
             [  2, "eliteGunner"],
-            //[  4, "eliteSprayer"],
+            [  4, "eliteSprayer"],
             [  4, "eliteBattleship"],
             [  2, "eliteSpawner"],
             [  2, "eliteTrapGuard"],
-            //[  4, "eliteSpinner"], // higher cost bc of lag (sorry)
+            [  4, "eliteSpinner"], // higher cost bc of lag (sorry)
             [  2, "eliteSkimmer"],
-
             //nesters
+            [  4, "nestWatcher"],
             [  5, "nestKeeper"],
             [  5, "nestWarden"],
             [  5, "nestGuardian"],
-            [  4, "nestWatcher"],
-
             //entrestrials
             [ 10, "th"],
             [ 10, "ze"],
@@ -43,7 +40,6 @@ class BossRush {
             [ 10, "ha"],
             [ 10, "de"],
             [ 10, "the"],
-
             //terrestrials
             [ 15, "ares"],
             [ 15, "gersemi"],
@@ -51,18 +47,78 @@ class BossRush {
             [ 15, "eris"],
             [ 15, "selene"],
             [ 15, "rokna"],
-
             //celestials
             [ 35, "paladin"],
             [ 35, "freyja"],
             [ 35, "zaphkiel"],
             [ 35, "nyx"],
             [ 35, "theia"],
-
             //eternals
             [100, "legionaryCrasher"],
             [100, "kronos"],
             [100, "odin"],
+        ];
+        this.b_mystical = [
+            [  2, "sorcerer"],
+            [  2, "summoner"],
+            [  3, "enchantress"],
+            [  4, "exorcistor"],
+            [  5, "shaman"],
+            
+            //[  4, "betaExorcistor "],
+        ];
+        this.b_elite = [
+            [  2, "eliteDestroyer"],
+            [  2, "eliteGunner"],
+            [  4, "eliteSprayer"],
+            [  4, "eliteBattleship"],
+            [  2, "eliteSpawner"],
+            [  2, "eliteTrapGuard"],
+            [  4, "eliteSpinner"],
+            [  2, "eliteSkimmer"],
+        ];
+        this.b_nest = [
+            [  4, "nestWatcher"],
+            [  5, "nestKeeper"],
+            [  5, "nestWarden"],
+            [  5, "nestGuardian"],
+        ];
+        this.b_celestial = [
+            //entrestrials
+            [ 10, "th"],
+            [ 10, "ze"],
+            [ 10, "ga"],
+            [ 10, "ha"],
+            [ 10, "de"],
+            [ 10, "the"],
+            //terrestrials
+            [ 15, "ares"],
+            [ 15, "gersemi"],
+            [ 15, "ezekiel"],
+            [ 15, "eris"],
+            [ 15, "selene"],
+            [ 15, "rokna"],
+            //celestials
+            [ 35, "paladin"],
+            [ 35, "freyja"],
+            [ 35, "zaphkiel"],
+            [ 35, "nyx"],
+            [ 35, "theia"],
+            //eternals
+            [100, "legionaryCrasher"],
+            [100, "kronos"],
+            [100, "odin"],
+        ];
+        this.b_sentry = [
+            [  0.5, "sentryGun"],
+            [  0.5, "sentrySwarm"],
+            [  0.5, "sentryTrap"],
+        ];
+        this.b_crasher = [
+            [  3, "sentryGun"],
+            [  3, "sentrySwarm"],
+            [  3, "sentryTrap"],
+            [  0.5, "crasher"],
         ];
         this.largeFodderChoices = [ "sentinelCrossbow", "sentinelLauncher", "sentinelMinigun" ];
         this.friendlyBossChoices = [ [5, "roguePalisade"], [5, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"] ];
@@ -85,7 +141,15 @@ class BossRush {
         for (let i = 0; i < this.length; i++) {
             let wave = [],
                 points = calculatePoints(i),
-                choices = this.bossChoices;
+                let choices = this.b_normal
+                let r = Math.random()
+                if(r<0.025 && i>24){choices = this.b_celestial;} //celestial wave (2.5%, 25+)
+                else if(r<0.05 && i>1){choices = this.b_crasher;} //crasher wave (2.5%, 2+)
+                else if(r<0.075 && i>4){choices = this.b_sentry;} //sentry wave (2.5%, 5+)
+                else if(r<0.1 && i>19){choices = this.b_nest;} //nest wave (2.5%, 20+)
+                else if(r<0.15 && i>14){choices = this.b_elite;} //elite wave (5%, 15+)
+                else if(r<0.25 && i>9){choices = this.b_mystical;} //mystical wave (10%, 10+)
+                else{choices = this.b_normal}
 
             while (points > 0 && choices.length) {
                 choices = choices.filter(([ cost ]) => cost <= points);

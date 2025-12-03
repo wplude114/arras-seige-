@@ -1250,6 +1250,59 @@ Class.sprayer = {
 }
 
 // Minigun upgrades
+Class.enlister = {
+    PARENT: "genericTank",
+    LABEL: "Enlister",
+    DANGER: 7,
+    BODY: {
+        FOV: 1.5,
+    },
+    GUNS: [
+        {
+            POSITION: [16, 7.5, 1, 0, 4.5, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.twin, g.spam, g.spam]),
+                TYPE: "bullet",
+            },
+        }, {
+            POSITION: [11.5, 7.5, -1.33, 1, 4.5, 0, 0.5],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.twin, g.spam, g.spam]),
+                TYPE: "bullet",
+            },
+        }, {
+            POSITION: [16, 7.5, 1, 0, -4.5, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.twin, g.spam, g.spam]),
+                TYPE: "bullet",
+            },
+        }, {
+            POSITION: [11.5, 7.5, -1.33, 1, -4.5, 0, 0.5],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.twin, g.spam, g.spam]),
+                TYPE: "bullet",
+            },
+        }, {
+            POSITION: [22.5, 9, 1, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.twin, g.spam, g.spam]),
+                TYPE: "bullet",
+            },
+        }, {
+            POSITION: [20.4, 9, 1, 0, 0, 0, 1/3],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.twin, g.spam, g.spam]),
+                TYPE: "bullet",
+            },
+        }, {
+            POSITION: [18.3, 9, 1, 0, 0, 0, 2/3],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.twin, g.spam, g.spam]),
+                TYPE: "bullet",
+            },
+        },
+    ],
+}
 Class.streamliner = {
     PARENT: "genericTank",
     LABEL: "Streamliner",
@@ -3970,7 +4023,7 @@ Class.basic.UPGRADES_TIER_1 = ["twin", "sniper", "machineGun", "flankGuard", "di
         Class.marksman.UPGRADES_TIER_3 = ["deadeye", "nimrod", "revolver", "fork"]
 
     Class.machineGun.UPGRADES_TIER_2 = ["artillery", "minigun", "gunner", "sprayer"]
-        Class.minigun.UPGRADES_TIER_3 = ["streamliner", "nailgun", "cropDuster", "barricade", "vulture"]
+        Class.minigun.UPGRADES_TIER_3 = ["enlister", "streamliner", "nailgun", "cropDuster", "barricade", "vulture"]
             Class.streamliner.UPGRADES_TIER_3 = ["lunker"]
         Class.gunner.UPGRADES_TIER_3 = ["autoGunner", "nailgun", "auto4", "machineGunner", "gunnerTrapper", "cyclone", "overgunner"]
         Class.sprayer.UPGRADES_TIER_3 = ["redistributor", "phoenix", "atomizer", "focal"]
@@ -4002,3 +4055,4 @@ Class.basic.UPGRADES_TIER_1 = ["twin", "sniper", "machineGun", "flankGuard", "di
 
     Class.desmos.UPGRADES_TIER_2 = ["helix"]
         Class.helix.UPGRADES_TIER_3 = ["triplex", "quadruplex"]
+

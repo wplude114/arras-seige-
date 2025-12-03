@@ -142,13 +142,13 @@ class BossRush {
                 points = calculatePoints(i)
                 let choices = this.b_normal
                 let r = Math.random()
-                if(r<0.01 && i>40){choices = this.b_eternal;} //only eternals, idk odds lol
-                if(r<0.025 && i>24){choices = this.b_celestial;} //celestial wave (2.5%, 25+)
-                else if(r<0.05 && i>1){choices = this.b_crasher;} //crasher wave (2.5%, 2+)
-                else if(r<0.075 && i>4){choices = this.b_sentry;} //sentry wave (2.5%, 5+)
-                else if(r<0.1 && i>10){choices = this.b_nest;} //nest wave (2.5%, 20+)
-                else if(r<0.15 && i>10){choices = this.b_elite;} //elite wave (5%, 15+)
-                else if(r<0.25 && i>4){choices = this.b_mystical;} //mystical wave (10%, 10+)
+                if(r<0.01 && i>39){choices = this.b_eternal;} //only eternals, idk odds lol
+                if(r<0.025 && i>24){choices = this.b_celestial;} //celestial wave
+                else if(r<0.05 && i>1){choices = this.b_crasher;} //crasher wave
+                else if(r<0.075 && i>4){choices = this.b_sentry;} //sentry wave
+                else if(r<0.1 && i>9){choices = this.b_nest;} //nest wave
+                else if(r<0.15 && i>9){choices = this.b_elite;} //elite wave
+                else if(r<0.25 && i>4){choices = this.b_mystical;} //mystical wave
                 else{choices = this.b_normal}
 
             while (points > 0 && choices.length) {

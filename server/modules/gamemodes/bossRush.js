@@ -187,7 +187,10 @@ class BossRush {
 
     spawnFriendlyBoss() {
         let o = new Entity(getSpawnableArea(TEAM_BLUE));
+        let zz = new Entity(getSpawnableArea(TEAM_BLUE));
         let type = this.friendlyBossChoices[ran.chooseChance(...this.friendlyBossChoices.map((x) => x[0]))][1]
+        zz.define(bot);
+        zz.team = TEAM_BLUE;
         o.define(type);
         o.define({ DANGER: 10 });
         o.team = TEAM_BLUE;
@@ -195,7 +198,7 @@ class BossRush {
         o.name = ran.chooseBossName('castle');
         o.FOV = 10;
         o.settings.broadcastMessage = `${o.name} has fallen!`;
-        sockets.broadcast(o.name + ' has arrived and joined your team!');
+        sockets.broadcast(o.name + ' and ' + zz.name + ' has arrived and joined your team!');
     }
 
     spawnSanctuary(tile, team, type = false) {

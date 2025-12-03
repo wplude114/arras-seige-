@@ -8,8 +8,6 @@ let calculatePoints = wave => 2 + wave * 3;
 class BossRush {
     constructor() {
         this.b_normal = [
-            // [ cost , definition reference ],
-            
             //mysticals
             [  2, "sorcerer"],
             [  2, "summoner"],
@@ -109,21 +107,15 @@ class BossRush {
             [  0.5, "sentrySwarm"],
             [  0.5, "sentryTrap"],
         ];
-        this.b_shiny = [
-            [  1, "shinySentryGun"],
-            [  1, "shinySentrySwarm"],
-            [  1, "shinySentryTrap"],
-        ];
         this.b_crasher = [
             [  0.5, "crasher"],
             [  3, "sentryGun"],
             [  3, "sentrySwarm"],
             [  3, "sentryTrap"],
         ];
-        this.largeFodderChoices = [ "sentinelCrossbow", "sentinelLauncher", "sentinelMinigun" ];
         this.friendlyBossChoices = [ [5, "roguePalisade"], [5, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"] ];
+        this.largeFodderChoices = [ "sentinelCrossbow", "sentinelLauncher", "sentinelMinigun" ];
         this.bigFodderChoices = [ "sentryGun", "sentrySwarm", "sentryTrap" ];
-        this.shinyFodderChoices = [ "shinySentryGun", "shinySentrySwarm", "shinySentryTrap" ];
         this.smallFodderChoices = [ "crasher" ];
         this.length = Config.CLASSIC_SIEGE ? this.waveCodes.length : Config.WAVES;
         this.waves = this.generateWaves();
@@ -140,16 +132,15 @@ class BossRush {
         let waves = [];
         for (let i = 0; i < this.length; i++) {
             let wave = [],
-                points = calculatePoints(i),
-                let choices = this.b_normal;
-                let r = Math.random();
+                points = calculatePoints(i)
+                let choices = this.b_normal
+                let r = Math.random()
                 if(r<0.025 && i>24){choices = this.b_celestial;} //celestial wave (2.5%, 25+)
-                else if(r<0.05 && i>1){choices = this.b_crasher;} //crasher wave (2.5%, 2+)
+                else if(r<0.05 && i>2){choices = this.b_crasher;} //crasher wave (2.5%, 2+)
                 else if(r<0.075 && i>4){choices = this.b_sentry;} //sentry wave (2.5%, 5+)
                 else if(r<0.1 && i>19){choices = this.b_nest;} //nest wave (2.5%, 20+)
-                else if(r<0.15 && i>14){choices = this.b_elite;} //elite wave (5%, 15+)
+                else if(r<0.15 && i>10){choices = this.b_elite;} //elite wave (5%, 15+)
                 else if(r<0.25 && i>9){choices = this.b_mystical;} //mystical wave (10%, 10+)
-                else if(r<0.75 && i>10){choices = this.b_shiny;} // i think this is 10x more rare than sentry
                 else{choices = this.b_normal}
 
             while (points > 0 && choices.length) {

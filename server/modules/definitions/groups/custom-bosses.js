@@ -25,6 +25,7 @@ Class.entrestrial = {
         DAMAGE: 4,
     },
 };
+Class.pentdeco = makeDeco(5.5);
 
 // Nesters
 Class.nestWatcher = {
@@ -72,16 +73,16 @@ Class.thingy = {
     COLOR: "purple",
     UPGRADE_COLOR: "purple",
     SHAPE: 5,
-    SIZE: 20,
+    SIZE: 15,
     BODY: {
         FOV: 1.3,
-        SPEED: base.SPEED * 0.45,
+        SPEED: base.SPEED,
         HEALTH: base.HEALTH * 9,
         SHIELD: base.SHIELD * 1.5,
         REGEN: base.REGEN,
-        DAMAGE: base.DAMAGE * 2.5,
+        DAMAGE: base.DAMAGE * 10.5,
     },
-    VALUE: 3e5,
+    VALUE: 1e4,
      GUNS: weaponArray([
         {
             POSITION: [1.5, 10, 0.8, 9.8, 0, 36, 0],
@@ -89,7 +90,11 @@ Class.thingy = {
     ], 5),
     TURRETS: [
         {
-            POSITION: [10, 0, 0, 0, 360, 1],
+            POSITION: [15, 0, 0, 0, 0, 1],
+            TYPE: [ "pentdeco", { INDEPENDENT: true } ],
+        },
+        {
+            POSITION: [13, 0, 0, 0, 360, 1],
             TYPE: [ "auraforbosses", { INDEPENDENT: true } ],
         },
     ],

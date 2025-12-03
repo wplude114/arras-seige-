@@ -10,7 +10,7 @@ class BossRush {
         this.b_temp = [
             [  1, "miniboss"],
         ];
-        this.b_norm = [
+        this.b_normal = [
             // [ cost , definition reference ],
             
             //mysticals
@@ -114,6 +114,11 @@ class BossRush {
             [  0.5, "sentrySwarm"],
             [  0.5, "sentryTrap"],
         ];
+        this.b_shiny = [
+            [  1, "shinySentryGun"],
+            [  1, "shinySentrySwarm"],
+            [  1, "shinySentryTrap"],
+        ];
         this.b_crasher = [
             [  3, "sentryGun"],
             [  3, "sentrySwarm"],
@@ -149,6 +154,7 @@ class BossRush {
                 else if(r<0.1 && i>19){choices = this.b_nest;} //nest wave (2.5%, 20+)
                 else if(r<0.15 && i>14){choices = this.b_elite;} //elite wave (5%, 15+)
                 else if(r<0.25 && i>9){choices = this.b_mystical;} //mystical wave (10%, 10+)
+                else if(r<0.75 && i>4){choices = this.b_shiny;} // i think this is 10x more rare than sentry
                 else{choices = this.b_normal}
 
             while (points > 0 && choices.length) {

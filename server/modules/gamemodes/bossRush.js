@@ -7,9 +7,6 @@ let calculatePoints = wave => 2 + wave * 3;
 
 class BossRush {
     constructor() {
-        this.b_temp = [
-            [  1, "miniboss"],
-        ];
         this.b_normal = [
             // [ cost , definition reference ],
             
@@ -22,12 +19,12 @@ class BossRush {
             //elites
             [  2, "eliteDestroyer"],
             [  2, "eliteGunner"],
-            [  4, "eliteSprayer"],
-            [  4, "eliteBattleship"],
             [  2, "eliteSpawner"],
             [  2, "eliteTrapGuard"],
-            [  4, "eliteSpinner"], // higher cost bc of lag (sorry)
             [  2, "eliteSkimmer"],
+            [  3, "eliteBattleship"],
+            [  4, "eliteSpinner"],
+            [  4, "eliteSprayer"],
             //nesters
             [  4, "nestWatcher"],
             [  5, "nestKeeper"],
@@ -64,18 +61,16 @@ class BossRush {
             [  3, "enchantress"],
             [  4, "exorcistor"],
             [  5, "shaman"],
-            
-            //[  4, "betaExorcistor "],
         ];
         this.b_elite = [
             [  2, "eliteDestroyer"],
             [  2, "eliteGunner"],
-            [  4, "eliteSprayer"],
-            [  4, "eliteBattleship"],
             [  2, "eliteSpawner"],
             [  2, "eliteTrapGuard"],
-            [  4, "eliteSpinner"],
             [  2, "eliteSkimmer"],
+            [  3, "eliteBattleship"],
+            [  4, "eliteSpinner"],
+            [  4, "eliteSprayer"],
         ];
         this.b_nest = [
             [  4, "nestWatcher"],
@@ -120,10 +115,10 @@ class BossRush {
             [  1, "shinySentryTrap"],
         ];
         this.b_crasher = [
+            [  0.5, "crasher"],
             [  3, "sentryGun"],
             [  3, "sentrySwarm"],
             [  3, "sentryTrap"],
-            [  0.5, "crasher"],
         ];
         this.largeFodderChoices = [ "sentinelCrossbow", "sentinelLauncher", "sentinelMinigun" ];
         this.friendlyBossChoices = [ [5, "roguePalisade"], [5, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"] ];
@@ -146,15 +141,15 @@ class BossRush {
         for (let i = 0; i < this.length; i++) {
             let wave = [],
                 points = calculatePoints(i),
-                let choices = this.b_normal
-                let r = Math.random()
+                let choices = this.b_normal;
+                let r = Math.random();
                 if(r<0.025 && i>24){choices = this.b_celestial;} //celestial wave (2.5%, 25+)
                 else if(r<0.05 && i>1){choices = this.b_crasher;} //crasher wave (2.5%, 2+)
                 else if(r<0.075 && i>4){choices = this.b_sentry;} //sentry wave (2.5%, 5+)
                 else if(r<0.1 && i>19){choices = this.b_nest;} //nest wave (2.5%, 20+)
                 else if(r<0.15 && i>14){choices = this.b_elite;} //elite wave (5%, 15+)
                 else if(r<0.25 && i>9){choices = this.b_mystical;} //mystical wave (10%, 10+)
-                else if(r<0.75 && i>4){choices = this.b_shiny;} // i think this is 10x more rare than sentry
+                else if(r<0.75 && i>10){choices = this.b_shiny;} // i think this is 10x more rare than sentry
                 else{choices = this.b_normal}
 
             while (points > 0 && choices.length) {

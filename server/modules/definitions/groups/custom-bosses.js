@@ -133,7 +133,7 @@ Class.alphaExorcistor = {
             TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
         },
         {
-            POSITION: [11, 0, 0, 0, 0, 1],
+            POSITION: [13, 0, 0, 0, 0, 1],
             TYPE: [ "pentdeco2", { INDEPENDENT: true, COLOR: -1} ],
         },
     ],

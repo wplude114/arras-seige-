@@ -112,10 +112,6 @@ Class.thingy = {
             POSITION: [16, 0, 0, 0, 0, 1],
             TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
         },
-        {
-            POSITION: [12, 0, 0, 0, 360, 1],
-            TYPE: [ "auraforbosses", { INDEPENDENT: true } ],
-        },
     ],
 }
 

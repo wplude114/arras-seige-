@@ -81,7 +81,7 @@ Class.thingy = {
         HEALTH: base.HEALTH * 9,
         SHIELD: base.SHIELD * 1.5,
         REGEN: base.REGEN,
-        DAMAGE: base.DAMAGE * 10.5,
+        DAMAGE: base.DAMAGE * 30,
     },
     VALUE: 1e4,
      GUNS: weaponArray([

@@ -48,6 +48,7 @@ Class.basic = {
         }
     ]
 }
+
 Class.twin = {
     PARENT: "genericTank",
     LABEL: "Twin",
@@ -69,6 +70,47 @@ Class.twin = {
                 WIDTH: 8,
                 Y: -5.5,
                 DELAY: 0.5
+            },
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.twin]),
+                TYPE: "bullet"
+            }
+        }
+    ]
+}
+Class.twinlet = {
+    PARENT: "genericTank",
+    LABEL: "Twinlet",
+    GUNS: [
+        {
+            POSITION: {
+                LENGTH: 25,
+                WIDTH: 10,
+                Y: 0
+            },
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.twin]),
+                TYPE: "bullet"
+            }
+        },
+        {
+            POSITION: {
+                LENGTH: 20,
+                WIDTH: 8,
+                Y: 5.5,
+                DELAY: 0.33
+            },
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.twin]),
+                TYPE: "bullet"
+            }
+        },
+        {
+            POSITION: {
+                LENGTH: 20,
+                WIDTH: 8,
+                Y: -5.5,
+                DELAY: 0.66
             },
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.twin]),
@@ -4196,7 +4238,7 @@ Class.basic.UPGRADES_TIER_1 = ["twin", "sniper", "machineGun", "flankGuard", "di
         Class.healer.UPGRADES_TIER_3 = ["medic", "ambulance", "surgeon", "paramedic"]
 
     Class.twin.UPGRADES_TIER_2 = ["doubleTwin", "tripleShot", "gunner", "hexaTank", "helix"]
-        Class.twin.UPGRADES_TIER_3 = ["dual", "bulwark", "musket"]
+        Class.twin.UPGRADES_TIER_3 = ["dual", "bulwark", "musket", "twinlet"]
         Class.doubleTwin.UPGRADES_TIER_3 = ["tripleTwin", "hewnDouble", "autoDouble", "bentDouble"]
         Class.tripleShot.UPGRADES_TIER_3 = ["pentaShot", "spreadshot", "bentHybrid", "bentDouble", "triplet", "triplex"]
 
@@ -4241,6 +4283,7 @@ Class.basic.UPGRADES_TIER_1 = ["twin", "sniper", "machineGun", "flankGuard", "di
 
     Class.desmos.UPGRADES_TIER_2 = ["helix"]
         Class.helix.UPGRADES_TIER_3 = ["triplex", "quadruplex"]
+
 
 
 

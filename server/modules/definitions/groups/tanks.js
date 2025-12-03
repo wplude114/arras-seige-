@@ -1514,49 +1514,49 @@ Class.elaper = {
         {
             POSITION: [29, 8, 1.3, 0, 0, 0, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner, g.twin]),
                 TYPE: "bullet",
             },
         },
         {
             POSITION: [27, 8, 1.3, 0, 0, 0, 0.1],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner, g.twin]),
                 TYPE: "bullet",
             },
         },
         {
             POSITION: [25, 8, 1.3, 0, 0, 0, 0.15],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner, g.twin]),
                 TYPE: "bullet",
             },
         },
         {
             POSITION: [23, 8, 1.3, 0, 0, 0, 0.2],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner, g.twin]),
                 TYPE: "bullet",
             },
         },
         {
             POSITION: [21, 8, 1.3, 0, 0, 0, 0.25],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner, g.twin]),
                 TYPE: "bullet",
             },
         },
         {
             POSITION: [19, 8, 1.3, 0, 0, 0, 0.3],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner, g.twin]),
                 TYPE: "bullet",
             },
         },
         {
             POSITION: [17, 8, 1.3, 0, 0, 0, 0.35],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner, g.twin]),
                 TYPE: "bullet",
             },
         },
@@ -1573,56 +1573,56 @@ Class.lofter = {
         {
             POSITION: [31, 2, 1, 0, 0, 0, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner, g.twin]),
                 TYPE: "bullet",
             },
         },
         {
             POSITION: [29, 4, 1, 0, 0, 0, 0.1],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner, g.twin]),
                 TYPE: "bullet",
             },
         },
         {
             POSITION: [27, 6, 1, 0, 0, 0, 0.2],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner, g.twin]),
                 TYPE: "bullet",
             },
         },
         {
             POSITION: [25, 7, 1, 0, 0, 0, 0.3],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner, g.twin]),
                 TYPE: "bullet",
             },
         },
         {
             POSITION: [23, 8, 1, 0, 0, 0, 0.4],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner, g.twin]),
                 TYPE: "bullet",
             },
         },
         {
             POSITION: [21, 8, 1, 0, 0, 0, 0.5],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner, g.twin]),
                 TYPE: "bullet",
             },
         },
         {
             POSITION: [19, 8, 1, 0, 0, 0, 0.6],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner, g.twin]),
                 TYPE: "bullet",
             },
         },
         {
             POSITION: [17, 8, 1, 0, 0, 0, 0.8],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.minigun, g.streamliner, g.twin]),
                 TYPE: "bullet",
             },
         },
@@ -4283,6 +4283,7 @@ Class.basic.UPGRADES_TIER_1 = ["twin", "sniper", "machineGun", "flankGuard", "di
 
     Class.desmos.UPGRADES_TIER_2 = ["helix"]
         Class.helix.UPGRADES_TIER_3 = ["triplex", "quadruplex"]
+
 
 
 

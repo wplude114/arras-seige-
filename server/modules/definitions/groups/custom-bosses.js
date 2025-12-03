@@ -84,7 +84,7 @@ Class.thingy = {
     VALUE: 3e5,
      GUNS: weaponArray([
         {
-            [2, 10, -1.6, 8.85, 0, null, 0],
+            [2, 10, -1.6, 8.85, 0, null],
         }
     ], 5),
     TURRETS: [

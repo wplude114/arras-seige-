@@ -25,7 +25,7 @@ Class.entrestrial = {
         DAMAGE: 4,
     },
 };
-Class.pentdeco = makeDeco(5.2);
+Class.pentdeco = makeDeco(5.5);
 
 // Nesters
 Class.nestWatcher = {

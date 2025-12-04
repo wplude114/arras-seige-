@@ -40,9 +40,9 @@ body {
 body {
     font-family: Ubuntu;
     font-size: 14px;
-    background-image: url('./backgroundTile.png');
+    background-image: url('https://cdn.discordapp.com/attachments/1445548569577914490/1446251042973941760/Tile1.png?ex=69334dbe&is=6931fc3e&hm=00db9240957144380c26bc513d2a8bb9bc10de2a0670ad08562f3760ae9bfebf&');
     background-repeat: repeat;
-    background-color: gray;
+    background-color: guiwhite;
 }
 
 html,

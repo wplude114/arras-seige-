@@ -8,7 +8,7 @@
     "scope": "/",
     "display": "fullscreen",
     "icons": [{
-        "src": "round.png",
+        "src": "https://cdn.discordapp.com/attachments/1442179338274340864/1446225926386880632/Icon_small.png?ex=6933365a&is=6931e4da&hm=f3e9aaf6ef34127207997e0a043f439120aaab8d2b6b8f933941bbd003a5e4d0&",
         "sizes": "96x96",
         "type": "image/png"
     }]

@@ -73,15 +73,6 @@ class BossRush {
             [  4, "eliteSprayer"],
             [200, "legionaryCrasher"],
         ];
-        this.b_entrestrial = [
-            [  0.25, "crasher"],
-            [ 10, "th"],
-            [ 10, "ze"],
-            [ 10, "ga"],
-            [ 10, "ha"],
-            [ 10, "de"],
-            [ 10, "the"],
-        ];
         this.b_nest = [
             [  4, "nestWatcher"],
             [  5, "nestKeeper"],
@@ -171,10 +162,8 @@ class BossRush {
                 if(r<0.005 && i>14){choices = this.b_shiny;} // rarest wave, all shiny color things
                 else if(r<0.01 && i>9){choices = this.b_shinySentry;} // shiny sentry wave
                 else if(r<0.02 && i>39){choices = this.b_eternal;
-                        sockets.broadcast('Yall are cooked 💀💀💀🥀🥀');
-                    }
-                else if(r<0.025 && i>14){choices = this.b_entrestial;} //celestial wave
-                else if(r<0.03 && i>24){choices = this.b_celestial;} //entrestrial wave
+                sockets.broadcast('Yall are cooked 💀💀💀🥀🥀');}
+                else if(r<0.03 && i>24){choices = this.b_celestial;} //celestial wave
                 else if(r<0.05 && i>1){choices = this.b_crasher;} //crasher wave
                 else if(r<0.075 && i>4){choices = this.b_sentry;} //sentry wave
                 else if(r<0.1 && i>9){choices = this.b_nest;} //nest wave

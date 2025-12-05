@@ -58,9 +58,9 @@ class BossRush {
             [  2, "summoner"],
             [  3, "enchantress"],
             [  4, "exorcistor"],
-            [  5, "shaman"],
             [  6, "betaExorcistor"],
-            [  8, "alphaExorcistor"],
+            [  7, "alphaExorcistor"],
+            [  8, "shaman"],
         ];
         this.b_elite = [
             [  2, "eliteDestroyer"],

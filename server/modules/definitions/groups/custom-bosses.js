@@ -36,14 +36,14 @@ Class.betaExorcistor = {
     SHAPE: 5,
     COLOR: "purple",
     UPGRADE_COLOR: "purple",
-    SIZE: 30,
+    SIZE: 28,
     MAX_CHILDREN: 20,
-    VALUE: 4e6,
+    VALUE: 6e5,
     BODY: {
         FOV: 0.75,
         SPEED: 0.05 * base.SPEED,
-        HEALTH: 17 * base.HEALTH,
-        DAMAGE: 10 * base.DAMAGE,
+        HEALTH: 16 * base.HEALTH,
+        DAMAGE: 4.33 * base.DAMAGE,
     },
     GUNS: weaponArray([
         {
@@ -83,14 +83,14 @@ Class.alphaExorcistor = {
     SHAPE: 5,
     COLOR: "purple",
     UPGRADE_COLOR: "purple",
-    SIZE: 40,
-    MAX_CHILDREN: 50,
-    VALUE: 75e5,
+    SIZE: 30,
+    MAX_CHILDREN: 30,
+    VALUE: 55e4,
     BODY: {
-        FOV: 1.3,
+        FOV: 1.1,
         SPEED: 0.02 * base.SPEED,
-        HEALTH: 25 * base.HEALTH,
-        DAMAGE: 80 * base.DAMAGE,
+        HEALTH: 18 * base.HEALTH,
+        DAMAGE: 4.66 * base.DAMAGE,
     },
     GUNS: weaponArray([
         {

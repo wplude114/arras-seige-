@@ -73,6 +73,15 @@ class BossRush {
             [  4, "eliteSprayer"],
             [200, "legionaryCrasher"],
         ];
+        this.b_entrestrial = [
+            [  0.25, "crasher"],
+            [ 10, "th"],
+            [ 10, "ze"],
+            [ 10, "ga"],
+            [ 10, "ha"],
+            [ 10, "de"],
+            [ 10, "the"],
+        ];
         this.b_nest = [
             [  4, "nestWatcher"],
             [  5, "nestKeeper"],
@@ -133,9 +142,9 @@ class BossRush {
         ];
         this.b_crasher = [
             [  0.5, "crasher"],
-            [  3, "sentryGun"],
-            [  3, "sentrySwarm"],
-            [  3, "sentryTrap"],
+            [  5, "sentryGun"],
+            [  5, "sentrySwarm"],
+            [  5, "sentryTrap"],
         ];
         this.friendlyBossChoices = [ [5, "roguePalisade"], [5, "rogueArmada"], [1, "julius"], [1, "genghis"], [1, "napoleon"] ];
         this.largeFodderChoices = [ "sentinelCrossbow", "sentinelLauncher", "sentinelMinigun" ];
@@ -164,12 +173,13 @@ class BossRush {
                 else if(r<0.02 && i>39){choices = this.b_eternal;
                         sockets.broadcast('Yall are cooked 💀💀💀🥀🥀');
                     }
-                else if(r<0.025 && i>24){choices = this.b_celestial;} //celestial wave
+                else if(r<0.025 && i>14){choices = this.b_entrestial;} //celestial wave
+                else if(r<0.03 && i>24){choices = this.b_celestial;} //entrestrial wave
                 else if(r<0.05 && i>1){choices = this.b_crasher;} //crasher wave
                 else if(r<0.075 && i>4){choices = this.b_sentry;} //sentry wave
                 else if(r<0.1 && i>9){choices = this.b_nest;} //nest wave
-                else if(r<0.25 && i>9){choices = this.b_elite;} //elite wave
-                else if(r<0.35 && i>4){choices = this.b_mystical;} //mystical wave
+                else if(r<0.25 && i>5){choices = this.b_elite;} //elite wave
+                else if(r<0.35 && i>2){choices = this.b_mystical;} //mystical wave
                 else{choices = this.b_normal}
 
             while (points > 0 && choices.length) {

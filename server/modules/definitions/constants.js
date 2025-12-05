@@ -3,8 +3,8 @@ module.exports = {
 	basePolygonHealth: 2,
 
 	// SKILL DEFINITIONS
-	dfltskl: 9,
-	smshskl: 12,
+	dfltskl: 10,
+	smshskl: 20,
 
 	// NAMES
 	statnames: {

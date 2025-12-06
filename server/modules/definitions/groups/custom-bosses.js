@@ -56,12 +56,6 @@ Class.betaSorcerer = {
             TYPE: [ "eggdeco", { INDEPENDENT: true, COLOR: -1} ],
         },
     ],
-    TURRETS: [
-        {
-            POSITION: [9, 0, 0, 0, 360, 1],
-            TYPE: [ "sorcerer", { INDEPENDENT: true, COLOR: -1 } ],
-        },
-    ],
     GUNS: weaponArray({
         POSITION: [3.5, 8.65, 1.2, 8, 0, 0, 0],
         PROPERTIES: {
@@ -202,7 +196,7 @@ Class.omegaExorcistor = { // why the fuck
     },
     GUNS: weaponArray([
          {
-            POSITION: [1.5, 4, 1.2, 9.8, 5, 36, 0],
+            POSITION: [1.5, 6, 1.2, 9.8, 4, 36, 0],
             PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
                 TYPE: "omegaDemonchip",
@@ -213,7 +207,7 @@ Class.omegaExorcistor = { // why the fuck
             },
         },
          {
-            POSITION: [1.5, 4, 1.2, 9.8, -5, 36, 0.5],
+            POSITION: [1.5, 6, 1.2, 9.8, -4, 36, 0.5],
             PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
                 TYPE: "omegaDemonchip",

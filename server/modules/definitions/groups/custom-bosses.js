@@ -185,7 +185,7 @@ Class.omegaExorcistor = { // why the fuck
     SHAPE: 5,
     COLOR: "purple",
     UPGRADE_COLOR: "purple",
-    SIZE: 38,
+    SIZE: 75,
     MAX_CHILDREN: 40,
     VALUE: 55e5,
     BODY: {

@@ -186,17 +186,17 @@ Class.omegaExorcistor = { // why the fuck
     COLOR: "purple",
     UPGRADE_COLOR: "purple",
     SIZE: 75,
-    MAX_CHILDREN: 40,
+    MAX_CHILDREN: 50,
     VALUE: 55e5,
     BODY: {
         FOV: 1.2,
         SPEED: 0.01 * base.SPEED,
         HEALTH: 30 * base.HEALTH,
-        DAMAGE: 10 * base.DAMAGE, // still weak 💔
+        DAMAGE: 100 * base.DAMAGE, // still weak 💔
     },
     GUNS: weaponArray([
          {
-            POSITION: [1.5, 6, 1.2, 9.8, 4, 36, 0],
+            POSITION: [1.5, 6, 1.2, 9.8, 3.5, 35, 0],
             PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
                 TYPE: "omegaDemonchip",
@@ -207,7 +207,7 @@ Class.omegaExorcistor = { // why the fuck
             },
         },
          {
-            POSITION: [1.5, 6, 1.2, 9.8, -4, 36, 0.5],
+            POSITION: [1.5, 6, 1.2, 9.8, -3.5, 35, 0.5],
             PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
                 TYPE: "omegaDemonchip",

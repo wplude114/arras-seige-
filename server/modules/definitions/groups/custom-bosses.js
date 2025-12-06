@@ -251,6 +251,17 @@ Class.emperorExorcistor = { // what the fuck even is this!?!
     },
     GUNS: weaponArray([
          {
+            POSITION: [1.5, 5, 1.2, 10.3, 3.5, 36, 0.5],
+            PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator,g.streamliner, {maxSpeed: 1}]),
+                TYPE: "omegaDemonchip",
+                AUTOFIRE: true,
+                SYNCS_SKILLS: true,
+                STAT_CALCULATOR: "drone",
+                WAIT_TO_CYCLE: true,
+            },
+        },
+         {
             POSITION: [1.5, 5, 1.2, 9.5, 3.5, 36, 0],
             PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator,g.streamliner, {maxSpeed: 1}]),
@@ -262,7 +273,7 @@ Class.emperorExorcistor = { // what the fuck even is this!?!
             },
         },
          {
-            POSITION: [1.5, 5, 1.2, 10.3, 3.5, 36, 0.5],
+            POSITION: [1.5, 5, 1.2, 10.3, -3.5, 36, 0],
             PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator,g.streamliner, {maxSpeed: 1}]),
                 TYPE: "omegaDemonchip",
@@ -276,17 +287,6 @@ Class.emperorExorcistor = { // what the fuck even is this!?!
             POSITION: [1.5, 5, 1.2, 9.5, -3.5, 36, 0.5],
             PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, g.streamliner, {maxSpeed: 1}]),
-                TYPE: "omegaDemonchip",
-                AUTOFIRE: true,
-                SYNCS_SKILLS: true,
-                STAT_CALCULATOR: "drone",
-                WAIT_TO_CYCLE: true,
-            },
-        },
-         {
-            POSITION: [1.5, 5, 1.2, 10.3, -3.5, 36, 0],
-            PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator,g.streamliner, {maxSpeed: 1}]),
                 TYPE: "omegaDemonchip",
                 AUTOFIRE: true,
                 SYNCS_SKILLS: true,

@@ -173,27 +173,12 @@ module.exports = {
     BOSS_SPAWN_DURATION: 5,
 
     FOOD_TYPES: [
-        [2000, [
-            [1024, 'egg'], [256, 'betaEgg'], [64, 'alphaEgg'], [256, 'square'], [64, 'betaSquare'], [16, 'alphaSquare'], [64, 'triangle'], [16, 'pentagon'], [4, 'betaPentagon'], [1, 'alphaPentagon'], [0.25, 'omegaPentagon']
+        [9999, [
+            [1024, 'egg'], [256, 'betaEgg'], [64, 'alphaEgg'],
+            [256, 'square'], [64, 'betaSquare'], [16, 'alphaSquare'],
+            [64, 'triangle'],
+            [16, 'pentagon'], [4, 'betaPentagon'], [1, 'alphaPentagon'], [0.25, 'omegaPentagon']
         ]],
-        [1, [
-            [3125, 'shinyEgg'], [625, 'shinySquare'], [125, 'shinyTriangle'], [25, 'shinyPentagon'], [5, 'shinyBetaPentagon'], [1, 'shinyAlphaPentagon'], [0.2, 'shinyOmegaPentagon']
-        ]],
-        [0.1, [
-            [6836, 'legendaryEgg'], [1296, 'legendarySquare'], [216, 'legendaryTriangle'], [36, 'legendaryPentagon'], [6, 'legendaryBetaPentagon'], [1, 'legendaryAlphaPentagon'], [0.1666666666666667, 'legendaryOmegaPentagon']
-        ]],
-        [0.005, [
-            [16807, 'shadowEgg'], [2401, 'shadowSquare'], [343, 'shadowTriangle'], [49, 'shadowPentagon'], [7, 'shadowBetaPentagon'], [1, 'shadowAlphaPentagon'], [0.1428571428571429, 'shadowOmegaPentagon']
-        ]],
-        [0.001, [
-            [65536, 'rainbowEgg'], [8192, 'rainbowSquare'], [1024, 'rainbowTriangle'], [64, 'rainbowPentagon'], [8, 'rainbowBetaPentagon'], [1, 'rainbowAlphaPentagon'], [0.125, 'rainbowOmegaPentagon']
-        ]],
-        [0.0005, [
-            [59549, 'transEgg'], [6561, 'transSquare'], [729, 'transTriangle'], [81, 'transPentagon'], [9, 'transBetaPentagon'], [1, 'transAlphaPentagon'], [0.1111111111111111, 'transOmegaPentagon']
-        ]],
-        [0.0001, [
-            [10000, 'cube'], [5000, 'dodecahedron'], [2500, 'icosahedron']
-        ]]
     ],
 
     // The possible nest food types that can spawn.

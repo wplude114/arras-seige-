@@ -34,6 +34,47 @@ Class.pentdeco = makeDeco(5.5);
 Class.pentdeco2 = makeDeco(5);
 
 // Mysticals
+Class.betaSorcerer = {
+    PARENT: "miniboss",
+    LABEL: "Beta Sorcerer",
+    DANGER: 8,
+    SHAPE: 0,
+    COLOR: "veryLightGrey",
+    UPGRADE_COLOR: "veryLightGrey",
+    SIZE: 30,
+    MAX_CHILDREN: 70,
+    VALUE: 7e5,
+    BODY: {
+        FOV: 0.7,
+        SPEED: 0.08 * base.SPEED,
+        HEALTH: 8 * base.HEALTH,
+        DAMAGE: 3 * base.DAMAGE,
+    },
+    PROPS: [
+        {
+            POSITION: [23, 0, 0, 0, 1],
+            TYPE: [ "eggdeco", { INDEPENDENT: true, COLOR: -1} ],
+        },
+    ],
+    TURRETS: [
+        {
+            POSITION: [9, 0, 0, 0, 360, 1],
+            TYPE: [ "sorcerer", { INDEPENDENT: true, COLOR: -1 } ],
+        },
+    ],
+    GUNS: weaponArray({
+        POSITION: [3.5, 8.65, 1.2, 8, 0, 0, 0],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.machineGun, g.machineGunner, { damage: 1.8, size: 0.4, spray: 150, speed: 2, shudder: 1.75 }]),
+            TYPE: "minichip",
+            AUTOFIRE: true,
+            SYNCS_SKILLS: true,
+            STAT_CALCULATOR: "drone",
+            WAIT_TO_CYCLE: true,
+        },
+    }, 4)
+};
+
 Class.betaExorcistor = {
     PARENT: "miniboss",
     LABEL: "Beta Exorcistor",
@@ -95,7 +136,7 @@ Class.alphaExorcistor = {
         FOV: 1.1,
         SPEED: 0.02 * base.SPEED,
         HEALTH: 18 * base.HEALTH,
-        DAMAGE: 4.66 * base.DAMAGE,
+        DAMAGE: 4.66 * base.DAMAGE, // weak as hell bruh
     },
     GUNS: weaponArray([
         {
@@ -143,7 +184,7 @@ Class.alphaExorcistor = {
         }
     ],
 }
-Class.omegaExorcistor = {
+Class.omegaExorcistor = { // why the fuck
     PARENT: "miniboss",
     LABEL: "Omega Exorcistor",
     DANGER: 10,
@@ -151,20 +192,20 @@ Class.omegaExorcistor = {
     COLOR: "purple",
     UPGRADE_COLOR: "purple",
     SIZE: 38,
-    MAX_CHILDREN: 30,
+    MAX_CHILDREN: 40,
     VALUE: 55e5,
     BODY: {
         FOV: 1.2,
         SPEED: 0.01 * base.SPEED,
         HEALTH: 30 * base.HEALTH,
-        DAMAGE: 10 * base.DAMAGE,
+        DAMAGE: 10 * base.DAMAGE, // still weak 💔
     },
     GUNS: weaponArray([
-        {
-            POSITION: [3.7, 3, 0.8, 9.8, 0, 36, 0],
+         {
+            POSITION: [1.5, 4, 1.2, 9.8, 5, 36, 0],
             PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
-                TYPE: "demonchip",
+                TYPE: "omegaDemonchip",
                 AUTOFIRE: true,
                 SYNCS_SKILLS: true,
                 STAT_CALCULATOR: "drone",
@@ -172,29 +213,7 @@ Class.omegaExorcistor = {
             },
         },
          {
-            POSITION: [3, 6, 0.8, 9.8, 0, 36, 0.25],
-            PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
-                TYPE: "betaDemonchip",
-                AUTOFIRE: true,
-                SYNCS_SKILLS: true,
-                STAT_CALCULATOR: "drone",
-                WAIT_TO_CYCLE: true,
-            },
-        },
-         {
-            POSITION: [2.2, 9, 0.8, 9.8, 0, 36, 0.50],
-            PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
-                TYPE: "alphaDemonchip",
-                AUTOFIRE: true,
-                SYNCS_SKILLS: true,
-                STAT_CALCULATOR: "drone",
-                WAIT_TO_CYCLE: true,
-            },
-        },
-         {
-            POSITION: [1.5, 12, 0.8, 9.8, 0, 36, 0.75],
+            POSITION: [1.5, 4, 1.2, 9.8, -5, 36, 0.5],
             PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
                 TYPE: "omegaDemonchip",

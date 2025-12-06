@@ -313,7 +313,7 @@ Class.emperorExorcistor = { // what the fuck even is this!?!
             TYPE: [ "pentdeco2", { INDEPENDENT: true, COLOR: -1} ],
         },
         {
-            POSITION: [6, 0, 0, 0, 5],
+            POSITION: [6.7, 0, 0, 0, 5],
             TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
         },
     ],

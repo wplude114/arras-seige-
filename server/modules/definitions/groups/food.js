@@ -1,6 +1,5 @@
 const { basePolygonDamage, basePolygonHealth } = require('../constants.js');
 const { makeRelic, makeRare, makeCrasher, makeLaby } = require('../facilitators.js');
-
 // EGGS
 Class.egg = {
     PARENT: "food",
@@ -19,6 +18,61 @@ Class.egg = {
         ACCELERATION: 0.015
     },
     DRAW_HEALTH: false,
+};
+Class.betaEgg = {
+    PARENT: "food",
+    LABEL: "Beta Egg",
+    VALUE: 100,
+    SHAPE: 0,
+    SIZE: 9.5,
+    COLOR: "veryLightGrey",
+    VARIES_IN_SIZE: false,
+    INTANGIBLE: true,
+    BODY: {
+        DAMAGE: 0,
+        DENSITY: 2,
+        HEALTH: 0.5 * basePolygonHealth,
+        PENETRATION: 1,
+        PUSHABILITY: 0,
+        ACCELERATION: 0.015
+    },
+    PROPS: [
+        {
+            POSITION: [10, 0, 0, 0, 1],
+            TYPE: [ "eggdeco", { INDEPENDENT: true, COLOR: -1} ],
+        },
+    ],
+    DRAW_HEALTH: false,
+};
+Class.alphaEgg = {
+    PARENT: "food",
+    LABEL: "Alpha Egg",
+    VALUE: 500,
+    SHAPE: 0,
+    SIZE: 14.5,
+    COLOR: "veryLightGrey",
+    VARIES_IN_SIZE: false,
+    INTANGIBLE: true,
+    BODY: {
+        DAMAGE: 0,
+        DENSITY: 2,
+        HEALTH: 0.5 * basePolygonHealth,
+        PENETRATION: 1,
+        PUSHABILITY: 0,
+        ACCELERATION: 0.015
+    },
+    PROPS: [
+        {
+            POSITION: [9, 0, 0, 0, 1],
+            TYPE: [ "eggdeco", { INDEPENDENT: true, COLOR: -1} ],
+        },
+        {
+            POSITION: [3, 0, 0, 0, 2],
+            TYPE: [ "eggdeco", { INDEPENDENT: true, COLOR: -1} ],
+        }
+    ],
+    DRAW_HEALTH: false,
+    GIVE_KILL_MESSAGE: true,
 };
 Class.gem = {
     PARENT: "food",
@@ -66,25 +120,6 @@ Class.shadowEgg = makeRare("egg", 2);
 Class.rainbowEgg = makeRare("egg", 3);
 Class.transEgg = makeRare("egg", 4); //ironic
 // CONTROLLERS: [["minion", {orbit: 125}]],
-Class.flash = {
-    PARENT: "food",
-    LABEL: "Flasher",
-    VALUE: 300,
-    SHAPE: 2,
-    SIZE: 14,
-    COLOR: "pink",
-    CONTROLLERS: [["minion", {orbit: 125}]],
-    BODY: {
-        DAMAGE: basePolygonDamage,
-        DENSITY: 4,
-        HEALTH: basePolygonHealth * 5,
-        PENETRATION: 2,
-        ACCELERATION: 0.2,
-        SPEED: 5
-    },
-    DRAW_HEALTH: true,
-    INTANGIBLE: false,
-};
 // SQUARES
 Class.square = {
     PARENT: "food",
@@ -102,6 +137,60 @@ Class.square = {
     },
     DRAW_HEALTH: true,
     INTANGIBLE: false,
+};
+Class.betaSquare = {
+    PARENT: "food",
+    LABEL: "Beta Square",
+    VALUE: 300,
+    SHAPE: 4,
+    SIZE: 19,
+    COLOR: "gold",
+    VARIES_IN_SIZE: false,
+    BODY: {
+        DAMAGE: basePolygonDamage,
+        DENSITY: 4,
+        HEALTH: basePolygonHealth * 75,
+        PENETRATION: 2,
+        ACCELERATION: 0.0075
+    },
+    PROPS: [
+        {
+            POSITION: [14, 0, 0, 0, 1],
+            TYPE: [ "squaredeco", { INDEPENDENT: true, COLOR: -1} ],
+        }
+    ],
+    DRAW_HEALTH: true,
+    INTANGIBLE: false,
+    GIVE_KILL_MESSAGE: true,
+};
+Class.alphaSquare = {
+    PARENT: "food",
+    LABEL: "Alpha Square",
+    VALUE: 750,
+    SHAPE: 4,
+    SIZE: 24,
+    COLOR: "gold",
+    VARIES_IN_SIZE: false,
+    BODY: {
+        DAMAGE: basePolygonDamage,
+        DENSITY: 4,
+        HEALTH: basePolygonHealth * 500,
+        PENETRATION: 2,
+        ACCELERATION: 0.0075
+    },
+    PROPS: [
+        {
+            POSITION: [14, 0, 0, 0, 1],
+            TYPE: [ "squaredeco", { INDEPENDENT: true, COLOR: -1} ],
+        },
+        {
+            POSITION: [9.5, 0, 0, 0, 2],
+            TYPE: [ "squaredeco2", { INDEPENDENT: true, COLOR: -1} ],
+        }
+    ],
+    DRAW_HEALTH: true,
+    INTANGIBLE: false,
+    GIVE_KILL_MESSAGE: true,
 };
 Class.shinySquare = makeRare("square", 0);
 Class.legendarySquare = makeRare("square", 1);
@@ -156,15 +245,19 @@ Class.legendaryPentagon = makeRare("pentagon", 1);
 Class.shadowPentagon = makeRare("pentagon", 2);
 Class.rainbowPentagon = makeRare("pentagon", 3);
 Class.transPentagon = makeRare("pentagon", 4);
-
+/*
+Class.pentdeco = makeDeco(5.5);
+Class.pentdeco2 = makeDeco(5);
+*/
 // BETA PENTAGONS
 Class.betaPentagon = {
     PARENT: "food",
     LABEL: "Beta Pentagon",
     VALUE: 2500,
     SHAPE: 5,
-    SIZE: 30,
+    SIZE: 26,
     COLOR: "purple",
+    VARIES_IN_SIZE: false,
     BODY: {
         DAMAGE: 2 * basePolygonDamage,
         DENSITY: 30,
@@ -174,6 +267,12 @@ Class.betaPentagon = {
         SHIELD: 20 * basePolygonHealth,
         ACCELERATION: 0.003
     },
+    PROPS: [
+        {
+            POSITION: [16, 0, 0, 0, 1],
+            TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
+        }
+    ],
     DRAW_HEALTH: true,
     GIVE_KILL_MESSAGE: true,
 };
@@ -189,8 +288,9 @@ Class.alphaPentagon = {
     LABEL: "Alpha Pentagon",
     VALUE: 15e3,
     SHAPE: 5,
-    SIZE: 58,
+    SIZE: 31,
     COLOR: "purple",
+    VARIES_IN_SIZE: false,
     BODY: {
         DAMAGE: 2 * basePolygonDamage,
         DENSITY: 80,
@@ -200,6 +300,16 @@ Class.alphaPentagon = {
         SHIELD: 40 * basePolygonHealth,
         ACCELERATION: 0.0025
     },
+    PROPS: [
+        {
+            POSITION: [16, 0, 0, 0, 1],
+            TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
+        },
+        {
+            POSITION: [13, 0, 0, 0, 2],
+            TYPE: [ "pentdeco2", { INDEPENDENT: true, COLOR: -1} ],
+        }
+    ],
     DRAW_HEALTH: true,
     GIVE_KILL_MESSAGE: true,
 };
@@ -208,6 +318,47 @@ Class.legendaryAlphaPentagon = makeRare("alphaPentagon", 1);
 Class.shadowAlphaPentagon = makeRare("alphaPentagon", 2);
 Class.rainbowAlphaPentagon = makeRare("alphaPentagon", 3);
 Class.transAlphaPentagon = makeRare("alphaPentagon", 4);
+
+// OMEGA PENTAGONS
+Class.omegaPentagon = {
+    PARENT: "food",
+    LABEL: "Omega Pentagon",
+    VALUE: 2e5,
+    SHAPE: 5,
+    SIZE: 34,
+    COLOR: "purple",
+    VARIES_IN_SIZE: false,
+    BODY: {
+        DAMAGE: 3 * basePolygonDamage,
+        DENSITY: 200,
+        HEALTH: 763 * basePolygonHealth,
+        RESIST: Math.pow(1.25, 3),
+        PENETRATION: 1.1,
+        SHIELD: 50 * basePolygonHealth,
+        ACCELERATION: 0.0008
+    },
+    PROPS: [
+        {
+            POSITION: [16, 0, 0, 0, 1],
+            TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
+        },
+        {
+            POSITION: [13, 0, 0, 0, 2],
+            TYPE: [ "pentdeco2", { INDEPENDENT: true, COLOR: -1} ],
+        },
+        {
+            POSITION: [10, 0, 0, 0, 2],
+            TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
+        }
+    ],
+    DRAW_HEALTH: true,
+    GIVE_KILL_MESSAGE: true,
+};
+Class.shinyOmegaPentagon = makeRare("omegaPentagon", 0);
+Class.legendaryOmegaPentagon = makeRare("omegaPentagon", 1);
+Class.shadowOmegaPentagon = makeRare("omegaPentagon", 2);
+Class.rainbowOmegaPentagon = makeRare("omegaPentagon", 3);
+Class.transOmegaPentagon = makeRare("omegaPentagon", 4);
 
 // HEXAGONS
 Class.hexagon = {

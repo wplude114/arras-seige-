@@ -52,7 +52,7 @@ Class.betaSorcerer = {
     },
     PROPS: [
         {
-            POSITION: [23, 0, 0, 0, 1],
+            POSITION: [16, 0, 0, 0, 1],
             TYPE: [ "eggdeco", { INDEPENDENT: true, COLOR: -1} ],
         },
     ],

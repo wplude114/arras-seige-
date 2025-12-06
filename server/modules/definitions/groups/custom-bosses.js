@@ -6,8 +6,7 @@ require('./tanks.js');
 require('./turrets.js');
 require('./bosses.js');
 
-Class.auraforbosses = addAura(1.2, 1.45);
-// bases
+// def
 Class.entrestrial = {
     PARENT: "miniboss",
     LABEL: "Entrestrial",
@@ -25,6 +24,12 @@ Class.entrestrial = {
         DAMAGE: 4,
     },
 };
+
+Class.eggdeco = makeDeco(0);
+Class.squaredeco = makeDeco(4.5);
+Class.squaredeco2 = makeDeco(4);
+Class.trideco = makeDeco(3.5);
+Class.trideco2 = makeDeco(3);
 Class.pentdeco = makeDeco(5.5);
 Class.pentdeco2 = makeDeco(5);
 
@@ -61,7 +66,7 @@ Class.betaExorcistor = {
             POSITION: [1.5, 12, 0.8, 9.8, 0, 36, 0],
             PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
-                TYPE: "demonchip",
+                TYPE: "betaDemonchip",
                 AUTOFIRE: true,
                 SYNCS_SKILLS: true,
                 STAT_CALCULATOR: "drone",
@@ -69,9 +74,9 @@ Class.betaExorcistor = {
             },
         }
     ], 5),
-    TURRETS: [
+    PROPS: [
         {
-            POSITION: [16, 0, 0, 0, 0, 1],
+            POSITION: [16, 0, 0, 0, 1],
             TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
         },
     ],
@@ -108,7 +113,7 @@ Class.alphaExorcistor = {
             POSITION: [2.2, 9, 0.8, 9.8, 0, 36, 0.66],
             PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
-                TYPE: "demonchip",
+                TYPE: "betaDemonchip",
                 AUTOFIRE: true,
                 SYNCS_SKILLS: true,
                 STAT_CALCULATOR: "drone",
@@ -119,7 +124,7 @@ Class.alphaExorcistor = {
             POSITION: [1.5, 12, 0.8, 9.8, 0, 36, 1],
             PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
-                TYPE: "demonchip",
+                TYPE: "alphaDemonchip",
                 AUTOFIRE: true,
                 SYNCS_SKILLS: true,
                 STAT_CALCULATOR: "drone",
@@ -127,15 +132,92 @@ Class.alphaExorcistor = {
             },
         }
     ], 5),
-    TURRETS: [
+    PROPS: [
         {
-            POSITION: [16, 0, 0, 0, 0, 1],
+            POSITION: [16, 0, 0, 0, 1],
             TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
         },
         {
-            POSITION: [13, 0, 0, 0, 0, 1],
+            POSITION: [13, 0, 0, 0, 2],
+            TYPE: [ "pentdeco2", { INDEPENDENT: true, COLOR: -1} ],
+        }
+    ],
+}
+Class.omegaExorcistor = {
+    PARENT: "miniboss",
+    LABEL: "Omega Exorcistor",
+    DANGER: 10,
+    SHAPE: 5,
+    COLOR: "purple",
+    UPGRADE_COLOR: "purple",
+    SIZE: 38,
+    MAX_CHILDREN: 30,
+    VALUE: 55e5,
+    BODY: {
+        FOV: 1.2,
+        SPEED: 0.01 * base.SPEED,
+        HEALTH: 30 * base.HEALTH,
+        DAMAGE: 10 * base.DAMAGE,
+    },
+    GUNS: weaponArray([
+        {
+            POSITION: [3.7, 3, 0.8, 9.8, 0, 36, 0],
+            PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
+                TYPE: "demonchip",
+                AUTOFIRE: true,
+                SYNCS_SKILLS: true,
+                STAT_CALCULATOR: "drone",
+                WAIT_TO_CYCLE: true,
+            },
+        },
+         {
+            POSITION: [3, 6, 0.8, 9.8, 0, 36, 0.25],
+            PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
+                TYPE: "betaDemonchip",
+                AUTOFIRE: true,
+                SYNCS_SKILLS: true,
+                STAT_CALCULATOR: "drone",
+                WAIT_TO_CYCLE: true,
+            },
+        },
+         {
+            POSITION: [2.2, 9, 0.8, 9.8, 0, 36, 0.50],
+            PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
+                TYPE: "alphaDemonchip",
+                AUTOFIRE: true,
+                SYNCS_SKILLS: true,
+                STAT_CALCULATOR: "drone",
+                WAIT_TO_CYCLE: true,
+            },
+        },
+         {
+            POSITION: [1.5, 12, 0.8, 9.8, 0, 36, 0.75],
+            PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, {maxSpeed: 1}]),
+                TYPE: "omegaDemonchip",
+                AUTOFIRE: true,
+                SYNCS_SKILLS: true,
+                STAT_CALCULATOR: "drone",
+                WAIT_TO_CYCLE: true,
+            },
+        }
+    ], 5),
+    PROPS: [
+        {
+            POSITION: [16, 0, 0, 0, 1],
+            TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
+        },
+        {
+            POSITION: [13, 0, 0, 0, 2],
             TYPE: [ "pentdeco2", { INDEPENDENT: true, COLOR: -1} ],
         },
+        {
+            POSITION: [10, 0, 0, 0, 3],
+            TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
+        }
     ],
 }
 
@@ -196,7 +278,7 @@ gaia.addLayer({gun: {
     POSITION: [2, 7, -1.6, 8.85, 0, null, 0],
     PROPERTIES: {
         SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.pounder, g.destroyer, {speed: 6.25, maxSpeed: 8}]),
-        TYPE: ["realchip", {INDEPENDENT: true, DRAW_HEALTH: true, COLOR: 'lightGreen', SHAPE: 5}],
+        TYPE: ["realchip", {INDEPENDENT: true, COLOR: 'lightGreen', SHAPE: 5}],
         AUTOFIRE: true,
         SYNCS_SKILLS: true,
     },

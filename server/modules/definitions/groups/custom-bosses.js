@@ -233,6 +233,91 @@ Class.omegaExorcistor = { // why the fuck
         }
     ],
 }
+Class.emperorExorcistor = { // what the fuck even is this!?!
+    PARENT: "miniboss",
+    LABEL: "Emperor Exorcistor",
+    DANGER: 13,
+    SHAPE: 5,
+    COLOR: "purple",
+    UPGRADE_COLOR: "purple",
+    SIZE: 150,
+    MAX_CHILDREN: 100,
+    VALUE: 95e8,
+    BODY: {
+        FOV: 1.4,
+        SPEED: 0.1 * base.SPEED,
+        HEALTH: 3000 * base.HEALTH,
+        DAMAGE: 1000 * base.DAMAGE, // still weak 💔
+    },
+    GUNS: weaponArray([
+         {
+            POSITION: [1.5, 5, 1.2, 9.5, 3.5, 36, 0],
+            PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator,g.streamliner, {maxSpeed: 1}]),
+                TYPE: "omegaDemonchip",
+                AUTOFIRE: true,
+                SYNCS_SKILLS: true,
+                STAT_CALCULATOR: "drone",
+                WAIT_TO_CYCLE: true,
+            },
+        },
+         {
+            POSITION: [1.5, 5, 1.2, 10.3, 3.5, 36, 0.5],
+            PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator,g.streamliner, {maxSpeed: 1}]),
+                TYPE: "omegaDemonchip",
+                AUTOFIRE: true,
+                SYNCS_SKILLS: true,
+                STAT_CALCULATOR: "drone",
+                WAIT_TO_CYCLE: true,
+            },
+        },
+         {
+            POSITION: [1.5, 5, 1.2, 9.5, -3.5, 36, 0.5],
+            PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator, g.streamliner, {maxSpeed: 1}]),
+                TYPE: "omegaDemonchip",
+                AUTOFIRE: true,
+                SYNCS_SKILLS: true,
+                STAT_CALCULATOR: "drone",
+                WAIT_TO_CYCLE: true,
+            },
+        },
+         {
+            POSITION: [1.5, 5, 1.2, 10.3, -3.5, 36, 0],
+            PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.annihilator,g.streamliner, {maxSpeed: 1}]),
+                TYPE: "omegaDemonchip",
+                AUTOFIRE: true,
+                SYNCS_SKILLS: true,
+                STAT_CALCULATOR: "drone",
+                WAIT_TO_CYCLE: true,
+            },
+        },
+    ], 5),
+    PROPS: [
+        {
+            POSITION: [16, 0, 0, 0, 1],
+            TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
+        },
+        {
+            POSITION: [13, 0, 0, 0, 2],
+            TYPE: [ "pentdeco2", { INDEPENDENT: true, COLOR: -1} ],
+        },
+        {
+            POSITION: [10, 0, 0, 0, 3],
+            TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
+        },
+        {
+            POSITION: [7, 0, 0, 0, 2],
+            TYPE: [ "pentdeco2", { INDEPENDENT: true, COLOR: -1} ],
+        },
+        {
+            POSITION: [4, 0, 0, 0, 3],
+            TYPE: [ "pentdeco", { INDEPENDENT: true, COLOR: -1} ],
+        },
+    ],
+}
 
 // Nesters
 Class.nestWatcher = {

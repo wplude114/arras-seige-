@@ -143,7 +143,7 @@ Class.primordialSquare = { // this is the test one :)
     LABEL: "Primordial Square",
     VALUE: 30*75000, // x75K value
     SHAPE: 4,
-    SIZE: 14*7, // x7 size
+    SIZE: 14*3, // x3 size
     COLOR: "gold",
     ALPHA: 0.75,
     BODY: {

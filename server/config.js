@@ -173,18 +173,24 @@ module.exports = {
     BOSS_SPAWN_DURATION: 5,
 
     FOOD_TYPES: [
-        [9999, [
-            [1024, 'primordialEgg'], [256, 'betaEgg'], [64, 'alphaEgg'],
-            [256, 'primordialSquare'], [64, 'betaSquare'], [16, 'alphaSquare'],
+        [100, [
+            [1024, 'egg'], [256, 'betaEgg'], [64, 'alphaEgg'],
+            [256, 'square'], [64, 'betaSquare'], [16, 'alphaSquare'],
+            [64, 'triangle'],
+            [16, 'pentagon'], [4, 'betaPentagon'], [1, 'alphaPentagon'], //[0.25, 'omegaPentagon']
+        ]],
+        [0.001, [
+            [1024, 'primordialEgg'],
+            [256, 'primordialSquare'],
             [64, 'primordialTriangle'],
-            [16, 'primordialPentagon'], [4, 'betaPentagon'], [1, 'alphaPentagon'], //[0.25, 'omegaPentagon']
+            [16, 'primordialPentagon'],
         ]],
     ],
 
     // The possible nest food types that can spawn.
     FOOD_TYPES_NEST: [
         [1, [
-            [16, 'pentagon'], [ 4, 'betaPentagon'], [ 1, 'alphaPentagon'], //[0.25, 'omegaPentagon']
+            [16, 'pentagon'], [ 4, 'betaPentagon'], [ 1, 'alphaPentagon'], [0.001, "primordialPentagon"], //[0.25, 'omegaPentagon']
         ]],
     ],
 

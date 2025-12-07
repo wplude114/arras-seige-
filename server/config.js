@@ -177,17 +177,18 @@ module.exports = {
             [1024, 'egg'], [256, 'betaEgg'], [64, 'alphaEgg'],
             [256, 'square'], [64, 'betaSquare'], [16, 'alphaSquare'],
             [64, 'triangle'],
-            [16, 'pentagon'], [4, 'betaPentagon'], [1, 'alphaPentagon'], [0.25, 'omegaPentagon']
+            [16, 'pentagon'], [4, 'betaPentagon'], [1, 'alphaPentagon'], //[0.25, 'omegaPentagon']
         ]],
     ],
 
     // The possible nest food types that can spawn.
     FOOD_TYPES_NEST: [
         [1, [
-            [16, 'pentagon'], [ 4, 'betaPentagon'], [ 1, 'alphaPentagon'], [0.25, 'omegaPentagon']
+            [16, 'pentagon'], [ 4, 'betaPentagon'], [ 1, 'alphaPentagon'], //[0.25, 'omegaPentagon']
         ]],
         [0.1, [
-            [10, 'GSeptagon'], [9, 'GHexagon'], [ 2, 'GOctagon'], [ 0.75, 'GNonagon']
+            [16, 'pentagon'], [ 4, 'GBetaPentagon'], [ 1, 'GAlphaPentagon'],
+            [0.5, 'GSeptagon'], [0.25, 'GHexagon'], [ 0.05, 'GOctagon'], [ 0.0075, 'GNonagon']
         ]], /*
         [0.005, [
             [25, 'shinyPentagon'], [5, 'shinyBetaPentagon'], [1, 'shinyAlphaPentagon'], [0.2, 'shinyOmegaPentagon']

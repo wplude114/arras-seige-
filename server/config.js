@@ -212,13 +212,14 @@ module.exports = {
             [100, 'cube'],
             [10, 'dodecahedron'],
             [1, 'icosahedron']
-        ]]
+        ]],
         [100000/7500000000 [ // 1/7.5b i think
             [1024, 'primordialEgg'],
             [256, 'primordialSquare'],
             [64, 'primordialTriangle'],
             [16, 'primordialPentagon'],
         ]],
+        // dont make any more fucking mustations, theres enough.
     ],
 
     // The possible nest food types that can spawn.

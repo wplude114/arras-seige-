@@ -818,6 +818,27 @@ exports.makeRare = (type, level) => {
         GIVE_KILL_MESSAGE: true,
     }
 }
+exports.makePrimordial = (type) => {
+    type = ensureIsClass(type);
+    return {
+    PARENT: "food",
+    LABEL: "Primordial " + type.LABEL,
+    SHAPE: type.SHAPE,
+    SIZE: type.SIZE*3,
+    VALUE: type.VALUE*85000,
+    ALPHA: 0.75,
+    BODY: {
+        DAMAGE: type.BODY.DAMAGE*10,
+        DENSITY: type.BODY.DENSITY,
+        HEALTH: type.BODY.HEALTH*75000,
+        PENETRATION: type.BODY.PENETRATION,
+        ACCELERATION: type.BODY.ACCELERATION
+    },
+    DRAW_HEALTH: true,
+    INTANGIBLE: type.INTANGIBLE,
+    GIVE_KILL_MESSAGE: true,
+    }
+}
 
 exports.makeLaby = (type, level, baseScale = 1) => {
     type = ensureIsClass(type);

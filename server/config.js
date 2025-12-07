@@ -191,7 +191,7 @@ module.exports = {
     // The possible nest enemy types that can spawn.
     ENEMY_TYPES_NEST: [
         [19, [
-            [1, 'primordial']
+            [1, 'primordialEgg']
         ]],
         [1, [
             [1, 'sentryGun'], [1, 'sentrySwarm'], [1, 'sentryTrap']

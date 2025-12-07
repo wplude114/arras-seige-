@@ -1,5 +1,5 @@
 const { basePolygonDamage, basePolygonHealth } = require('../constants.js');
-const { makeRelic, makeRare, makeCrasher, makeLaby } = require('../facilitators.js');
+const { makeRelic, makeRare, makePrimordial, makeCrasher, makeLaby } = require('../facilitators.js');
 // EGGS
 Class.egg = {
     PARENT: "food",
@@ -138,24 +138,6 @@ Class.square = {
     DRAW_HEALTH: true,
     INTANGIBLE: false,
 };
-Class.primordialSquare = { // this is the test one :)
-    PARENT: "food",
-    LABEL: "Primordial Square",
-    VALUE: 30*75000, // x75K value
-    SHAPE: 4,
-    SIZE: 14*3, // x3 size
-    COLOR: "gold",
-    ALPHA: 0.75,
-    BODY: {
-        DAMAGE: basePolygonDamage,
-        DENSITY: 4,
-        HEALTH: basePolygonHealth*75000,
-        PENETRATION: 2,
-        ACCELERATION: 0.0075
-    },
-    DRAW_HEALTH: true,
-    INTANGIBLE: false,
-};
 Class.betaSquare = {
     PARENT: "food",
     LABEL: "Beta Square",
@@ -215,6 +197,7 @@ Class.legendarySquare = makeRare("square", 1);
 Class.shadowSquare = makeRare("square", 2);
 Class.rainbowSquare = makeRare("square", 3);
 Class.transSquare = makeRare("square", 4);
+Class.primordialSquare = makePrimordial("square");
 
 // TRIANGLES
 Class.triangle = {
@@ -239,6 +222,7 @@ Class.legendaryTriangle = makeRare("triangle", 1);
 Class.shadowTriangle = makeRare("triangle", 2);
 Class.rainbowTriangle = makeRare("triangle", 3);
 Class.transTriangle = makeRare("triangle", 4);
+Class.primordialTriangle = makePrimordial("triangle");
 
 // PENTAGONS
 Class.pentagon = {

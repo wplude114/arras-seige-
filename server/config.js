@@ -176,8 +176,8 @@ module.exports = {
         [9999, [
             [1024, 'primordialEgg'], [256, 'betaEgg'], [64, 'alphaEgg'],
             [256, 'primordialSquare'], [64, 'betaSquare'], [16, 'alphaSquare'],
-            [64, 'triangle'],
-            [16, 'pentagon'], [4, 'betaPentagon'], [1, 'alphaPentagon'], //[0.25, 'omegaPentagon']
+            [64, 'primordialTriangle'],
+            [16, 'primordialPentagon'], [4, 'betaPentagon'], [1, 'alphaPentagon'], //[0.25, 'omegaPentagon']
         ]],
     ],
 

@@ -187,7 +187,7 @@ module.exports = {
             [16, 'pentagon'], [ 4, 'betaPentagon'], [ 1, 'alphaPentagon'], [0.25, 'omegaPentagon']
         ]],
         [0.75, [
-            [16, 'GHexagon'], [ 10, 'GOctagon'], [ 4, 'GNonagon']
+            [16, 'GHexagon'], [8, 'GSeptagon'], [ 4, 'GOctagon'], [ 2, 'GNonagon']
         ]], /*
         [0.005, [
             [25, 'shinyPentagon'], [5, 'shinyBetaPentagon'], [1, 'shinyAlphaPentagon'], [0.2, 'shinyOmegaPentagon']

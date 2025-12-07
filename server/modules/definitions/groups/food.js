@@ -138,6 +138,24 @@ Class.square = {
     DRAW_HEALTH: true,
     INTANGIBLE: false,
 };
+Class.primordialSquare = { // this is the test one :)
+    PARENT: "food",
+    LABEL: "Primordial Square",
+    VALUE: 30*75000, // x75K value
+    SHAPE: 4,
+    SIZE: 14*7, // x7 size
+    COLOR: "gold",
+    ALPHA: 0.75,
+    BODY: {
+        DAMAGE: basePolygonDamage,
+        DENSITY: 4,
+        HEALTH: basePolygonHealth*75000,
+        PENETRATION: 2,
+        ACCELERATION: 0.0075
+    },
+    DRAW_HEALTH: true,
+    INTANGIBLE: false,
+};
 Class.betaSquare = {
     PARENT: "food",
     LABEL: "Beta Square",

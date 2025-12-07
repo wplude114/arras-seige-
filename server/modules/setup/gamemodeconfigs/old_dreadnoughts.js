@@ -17,10 +17,10 @@ module.exports = {
         ]],
     ],
     FOOD_TYPES_NEST: [ // set spawns to old shapes
-        [1, [
+        [100000, [
             [16, 'pentagon'], [4, 'GBetaPentagon'], [1, 'GAlphaPentagon'], //[0.25, 'omegaPentagon']
         ]],
-        [0.25, [
+        [99999.25, [
             [16, 'GSeptagon'], [4, 'GHexagon'], [ 1, 'GOctagon'], [ 0.25, 'GNonagon']
         ]],
     ],

@@ -385,7 +385,7 @@ Class.shadowHexagon = makeRare("hexagon", 2);
 Class.rainbowHexagon = makeRare("hexagon", 3);
 Class.transHexagon = makeRare("hexagon", 4);
 
-// extinct shapes
+// Extinct Shapes
 Class.GHexagon = {
     PARENT: "food",
     LABEL: "Hexagon",
@@ -409,7 +409,7 @@ Class.GSeptagon = {
     LABEL: "Septagon",
     VALUE: 26520,
     SHAPE: 7,
-    SIZE: 87,
+    SIZE: 73,
     COLOR: "green",
     BODY: {
         DAMAGE: 3 * basePolygonDamage,

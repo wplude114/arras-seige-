@@ -391,7 +391,7 @@ Class.GHexagon = {
     LABEL: "Hexagon",
     VALUE: 25000,
     SHAPE: 6,
-    SIZE: 40,
+    SIZE: 70,
     COLOR: "magenta",
     BODY: {
         DAMAGE: 3 * basePolygonDamage,
@@ -409,7 +409,7 @@ Class.GOctagon = {
     LABEL: "Octagon",
     VALUE: 27000,
     SHAPE: 8,
-    SIZE: 67,
+    SIZE: 147,
     COLOR: "lavender",
     BODY: {
         DAMAGE: 5 * basePolygonDamage,
@@ -427,7 +427,7 @@ Class.GNonagon = {
     LABEL: "Nonagon",
     VALUE: 250000,
     SHAPE: 10,
-    SIZE: 100,
+    SIZE: 352,
     COLOR: "white",
     BODY: {
         DAMAGE: 5 * basePolygonDamage,

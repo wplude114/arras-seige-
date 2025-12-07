@@ -825,12 +825,13 @@ exports.makePrimordial = (type) => {
     LABEL: "Primordial " + type.LABEL,
     SHAPE: type.SHAPE,
     SIZE: type.SIZE*3,
-    VALUE: type.VALUE*85000,
+    COLOR: type.COLOR,
+    VALUE: type.VALUE*850000,
     ALPHA: 0.75,
     BODY: {
         DAMAGE: type.BODY.DAMAGE*10,
         DENSITY: type.BODY.DENSITY,
-        HEALTH: type.BODY.HEALTH*75000,
+        HEALTH: type.BODY.HEALTH*7500,
         PENETRATION: type.BODY.PENETRATION,
         ACCELERATION: type.BODY.ACCELERATION
     },

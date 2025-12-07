@@ -23,7 +23,7 @@ module.exports = {
 
     // The \modules\setup\gamemodeconfigs\ files to load.
     // To change specific things about specific gamemodes (such as team count for tdm), edit their config file in \modules\setup\gamemodeconfigs\.
-    GAME_MODES: ['ffa'],
+    GAME_MODES: ['old_dreadnoughts'],
 
     // The room files to load in the setup/rooms folder.
     // NOTE: If a /gamemodeconfig/ file "replaces" the value of ROOM_SETUP, it just adds its own ROOM_SETUP's content to this array.
@@ -186,20 +186,6 @@ module.exports = {
         [1, [
             [16, 'pentagon'], [ 4, 'betaPentagon'], [ 1, 'alphaPentagon'], //[0.25, 'omegaPentagon']
         ]],
-        [0.1, [
-            [16, 'pentagon'], [ 4, 'GBetaPentagon'], [ 1, 'GAlphaPentagon'],
-            [0.5, 'GSeptagon'], [0.25, 'GHexagon'], [ 0.05, 'GOctagon'], [ 0.0075, 'GNonagon']
-        ]], /*
-        [0.005, [
-            [25, 'shinyPentagon'], [5, 'shinyBetaPentagon'], [1, 'shinyAlphaPentagon'], [0.2, 'shinyOmegaPentagon']
-        ]],
-        [0.0005, [
-            [36, 'legendaryPentagon'], [6, 'legendaryBetaPentagon'], [1, 'legendaryAlphaPentagon'], [0.1666666666666667, 'legendaryOmegaPentagon']
-        ]],
-        [0.00001, [
-            [49, 'shadowPentagon'], [7, 'shadowBetaPentagon'], [1, 'shadowAlphaPentagon'], [0.1428571428571429, 'shadowOmegaPentagon']
-        ]],
-        */
     ],
 
     // The possible nest enemy types that can spawn.

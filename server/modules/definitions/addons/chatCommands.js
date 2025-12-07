@@ -20,7 +20,7 @@ class Command {
 	}
 
 	run({ args, socket, preventDefault, perms }) {
-		if (this.developerOnly && !perms.class == 'developer') {
+		if (this.developerOnly && !perms.class == 'bosses') {
 			return this.fail(preventDefault, 'You do not have permission to use this command');
 		}
 
@@ -302,4 +302,5 @@ module.exports = ({ Events, Class }) => {
 
 	console.log('[chatCommands] Commands loaded!');
 };
+
 

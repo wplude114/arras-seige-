@@ -174,8 +174,8 @@ module.exports = {
 
     FOOD_TYPES: [
         [9999, [
-            [1024, 'egg'], [256, 'betaEgg'], [64, 'alphaEgg'],
-            [256, 'square'], [64, 'betaSquare'], [16, 'alphaSquare'],
+            [1024, 'primordialEgg'], [256, 'betaEgg'], [64, 'alphaEgg'],
+            [256, 'primordialSquare'], [64, 'betaSquare'], [16, 'alphaSquare'],
             [64, 'triangle'],
             [16, 'pentagon'], [4, 'betaPentagon'], [1, 'alphaPentagon'], //[0.25, 'omegaPentagon']
         ]],
@@ -191,7 +191,7 @@ module.exports = {
     // The possible nest enemy types that can spawn.
     ENEMY_TYPES_NEST: [
         [19, [
-            [1, 'primordialEgg']
+            [1, 'crasher']
         ]],
         [1, [
             [1, 'sentryGun'], [1, 'sentrySwarm'], [1, 'sentryTrap']

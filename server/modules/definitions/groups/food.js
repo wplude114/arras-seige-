@@ -391,7 +391,7 @@ Class.GHexagon = {
     LABEL: "Hexagon",
     VALUE: 25000,
     SHAPE: 6,
-    SIZE: 70,
+    SIZE: 100,
     COLOR: "magenta",
     BODY: {
         DAMAGE: 3 * basePolygonDamage,

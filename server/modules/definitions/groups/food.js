@@ -119,6 +119,7 @@ Class.legendaryEgg = makeRare("egg", 1);
 Class.shadowEgg = makeRare("egg", 2);
 Class.rainbowEgg = makeRare("egg", 3);
 Class.transEgg = makeRare("egg", 4); //ironic
+Class.primordialEgg = makePrimordial("egg");
 // CONTROLLERS: [["minion", {orbit: 125}]],
 // SQUARES
 Class.square = {
@@ -247,6 +248,7 @@ Class.legendaryPentagon = makeRare("pentagon", 1);
 Class.shadowPentagon = makeRare("pentagon", 2);
 Class.rainbowPentagon = makeRare("pentagon", 3);
 Class.transPentagon = makeRare("pentagon", 4);
+Class.primordialPentagon = makePrimordial("pentagon");
 /*
 Class.pentdeco = makeDeco(5.5);
 Class.pentdeco2 = makeDeco(5);

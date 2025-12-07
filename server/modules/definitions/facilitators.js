@@ -813,6 +813,9 @@ exports.makeRare = (type, level) => {
             PENETRATION: [1.5, 1.5, 2, 2.5, 2.5][level] * type.BODY.PENETRATION,
             ACCELERATION: type.BODY.ACCELERATION
         },
+        PROPS: type.PROPS,
+        GUNS: type.GUNS,
+        TURRETS: type.TURRETS,
         DRAW_HEALTH: true,
         INTANGIBLE: type.INTANGIBLE,
         GIVE_KILL_MESSAGE: true,
@@ -821,26 +824,28 @@ exports.makeRare = (type, level) => {
 exports.makePrimordial = (type) => {
     type = ensureIsClass(type);
     return {
-    PARENT: "food",
-    LABEL: "Primordial " + type.LABEL,
-    SHAPE: type.SHAPE,
-    SIZE: type.SIZE*3,
-    COLOR: type.COLOR,
-    VALUE: type.VALUE*850000,
-    ALPHA: 0.75,
-    BODY: {
-        DAMAGE: type.BODY.DAMAGE*10,
-        DENSITY: type.BODY.DENSITY,
-        HEALTH: type.BODY.HEALTH*7500,
-        PENETRATION: type.BODY.PENETRATION,
-        ACCELERATION: type.BODY.ACCELERATION
-    },
-    DRAW_HEALTH: true,
-    INTANGIBLE: type.INTANGIBLE,
-    GIVE_KILL_MESSAGE: true,
+        PARENT: "food",
+        LABEL: "Primordial " + type.LABEL,
+        SHAPE: type.SHAPE,
+        SIZE: type.SIZE*7,
+        COLOR: type.COLOR,
+        VALUE: type.VALUE*850000,
+        ALPHA: 0.75,
+        BODY: {
+            DAMAGE: type.BODY.DAMAGE*10,
+            DENSITY: type.BODY.DENSITY,
+            HEALTH: type.BODY.HEALTH*7500,
+            PENETRATION: type.BODY.PENETRATION,
+            ACCELERATION: type.BODY.ACCELERATION
+        },
+        PROPS: type.PROPS,
+        GUNS: type.GUNS,
+        TURRETS: type.TURRETS,
+        DRAW_HEALTH: true,
+        INTANGIBLE: type.INTANGIBLE,
+        GIVE_KILL_MESSAGE: true,
     }
 }
-
 exports.makeLaby = (type, level, baseScale = 1) => {
     type = ensureIsClass(type);
     let usableSHAPE = Math.max(type.SHAPE, 3),

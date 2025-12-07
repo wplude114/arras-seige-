@@ -386,6 +386,44 @@ Class.rainbowHexagon = makeRare("hexagon", 3);
 Class.transHexagon = makeRare("hexagon", 4);
 
 // Extinct Shapes
+Class.GBetaPentagon = {
+    PARENT: "food",
+    LABEL: "Beta Pentagon",
+    VALUE: 2500,
+    SHAPE: 5,
+    SIZE: 30,
+    COLOR: "purple",
+    BODY: {
+        DAMAGE: 2 * basePolygonDamage,
+        DENSITY: 30,
+        HEALTH: 75 * basePolygonHealth,
+        RESIST: Math.pow(1.25, 2),
+        PENETRATION: 1.1,
+        SHIELD: 20 * basePolygonHealth,
+        ACCELERATION: 0.003
+    },
+    DRAW_HEALTH: true,
+    GIVE_KILL_MESSAGE: true,
+};
+Class.GAlphaPentagon = {
+    PARENT: "food",
+    LABEL: "Alpha Pentagon",
+    VALUE: 15e3,
+    SHAPE: 5,
+    SIZE: 58,
+    COLOR: "purple",
+    BODY: {
+        DAMAGE: 2 * basePolygonDamage,
+        DENSITY: 80,
+        HEALTH: 562.5 * basePolygonHealth,
+        RESIST: Math.pow(1.25, 3),
+        PENETRATION: 1.1,
+        SHIELD: 40 * basePolygonHealth,
+        ACCELERATION: 0.0025
+    },
+    DRAW_HEALTH: true,
+    GIVE_KILL_MESSAGE: true,
+};
 Class.GHexagon = {
     PARENT: "food",
     LABEL: "Hexagon",

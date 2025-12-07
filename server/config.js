@@ -202,18 +202,18 @@ module.exports = {
             [64, 'rainbowTriangle'],
             [16, 'rainbowPentagon'],
         ]],
-        [10000/152000000 [ // 1/152m i think
+        [100000/152000000 [ // 1/152m i think
             [1024, 'transEgg'],
             [256, 'transSquare'],
             [64, 'transTriangle'],
             [16, 'transPentagon'],
         ]],
-        [10000/3420000000, [ // 1/3.42b i think
+        [100000/3420000000, [ // 1/3.42b i think
             [100, 'cube'],
             [10, 'dodecahedron'],
             [1, 'icosahedron']
         ]]
-        [10000/7500000000 [ // 1/7.5b i think
+        [100000/7500000000 [ // 1/7.5b i think
             [1024, 'primordialEgg'],
             [256, 'primordialSquare'],
             [64, 'primordialTriangle'],
@@ -224,7 +224,7 @@ module.exports = {
     // The possible nest food types that can spawn.
     FOOD_TYPES_NEST: [
         [1, [
-            [16, 'pentagon'], [ 4, 'betaPentagon'], [ 1, 'alphaPentagon'], [10000/75000000, "primordialPentagon"], //[0.25, 'omegaPentagon']
+            [16, 'pentagon'], [ 4, 'betaPentagon'], [ 1, 'alphaPentagon'], [100000/75000000, "primordialPentagon"], //[0.25, 'omegaPentagon']
             //                                                             1/75m i think i have no idea
         ]],
     ],

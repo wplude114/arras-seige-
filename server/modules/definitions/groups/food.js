@@ -385,6 +385,62 @@ Class.shadowHexagon = makeRare("hexagon", 2);
 Class.rainbowHexagon = makeRare("hexagon", 3);
 Class.transHexagon = makeRare("hexagon", 4);
 
+// 'goliath' shapes
+Class.GHexagon = {
+    PARENT: "food",
+    LABEL: "Hexagon",
+    VALUE: 25000,
+    SHAPE: 6,
+    SIZE: 40,
+    COLOR: "magenta",
+    BODY: {
+        DAMAGE: 3 * basePolygonDamage,
+        DENSITY: 10,
+        HEALTH: 892 * basePolygonHealth,
+        RESIST: 1.3,
+        SHIELD: 75 * basePolygonHealth,
+        PENETRATION: 1.1,
+        ACCELERATION: 0.002
+    },
+    DRAW_HEALTH: true,
+};
+Class.GOctagon = {
+    PARENT: "food",
+    LABEL: "Octagon",
+    VALUE: 27000,
+    SHAPE: 8,
+    SIZE: 67,
+    COLOR: "lavender",
+    BODY: {
+        DAMAGE: 5 * basePolygonDamage,
+        DENSITY: 13,
+        HEALTH: 897 * basePolygonHealth,
+        RESIST: 1.3,
+        SHIELD: 120 * basePolygonHealth,
+        PENETRATION: 1.1,
+        ACCELERATION: 0.001
+    },
+    DRAW_HEALTH: true,
+};
+Class.GNonagon = {
+    PARENT: "food",
+    LABEL: "Nonagon",
+    VALUE: 250000,
+    SHAPE: 10,
+    SIZE: 100,
+    COLOR: "white",
+    BODY: {
+        DAMAGE: 5 * basePolygonDamage,
+        DENSITY: 20,
+        HEALTH: 1024 * basePolygonHealth,
+        RESIST: 1.3,
+        SHIELD: 273 * basePolygonHealth,
+        PENETRATION: 1.1,
+        ACCELERATION: 0.0007
+    },
+    DRAW_HEALTH: true,
+};
+
 // 3D POLYGONS
 Class.sphere = {
     PARENT: "food",

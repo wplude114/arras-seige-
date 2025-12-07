@@ -19,7 +19,9 @@ module.exports = {
     FOOD_TYPES_NEST: [ // set spawns to old shapes
         [1, [
             [16, 'pentagon'], [4, 'GBetaPentagon'], [1, 'GAlphaPentagon'], //[0.25, 'omegaPentagon']
-            [0.5, 'GSeptagon'], [0.25, 'GHexagon'], [ 0.05, 'GOctagon'], [ 0.0075, 'GNonagon']
+        ]],
+        [0.25, [
+            [16, 'GSeptagon'], [4, 'GHexagon'], [ 1, 'GOctagon'], [ 0.25, 'GNonagon']
         ]],
     ],
     BOSS_TYPES: [],

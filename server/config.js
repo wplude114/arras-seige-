@@ -172,48 +172,48 @@ module.exports = {
     // NOTE: The spawn message (ex. "A strange trembling...") takes half as long to appear than the boss.
     BOSS_SPAWN_DURATION: 5,
     FOOD_TYPES: [
-        [100000, [
+        [1000000, [
             [1024, 'egg'], [256, 'betaEgg'], [64, 'alphaEgg'],
             [256, 'square'], [64, 'betaSquare'], [16, 'alphaSquare'],
             [64, 'triangle'],
             [16, 'pentagon'], [4, 'betaPentagon'], [1, 'alphaPentagon'], //[0.25, 'omegaPentagon']
         ]],
-        [100000/150000 [ // 1/150k i think
+        [1000000/150000, [ // 1/150k i think
             [1024, 'shinyEgg'],
             [256, 'shinySquare'],
             [64, 'shinyTriangle'],
             [16, 'shinyPentagon'],
         ]],
-        [100000/1000000 [ // 1/1m i think
+        [1000000/1000000, [ // 1/1m i think
             [1024, 'legendaryEgg'],
             [256, 'legendarySquare'],
             [64, 'legendaryTriangle'],
             [16, 'legendaryPentagon'],
         ]],
-        [100000/3000000 [ // 1/3m i think
+        [1000000/3000000, [ // 1/3m i think
             [1024, 'shadowEgg'],
             [256, 'shadowSquare'],
             [64, 'shadowTriangle'],
             [16, 'shadowPentagon'],
         ]],
-        [100000/76000000 [ // 1/76m i think
+        [1000000/76000000, [ // 1/76m i think
             [1024, 'rainbowEgg'],
             [256, 'rainbowSquare'],
             [64, 'rainbowTriangle'],
             [16, 'rainbowPentagon'],
         ]],
-        [100000/152000000 [ // 1/152m i think
+        [1000000/152000000, [ // 1/152m i think
             [1024, 'transEgg'],
             [256, 'transSquare'],
             [64, 'transTriangle'],
             [16, 'transPentagon'],
         ]],
-        [100000/3420000000, [ // 1/3.42b i think
+        [1000000/3420000000, [ // 1/3.42b i think
             [100, 'cube'],
             [10, 'dodecahedron'],
             [1, 'icosahedron']
         ]],
-        [100000/7500000000 [ // 1/7.5b i think
+        [1000000/7500000000, [ // 1/7.5b i think
             [1024, 'primordialEgg'],
             [256, 'primordialSquare'],
             [64, 'primordialTriangle'],

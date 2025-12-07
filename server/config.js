@@ -19,11 +19,11 @@ module.exports = {
     flattenDefintions: false,
 
     // Log speed loop warnings
-    LOGS: true,
+    LOGS: false,
 
     // The \modules\setup\gamemodeconfigs\ files to load.
     // To change specific things about specific gamemodes (such as team count for tdm), edit their config file in \modules\setup\gamemodeconfigs\.
-    GAME_MODES: ['ffa'],
+    GAME_MODES: ['siege'],
 
     // The room files to load in the setup/rooms folder.
     // NOTE: If a /gamemodeconfig/ file "replaces" the value of ROOM_SETUP, it just adds its own ROOM_SETUP's content to this array.
@@ -167,7 +167,7 @@ module.exports = {
     ENEMY_SPAWN_COOLDOWN_NEST: 600, // Cooldown (in game ticks) of nest enemies spawn attempts being made.
 
     // Cooldown (in seconds) of boss spawns being announced.
-    BOSS_SPAWN_COOLDOWN: 60,
+    BOSS_SPAWN_COOLDOWN: Number.MAX_SAFE_INTEGER,
     // The delay (in seconds) between the boss spawns being announced and the bosses actually spawning.
     // NOTE: The spawn message (ex. "A strange trembling...") takes half as long to appear than the boss.
     BOSS_SPAWN_DURATION: 5,
@@ -242,24 +242,8 @@ module.exports = {
 
     // The possible boss types that can spawn.
     BOSS_TYPES: [{
-        bosses: ["eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner"],
-        amount: [5, 5, 4, 2, 1], chance: 2, nameType: "a",
-    },{
-        bosses: ["roguePalisade"],
-        amount: [4, 1], chance: 1, nameType: "castle",
-        message: "A strange trembling...",
-    },{
-        bosses: ["summoner", "eliteSkimmer", "nestKeeper"],
-        amount: [2, 2, 1], chance: 1, nameType: "a",
-        message: "A strange trembling...",
-    },{
-        bosses: ["paladin", "freyja", "zaphkiel", "nyx", "theia"],
-        amount: [1], chance: 0.01,
-        message: "The world tremors as the celestials are reborn anew!",
-    },{
-        bosses: ["julius", "genghis", "napoleon"],
-        amount: [1], chance: 0.1,
-        message: "The darkness arrives as the realms are torn apart!",
+        bosses: ["eliteDestroyer"],
+        amount: [0], chance: 2000,
     }],
 
 

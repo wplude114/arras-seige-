@@ -24,5 +24,4 @@ module.exports = {
             [16, 'GSeptagon'], [4, 'GHexagon'], [ 1, 'GOctagon'], [ 0.25, 'GNonagon']
         ]],
     ],
-    BOSS_TYPES: [],
 };

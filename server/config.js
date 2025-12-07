@@ -186,6 +186,9 @@ module.exports = {
         [1, [
             [16, 'pentagon'], [ 4, 'betaPentagon'], [ 1, 'alphaPentagon'], [0.25, 'omegaPentagon']
         ]],
+        [0.75, [
+            [16, 'GHexagon'], [ 10, 'GOctagon'], [ 4, 'GNonagon']
+        ]], /*
         [0.005, [
             [25, 'shinyPentagon'], [5, 'shinyBetaPentagon'], [1, 'shinyAlphaPentagon'], [0.2, 'shinyOmegaPentagon']
         ]],
@@ -195,6 +198,7 @@ module.exports = {
         [0.00001, [
             [49, 'shadowPentagon'], [7, 'shadowBetaPentagon'], [1, 'shadowAlphaPentagon'], [0.1428571428571429, 'shadowOmegaPentagon']
         ]],
+        */
     ],
 
     // The possible nest enemy types that can spawn.

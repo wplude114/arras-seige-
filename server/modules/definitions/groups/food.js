@@ -385,7 +385,7 @@ Class.shadowHexagon = makeRare("hexagon", 2);
 Class.rainbowHexagon = makeRare("hexagon", 3);
 Class.transHexagon = makeRare("hexagon", 4);
 
-// 'goliath' shapes
+// extinct shapes
 Class.GHexagon = {
     PARENT: "food",
     LABEL: "Hexagon",
@@ -401,6 +401,24 @@ Class.GHexagon = {
         SHIELD: 75 * basePolygonHealth,
         PENETRATION: 1.1,
         ACCELERATION: 0.002
+    },
+    DRAW_HEALTH: true,
+};
+Class.GSeptagon = {
+    PARENT: "food",
+    LABEL: "Septagon",
+    VALUE: 26520,
+    SHAPE: 7,
+    SIZE: 87,
+    COLOR: "green",
+    BODY: {
+        DAMAGE: 3 * basePolygonDamage,
+        DENSITY: 10,
+        HEALTH: 892 * basePolygonHealth,
+        RESIST: 1.3,
+        SHIELD: 75 * basePolygonHealth,
+        PENETRATION: 1.1,
+        ACCELERATION: 0.003
     },
     DRAW_HEALTH: true,
 };

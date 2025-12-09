@@ -641,11 +641,10 @@ exports.menuvar2 = (name = -1, color = -1, shape = 0) => {
             }
         },
         {
-            POSITION: [20, 10, -0.0001, 0, 0, 0, 0],
+            POSITION: [5, 10, 1.4, 15, 0, 0, 0],
             PROPERTIES: {
                 SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
-                TYPE: "bullet",
-				COLOR: "black"
+                TYPE: "bullet"
             }
         },
     ];

@@ -1367,7 +1367,7 @@ let tiles,
         }
         for (let i = 0; i < hasUpgrades.length; i++) {
             let upgrade = hasUpgrades[i],
-                spacing = 2 * Math.max(1, upgrade.tier - tier),
+                spacing = 1 * Math.max(1, upgrade.tier - tier),
                 measure = measureSize(x, y + spacing, upgrade.upgradeColor ?? i, upgrade);
             branches.push([{ x, y: y + Math.sign(i) }, { x, y: y + spacing + 1 }]);
             if (i === hasUpgrades.length - 1 && !noUpgrades.length) {

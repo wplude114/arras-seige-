@@ -153,6 +153,13 @@ Class.generatorBase = {
     },
 }
 
+Class.nav = menu("Menu's")
+Class.nav.PROPS = [
+    {
+        POSITION: [9, 0, 0, 0, 360, 1],
+        TYPE: "genericEntity"
+    }
+]
 Class.bosses = menu("Bosses")
 Class.bosses.REROOT_UPGRADE_TREE = "bosses"
 Class.sentries = menu("Sentries", "pink", 3.5)
@@ -1134,7 +1141,13 @@ Class.teams.UPGRADES_TIER_0.push('Team' + TEAM_DREADNOUGHTS, 'Team' + TEAM_ROOM,
 
 Class.testing = menu("Testing")
 
-Class.addons = menu("Addon Entities")
+Class.addons = menu("Addon Entities", "dgrey")
+Class.nav.PROPS = [
+    {
+        POSITION: [9, 0, 0, 0, 360, 1],
+        TYPE: "genericEntity"
+    }
+]
 Class.addons.UPGRADES_TIER_0 = []
 
 // misc tanks
@@ -2786,7 +2799,8 @@ Class.flace = {
     SKILL_CAP: [dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl],
 }
 
-Class.developer.UPGRADES_TIER_0 = ["tanks", "bosses", "spectator", "levels", "teams", "eggGenerator", "testing", "addons"]
+Class.developer.UPGRADES_TIER_0 = ["nav", "eggGenerator"]
+Class.nav.UPGRADES_TIER_0 = ["tanks", "bosses", "spectator", "levels", "teams", "testing", "addons"] // makes things easier
     Class.tanks.UPGRADES_TIER_0 = ["basic", "unavailable", "arenaCloser", "dominators", "sanctuaries", "mothership", "baseProtector", "antiTankMachineGun"]
         Class.unavailable.UPGRADES_TIER_0 = ["flail", "gunner3", "jumpSmasher", "healer", "literallyAMachineGun", "literallyATank", "master", "volute", "whirlwind"]
             Class.flail.UPGRADES_TIER_2 = ["doubleFlail", "mace", "flangle"]

@@ -351,14 +351,14 @@ Class.barrelDecoTest = {
             }
         },
         {
-            POSITION: {LENGTH: 8,WIDTH: 8,ASPECT: 1, X: 15,Y: 0,ANGLE: 0,DELAY: 0},
+            POSITION: {LENGTH: 5,WIDTH: 8,ASPECT: 1, X: 17,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic]),
                 TYPE: "bullet",
             }
         },
         {
-            POSITION: {LENGTH: 15,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+            POSITION: {LENGTH: 13,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
         },
         {
             POSITION: {LENGTH: 4,WIDTH: 4,ASPECT: 1, X: 22,Y: 0,ANGLE: 0,DELAY: 0},

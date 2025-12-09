@@ -625,14 +625,14 @@ exports.menuvar2 = (name = -1, color = -1, shape = 0) => {
         {
             POSITION: [18, 10, -1.4, 0, 0, 0, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.op]),
+                SHOOT_SETTINGS: exports.combineStats([g.basic, g.op]),
                 TYPE: "developerBullet"
             }
         },
         {
             POSITION: [6, 12, 1, 13, 0, 0, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
                 TYPE: "bullet",
 				COLOR: -1,
             }
@@ -640,21 +640,21 @@ exports.menuvar2 = (name = -1, color = -1, shape = 0) => {
         {
             POSITION: [18, 8, 1, 0, 0, 0, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
                 TYPE: "bullet"
             }
         },
         {
             POSITION: [3, 9, 1.5, 17, 0, 0, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
                 TYPE: "bullet"
             }
         },
         {
             POSITION: [1.5, 3, -0.00001, 17.5, 0, 0, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
                 TYPE: "bullet",
 				COLOR: -1,
             }

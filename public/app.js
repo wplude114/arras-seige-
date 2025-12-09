@@ -2047,7 +2047,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
         let clickableRatio = global.canvas.height / global.screenHeight / global.ratio;
         let lastBranch = -1;
         let upgradeHoverIndex = global.clickables.upgrade.check({ x: global.mouse.x, y: global.mouse.y });
-        upgradeSpin += 0.01;
+        upgradeSpin += 1.01;
 
         for (let i = 0; i < gui.upgrades.length; i++) {
             let upgrade = gui.upgrades[i];

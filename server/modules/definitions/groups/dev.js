@@ -336,6 +336,13 @@ Class.barrelDecoTest = {
     LABEL: "Barrel Deco Test",
     GUNS: [
         {
+            POSITION: {LENGTH: 3,WIDTH: 10,ASPECT: 1, X: 13,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                TYPE: "bullet",
+            }
+        },
+        {
             POSITION: {LENGTH: 18,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic]),
@@ -348,7 +355,6 @@ Class.barrelDecoTest = {
                 SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
                 TYPE: "bullet",
 				COLOR: "yellow",
-				SHAPE: 8.5,
             }
         },
     ]

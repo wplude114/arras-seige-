@@ -2022,7 +2022,7 @@ function drawLeaderboard(spacing, alcoveSize, max) {
 function drawAvailableUpgrades(spacing, alcoveSize) {
     // Draw upgrade menu
     if (gui.upgrades.length > 0) {
-        let internalSpacing = 5;
+        let internalSpacing = 10;
         let len = alcoveSize / 5;
         let height = len;
 

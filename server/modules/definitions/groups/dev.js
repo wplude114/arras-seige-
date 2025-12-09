@@ -50,7 +50,7 @@ Class.developer = {
             }
         },
         {
-            POSITION: [4, 13, 1, 13, 0, 0, 0],
+            POSITION: [6, 12, 1, 13, 0, 0, 0],
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
                 TYPE: "bullet",
@@ -65,14 +65,14 @@ Class.developer = {
             }
         },
         {
-            POSITION: [3, 8, 1.4, 17, 0, 0, 0],
+            POSITION: [3, 9, 1.5, 17, 0, 0, 0],
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
                 TYPE: "bullet"
             }
         },
         {
-            POSITION: [1.5, 4, -0.00001, 17.5, 0, 0, 0],
+            POSITION: [1.5, 3, -0.00001, 17.5, 0, 0, 0],
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
                 TYPE: "bullet",

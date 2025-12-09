@@ -952,7 +952,7 @@ Class.weirdAutoBasic = {
             ANGLE: 180,
             LAYER: 1
         },
-        TYPE: ["coolTurret", {
+        TYPE: ["autoTankGun", {
             CONTROLLERS: ["nearestDifferentMaster"],
             INDEPENDENT: true
         }]

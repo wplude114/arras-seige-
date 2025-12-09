@@ -588,7 +588,7 @@ exports.menu = (name = -1, color = -1, shape = 0) => {
             PROPERTIES: {
                 SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
                 TYPE: "bullet",
-                COLOR: color,
+                COLOR: -1,
             }
         },
         {
@@ -603,7 +603,7 @@ exports.menu = (name = -1, color = -1, shape = 0) => {
             PROPERTIES: {
                 SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
                 TYPE: "bullet",
-                COLOR: color,
+                COLOR: -1,
             }
         },
         {
@@ -626,22 +626,25 @@ exports.menuvar2 = (name = -1, color = -1, shape = 0) => {
             POSITION: [18, 14, -1.4, 0, 0, 0, 0],
         },
         {
-            POSITION: [6, 16, 1, 13, 0, 0, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: exports.combineStats([g.basic]),
-                TYPE: "bullet",
-				COLOR: -1,
-            }
-        },
-        {
             POSITION: [20, 12, 1, 0, 0, 0, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
+                SHOOT_SETTINGS: exports.combineStats([g.basic]),
                 TYPE: "bullet"
             }
         },
         {
-            POSITION: [8, 12, -0.00001, 14, 0, 0, 0],
+            POSITION: [20, 8, 1, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
+                TYPE: "bullet",
+				COLOR: -1
+            }
+        },
+        {
+            POSITION: [15, 10, 0.5, 0, 0, 0, 0],
+        },
+        {
+            POSITION: [8, 12, -0.00001, 12, 0, 0, 0],
             PROPERTIES: {
                 SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
                 TYPE: "bullet"

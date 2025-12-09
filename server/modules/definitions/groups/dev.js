@@ -360,15 +360,6 @@ Class.barrelDecoTest = {
         {
             POSITION: {LENGTH: 13,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
         },
-		
-        {
-            POSITION: {LENGTH: 3,WIDTH: 7,ASPECT: 0.7, X: 9.5,Y: 0,ANGLE: 180,DELAY: 0.5},
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
-                TYPE: "bullet",
-				COLOR: 'white',
-            }
-        },
     ]
 }
 

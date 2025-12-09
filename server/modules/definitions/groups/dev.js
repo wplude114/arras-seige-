@@ -347,7 +347,7 @@ Class.barrelDecoTest = {
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
                 TYPE: "bullet",
-				COLOR: 'vlgrey',
+				COLOR: 'white',
             }
         },
         {

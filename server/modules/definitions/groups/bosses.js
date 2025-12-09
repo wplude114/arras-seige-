@@ -285,7 +285,7 @@ Class.oldEliteSprayer = {
     AI: { NO_LEAD: false },
     TURRETS: weaponArray({
         POSITION: [14, 6, 0, 60, 190, 0],
-        TYPE: [ "sprayer", { COLOR: -1 } ],
+        TYPE: [ "SprayGun", { COLOR: -1 } ],
     }, 3)
 };
 
@@ -552,7 +552,7 @@ Class.legionaryCrasher = {
         },
         ...weaponArray({
             POSITION: [14, 8, 0, 60, 180, 0],
-            TYPE: [ "sprayer", { GUN_STAT_SCALE: {speed: 1.3, health: 1.5, damage: 1.4, resist: 1.2}, COLOR: -1 } ],
+            TYPE: [ "SprayGun", { GUN_STAT_SCALE: {speed: 1.3, health: 1.5, damage: 1.4, resist: 1.2}, COLOR: -1 } ],
         }, 3),
         {
             POSITION: [12, 0, 0, 0, 0, 0],
@@ -3427,6 +3427,7 @@ Class.helenaBoss = {
         },
     ]
 }
+
 
 
 

@@ -576,7 +576,7 @@ exports.setTurretProjectileRecoil = (type, recoilFactor) => {
 exports.menu = (name = -1, color = -1, shape = 0) => {
     let gun = [
         {
-            POSITION: {LENGTH: 8,WIDTH: 14,ASPECT: 1, X: 10,Y: 0,ANGLE: 0,DELAY: 0},
+            POSITION: {LENGTH: 18,WIDTH: 14,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
                 SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
                 TYPE: "bullet",

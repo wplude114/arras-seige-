@@ -578,14 +578,14 @@ exports.menu = (name = -1, color = -1, shape = 0) => {
         {
             POSITION: {LENGTH: 8,WIDTH: 14,ASPECT: 1, X: 10,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
                 TYPE: "bullet",
             }
         },
         {
             POSITION: {LENGTH: 23,WIDTH: 10,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
                 TYPE: "bullet",
                 COLOR: color,
             }
@@ -593,8 +593,16 @@ exports.menu = (name = -1, color = -1, shape = 0) => {
         {
             POSITION: {LENGTH: 5,WIDTH: 12,ASPECT: 1, X: 17,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic]),
+                SHOOT_SETTINGS: exports.combineStats([g.basic]),
                 TYPE: "bullet",
+            }
+        },
+        {
+            POSITION: {LENGTH: 3,WIDTH: 3,ASPECT: 0.0001, X: 18,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
+                TYPE: "bullet",
+                COLOR: color,
             }
         },
         {

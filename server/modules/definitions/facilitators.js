@@ -644,14 +644,6 @@ exports.menuvar2 = (name = -1, color = -1, shape = 0) => {
                 TYPE: "bullet"
             }
         },
-        {
-            POSITION: [1.5, 9, -0.00001, 17.5, 0, 0, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
-                TYPE: "bullet",
-				COLOR: -1,
-            }
-        },
     ];
     return {
         PARENT: "genericTank",

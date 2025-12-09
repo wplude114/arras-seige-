@@ -165,7 +165,11 @@ Class.miscdeco = makeDeco(-4.5);
 Class.misc = menuvar2("Misc.")
 Class.misc.PROPS = [
     {
-        POSITION: [20, 0, 0, 0, 360, 0],
+        POSITION: [20, 0, 0, 0, 360, -1],
+        TYPE: "miscdeco"
+    },
+    {
+        POSITION: [10, 0, 0, 0, 360, 1],
         TYPE: "miscdeco"
     }
 ]

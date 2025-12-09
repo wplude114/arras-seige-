@@ -2022,8 +2022,8 @@ function drawLeaderboard(spacing, alcoveSize, max) {
 function drawAvailableUpgrades(spacing, alcoveSize) {
     // Draw upgrade menu
     if (gui.upgrades.length > 0) {
-        let internalSpacing = 10;
-        let len = alcoveSize / 5;
+        let internalSpacing = 15;
+        let len = alcoveSize / 4;
         let height = len;
 
         // Animation processing
@@ -2047,7 +2047,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
         let clickableRatio = global.canvas.height / global.screenHeight / global.ratio;
         let lastBranch = -1;
         let upgradeHoverIndex = global.clickables.upgrade.check({ x: global.mouse.x, y: global.mouse.y });
-        upgradeSpin += 0.01;
+        upgradeSpin += 0.02;
 
         for (let i = 0; i < gui.upgrades.length; i++) {
             let upgrade = gui.upgrades[i];

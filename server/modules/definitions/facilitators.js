@@ -580,6 +580,7 @@ exports.menu = (name = -1, color = -1, shape = 0) => {
             PROPERTIES: {
                 SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
                 TYPE: "bullet",
+                COLOR: "black"
             }
         },
         {

@@ -34,12 +34,7 @@ Class.trapLayer = {
     DANGER: 5,
     GUNS: [
         {
-            POSITION: {LENGTH: 14,WIDTH: 11,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
-                TYPE: "bullet",
-            }
-        },
+            POSITION: {LENGTH: 12.5,WIDTH: 10,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
         {
             POSITION: {LENGTH: 20,WIDTH: 6,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
@@ -69,6 +64,7 @@ Class.trapLayer = {
 
 // Upgrade Paths
 Class.basic.UPGRADES_TIER_1 = ['trapLayer']
+
 
 
 

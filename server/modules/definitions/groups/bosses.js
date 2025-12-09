@@ -3036,7 +3036,7 @@ Class.MKTurretFactory = {
     ],
 }
 Class.MKTurretCarrier = {
-    PARENT: "carrier",
+    PARENT: "carrierTurret",
     FACING_TYPE: "toTarget",
     LABEL: "MKTurret carrier",
     SKILL: [12, 12, 12, 12, 12, 12, 12, 12, 12, 12],

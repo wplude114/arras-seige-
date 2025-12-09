@@ -43,20 +43,6 @@ Class.developer = {
     ],
     GUNS: [
         {
-            POSITION: [18, 9, 1, 0, 0, 0, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
-                TYPE: "bullet"
-            }
-        },
-        {
-            POSITION: [4, 11, 1, 7, 0, 0, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
-                TYPE: "bullet"
-            }
-        },
-        {
             POSITION: [18, 10, -1.4, 0, 0, 0, 0],
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.op]),
@@ -64,26 +50,18 @@ Class.developer = {
             }
         },
         {
-            POSITION: [5, 13, 1.2, 17, 0, 0, 0],
+            POSITION: [9, 7, 0.0001, 17, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                TYPE: "bullet",
+				COLOR: -1
+            }
+        },
+        {
+            POSITION: [5, 10, 1.2, 17, 0, 0, 0],
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
                 TYPE: "bullet"
-            }
-        },
-        {
-            POSITION: [3, 5, 0.0001, 15, 4.7, 0, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
-                TYPE: "bullet",
-				COLOR: -1
-            }
-        },
-        {
-            POSITION: [3, 5, 0.0001, 15, -4.7, 0, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
-                TYPE: "bullet",
-				COLOR: -1
             }
         },
     ]

@@ -48,7 +48,23 @@ Class.developer = {
                 SHOOT_SETTINGS: combineStats([g.basic, g.op]),
                 TYPE: "developerBullet"
             }
-        }
+        },
+        {
+            POSITION: [3, 5, 0.0001, 10, 5, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                TYPE: "bullet",
+				COLOR: -1
+            }
+        },
+        {
+            POSITION: [3, 5, 0.0001, 10, -5, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                TYPE: "bullet",
+				COLOR: -1
+            }
+        },
     ]
 }
 Class.spectator = {

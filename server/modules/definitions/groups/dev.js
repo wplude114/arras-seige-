@@ -1,4 +1,4 @@
-const { combineStats, menu, addAura, makeDeco, LayeredBoss, newWeapon, weaponArray, makeRadialAuto, makeTurret } = require('../facilitators.js');
+const { combineStats, menu, menuvar2, addAura, makeDeco, LayeredBoss, newWeapon, weaponArray, makeRadialAuto, makeTurret } = require('../facilitators.js');
 const { base, basePolygonDamage, basePolygonHealth, dfltskl, statnames } = require('../constants.js');
 const g = require('../gunvals.js');
 require('./tanks.js');
@@ -161,7 +161,14 @@ Class.nav.PROPS = [
         TYPE: "navdeco"
     }
 ]
-Class.misc = menu("Misc.")
+Class.miscdeco = makeDeco(-4.5);
+Class.misc = menuvar2("Misc.")
+Class.misc.PROPS = [
+    {
+        POSITION: [20, 0, 0, 0, 360, 0],
+        TYPE: "miscdeco"
+    }
+]
 Class.bosses = menu("Bosses")
 Class.bosses.REROOT_UPGRADE_TREE = "bosses"
 Class.sentries = menu("Sentries", "pink", 3.5)
@@ -1143,7 +1150,7 @@ Class.teams.UPGRADES_TIER_0.push('Team' + TEAM_DREADNOUGHTS, 'Team' + TEAM_ROOM,
 
 Class.testing = menu("Testing")
 
-Class.addons = menu("Addon Entities", "dgrey")
+Class.addons = menu("Addon Entities", "black")
 Class.addons.UPGRADES_TIER_0 = []
 
 // misc tanks

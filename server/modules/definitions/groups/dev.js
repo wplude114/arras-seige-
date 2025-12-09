@@ -43,18 +43,18 @@ Class.developer = {
     ],
     GUNS: [
         {
+            POSITION: [18, 10, -1.4, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.op]),
+                TYPE: "developerBullet"
+            }
+        },
+        {
             POSITION: [4, 13, 1, 13, 0, 0, 0],
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
                 TYPE: "bullet",
 				COLOR: -1,
-            }
-        },
-        {
-            POSITION: [18, 10, -1.4, 0, 0, 0, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.op]),
-                TYPE: "developerBullet"
             }
         },
         {
@@ -66,6 +66,20 @@ Class.developer = {
         },
         {
             POSITION: [3, 10, 1.4, 17, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                TYPE: "bullet"
+            }
+        },
+        {
+            POSITION: [3, 10, 1, 17, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                TYPE: "bullet"
+            }
+        },
+        {
+            POSITION: [1.5, 10, 0.6, 17, 0, 0, 0],
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
                 TYPE: "bullet"

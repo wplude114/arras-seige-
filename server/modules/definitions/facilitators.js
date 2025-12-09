@@ -624,6 +624,9 @@ exports.menuvar2 = (name = -1, color = -1, shape = 0) => {
     let gun = [
         {
             POSITION: [18, 14, -1.4, 0, 0, 0, 0],
+            PROPERTIES: {
+                COLOR: "black"
+            }
         },
         {
             POSITION: [20, 12, 1, 0, 0, 0, 0],

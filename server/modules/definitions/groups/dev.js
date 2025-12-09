@@ -624,20 +624,6 @@ Class.alphaGunTest = {
         }
     }]
 }
-
-Class.radialAutoTest = makeRadialAuto("gunner", {
-    count: 5,
-    isTurret: false,
-    extraStats: {spray: 4, speed: 1.4, maxSpeed: 1.4, recoil: 0.2},
-    turretIdentifier: "radialAutoTestTurret",
-    size: 8,
-    x: 10,
-    arc: 220,
-    angle: 36,
-    label: "Radial Auto Test",
-    rotation: 0.04,
-    danger: 10,
-})
 Class.makeAutoTestTurret = makeTurret("ranger", {canRepel: true, limitFov: true, extraStats: {reload: 0.5}});
 Class.makeAutoTest = {
     PARENT: 'genericTank',
@@ -2832,4 +2818,4 @@ Class.nav.UPGRADES_TIER_0 = ["tanks", "bosses", "levels", "teams", "testing"] //
         Class.eternals.UPGRADES_TIER_0 = ["odin", "kronos"]
         Class.devBosses.UPGRADES_TIER_0 = ["taureonBoss", "zephiBoss", "dogeiscutBoss", "trplnrBoss", "frostBoss", "toothlessBoss", "AEMKShipBoss", "helenaBoss"]
 
-    Class.testing.UPGRADES_TIER_0 = ["barrelDecoTest" ,"diamondShape", "miscTest", "mmaTest", "vulnturrettest", "onTest", "alphaGunTest", "strokeWidthTest", "testLayeredBoss", "tooltipTank", "turretLayerTesting", "bulletSpawnTest", "propTest", "weaponArrayTest", "radialAutoTest", "makeAutoTest", "imageShapeTest", "turretStatScaleTest", "auraBasic", "auraHealer", "weirdAutoBasic", "ghoster", "gunBenchmark", "switcheroo", ["developer", "developer"], "armyOfOne", "vanquisher", "mummifier"]
+    Class.testing.UPGRADES_TIER_0 = ["barrelDecoTest" ,"diamondShape", "miscTest", "mmaTest", "vulnturrettest", "onTest", "alphaGunTest", "strokeWidthTest", "testLayeredBoss", "tooltipTank", "turretLayerTesting", "bulletSpawnTest", "propTest", "weaponArrayTest", "makeAutoTest", "imageShapeTest", "turretStatScaleTest", "auraBasic", "auraHealer", "weirdAutoBasic", "ghoster", "gunBenchmark", "switcheroo", ["developer", "developer"], "armyOfOne", "vanquisher", "mummifier"]

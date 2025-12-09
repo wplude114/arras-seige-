@@ -575,31 +575,31 @@ exports.setTurretProjectileRecoil = (type, recoilFactor) => {
 // misc functions
 exports.menu = (name = -1, color = -1, shape = 0) => {
     let gun = [
-    {
-        POSITION: [18, 8, 1, 0, 0, 0, 0],
-        PROPERTIES: {
-            SHOOT_SETTINGS: exports.combineStats([g.basic]),
-            TYPE: "bullet",
+        {
+            POSITION: {LENGTH: 8,WIDTH: 14,ASPECT: 1, X: 10,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                TYPE: "bullet",
+            }
         },
-    },
-    {
-        POSITION: {LENGTH: 16,WIDTH: 10,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
-        PROPERTIES: {
-            SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
-            TYPE: "bullet",
-        }
-    },
-    {
-        POSITION: {LENGTH: 6,WIDTH: 15,ASPECT: 0.8, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
-    },
-    {
-        POSITION: {LENGTH: 5,WIDTH: 5,ASPECT: 0.0001, X: 8,Y: 0,ANGLE: 0,DELAY: 0},
-        PROPERTIES: {
-            SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
-            TYPE: "bullet",
-            COLOR: color, // same color as body :D
-        }
-    },
+        {
+            POSITION: {LENGTH: 23,WIDTH: 10,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                TYPE: "bullet",
+                COLOR: color,
+            }
+        },
+        {
+            POSITION: {LENGTH: 5,WIDTH: 12,ASPECT: 1, X: 17,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: "bullet",
+            }
+        },
+        {
+            POSITION: {LENGTH: 13,WIDTH: 12,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+        },
     ];
     return {
         PARENT: "genericTank",

@@ -624,15 +624,11 @@ exports.menuvar2 = (name = -1, color = -1, shape = 0) => {
     let gun = [
         {
             POSITION: [18, 14, -1.4, 0, 0, 0, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: exports.combineStats([g.basic, g.op]),
-                TYPE: "developerBullet"
-            }
         },
         {
             POSITION: [6, 16, 1, 13, 0, 0, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
+                SHOOT_SETTINGS: exports.combineStats([g.basic]),
                 TYPE: "bullet",
 				COLOR: -1,
             }

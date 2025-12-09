@@ -49,6 +49,10 @@ Class.doublet = {
         },
         {
             POSITION: {LENGTH: 12,WIDTH: 8,ASPECT: 1, X: 0,Y: 6,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                TYPE: "bullet",
+            }
         },
         
         {
@@ -59,7 +63,7 @@ Class.doublet = {
             }
         },
         {
-            POSITION: {LENGTH: 5,WIDTH: 8,ASPECT: 1, X: 14,Y: -6,ANGLE: 0,DELAY: 0.4},
+            POSITION: {LENGTH: 5,WIDTH: 8,ASPECT: 1, X: 14,Y: -6,ANGLE: 0,DELAY: 0.5},
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.twin]),
                 TYPE: "bullet",
@@ -107,6 +111,7 @@ Class.trapLayer = {
 
 // Upgrade Paths
 Class.basic.UPGRADES_TIER_1 = ['trapLayer', 'doublet']
+
 
 
 

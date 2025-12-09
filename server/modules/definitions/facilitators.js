@@ -620,6 +620,56 @@ exports.menu = (name = -1, color = -1, shape = 0) => {
         IGNORED_BY_AI: true,
     };
 }
+exports.menuvar2 = (name = -1, color = -1, shape = 0) => {
+    let gun = [
+        {
+            POSITION: [18, 10, -1.4, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.op]),
+                TYPE: "developerBullet"
+            }
+        },
+        {
+            POSITION: [6, 12, 1, 13, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                TYPE: "bullet",
+				COLOR: -1,
+            }
+        },
+        {
+            POSITION: [18, 8, 1, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                TYPE: "bullet"
+            }
+        },
+        {
+            POSITION: [3, 9, 1.5, 17, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                TYPE: "bullet"
+            }
+        },
+        {
+            POSITION: [1.5, 3, -0.00001, 17.5, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                TYPE: "bullet",
+				COLOR: -1,
+            }
+        },
+    ];
+    return {
+        PARENT: "genericTank",
+        LABEL: name == -1 ? undefined : name,
+        GUNS: gun,
+        COLOR: color,
+        UPGRADE_COLOR: color == -1 ? undefined : color,
+        SHAPE: shape,
+        IGNORED_BY_AI: true,
+    };
+}
 exports.weaponArray = (weapons, count, delayIncrement = 0, delayOverflow = false) => {
     // delayIncrement: how much each side's delay increases by
     // delayOverflow: false to constrain the delay value between [0, 1)

@@ -1335,6 +1335,12 @@ var getClassUpgradeKey = function (number) {
             return "J";
         case 5:
             return "K";
+        case 6:
+            return "B";
+        case 7:
+            return "N";
+        case 8:
+            return "M";
         default:
             return null;
     }

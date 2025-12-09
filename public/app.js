@@ -2023,7 +2023,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
     // Draw upgrade menu
     if (gui.upgrades.length > 0) {
         let internalSpacing = 10;
-        let len = alcoveSize / 2;
+        let len = alcoveSize / 3;
         let height = len;
 
         // Animation processing

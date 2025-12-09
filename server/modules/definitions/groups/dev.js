@@ -154,7 +154,7 @@ Class.generatorBase = {
     },
 }
 Class.navdeco = makeDeco(-5);
-Class.nav = menu("Menu's")
+Class.nav = menu("Entities and values")
 Class.nav.PROPS = [
     {
         POSITION: [12, 0, 0, 0, 360, 1],

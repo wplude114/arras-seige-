@@ -591,7 +591,7 @@ exports.menu = (name = -1, color = -1, shape = 0) => {
             }
         },
         {
-            POSITION: {LENGTH: 5,WIDTH: 12,ASPECT: 1, X: 17,Y: 0,ANGLE: 0,DELAY: 0},
+            POSITION: {LENGTH: 5,WIDTH: 12,ASPECT: 1.3, X: 17,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
                 SHOOT_SETTINGS: exports.combineStats([g.basic]),
                 TYPE: "bullet",

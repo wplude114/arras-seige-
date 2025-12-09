@@ -354,6 +354,20 @@ Class.gunnerLegion = {
         },
     ],
 }
+Class.MachGun = makeAuto({GUNS: [
+        {
+            POSITION: {
+                LENGTH: 12,
+                WIDTH: 10,
+                ASPECT: 1.4,
+                X: 8
+            },
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.machineGun]),
+                TYPE: "bullet"
+            }
+        }
+    ]})
 Class.sprayerLegion = {
     PARENT: "elite",
     UPGRADE_LABEL: "Sprayer Legion",
@@ -367,7 +381,7 @@ Class.sprayerLegion = {
     },
     TURRETS: weaponArray({
         POSITION: [14, 6, 0, 60, 190, 0],
-        TYPE: ["machineGun", {GUN_STAT_SCALE: {health: 1.1, damage: 1.2, speed: 1.2, resist: 1.05}, COLOR: -1}],
+        TYPE: ["MachGun", {GUN_STAT_SCALE: {health: 1.1, damage: 1.2, speed: 1.2, resist: 1.05}, COLOR: -1}],
     }, 3)
 }
 Class.battleshipLegion = {
@@ -3427,6 +3441,7 @@ Class.helenaBoss = {
         },
     ]
 }
+
 
 
 

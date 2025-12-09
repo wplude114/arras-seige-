@@ -624,7 +624,18 @@ Class.alphaGunTest = {
         }
     }]
 }
-Class.makeAutoTestTurret = makeTurret("ranger", {canRepel: true, limitFov: true, extraStats: {reload: 0.5}});
+Class.makeAutoTestTurret = makeTurret({GUNS: [
+        {
+            POSITION: [32, 8, 1, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.sniper, g.assassin]),
+                TYPE: "bullet",
+            },
+        },
+        {
+            POSITION: [5, 8, -1.4, 8, 0, 0, 0],
+        },
+    ],}, {canRepel: true, limitFov: true, extraStats: {reload: 0.5}});
 Class.makeAutoTest = {
     PARENT: 'genericTank',
     LABEL: "Make Auto Test",

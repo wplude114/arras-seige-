@@ -585,7 +585,7 @@ exports.menu = (name = -1, color = -1, shape = 0) => {
     {
         POSITION: {LENGTH: 16,WIDTH: 10,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
         PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+            SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
             TYPE: "bullet",
         }
     },
@@ -595,7 +595,7 @@ exports.menu = (name = -1, color = -1, shape = 0) => {
     {
         POSITION: {LENGTH: 5,WIDTH: 5,ASPECT: 0.0001, X: 8,Y: 0,ANGLE: 0,DELAY: 0},
         PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+            SHOOT_SETTINGS: exports.combineStats([g.basic, g.fake]),
             TYPE: "bullet",
             COLOR: color, // same color as body :D
         }

@@ -30,7 +30,7 @@ Class.basic = {
 }
 Class.trapLayer = {
     PARENT: "genericTank",
-    LABEL: "Trap-Layer",
+    LABEL: "Trappette",
     DANGER: 5,
     GUNS: [
         {
@@ -65,6 +65,7 @@ Class.trapLayer = {
 
 // Upgrade Paths
 Class.basic.UPGRADES_TIER_1 = ['trapLayer']
+
 
 
 

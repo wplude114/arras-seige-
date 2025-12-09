@@ -106,7 +106,8 @@ Class.trapLayer = {
 }
 
 // Upgrade Paths
-Class.basic.UPGRADES_TIER_1 = ['trapLayer']
+Class.basic.UPGRADES_TIER_1 = ['trapLayer', 'doublet']
+
 
 
 

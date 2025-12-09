@@ -86,6 +86,22 @@ Class.eliteGunner = {
         },
     ],
 }
+Class.SprayGun = makeAuto({GUNS: [
+        {
+            POSITION: [23, 7, 1, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.machineGun, g.lowPower, g.pelleter, { recoil: 1.15 }]),
+                TYPE: "bullet"
+            }
+        },
+        {
+            POSITION: [12, 10, 1.4, 8, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.machineGun]),
+                TYPE: "bullet"
+            }
+        }
+    ]}, { COLOR: "grey", GUN_STAT_SCALE: {damage: 0.9, resist: 0.95} })
 Class.eliteSprayer = {
     PARENT: "elite",
     UPGRADE_LABEL: "Elite Sprayer",
@@ -101,10 +117,10 @@ Class.eliteSprayer = {
         ...weaponArray([
             {
                 POSITION: [9, 6, -5, 60, 130, 0],
-                TYPE: ["sprayer", { COLOR: "grey", GUN_STAT_SCALE: {damage: 0.9, resist: 0.95} }],
+                TYPE: ["SprayGun"],
             }, {
                 POSITION: [9, 6, 5, 60, 130, 0],
-                TYPE: ["sprayer", { COLOR: "grey", GUN_STAT_SCALE: {damage: 0.9, resist: 0.95} }],
+                TYPE: ["SprayGun"],
             }, 
         ], 3)
     ],
@@ -3411,6 +3427,7 @@ Class.helenaBoss = {
         },
     ]
 }
+
 
 
 

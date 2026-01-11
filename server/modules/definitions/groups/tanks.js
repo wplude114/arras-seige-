@@ -29,6 +29,39 @@ Class.basic = {
         },
     ]
 }
+
+Class.guard = {
+    PARENT: "genericTank",
+    LABEL: "Guard",
+    UPGRADE_TOOLTIP: "Shoot in 2 angles!",
+    DANGER: 5,
+    GUNS: [
+        {
+            POSITION: {LENGTH: 20,WIDTH: 6,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                TYPE: "bullet",
+            }
+        },
+        {
+            POSITION: {LENGTH: 5,WIDTH: 8,ASPECT: 1, X: 14,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: "bullet",
+            }
+        },
+        {
+            POSITION: {LENGTH: 12,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 180,DELAY: 0.5},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.flankGuard]),
+                TYPE: "bullet",
+            }
+        },
+        {
+            POSITION: {LENGTH: 12,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+        },
+    ]
+}
 Class.trapLayer = {
     PARENT: "genericTank",
     LABEL: "Trap Layer",
@@ -105,10 +138,11 @@ Class.trapomatic = {
 }
 
 // Upgrade Paths
-Class.basic.UPGRADES_TIER_1 = ['trapLayer']
+Class.basic.UPGRADES_TIER_1 = ['trapLayer', 'guard']
 
 // Trap path
 Class.trapLayer.UPGRADES_TIER_2 = ['trapomatic']
+
 
 
 

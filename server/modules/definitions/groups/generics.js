@@ -274,7 +274,7 @@ Class.trap = {
     LABEL: "Thrown Trap",
     TYPE: "trap",
     ACCEPTS_SCORE: false,
-    SHAPE: -3,
+    SHAPE: -6,
     MOTION_TYPE: "glide",
     FACING_TYPE: "turnWithSpeed",
     HITS_OWN_TYPE: "push",

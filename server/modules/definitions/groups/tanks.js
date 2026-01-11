@@ -67,7 +67,7 @@ Class.trapLayer = {
 }
 
 // t3 -- trap path
-Class.Trapomatic = {
+Class.trapomatic = {
     PARENT: "genericTank",
     LABEL: "Trap-o-matic",
     UPGRADE_TOOLTIP: "Shoot upgraded, beefy traps!",
@@ -106,8 +106,10 @@ Class.Trapomatic = {
 
 // Upgrade Paths
 Class.basic.UPGRADES_TIER_1 = ['trapLayer']
+
 // Trap path
 Class.traplayer.UPGRADES_TIER_2 = ['trapomatic']
+
 
 
 

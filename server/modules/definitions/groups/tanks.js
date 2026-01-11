@@ -108,7 +108,8 @@ Class.trapomatic = {
 Class.basic.UPGRADES_TIER_1 = ['trapLayer']
 
 // Trap path
-Class.traplayer.UPGRADES_TIER_2 = ['trapomatic']
+Class.trapLayer.UPGRADES_TIER_2 = ['trapomatic']
+
 
 
 

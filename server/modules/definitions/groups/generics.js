@@ -1,4 +1,4 @@
-const { skillSet } = require('../facilitators.js');
+const { skillSet, createPolySVG } = require('../facilitators.js');
 const { base, statnames, dfltskl, smshskl } = require('../constants.js');
 
 Class.genericEntity = {

@@ -66,8 +66,49 @@ Class.trapLayer = {
     ]
 }
 
+// t3 -- trap path
+Class.Trapomatic = {
+    PARENT: "genericTank",
+    LABEL: "Trap-o-matic",
+    UPGRADE_TOOLTIP: "Shoot upgraded, beefy traps!",
+    DANGER: 6,
+    GUNS: [
+        {
+            POSITION: {LENGTH: 20,WIDTH: 9,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+        },
+        {
+            POSITION: {LENGTH: 20,WIDTH: 6,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                TYPE: "bullet",
+                COLOR: -1,
+            }
+        },
+        {
+            POSITION: {LENGTH: 5,WIDTH: 8,ASPECT: 1, X: 15,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                TYPE: "bullet",
+            }
+        },
+        {
+            POSITION: {LENGTH: 3,WIDTH: 8,ASPECT: 1.6, X: 18,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, {Size: 0.75}]),
+                TYPE: "trap",
+            }
+        },
+        {
+            POSITION: {LENGTH: 11,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+        },
+    ]
+}
+
 // Upgrade Paths
 Class.basic.UPGRADES_TIER_1 = ['trapLayer']
+// Trap path
+Class.traplayer.UPGRADES_TIER_2 = ['trapomatic']
+
 
 
 

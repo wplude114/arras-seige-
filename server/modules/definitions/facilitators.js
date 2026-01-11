@@ -13,73 +13,6 @@ let skcnv = {
     hlt: 7,
 }
 
-// gun definitions
-exports.combineStats = function (stats) {
-    try {
-        // Build a blank array of the appropiate length
-        let data = {
-            reload: 1,
-            recoil: 1,
-            shudder: 1,
-            size: 1,
-            health: 1,
-            damage: 1,
-            pen: 1,
-            speed: 1,
-            maxSpeed: 1,
-            range: 1,
-            density: 1,
-            spray: 1,
-            resist: 1
-        };
-
-        for (let object = 0; object < stats.length; object++) {
-            let gStat = stats[object];
-            if (Array.isArray(gStat)) {
-                gStat = {
-                    reload: gStat[0], recoil: gStat[1], shudder: gStat[2],
-                    size: gStat[3], health: gStat[4], damage: gStat[5],
-                    pen: gStat[6], speed: gStat[7], maxSpeed: gStat[8],
-                    range: gStat[9], density: gStat[10], spray: gStat[11],
-                    resist: gStat[12]
-                };
-            }
-            data.reload *= gStat.reload ?? 1;
-            data.recoil *= gStat.recoil ?? 1;
-            data.shudder *= gStat.shudder ?? 1;
-            data.size *= gStat.size ?? 1;
-            data.health *= gStat.health ?? 1;
-            data.damage *= gStat.damage ?? 1;
-            data.pen *= gStat.pen ?? 1;
-            data.speed *= gStat.speed ?? 1;
-            data.maxSpeed *= gStat.maxSpeed ?? 1;
-            data.range *= gStat.range ?? 1;
-            data.density *= gStat.density ?? 1;
-            data.spray *= gStat.spray ?? 1;
-            data.resist *= gStat.resist ?? 1;
-        }
-        return data;
-    } catch (err) {
-        console.log(err);
-        throw JSON.stringify(stats);
-    }
-}
-exports.setBuild = (build) => {
-    let skills = build.split(build.includes("/") ? "/" : "").map((r) => +r);
-    if (skills.length !== 10)
-        throw new RangeError("Build must be made up of 10 numbers");
-    return [6, 4, 3, 5, 2, 9, 0, 1, 8, 7].map((r) => skills[r]);
-}
-exports.skillSet = (args) => {
-    let skills = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-    for (let s in args) {
-        if (!args.hasOwnProperty(s)) continue;
-        skills[skcnv[s]] = Math.round(MAX_SKILL * args[s]);
-    }
-    return skills;
-}
-
-// functions
 function rotatePoint(px, py, cx, cy, degrees) {
     const radians = degrees * (Math.PI / 180);
 
@@ -184,6 +117,73 @@ exports.createPolySVG = (options = {}) => {
     }
 }
 
+// gun definitions
+exports.combineStats = function (stats) {
+    try {
+        // Build a blank array of the appropiate length
+        let data = {
+            reload: 1,
+            recoil: 1,
+            shudder: 1,
+            size: 1,
+            health: 1,
+            damage: 1,
+            pen: 1,
+            speed: 1,
+            maxSpeed: 1,
+            range: 1,
+            density: 1,
+            spray: 1,
+            resist: 1
+        };
+
+        for (let object = 0; object < stats.length; object++) {
+            let gStat = stats[object];
+            if (Array.isArray(gStat)) {
+                gStat = {
+                    reload: gStat[0], recoil: gStat[1], shudder: gStat[2],
+                    size: gStat[3], health: gStat[4], damage: gStat[5],
+                    pen: gStat[6], speed: gStat[7], maxSpeed: gStat[8],
+                    range: gStat[9], density: gStat[10], spray: gStat[11],
+                    resist: gStat[12]
+                };
+            }
+            data.reload *= gStat.reload ?? 1;
+            data.recoil *= gStat.recoil ?? 1;
+            data.shudder *= gStat.shudder ?? 1;
+            data.size *= gStat.size ?? 1;
+            data.health *= gStat.health ?? 1;
+            data.damage *= gStat.damage ?? 1;
+            data.pen *= gStat.pen ?? 1;
+            data.speed *= gStat.speed ?? 1;
+            data.maxSpeed *= gStat.maxSpeed ?? 1;
+            data.range *= gStat.range ?? 1;
+            data.density *= gStat.density ?? 1;
+            data.spray *= gStat.spray ?? 1;
+            data.resist *= gStat.resist ?? 1;
+        }
+        return data;
+    } catch (err) {
+        console.log(err);
+        throw JSON.stringify(stats);
+    }
+}
+exports.setBuild = (build) => {
+    let skills = build.split(build.includes("/") ? "/" : "").map((r) => +r);
+    if (skills.length !== 10)
+        throw new RangeError("Build must be made up of 10 numbers");
+    return [6, 4, 3, 5, 2, 9, 0, 1, 8, 7].map((r) => skills[r]);
+}
+exports.skillSet = (args) => {
+    let skills = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    for (let s in args) {
+        if (!args.hasOwnProperty(s)) continue;
+        skills[skcnv[s]] = Math.round(MAX_SKILL * args[s]);
+    }
+    return skills;
+}
+
+// functions
 exports.dereference = type => {
     type = ensureIsClass(type);
 

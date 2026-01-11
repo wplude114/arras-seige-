@@ -55,7 +55,7 @@ Class.trapLayer = {
         {
             POSITION: {LENGTH: 3,WIDTH: 8,ASPECT: 1.6, X: 18,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic]),
+                SHOOT_SETTINGS: combineStats([g.basic, {Size: 0.75}]),
                 TYPE: "trap",
             }
         },
@@ -67,6 +67,7 @@ Class.trapLayer = {
 
 // Upgrade Paths
 Class.basic.UPGRADES_TIER_1 = ['trapLayer']
+
 
 
 

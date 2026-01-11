@@ -189,7 +189,7 @@ Class.rammers.PROPS = [
         TYPE: "smasherBody",
     }
 ]
-Class.entrestrials = menu("Entrestrials", "gold", 5)
+Class.entrestrials = menu("Telestials", "gold", 5)
 Class.terrestrials = menu("Terrestrials", "orange", 7)
 Class.celestials = menu("Celestials", "lightGreen", 9)
 Class.eternals = menu("Eternals", "veryLightGrey", 11)

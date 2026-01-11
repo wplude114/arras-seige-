@@ -7,7 +7,7 @@ const g = require('../gunvals.js');
 Class.basic = {
     PARENT: "genericTank",
     LABEL: "Tank",
-    TOOLTIP: "The basic tank.",
+    UPGRADE_TOOLTIP: "The basic tank.",
     DANGER: 4,
     GUNS: [
         {
@@ -32,7 +32,7 @@ Class.basic = {
 Class.doublet = {
     PARENT: "genericTank",
     LABEL: "Double-Shot",
-    TOOLTIP: "Shoot 2 times the bullets!",
+    UPGRADE_TOOLTIP: "Shoot 2 times the bullets!",
     DANGER: 5,
     GUNS: [
         {
@@ -79,7 +79,7 @@ Class.doublet = {
 Class.trapLayer = {
     PARENT: "genericTank",
     LABEL: "Trap Layer",
-    TOOLTIP: "Shoot high-damage traps!",
+    UPGRADE_TOOLTIP: "Shoot high-damage traps!",
     DANGER: 5,
     GUNS: [
         {
@@ -114,6 +114,7 @@ Class.trapLayer = {
 
 // Upgrade Paths
 Class.basic.UPGRADES_TIER_1 = ['trapLayer', 'doublet']
+
 
 
 

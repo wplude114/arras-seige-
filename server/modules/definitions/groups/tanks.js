@@ -29,53 +29,6 @@ Class.basic = {
         },
     ]
 }
-Class.doublet = {
-    PARENT: "genericTank",
-    LABEL: "Double-Shot",
-    UPGRADE_TOOLTIP: "Shoot 2 times the bullets!",
-    DANGER: 5,
-    GUNS: [
-        {
-            POSITION: {LENGTH: 20,WIDTH: 6,ASPECT: 1, X: 0,Y: 6,ANGLE: 0,DELAY: 0},
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
-                TYPE: "bullet",
-            }
-        },
-        {
-            POSITION: {LENGTH: 5,WIDTH: 8,ASPECT: 1, X: 14,Y: 6,ANGLE: 0,DELAY: 0},
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.twin]),
-                TYPE: "bullet",
-            }
-        },
-        {
-            POSITION: {LENGTH: 12,WIDTH: 8,ASPECT: 1, X: 0,Y: 6,ANGLE: 0,DELAY: 0},
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
-                TYPE: "bullet",
-            }
-        },
-        
-        {
-            POSITION: {LENGTH: 20,WIDTH: 6,ASPECT: 1, X: 0,Y: -6,ANGLE: 0,DELAY: 0.5},
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
-                TYPE: "bullet",
-            }
-        },
-        {
-            POSITION: {LENGTH: 5,WIDTH: 8,ASPECT: 1, X: 14,Y: -6,ANGLE: 0,DELAY: 0.5},
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.twin]),
-                TYPE: "bullet",
-            }
-        },
-        {
-            POSITION: {LENGTH: 12,WIDTH: 8,ASPECT: 1, X: 0,Y: -6,ANGLE: 0,DELAY: 0.5},
-        },
-    ]
-}
 Class.trapLayer = {
     PARENT: "genericTank",
     LABEL: "Trap Layer",
@@ -113,7 +66,8 @@ Class.trapLayer = {
 }
 
 // Upgrade Paths
-Class.basic.UPGRADES_TIER_1 = ['trapLayer', 'doublet']
+Class.basic.UPGRADES_TIER_1 = ['trapLayer']
+
 
 
 

@@ -1983,7 +1983,7 @@ function drawLeaderboard(spacing, alcoveSize, max) {
     let lb = leaderboard.get();
     let vspacing = 4;
     let len = alcoveSize; // * global.screenWidth;
-    let height = 14;
+    let height = 10;
     let x = global.screenWidth - len - spacing;
     let y = spacing + height + 7;
     if (!lb.data.length) return;
@@ -2101,15 +2101,15 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
         if (upgradeHoverIndex > -1 && upgradeHoverIndex < gui.upgrades.length && !global.mobile) {
             let picture = gui.upgrades[upgradeHoverIndex][2];
             if (picture.upgradeTooltip.length > 0) {
-                let boxWidth = measureText(picture.name, alcoveSize / 7.5),
+                let boxWidth = measureText(picture.name, alcoveSize / 17.5),
                     boxX = global.mouse.x * global.screenWidth / window.canvas.width + 2,
                     boxY = global.mouse.y * global.screenHeight / window.canvas.height + 1,
-                    boxPadding = 10,
+                    boxPadding = 50,
                     splitTooltip = picture.upgradeTooltip.split("\n"),
-                    textY = boxY + boxPadding + alcoveSize / 7.5;
+                    textY = boxY + boxPadding + alcoveSize / 17.5;
 
                 // Tooltip box width
-                for (let line of splitTooltip) boxWidth = Math.max(boxWidth, measureText(line, alcoveSize / 10));
+                for (let line of splitTooltip) boxWidth = Math.max(boxWidth, measureText(line, alcoveSize / 20));
 
                 // Draw tooltip box
                 gameDraw.setColor(ctx, color.dgrey);
@@ -2117,10 +2117,10 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
                 drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, false);
                 drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, true);
                 ctx.lineWidth *= 2;
-                drawText(picture.name, boxX + boxPadding * 1.5, textY, alcoveSize / 10, color.guiwhite);
+                drawText(picture.name, boxX + boxPadding * 1.5, textY, alcoveSize / 20, color.guiwhite);
                 for (let t of splitTooltip) {
                     textY += boxPadding + alcoveSize / 15
-                    drawText(t, boxX + boxPadding * 1.5, textY, alcoveSize / 10, color.guiwhite);
+                    drawText(t, boxX + boxPadding * 1.5, textY, alcoveSize / 20, color.guiwhite);
                 }
             }
         }

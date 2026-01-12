@@ -2104,7 +2104,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
                 let boxWidth = measureText(picture.name, alcoveSize / 17.5),
                     boxX = global.mouse.x * global.screenWidth / window.canvas.width + 2,
                     boxY = global.mouse.y * global.screenHeight / window.canvas.height + 1,
-                    boxPadding = 50,
+                    boxPadding = 2,
                     splitTooltip = picture.upgradeTooltip.split("\n"),
                     textY = boxY + boxPadding + alcoveSize / 17.5;
 

@@ -315,7 +315,7 @@ themis.addLayer({turret: {
     TYPE: ["rocketeerTurret", { INDEPENDENT: true, COLOR: -1 } ],
 }}, true, 10, 10);
 
-let testent = new LayeredBoss("testent", "Test Entrestrial", "entrestrial", 5, 3, "terrestrialTrapTurret", 4, 5);
+let testent = new LayeredBoss("testent", "Telemon", "entrestrial", 5, 3, "terrestrialTrapTurret", 4, 5);
 testent.addLayer({turret: {
     POSITION: [9, 8, 0, null, 120, 0],
     TYPE: ["crowbarTurret", { INDEPENDENT: true, COLOR: -1 } ],

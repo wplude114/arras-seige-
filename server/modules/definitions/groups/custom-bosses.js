@@ -10,7 +10,7 @@ require('./bosses.js');
 Class.entrestrial = {
     PARENT: "miniboss",
     LABEL: "Telestial",
-    SKILL: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
+    SKILL: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
     VALUE: 350000,
     SHAPE: 5,
     SIZE: 23,
@@ -21,7 +21,7 @@ Class.entrestrial = {
         SHIELD: 50,
         REGEN: base.REGEN * 10,
         SPEED: base.SPEED * 2,
-        DAMAGE: 4,
+        DAMAGE: 2,
     },
 };
 
@@ -291,7 +291,7 @@ gaia.addLayer({gun: {
     POSITION: [2, 7, -1.6, 8.85, 0, null, 0],
     PROPERTIES: {
         SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.pounder, g.destroyer, {speed: 6.25, maxSpeed: 8}]),
-        TYPE: ["realchip", {INDEPENDENT: true, COLOR: 'lightGreen', SHAPE: 5}],
+        TYPE: ["autoswarm", {INDEPENDENT: true, COLOR: 'lightGreen', SHAPE: 5}],
         AUTOFIRE: true,
         SYNCS_SKILLS: true,
     },

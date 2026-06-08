@@ -152,13 +152,13 @@ module.exports = {
 
     // Allow foods to be spawned or not.
     // NOTE: Disabling it decreases lagness, also very useful if you don't need foods to be spawned.
-   ENABLE_FOOD: false,
+   ENABLE_FOOD: true,
 
-    FOOD_CAP: 2, // Max normal food per normal tile.
+    FOOD_CAP: 1, // Max normal food per normal tile.
     FOOD_SPAWN_CHANCE: 0.075, // Likeliness of normal food spawn attempts succeeding.
     FOOD_SPAWN_COOLDOWN: 300, // Cooldown (in game ticks) of food spawn attempts being made.
 
-    FOOD_CAP_NEST: 3, // Max nest food per nest tile.
+    FOOD_CAP_NEST: 2, // Max nest food per nest tile.
     FOOD_SPAWN_CHANCE_NEST: 0.25, // Likeliness of nest food spawn attempts succeeding.
     FOOD_SPAWN_COOLDOWN_NEST: 450, // Cooldown (in game ticks) of nest food spawn attempts being made.
 
@@ -167,7 +167,7 @@ module.exports = {
     ENEMY_SPAWN_COOLDOWN_NEST: 600, // Cooldown (in game ticks) of nest enemies spawn attempts being made.
 
     // Cooldown (in seconds) of boss spawns being announced.
-    BOSS_SPAWN_COOLDOWN: Number.MAX_SAFE_INTEGER,
+    BOSS_SPAWN_COOLDOWN: 10,
     // The delay (in seconds) between the boss spawns being announced and the bosses actually spawning.
     // NOTE: The spawn message (ex. "A strange trembling...") takes half as long to appear than the boss.
     BOSS_SPAWN_DURATION: 5,
@@ -219,24 +219,24 @@ module.exports = {
             [64, 'primordialTriangle'],
             [16, 'primordialPentagon'],
         ]],
-        // dont make any more fucking mustations, theres enough.
+        // Dont make any more fucking mutations, theres enough.
     ],
 
     // The possible nest food types that can spawn.
     FOOD_TYPES_NEST: [
         [1, [
-            [16, 'pentagon'], [ 4, 'betaPentagon'], [ 1, 'alphaPentagon'], [100000/75000000, "primordialPentagon"], //[0.25, 'omegaPentagon']
+            //[16, 'pentagon'], [ 4, 'betaPentagon'], [ 1, 'alphaPentagon'], [100000/75000000, "primordialPentagon"], //[0.25, 'omegaPentagon']
             //                                                             1/75m i think i have no idea
         ]],
     ],
 
     // The possible nest enemy types that can spawn.
     ENEMY_TYPES_NEST: [
-        [19, [
+        [15, [
             [1, 'crasher']
         ]],
-        [1, [
-            [1, 'sentryGun'], [1, 'sentrySwarm'], [1, 'sentryTrap']
+        [5, [
+            [1, 'sentryGun'], [1, 'sentrySwarm'], [1, 'sentryTrap'], /* SHINY */ [0.1, 'shinySentryGun'], [0.1, 'shinySentrySwarm'], [0.1, 'shinySentryTrap'],
         ]]
     ],
 
@@ -244,27 +244,27 @@ module.exports = {
     BOSS_TYPES: [
     { // elites I
         bosses: ["eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner", "eliteTrapGuard",],
-        amount: [1], chance: 3,
-    },
-    { // elites II + Sentries
-        bosses: ["sentrySwarm", "sentryGun", "sentryTrap","eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner", "eliteTrapGuard", "eliteSkimmer",],
-        amount: [3], chance: 4,
-    },
-    { // telestials I
-        bosses: ["th", "ze", "ga", "ha", "de", "the"],
-        amount: [2], chance: 4,
+        amount: [1], chance: 20,
     },
     { // sentries
         bosses: ["sentrySwarm", "sentryGun", "sentryTrap", "shinySentrySwarm", "shinySentryGun", "shinySentryTrap"],
-        amount: [20], chance: 16,
+        amount: [12], chance: 15,
     },
-    { // telestials II
-        bosses: ["th", "ze", "ga", "ha"],
-        amount: [4], chance: 18,
+    { // elites II + Sentries
+        bosses: ["sentrySwarm", "sentryGun", "sentryTrap","eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner", "eliteTrapGuard", "eliteSkimmer",],
+        amount: [4], chance: 10,
     },
     { // sentinels
         bosses: ["sentinelMinigun", "sentinelLauncher", "sentinelCrossbow"],
-        amount: [7], chance: 20,
+        amount: [7], chance: 5,
+    },
+    { // telestials I
+        bosses: ["th", "ze", "ga", "ha", "de", "the"],
+        amount: [2], chance: 3,
+    },
+    { // telestials II
+        bosses: ["th", "ze", "ga", "ha"],
+        amount: [4], chance: 2,
     },],
 
 

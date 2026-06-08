@@ -152,7 +152,7 @@ module.exports = {
 
     // Allow foods to be spawned or not.
     // NOTE: Disabling it decreases lagness, also very useful if you don't need foods to be spawned.
-   ENABLE_FOOD: true,
+   ENABLE_FOOD: false,
 
     FOOD_CAP: 2, // Max normal food per normal tile.
     FOOD_SPAWN_CHANCE: 0.075, // Likeliness of normal food spawn attempts succeeding.
@@ -241,10 +241,31 @@ module.exports = {
     ],
 
     // The possible boss types that can spawn.
-    BOSS_TYPES: [{
-        bosses: ["eliteDestroyer"],
-        amount: [0], chance: 2000,
-    }],
+    BOSS_TYPES: [
+    { // elites I
+        bosses: ["eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner", "eliteTrapGuard",],
+        amount: [1], chance: 3,
+    },
+    { // elites II + Sentries
+        bosses: ["sentrySwarm", "sentryGun", "sentryTrap","eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner", "eliteTrapGuard", "eliteSkimmer",],
+        amount: [3], chance: 4,
+    },
+    { // telestials I
+        bosses: ["th", "ze", "ga", "ha", "de", "the"],
+        amount: [2], chance: 4,
+    },
+    { // sentries
+        bosses: ["sentrySwarm", "sentryGun", "sentryTrap", "shinySentrySwarm", "shinySentryGun", "shinySentryTrap"],
+        amount: [20], chance: 16,
+    },
+    { // telestials II
+        bosses: ["th", "ze", "ga", "ha"],
+        amount: [4], chance: 18,
+    },
+    { // sentinels
+        bosses: ["sentinelMinigun", "sentinelLauncher", "sentinelCrossbow"],
+        amount: [7], chance: 20,
+    },],
 
 
 

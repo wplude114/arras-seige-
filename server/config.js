@@ -246,25 +246,17 @@ module.exports = {
         bosses: ["eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner", "eliteTrapGuard",],
         amount: [1], chance: 20,
     },
-    { // sentries
-        bosses: ["sentrySwarm", "sentryGun", "sentryTrap", "shinySentrySwarm", "shinySentryGun", "shinySentryTrap"],
-        amount: [12], chance: 15,
-    },
-    { // elites II + Sentries
-        bosses: ["sentrySwarm", "sentryGun", "sentryTrap","eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner", "eliteTrapGuard", "eliteSkimmer",],
-        amount: [4], chance: 10,
-    },
     { // sentinels
         bosses: ["sentinelMinigun", "sentinelLauncher", "sentinelCrossbow"],
-        amount: [7], chance: 5,
+        amount: [7], chance: 15,
     },
     { // telestials I
         bosses: ["th", "ze", "ga", "ha", "de", "the"],
-        amount: [2], chance: 3,
+        amount: [2], chance: 15,
     },
     { // telestials II
         bosses: ["th", "ze", "ga", "ha"],
-        amount: [4], chance: 2,
+        amount: [4], chance: 10,
     },],
 
 

@@ -225,7 +225,7 @@ module.exports = {
     // The possible nest food types that can spawn.
     FOOD_TYPES_NEST: [
         [1, [
-            //[16, 'pentagon'], [ 4, 'betaPentagon'], [ 1, 'alphaPentagon'], [100000/75000000, "primordialPentagon"], //[0.25, 'omegaPentagon']
+            [16, 'pentagon'], [ 4, 'betaPentagon'], [ 1, 'alphaPentagon'], [100000/75000000, "primordialPentagon"], //[0.25, 'omegaPentagon']
             //                                                             1/75m i think i have no idea
         ]],
     ],

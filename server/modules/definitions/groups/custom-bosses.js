@@ -21,7 +21,7 @@ Class.entrestrial = {
         SHIELD: 50,
         REGEN: base.REGEN * 10,
         SPEED: base.SPEED * 2,
-        DAMAGE: 2,
+        DAMAGE: 1,
     },
 };
 
@@ -321,7 +321,7 @@ testent.addLayer({turret: {
     TYPE: ["crowbarTurret", { INDEPENDENT: true, COLOR: -1 } ],
 }}, true, 10, 10);
 
-let finalent = new LayeredBoss("finalent", "The Menace", "entrestrial", 7, 17, "terrestrialTrapTurret", 4, 5);
+let finalent = new LayeredBoss("finalent", "Rogue Telestial", "entrestrial", 5, 17, "terrestrialTrapTurret", 4, 5);
 finalent.addLayer({turret: {
     POSITION: [9, 8, 0, null, 120, 0],
     TYPE: ["pentashotTurret", { INDEPENDENT: true, COLOR: -1 } ],

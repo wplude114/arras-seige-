@@ -7,6 +7,8 @@ require('./turrets.js');
 require('./bosses.js');
 
 // def
+
+
 Class.entrestrial = {
     PARENT: "miniboss",
     LABEL: "Telestial",
@@ -278,7 +280,7 @@ Class.nestWatcher = {
 let Titon = new LayeredBoss("Ti", "Titon", "entrestrial", 7, "veryLightGrey", "terrestrialTrapTurret", 4, 5);
 Titon.addLayer({turret: {
     POSITION: [9, 8, 0, null, 120, 0],
-    TYPE: ["flailbolt3", { INDEPENDENT: true, COLOR: -1 } ],
+    TYPE: ["flailBolt3", { INDEPENDENT: true, COLOR: -1 } ],
 }}, true, 10, 10);
 
 let thor = new LayeredBoss("th", "Thor", "entrestrial", 7, "purple", "terrestrialTrapTurret", 4, 5);

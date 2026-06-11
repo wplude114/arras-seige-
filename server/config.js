@@ -23,7 +23,7 @@ module.exports = {
 
     // The \modules\setup\gamemodeconfigs\ files to load.
     // To change specific things about specific gamemodes (such as team count for tdm), edit their config file in \modules\setup\gamemodeconfigs\.
-    GAME_MODES: ['ffa'],
+    GAME_MODES: ['siege'],
 
     // The room files to load in the setup/rooms folder.
     // NOTE: If a /gamemodeconfig/ file "replaces" the value of ROOM_SETUP, it just adds its own ROOM_SETUP's content to this array.
@@ -32,8 +32,8 @@ module.exports = {
     ROOM_SETUP: ['map_apspp_default'],
 
     // The dimensions of a single tile on the map.
-    TILE_WIDTH: 300,
-    TILE_HEIGHT: 300,
+    TILE_WIDTH: 200,
+    TILE_HEIGHT: 200,
 
 
 
@@ -65,7 +65,7 @@ module.exports = {
     MESSAGE_DISPLAY_TIME: 10_000,
 
     // How long you have to wait to respawn in seconds.
-    RESPAWN_TIMEOUT: 1,
+    RESPAWN_TIMEOUT: 0,
     
 
 
@@ -101,10 +101,10 @@ module.exports = {
         return 0;
     },
     // Show the health bar text or not.
-    SHOW_HEALTHBAR_TEXT: false,
+    SHOW_HEALTHBAR_TEXT: true,
 
     // Default skill caps.
-    MAX_SKILL: 9,
+    MAX_SKILL: 10,
 
     // Amount of tank tiers.
     MAX_UPGRADE_TIER: 9,
@@ -167,10 +167,10 @@ module.exports = {
     ENEMY_SPAWN_COOLDOWN_NEST: 600, // Cooldown (in game ticks) of nest enemies spawn attempts being made.
 
     // Cooldown (in seconds) of boss spawns being announced.
-    BOSS_SPAWN_COOLDOWN: 2,
+    BOSS_SPAWN_COOLDOWN: 12094823409283492830492834092,
     // The delay (in seconds) between the boss spawns being announced and the bosses actually spawning.
     // NOTE: The spawn message (ex. "A strange trembling...") takes half as long to appear than the boss.
-    BOSS_SPAWN_DURATION: 1,
+    BOSS_SPAWN_DURATION: 2,
     FOOD_TYPES: [
         [1000000, [
             [1024, 'egg'], [256, 'betaEgg'], [64, 'alphaEgg'],
@@ -244,7 +244,7 @@ module.exports = {
     BOSS_TYPES: [
     { // telestials II
         bosses: ["th", "ze", "ga", "ha", "de", "the"],
-        amount: [5,10], chance: 1,
+        amount: 5, chance: 1,
     },
         /*
     { // elites I

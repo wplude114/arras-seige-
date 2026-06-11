@@ -243,8 +243,8 @@ module.exports = {
     // The possible boss types that can spawn.
     BOSS_TYPES: [
     { // telestials II
-        bosses: ["sentinelMinigun", "sentinelLauncher", "sentinelCrossbow", "th", "ze", "ga", "ha", "de", "the"],
-        amount: [10], chance: 10,
+        bosses: ["th", "ze", "ga", "ha", "de", "the"],
+        amount: [10,1], chance: 10,
     },
         /*
     { // elites I

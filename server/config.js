@@ -244,7 +244,7 @@ module.exports = {
     BOSS_TYPES: [
     { // telestials II
         bosses: ["th", "ze", "ga", "ha", "de", "the"],
-        amount: [10,1], chance: 10,
+        amount: [5,10], chance: 10,
     },
         /*
     { // elites I

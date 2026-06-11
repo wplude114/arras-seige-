@@ -119,7 +119,7 @@ module.exports = {
     LEVEL_CHEAT_CAP: 45,
 
     // Amount of player-bots to spawn.
-    BOTS: 2,
+    BOTS: 0,
 
     // How much XP player-bots get per second until they reach LEVEL_CAP.
     BOT_XP: 0,
@@ -152,7 +152,7 @@ module.exports = {
 
     // Allow foods to be spawned or not.
     // NOTE: Disabling it decreases lagness, also very useful if you don't need foods to be spawned.
-   ENABLE_FOOD: true,
+   ENABLE_FOOD: false,
 
     FOOD_CAP: 1, // Max normal food per normal tile.
     FOOD_SPAWN_CHANCE: 0.075, // Likeliness of normal food spawn attempts succeeding.
@@ -242,6 +242,11 @@ module.exports = {
 
     // The possible boss types that can spawn.
     BOSS_TYPES: [
+    { // telestials II
+        bosses: ["sentinelMinigun", "sentinelLauncher", "sentinelCrossbow", "th", "ze", "ga", "ha", "de", "the"],
+        amount: [10], chance: 10,
+    },
+        /*
     { // elites I
         bosses: ["eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner", "eliteTrapGuard",],
         amount: [1], chance: 20,
@@ -257,7 +262,7 @@ module.exports = {
     { // telestials II
         bosses: ["th", "ze", "ga", "ha"],
         amount: [4], chance: 10,
-    },],
+    },*/],
 
 
 

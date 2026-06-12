@@ -2,6 +2,35 @@ const { combineStats, makeAuto, weaponArray, makeTurret } = require('../facilita
 const { base, smshskl } = require('../constants.js');
 const g = require('../gunvals.js');
 
+// turrets
+Class.mechanism = {
+    PARENT: "genericTank",
+    COLOR: -1,
+    FACING_TYPE: ["spin", { speed: -0.02, independent: true }],
+	GUNS:[
+	 {
+            POSITION: [22, 10, 1, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.flankGuard]),
+                TYPE: "bullet",
+            },
+        }, {
+            POSITION: [22, 10, 1, 0, 0, 120, 0.33],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.flankGuard]),
+                TYPE: "bullet",
+            },
+        }, {
+            POSITION: [22, 10, 1, 0, 0, -120, 0.66],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.flankGuard]),
+                TYPE: "bullet",
+            },
+        },
+	]
+}
+
+// dreads
 Class.protoD = {
     PARENT: "genericTank",
     LABEL: "Proto-Dread",
@@ -89,7 +118,7 @@ Class.protoMechanic = {
             TYPE: "autoTankGun",
         }, {
             POSITION: [4, 9, 0, -120, 360, 1],
-            TYPE: "autoTankGun",
+            TYPE: "mechanism",
         },
     ],
 };
@@ -124,6 +153,38 @@ Class.protoMechanic_Myriad = {
         },
     ],
 };
+Class.protoMechanic_Mechanisim = {
+    PARENT: "protoD",
+    LABEL: "Mechanic-Mechanisim",
+	BODY: {DAMAGE: 2},
+	SHAPE: 6.5,
+    TURRETS: [
+        {
+            POSITION: [4, 9, 0, 0, 360, 1],
+            TYPE: "autoTankGun",
+        }, {
+            POSITION: [4, 9, 0, 180, 360, 1],
+            TYPE: "autoTankGun",
+        },
+        {
+            POSITION: [4, 9, 0, 60, 360, 1],
+            TYPE: "autoTankGun",
+        }, {
+            POSITION: [4, 9, 0, 120, 360, 1],
+            TYPE: "autoTankGun",
+        },
+        {
+            POSITION: [4, 9, 0, -60, 360, 1],
+            TYPE: "autoTankGun",
+        }, {
+            POSITION: [4, 9, 0, -120, 360, 1],
+            TYPE: "autoTankGun",
+        }, {
+            POSITION: [10, 0, 0, -120, 360, 1],
+            TYPE: "autoTankGun",
+        },
+    ],
+};
 
 Class.protoDread.UPGRADES_TIER_1 = ["protoJuggernaut", "protoInvader","protoMechanic"]
-	Class.protoMechanic.UPGRADES_TIER_2 = ["protoMechanic_Myriad"]
+	Class.protoMechanic.UPGRADES_TIER_2 = ["protoMechanic_Mechanisim", "protoMechanic_Myriad"]

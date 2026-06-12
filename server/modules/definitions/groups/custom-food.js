@@ -7,7 +7,7 @@ Class.hexas = {
     SIZE: 24,
     SHAPE: 6,
     COLOR: 17,
-    CONTROLLERS: ["spin"],
+    FACING_TYPE: ['spin', {speed: 0.02}],
     BODY: {FOV: 0.8},
     GUNS: [],
     TURRETS: [

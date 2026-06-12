@@ -5,14 +5,15 @@ Class.hexas = {
     PARENT: "hexagon",
     LABEL: "Hexas",
     VALUE: 5000,
-    SIZE: 27,
+    SIZE: 24,
+    BODY: {FOV: 0.8},
     GUNS: [],
     TURRETS: [
         {
-            POSITION: [7, 9, 0, 60, 180, 0],
+            POSITION: [7, 10, 0, 60, 180, 0],
             TYPE: "autoTankGun",
         }, {
-            POSITION: [7, 9, 0, -120, 180, 0],
+            POSITION: [7, 10, 0, -120, 180, 0],
             TYPE: "autoTankGun",
         },
     ],

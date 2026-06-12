@@ -4,7 +4,6 @@ const g = require('../gunvals.js');
 
 Class.flailBullet = {
     PARENT: "bullet",
-    COLOR: "grey",
     HITS_OWN_TYPE: 'hard',
     INDEPENDENT: true,
     FACING_TYPE: ['spin', {speed: 0.05}],
@@ -16,7 +15,6 @@ Class.flailBullet = {
 
 Class.flailSplitBullet = {
     PARENT: "bullet",
-    COLOR: "grey",
     INDEPENDENT: true,
     FACING_TYPE: ['spin', {speed: 0.05}],
     TURRETS: [{

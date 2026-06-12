@@ -13,7 +13,7 @@ Class.protoD = {
 
 Class.protoDread = {
     PARENT: "protoD",
-    LABEL: "DiaDread",
+    LABEL: "Dianought",
     TURRETS: [
         {
             POSITION: [7, 10, 0, 0, 160, 0],
@@ -50,9 +50,9 @@ Class.protoInvader = {
     PARENT: "protoD",
     LABEL: "Necromantic",
     GUNS: weaponArray({
-		POSITION: [5.5, 7.5, 0.8, 7.5, 0, 0, 0],
+		POSITION: [4, 7.5, 0.8, 7.5, 0, 0, 0],
 		PROPERTIES: {
-			SHOOT_SETTINGS: combineStats([g.drone, g.overseer, {reload: 1.75}]),
+			SHOOT_SETTINGS: combineStats([g.drone, g.overseer, {reload: 0.5}]),
 			TYPE: "drone",
 			AUTOFIRE: true,
 			SYNCS_SKILLS: true,

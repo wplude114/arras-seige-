@@ -367,7 +367,7 @@ rokna.addLayer({turret: {
 // Planetary crashers
 
 // / Solara
-let solara = new LayeredBoss("Sol", "Solara", "planetaryCrasher", 9, "pink", "terrestrialTrapTurret", 4, 5);
+let solara = new LayeredBoss("sol", "Solara", "planetaryCrasher", 9, "pink", "terrestrialTrapTurret", 4, 5);
 solara.addLayer({turret: {
     POSITION: [9, 8, 0, null, 120, 0],
     TYPE: ["rocketeerTurret", { INDEPENDENT: true, COLOR: -1 } ],

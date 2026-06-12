@@ -8,7 +8,7 @@ Class.protoD = {
     SHAPE: 6,
     COLOR: 17,
     FACING_TYPE: ['spin', {speed: 0.02}],
-    BODY: {FOV: 1.1},
+    BODY: {DAMAGE: 3, FOV: 1.1},
 };
 
 Class.protoDread = {
@@ -46,5 +46,21 @@ Class.protoJuggernaut = {
         },
     ],
 };
+Class.protoInvader = {
+    PARENT: "protoD",
+    LABEL: "Proto-Invader",
+    GUNS: weaponArray({
+		POSITION: [5.5, 7.5, 1.3, 7.5, 0, 0, 0],
+		PROPERTIES: {
+			SHOOT_SETTINGS: combineStats([g.drone, g.overseer]),
+			TYPE: "drone",
+			AUTOFIRE: true,
+			SYNCS_SKILLS: true,
+			STAT_CALCULATOR: "drone",
+			WAIT_TO_CYCLE: true,
+			MAX_CHILDREN: 10,
+		}
+	}, 2)
+};
 
-Class.protoDread.UPGRADES_TIER_1 = ["protoJuggernaut"]
+Class.protoDread.UPGRADES_TIER_1 = ["protoJuggernaut", "protoInvader"]

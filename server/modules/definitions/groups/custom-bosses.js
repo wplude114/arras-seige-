@@ -278,10 +278,23 @@ Class.nestWatcher = {
 
 // Telestials
 let Titon = new LayeredBoss("Ti", "Titon", "entrestrial", 5, "veryLightGrey", "terrestrialTrapTurret", 4, 5);
-Titon.addLayer({turret: {
-    POSITION: [6, 8, 0, null, 120, 0],
-    TYPE: ["flailBolt2", { INDEPENDENT: true, COLOR: -1 } ],
-}}, true, 10, 10);
+Titon.addLayer({GUNS: (() => { 
+        let output = []
+        for (let i = 0; i < 20; i++) { 
+            output.push({ 
+                POSITION: {WIDTH: 8, LENGTH: 1, DELAY: i * 0.25},
+                PROPERTIES: {
+                    SHOOT_SETTINGS: combineStats([g.satellite]), 
+                    TYPE: ["satellite", {ANGLE: i * 60}], 
+                    MAX_CHILDREN: 1,   
+                    AUTOFIRE: true,  
+                    SYNCS_SKILLS: false,
+                    WAIT_TO_CYCLE: true
+                }
+            }) 
+        }
+        return output
+    })(),}, true, 10, 10);
 
 let thor = new LayeredBoss("th", "Thor", "entrestrial", 7, "purple", "terrestrialTrapTurret", 4, 5);
 thor.addLayer({turret: {

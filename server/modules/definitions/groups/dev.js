@@ -10,11 +10,6 @@ Class.developer = {
     PARENT: "genericTank",
     LABEL: "Developer",
     BODY: {
-        SHIELD: 1000,
-        REGEN: 10,
-        HEALTH: 100,
-        DAMAGE: 10,
-        DENSITY: 20,
         FOV: 2,
     },
     SKILL_CAP: Array(10).fill(dfltskl),
@@ -30,56 +25,15 @@ Class.developer = {
     ALPHA: [0, 1],
     HITS_OWN_TYPE: "hardOnlyTanks",
     NECRO: false,
-    SHAPE: [
-        [-1, -0.8],
-        [-0.8, -1],
-        [0.8, -1],
-        [1, -0.8],
-        [0.2, 0],
-        [1, 0.8],
-        [0.8, 1],
-        [-0.8, 1],
-        [-1, 0.8],
-    ],
-    GUNS: [
-        {
-            POSITION: [18, 10, -1.4, 0, 0, 0, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.op]),
-                TYPE: "developerBullet"
-            }
-        },
-        {
-            POSITION: [6, 12, 1, 13, 0, 0, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
-                TYPE: "bullet",
-				COLOR: -1,
-            }
-        },
-        {
-            POSITION: [18, 8, 1, 0, 0, 0, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
-                TYPE: "bullet"
-            }
-        },
-        {
-            POSITION: [3, 9, 1.5, 17, 0, 0, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
-                TYPE: "bullet"
-            }
-        },
-        {
-            POSITION: [1.5, 3, -0.00001, 17.5, 0, 0, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
-                TYPE: "bullet",
-				COLOR: -1,
-            }
-        },
-    ]
+	BODY: {
+        PUSHABILITY: 0,
+        SPEED: 5,
+        FOV: 2.5,
+        DAMAGE: 0,
+        HEALTH: 1e100,
+        SHIELD: 1e100,
+        REGEN: 1e100,
+    },
 }
 Class.developer.REROOT_UPGRADE_TREE = "developer"
 Class.spectator = {
@@ -2799,10 +2753,10 @@ Class.flace = {
     SKILL_CAP: [dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl],
 }
 
-Class.developer.UPGRADES_TIER_0 = ["nav", "misc","protoDread"]
+Class.developer.UPGRADES_TIER_0 = ["nav", "misc"]
 Class.misc.UPGRADES_TIER_0 = ["eggGenerator", "spectator", "addons"]
 Class.nav.UPGRADES_TIER_0 = ["tanks", "bosses", "levels", "teams", "testing"] // makes things easier
-    Class.tanks.UPGRADES_TIER_0 = ["basic", "unavailable", "arenaCloser", "dominators", "sanctuaries", "mothership", "baseProtector", "antiTankMachineGun"]
+    Class.tanks.UPGRADES_TIER_0 = ["basic", "protoDread", "unavailable", "arenaCloser", "dominators", "sanctuaries", "mothership", "baseProtector", "antiTankMachineGun"]
         Class.unavailable.UPGRADES_TIER_0 = ["flail"]
             Class.flail.UPGRADES_TIER_2 = ["doubleFlail", "mace", "flangle"]
                 Class.doubleFlail.UPGRADES_TIER_3 = ["tripleFlail"]

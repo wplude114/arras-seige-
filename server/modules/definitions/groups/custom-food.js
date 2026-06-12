@@ -9,21 +9,21 @@ Class.mechanism = {
     FACING_TYPE: ["spin", { speed: -0.02, independent: true }],
 	GUNS:[
 	 {
-            POSITION: [22, 10, 1, 0, 0, 0, 0],
+            POSITION: [20, 10, 1, 0, 0, 0, 0],
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.flankGuard]),
                 TYPE: "bullet",
 				AUTOFIRE: true
             },
         }, {
-            POSITION: [22, 10, 1, 0, 0, 120, 0.33],
+            POSITION: [20, 10, 1, 0, 0, 120, 0.33],
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.flankGuard]),
                 TYPE: "bullet",
 				AUTOFIRE: true
             },
         }, {
-            POSITION: [22, 10, 1, 0, 0, -120, 0.66],
+            POSITION: [20, 10, 1, 0, 0, -120, 0.66],
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.flankGuard]),
                 TYPE: "bullet",
@@ -183,7 +183,7 @@ Class.protoMechanic_Mechanisim = {
             POSITION: [4, 9, 0, -120, 360, 1],
             TYPE: "autoTankGun",
         }, {
-            POSITION: [10, 0, 0, -120, 360, 1],
+            POSITION: [7, 0, 0, -120, 360, 1],
             TYPE: "mechanism",
         },
     ],

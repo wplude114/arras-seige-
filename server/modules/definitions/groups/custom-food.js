@@ -15,6 +15,7 @@ Class.protoD = {
 Class.protoDread = {
     PARENT: "protoD",
     LABEL: "Dianought",
+	VALUE: 63319,
     TURRETS: [
         {
             POSITION: [7, 10, 0, 0, 160, 0],
@@ -63,5 +64,34 @@ Class.protoInvader = {
 		}
 	}, 2)
 };
+Class.protoMechanic = {
+    PARENT: "protoD",
+    LABEL: "Mechanic",
+	VALUE: 63319,
+	BODY: {DAMAGE: 1.6},
+    TURRETS: [
+        {
+            POSITION: [5, 10, 0, 0, 160, 1],
+            TYPE: "autoTankGun",
+        }, {
+            POSITION: [5, 10, 0, 180, 160, 1],
+            TYPE: "autoTankGun",
+        },
+        {
+            POSITION: [5, 10, 0, 60, 160, 1],
+            TYPE: "autoTankGun",
+        }, {
+            POSITION: [5, 10, 0, 120, 160, 1],
+            TYPE: "autoTankGun",
+        },
+        {
+            POSITION: [5, 10, 0, -60, 160, 1],
+            TYPE: "autoTankGun",
+        }, {
+            POSITION: [5, 10, 0, -120, 160, 1],
+            TYPE: "autoTankGun",
+        },
+    ],
+};
 
-Class.protoDread.UPGRADES_TIER_1 = ["protoJuggernaut", "protoInvader"]
+Class.protoDread.UPGRADES_TIER_1 = ["protoJuggernaut", "protoInvader","protoMechanic"]

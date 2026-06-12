@@ -3,7 +3,7 @@ const { base } = require('../constants.js');
 const g = require('../gunvals.js');
 
 Class.flailBullet = {
-    PARENT: "genericTank",
+    PARENT: "bullet",
     COLOR: "grey",
     HITS_OWN_TYPE: 'hard',
     INDEPENDENT: true,

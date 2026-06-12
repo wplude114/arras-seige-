@@ -2393,6 +2393,30 @@ Class.lobber = {
         },
     ]
 }
+Class.shatterShot = {
+    PARENT: "genericFlail",
+    LABEL: "Shatter Shot",
+    DANGER: 4,
+    GUNS: [
+        {
+            POSITION: {LENGTH: 20,WIDTH: 16,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
+                TYPE: "bullet",
+            }
+        },
+        {
+            POSITION: {LENGTH: 5,WIDTH: 18,ASPECT: 1, X: 14,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: "flailSplitBullet",
+            }
+        },
+        {
+            POSITION: {LENGTH: 12,WIDTH: 18,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+        },
+    ]
+}
 Class.doubleFlail = {
     PARENT: "genericFlail",
     LABEL: "Double Flail",
@@ -2786,6 +2810,7 @@ Class.nav.UPGRADES_TIER_0 = ["tanks", "bosses", "levels", "teams", "testing"] //
                 Class.doubleFlail.UPGRADES_TIER_3 = ["tripleFlail"]
                 Class.mace.UPGRADES_TIER_3 = ["bigMama", "itHurtsDontTouchIt", "flace"]
                 Class.flangle.UPGRADES_TIER_3 = ["flooster", "flace"]
+				Class.lobber.UPGRADES_TIER_3 = ["shatterShot"]
             Class.whirlwind.UPGRADES_TIER_2 = ["tornado", "hurricane"]
                 Class.whirlwind.UPGRADES_TIER_3 = ["hexaWhirl", "munition", "whirl3", "whirlGuard", /*"prophet",*/ "vortex"]
                 Class.tornado.UPGRADES_TIER_3 = ["megaTornado", "tempest", "thunderbolt"]

@@ -66,5 +66,13 @@ Class.flailSplitBullet = {
                 SHOOT_ON_DEATH: true,
             }
         },
+        {
+            POSITION: [8, 8, 1, 0, 0, 180, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: ["flailBullet", { PERSISTS_AFTER_DEATH: true }],
+                SHOOT_ON_DEATH: true,
+            }
+        },
     ]
 }

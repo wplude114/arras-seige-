@@ -23,7 +23,7 @@ Class.flailSplitBullet = {
         POSITION: [21.5, 0, 0, 0, 360, 0],
         TYPE: "flailBallSpike",
     },{
-        POSITION: [5, 0, 0, 0, 0, 1],
+        POSITION: [7, 0, 0, 0, 0, 1],
         TYPE: "genericEntity",
     }],
 
@@ -46,6 +46,22 @@ Class.flailSplitBullet = {
         },
         {
             POSITION: [8, 8, 1, 0, 0, -120, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: ["flailBullet", { PERSISTS_AFTER_DEATH: true }],
+                SHOOT_ON_DEATH: true,
+            }
+        },
+        {
+            POSITION: [8, 8, 1, 0, 0, 60, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: ["flailBullet", { PERSISTS_AFTER_DEATH: true }],
+                SHOOT_ON_DEATH: true,
+            }
+        },
+        {
+            POSITION: [8, 8, 1, 0, 0, -60, 0],
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic]),
                 TYPE: ["flailBullet", { PERSISTS_AFTER_DEATH: true }],

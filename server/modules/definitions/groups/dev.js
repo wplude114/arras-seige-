@@ -2377,14 +2377,14 @@ Class.lobber = {
         {
             POSITION: {LENGTH: 20,WIDTH: 16,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.lobber, g.fake]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.lobber, g.fake]),
                 TYPE: "bullet",
             }
         },
         {
             POSITION: {LENGTH: 5,WIDTH: 18,ASPECT: 1, X: 14,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.lobber]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.lobber]),
                 TYPE: "flailBullet",
             }
         },
@@ -2401,14 +2401,14 @@ Class.shatterShot = {
         {
             POSITION: {LENGTH: 20,WIDTH: 16,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.lobber, g.pounder, g.fake]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.lobber, g.pounder, g.fake]),
                 TYPE: "bullet",
             }
         },
         {
             POSITION: {LENGTH: 5,WIDTH: 18,ASPECT: 1, X: 14,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.lobber, g.pounder]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.lobber, g.pounder]),
                 TYPE: "flailSplitBullet",
             }
         },

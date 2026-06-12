@@ -67,28 +67,28 @@ Class.protoInvader = {
 Class.protoMechanic = {
     PARENT: "protoD",
     LABEL: "Mechanic",
-	VALUE: 63319,
 	BODY: {DAMAGE: 1.6},
+	SHAPE: 6.5,
     TURRETS: [
         {
-            POSITION: [5, 10, 0, 0, 160, 1],
+            POSITION: [4, 8, 0, 0, 360, 1],
             TYPE: "autoTankGun",
         }, {
-            POSITION: [5, 10, 0, 180, 160, 1],
+            POSITION: [4, 8, 0, 180, 360, 1],
             TYPE: "autoTankGun",
         },
         {
-            POSITION: [5, 10, 0, 60, 160, 1],
+            POSITION: [4, 8, 0, 60, 360, 1],
             TYPE: "autoTankGun",
         }, {
-            POSITION: [5, 10, 0, 120, 160, 1],
+            POSITION: [4, 8, 0, 120, 360, 1],
             TYPE: "autoTankGun",
         },
         {
-            POSITION: [5, 10, 0, -60, 160, 1],
+            POSITION: [4, 8, 0, -60, 360, 1],
             TYPE: "autoTankGun",
         }, {
-            POSITION: [5, 10, 0, -120, 160, 1],
+            POSITION: [4, 8, 0, -120, 360, 1],
             TYPE: "autoTankGun",
         },
     ],

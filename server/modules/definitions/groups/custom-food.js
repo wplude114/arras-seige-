@@ -1,5 +1,4 @@
 const { combineStats, makeAuto, weaponArray, makeTurret } = require('../facilitators.js');
-const { makeRelic, , makeCrasher, makeLaby, weaponArray } = require('../facilitators.js');
 
 Class.protoD = {
     PARENT: "genericTank",

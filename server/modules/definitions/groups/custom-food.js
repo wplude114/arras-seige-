@@ -1,5 +1,5 @@
 const { basePolygonDamage, basePolygonHealth } = require('../constants.js');
-const { makeRelic, makeRare, makePrimordial, makeCrasher, makeLaby } = require('../facilitators.js');
+const { makeRelic, makeRare, makePrimordial, makeCrasher, makeLaby, weaponArray } = require('../facilitators.js');
 
 Class.protoD = {
     PARENT: "genericTank",

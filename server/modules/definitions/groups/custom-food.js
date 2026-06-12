@@ -94,4 +94,36 @@ Class.protoMechanic = {
     ],
 };
 
+
+Class.protoMechanic_Myriad = {
+    PARENT: "protoD",
+    LABEL: "Mechanic-Myriad",
+	BODY: {DAMAGE: 2},
+	SHAPE: 6.5,
+    TURRETS: [
+        {
+            POSITION: [4, 9, 0, 0, 360, 1],
+            TYPE: "auto4gun",
+        }, {
+            POSITION: [4, 9, 0, 180, 360, 1],
+            TYPE: "auto4gun",
+        },
+        {
+            POSITION: [4, 9, 0, 60, 360, 1],
+            TYPE: "auto4gun",
+        }, {
+            POSITION: [4, 9, 0, 120, 360, 1],
+            TYPE: "auto4gun",
+        },
+        {
+            POSITION: [4, 9, 0, -60, 360, 1],
+            TYPE: "auto4gun",
+        }, {
+            POSITION: [4, 9, 0, -120, 360, 1],
+            TYPE: "auto4gun",
+        },
+    ],
+};
+
 Class.protoDread.UPGRADES_TIER_1 = ["protoJuggernaut", "protoInvader","protoMechanic"]
+	Class.protoMechanic.UPGRADES_TIER_2 = ["protoMechanic_Myriad"]

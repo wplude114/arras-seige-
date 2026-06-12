@@ -9,10 +9,10 @@ Class.hexas = {
     GUNS: [],
     TURRETS: [
         {
-            POSITION: [7, 8, 0, 60, 180, 0],
+            POSITION: [7, 9, 0, 60, 180, 0],
             TYPE: "autoTankGun",
         }, {
-            POSITION: [7, 8, 0, -120, 180, 0],
+            POSITION: [7, 9, 0, -120, 180, 0],
             TYPE: "autoTankGun",
         },
     ],

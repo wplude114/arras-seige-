@@ -6,7 +6,7 @@ Class.hexas = {
     LABEL: "Hexas",
     VALUE: 5000,
     SIZE: 24,
-    CONTROLLERS: ["spin","nearestDifferentMaster", ["minion", {orbit: 80}]],
+    CONTROLLERS: ["spin2","nearestDifferentMaster", ["minion", {orbit: 80}]],
     BODY: {FOV: 0.8},
     GUNS: [],
     TURRETS: [

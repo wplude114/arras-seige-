@@ -58,7 +58,7 @@ Class.protoInvader = {
 			SYNCS_SKILLS: true,
 			STAT_CALCULATOR: "drone",
 			WAIT_TO_CYCLE: true,
-			MAX_CHILDREN: 10,
+			MAX_CHILDREN: 9,
 		}
 	}, 2)
 };

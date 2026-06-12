@@ -2,11 +2,12 @@ const { basePolygonDamage, basePolygonHealth } = require('../constants.js');
 const { makeRelic, makeRare, makePrimordial, makeCrasher, makeLaby } = require('../facilitators.js');
 
 Class.hexas = {
-    PARENT: "hexagon",
-    LABEL: "Hexas",
-    VALUE: 5000,
+    PARENT: "genericTank",
+    LABEL: "Proto-Dread",
     SIZE: 24,
-    CONTROLLERS: ["spin2","nearestDifferentMaster", ["minion", {orbit: 80}]],
+    SHAPE: 6,
+    COLOR: 17,
+    CONTROLLERS: ["spin"],
     BODY: {FOV: 0.8},
     GUNS: [],
     TURRETS: [

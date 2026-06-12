@@ -1,4 +1,5 @@
 const { combineStats, makeAuto, weaponArray, makeTurret } = require('../facilitators.js');
+const { base, smshskl } = require('../constants.js');
 const g = require('../gunvals.js');
 
 Class.protoD = {
@@ -8,7 +9,7 @@ Class.protoD = {
     SHAPE: 6,
     COLOR: 17,
     FACING_TYPE: ['spin', {speed: 0.02}],
-    BODY: {DAMAGE: 3, FOV: 1.1},
+    BODY: {HEALTH: 50, DAMAGE: 3, FOV: 1.1},
 };
 
 Class.protoDread = {
@@ -50,15 +51,15 @@ Class.protoInvader = {
     PARENT: "protoD",
     LABEL: "Necromantic",
     GUNS: weaponArray({
-		POSITION: [4.5, 7.5, 0.7, 7.5, 0, 0, 0],
+		POSITION: [4.5, 7, 0.7, 7.5, 0, 0, 0],
 		PROPERTIES: {
-			SHOOT_SETTINGS: combineStats([g.drone, g.overseer, {reload: 0.3}]),
+			SHOOT_SETTINGS: combineStats([g.drone, g.overseer, {reload: 0.3, size: 0.5}]),
 			TYPE: "drone",
 			AUTOFIRE: true,
 			SYNCS_SKILLS: true,
 			STAT_CALCULATOR: "drone",
 			WAIT_TO_CYCLE: true,
-			MAX_CHILDREN: 9,
+			MAX_CHILDREN: 5,
 		}
 	}, 2)
 };

@@ -50,9 +50,9 @@ Class.protoInvader = {
     PARENT: "protoD",
     LABEL: "Necromantic",
     GUNS: weaponArray({
-		POSITION: [4, 7.5, 0.8, 7.5, 0, 0, 0],
+		POSITION: [4.5, 7.5, 0.7, 7.5, 0, 0, 0],
 		PROPERTIES: {
-			SHOOT_SETTINGS: combineStats([g.drone, g.overseer, {reload: 0.5}]),
+			SHOOT_SETTINGS: combineStats([g.drone, g.overseer, {reload: 0.3}]),
 			TYPE: "drone",
 			AUTOFIRE: true,
 			SYNCS_SKILLS: true,

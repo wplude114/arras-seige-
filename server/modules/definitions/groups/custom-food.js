@@ -6,12 +6,13 @@ Class.hexas = {
     LABEL: "Hexas",
     VALUE: 5000,
     SIZE: 27,
+    GUNS: [],
     TURRETS: [
         {
-            POSITION: [14, 8, 0, 60, 180, 0],
+            POSITION: [7, 8, 0, 60, 180, 0],
             TYPE: "autoTankGun",
         }, {
-            POSITION: [14, 8, 0, -60, 180, 0],
+            POSITION: [7, 8, 0, -120, 180, 0],
             TYPE: "autoTankGun",
         },
     ],

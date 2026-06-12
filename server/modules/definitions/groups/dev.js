@@ -2815,7 +2815,7 @@ Class.nav.UPGRADES_TIER_0 = ["tanks", "bosses", "levels", "teams", "testing"] //
         Class.dominators.UPGRADES_TIER_0 = ["destroyerDominator", "gunnerDominator", "trapperDominator"]
         Class.sanctuaries.UPGRADES_TIER_0 = ["sanctuaryTier1", "sanctuaryTier2", "sanctuaryTier3", "sanctuaryTier4", "sanctuaryTier5", "sanctuaryTier6"]
 
-    Class.bosses.UPGRADES_TIER_0 = ["sentries", "elites", "mysticals", "nesters", "rogues", "rammers", "entrestrials", "terrestrials", "celestials", "eternals", "devBosses"]
+    Class.bosses.UPGRADES_TIER_0 = ["sol","sentries", "elites", "mysticals", "nesters", "rogues", "rammers", "entrestrials", "terrestrials", "celestials", "eternals", "devBosses"]
         Class.sentries.UPGRADES_TIER_0 = ["sentrySwarm", "sentryGun", "sentryTrap", "shinySentrySwarm", "shinySentryGun", "shinySentryTrap", "sentinelMinigun", "sentinelLauncher", "sentinelCrossbow"]
         Class.elites.UPGRADES_TIER_0 = ["eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner", "eliteTrapGuard", "eliteSpinner", "eliteSkimmer", "legionaryCrasher", "guardian", "defender", "sprayerLegion"]
         Class.mysticals.UPGRADES_TIER_0 = ["sorcerer", "betaSorcerer", "summoner", "enchantress", "exorcistor", "shaman", 'betaExorcistor', 'alphaExorcistor', 'omegaExorcistor']

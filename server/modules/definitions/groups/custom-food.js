@@ -1,7 +1,7 @@
 const { basePolygonDamage, basePolygonHealth } = require('../constants.js');
 const { makeRelic, makeRare, makePrimordial, makeCrasher, makeLaby } = require('../facilitators.js');
 
-Class.protoDread = {
+Class.protoD = {
     PARENT: "genericTank",
     LABEL: "Proto-Dread",
     SIZE: 24,
@@ -11,8 +11,8 @@ Class.protoDread = {
     BODY: {FOV: 1.1},
 };
 
-Class.protoDread1 = {
-    PARENT: "protoDread",
+Class.protoDread = {
+    PARENT: "protoD",
     LABEL: "Proto-Dread",
     TURRETS: [
         {
@@ -26,7 +26,7 @@ Class.protoDread1 = {
 };
 
 Class.protoJuggernaut = {
-    PARENT: "protoDread",
+    PARENT: "protoD",
     LABEL: "Proto-Juggernaut",
     TURRETS: [
         {
@@ -46,3 +46,5 @@ Class.protoJuggernaut = {
         },
     ],
 };
+
+Class.protoDread.UPGRADES_TIER_1 = ["protoJuggernaut"]

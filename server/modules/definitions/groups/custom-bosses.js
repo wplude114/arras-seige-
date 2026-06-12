@@ -26,6 +26,23 @@ Class.entrestrial = {
         DAMAGE: 1,
     },
 };
+Class.planetaryCrasher = {
+    PARENT: "miniboss",
+    LABEL: "Planetary Crasher",
+    SKILL: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+    VALUE: 7500000,
+    SHAPE: 5,
+    SIZE: 40,
+    CONTROLLERS: [["minion", {orbit: 200}]],
+    BODY: {
+        FOV: 1.5,
+        HEALTH: 3000,
+        SHIELD: 500,
+        REGEN: base.REGEN,
+        SPEED: base.SPEED,
+        DAMAGE: 3,
+    },
+};
 
 Class.eggdeco = makeDeco(0);
 Class.squaredeco = makeDeco(4.5);
@@ -346,3 +363,20 @@ rokna.addLayer({turret: {
     POSITION: [9.5, 7.5, 0, null, 160, 0],
     TYPE: ["boomerTurret", { INDEPENDENT: true, GUN_STAT_SCALE: {health: 1.8, damage: 1.3} }],
 }}, true, 6.5);
+
+// Planetary crashers
+
+// / Solara
+let solara = new LayeredBoss("Sol", "Solara", "planetaryCrasher", 9, "pink", "terrestrialTrapTurret", 4, 5);
+solara.addLayer({turret: {
+    POSITION: [9, 8, 0, null, 120, 0],
+    TYPE: ["rocketeerTurret", { INDEPENDENT: true, COLOR: -1 } ],
+}}, true, 10, 10);
+solara.addLayer({turret: {
+    POSITION: [9, 8, 0, null, 120, 0],
+    TYPE: ["shotgunTurret", { INDEPENDENT: true, COLOR: -1 } ],
+}}, true, 10, 10);
+solara.addLayer({turret: {
+    POSITION: [9, 8, 0, null, 120, 0],
+    TYPE: ["tripletTurret", { INDEPENDENT: true, COLOR: -1 } ],
+}}, true, 10, 10);

@@ -2396,7 +2396,7 @@ Class.lobber = {
 Class.shatterShot = {
     PARENT: "genericFlail",
     LABEL: "Shatter Shot",
-    DANGER: 4,
+    DANGER: 5,
     GUNS: [
         {
             POSITION: {LENGTH: 20,WIDTH: 16,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
@@ -2421,6 +2421,44 @@ Class.shatterShot = {
         },
         {
             POSITION: {LENGTH: 12,WIDTH: 18,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+        },
+    ]
+}
+Class.boltstrapper = {
+    PARENT: "genericFlail",
+    LABEL: "Boltstrapper",
+    DANGER: 5,
+    GUNS: [
+        {
+            POSITION: {LENGTH: 20,WIDTH: 16,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.lobber, g.pounder, g.fake]),
+                TYPE: "bullet",
+            }
+        },
+        {
+            POSITION: {LENGTH: 20,WIDTH: 13,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.lobber, g.pounder, g.fake]),
+                TYPE: "bullet",
+            }
+        },
+        {
+            POSITION: {LENGTH: 5,WIDTH: 18,ASPECT: 1, X: 18,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.lobber, g.pounder]),
+                TYPE: "flailMissle",
+            }
+        },
+        {
+            POSITION: {LENGTH: 5,WIDTH: 15,ASPECT: 1, X: 18,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.lobber, g.pounder, g.fake]),
+                TYPE: "bullet",
+            }
+        },
+        {
+            POSITION: {LENGTH: 12,WIDTH: 18,ASPECT: 1.2, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
         },
     ]
 }
@@ -2817,7 +2855,7 @@ Class.nav.UPGRADES_TIER_0 = ["tanks", "bosses", "levels", "teams", "testing"] //
                 Class.doubleFlail.UPGRADES_TIER_3 = ["tripleFlail"]
                 Class.mace.UPGRADES_TIER_3 = ["bigMama", "itHurtsDontTouchIt", "flace"]
                 Class.flangle.UPGRADES_TIER_3 = ["flooster", "flace"]
-				Class.lobber.UPGRADES_TIER_3 = ["shatterShot"]
+				Class.lobber.UPGRADES_TIER_3 = ["shatterShot", "boltstrapper"]
             Class.whirlwind.UPGRADES_TIER_2 = ["tornado", "hurricane"]
                 Class.whirlwind.UPGRADES_TIER_3 = ["hexaWhirl", "munition", "whirl3", "whirlGuard", /*"prophet",*/ "vortex"]
                 Class.tornado.UPGRADES_TIER_3 = ["megaTornado", "tempest", "thunderbolt"]

@@ -37,7 +37,7 @@ Class.mechanism = {
 Class.protoD = {
     PARENT: "genericTank",
     LABEL: "Proto-Dread",
-    SIZE: 24,
+    SIZE: 35,
     SHAPE: 6,
     COLOR: 17,
     FACING_TYPE: ['spin', {speed: 0.02}],

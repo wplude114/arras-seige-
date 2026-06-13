@@ -32,5 +32,3 @@ Class.lancer = {
     }
   ]
 }
-
-Class.basic.UPGRADES_TIER_2.push("lancer");

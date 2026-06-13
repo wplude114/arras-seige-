@@ -2444,21 +2444,21 @@ Class.boltstrapper = {
             }
         },
         {
-            POSITION: {LENGTH: 5,WIDTH: 18,ASPECT: 1, X: 18,Y: 0,ANGLE: 0,DELAY: 0},
+            POSITION: {LENGTH: 5,WIDTH: 18,ASPECT: 0.9, X: 18,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.lobber, g.pounder]),
                 TYPE: "flailMissle",
             }
         },
         {
-            POSITION: {LENGTH: 5,WIDTH: 15,ASPECT: 1, X: 18,Y: 0,ANGLE: 0,DELAY: 0},
+            POSITION: {LENGTH: 5,WIDTH: 15,ASPECT: 0.8, X: 18,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.lobber, g.pounder, g.fake]),
                 TYPE: "bullet",
             }
         },
         {
-            POSITION: {LENGTH: 12,WIDTH: 18,ASPECT: 1.2, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+            POSITION: {LENGTH: 12,WIDTH: 18,ASPECT: 1.1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
         },
     ]
 }

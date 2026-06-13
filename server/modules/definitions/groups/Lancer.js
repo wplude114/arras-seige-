@@ -32,3 +32,8 @@ Class.lancer = {
     }
   ]
 }
+
+Class.hawk = makeBird("lancer", "Hawk")
+Class.bee = makeOver("lancer", "Bee", {count: 1, independent: true, cycle: true})
+
+Class.lancer.UPGRADES_TIER_3 = ["hawk", "bee"]

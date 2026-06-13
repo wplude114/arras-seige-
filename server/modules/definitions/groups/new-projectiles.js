@@ -1,4 +1,4 @@
-const { combineStats, makeAuto, weaponArray } = require('../facilitators.js');
+const { combineStats, makeAuto, weaponArray, makeTurret } = require('../facilitators.js');
 const { base } = require('../constants.js');
 const g = require('../gunvals.js');
 

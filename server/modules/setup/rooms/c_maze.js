@@ -1,5 +1,5 @@
 let { rock, roid } = require('../tiles/decoration.js'),
-    { normal, nest: ____, wall } = require('../tiles/misc.js'),
+    { normal: ____, nest, wall } = require('../tiles/misc.js'),
 
 room = [
     [wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall],

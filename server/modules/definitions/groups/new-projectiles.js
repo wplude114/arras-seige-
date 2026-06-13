@@ -10,11 +10,10 @@ Class.autoMissileGun = makeTurret({
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.minionGun, g.turret, g.power, g.autoTurret, { density: 0.1 }]),
                 TYPE: "bullet",
-                WAIT_TO_CYCLE: true
             },
         },
     ],
-}, {independent: true, extraStats: []})
+}, {independent: true, extraStats: [], hasAI: true})
 
 Class.flailBullet = {
     PARENT: "bullet",

@@ -10,7 +10,6 @@ Class.lancer = {
     SPEED: base.SPEED * 1.2,
     DAMAGE: base.DAMAGE * 0.9
   },
-  HAS_NO_RECOIL: true,
   STAT_NAMES: {
     BULLET_SPEED: 'Lance Range',
     BULLET_HEALTH: 'Lance Longevity',
@@ -22,7 +21,7 @@ Class.lancer = {
     {
       POSITION: [20, 15, 0.001, 0, 0, 0, 0],
       PROPERTIES: {
-        SHOOT_SETTINGS: combineStats([g.basic, { reload: 0.4, speed: 0.1, maxSpeed: 0.1, range: 0.1 }]),
+        SHOOT_SETTINGS: combineStats([g.basic, { reload: 0.4, speed: 0.1, maxSpeed: 0.1, range: 0.1, recoil: 0}]),
         TYPE: ["bullet", { ALPHA: 0 }],
         AUTOFIRE: true
       }
@@ -34,6 +33,6 @@ Class.lancer = {
 }
 
 Class.hawk = makeBird("lancer", "Hawk")
-Class.bee = makeOver("lancer", "Bee", {count: 1, independent: true, cycle: true})
+Class.wasp = makeOver("lancer", "Wasp", {count: 1, independent: true, cycle: true})
 
-Class.lancer.UPGRADES_TIER_3 = ["hawk", "bee"]
+Class.lancer.UPGRADES_TIER_3 = ["hawk", "wasp"]

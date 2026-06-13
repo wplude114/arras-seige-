@@ -2,8 +2,8 @@ const { combineStats, makeAuto, makeOver, makeDeco, makeGuard, makeBird, makeRad
 const { base, statnames, dfltskl, smshskl } = require('../constants.js');
 require('./generics.js');
 const g = require('../gunvals.js');
-// tracker3gun
-Class.lancer = {
+
+Class.genericLance = {
   PARENT: "genericTank",
   LABEL: "Lancer",
   BODY: {
@@ -17,6 +17,11 @@ Class.lancer = {
     BULLET_DAMAGE: 'Lance Damage',
     RELOAD: 'Lance Density'
   },
+}
+
+Class.lancer = {
+  PARENT: "genericLance",
+  LABEL: "Lancer",
   GUNS: [
     {
       POSITION: [20, 15, 0.001, 0, 0, 0, 0],
@@ -33,19 +38,8 @@ Class.lancer = {
 }
 
 Class.trackerLancer = {
-  PARENT: "genericTank",
-  LABEL: "Lancer",
-  BODY: {
-    SPEED: base.SPEED * 1.2,
-    DAMAGE: base.DAMAGE * 0.9
-  },
-  STAT_NAMES: {
-    BULLET_SPEED: 'Lance Range',
-    BULLET_HEALTH: 'Lance Longevity',
-    BULLET_PEN: 'Lance Sharpness',
-    BULLET_DAMAGE: 'Lance Damage',
-    RELOAD: 'Lance Density'
-  },
+  PARENT: "genericLance",
+  LABEL: "Tracker Lancer",
   GUNS: [
     {
       POSITION: [20, 15, 0.001, 0, 0, 0, 0],
@@ -62,7 +56,7 @@ Class.trackerLancer = {
   TURRETS: [{
         POSITION: [10, 0, 0, 180, 360, 1],
         TYPE: [
-            "tracker3Gun",
+            "tracker3gun",
             {
                 CONTROLLERS: ["nearestDifferentMaster"],
                 INDEPENDENT: true,

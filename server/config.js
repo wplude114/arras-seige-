@@ -242,11 +242,6 @@ module.exports = {
 
     // The possible boss types that can spawn.
     BOSS_TYPES: [
-    { // telestials II
-        bosses: ["th", "ze", "ga", "ha", "de", "the"],
-        amount: 5, chance: 1,
-    },
-        /*
     { // elites I
         bosses: ["eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner", "eliteTrapGuard",],
         amount: [1], chance: 20,
@@ -262,7 +257,7 @@ module.exports = {
     { // telestials II
         bosses: ["th", "ze", "ga", "ha"],
         amount: [4], chance: 10,
-    },*/],
+    },],
 
 
 

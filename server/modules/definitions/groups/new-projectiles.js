@@ -101,6 +101,6 @@ Class.flailMissle = {
         TYPE: "flailBallSpike",
     },{
         POSITION: [7, 0, 0, 0, 0, 1],
-        TYPE: "autoMissleGun",
+        TYPE: "autoMissileGun",
     }],
 }

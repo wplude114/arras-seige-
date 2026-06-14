@@ -278,7 +278,7 @@ Class.nestWatcher = {
 
 // Telestials
 let Titon = new LayeredBoss("Ti", "Titan", "entrestrial", 5, "rainbow", "terrestrialTrapTurret", 4, 5);
-Titon.addLayer({})(),}, true, 10, 10);
+Titon.addLayer(null, true, 10, 10);
 
 let thor = new LayeredBoss("th", "Thor", "entrestrial", 7, "purple", "terrestrialTrapTurret", 4, 5);
 thor.addLayer({turret: {

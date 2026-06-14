@@ -281,7 +281,7 @@ let Titon = new LayeredBoss("Ti", "Titan", "entrestrial", 5, "rainbow", "terrest
 Titon.addLayer({turret: {
     POSITION: [9, 8, 0, null, 120, 0],
     TYPE: ["tracker3gun", { INDEPENDENT: true, COLOR: -1 } ],
-}, true, 10, 10);
+}}, true, 10, 10);
 
 let thor = new LayeredBoss("th", "Thor", "entrestrial", 7, "purple", "terrestrialTrapTurret", 4, 5);
 thor.addLayer({turret: {

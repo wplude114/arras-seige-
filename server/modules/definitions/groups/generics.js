@@ -91,7 +91,6 @@ Class.genericTankBody = {
     PARENT: "genericEntity",
     TYPE: "tank",
     COLOR: "mirror",
-    INDEPENDENT: true,
     CONTROLLERS: ["turretWithMotion"],
     SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]],
 }

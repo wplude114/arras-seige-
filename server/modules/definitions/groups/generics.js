@@ -92,12 +92,12 @@ Class.genericTankBody = {
     TYPE: "tank",
     COLOR: "mirror",
     INDEPENDENT: true,
-    CONTROLLERS: ["turretWithMotion"],
     FACING_TYPE: ["turnWithSpeed"],
+    MIRROR_MASTER_ANGLE: true,
     SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]],
     TURRETS: [
         {
-            POSITION: [14, 0, 0, 0, 0, 0],
+            POSITION: [16, 0, 0, 0, 0, 0],
             TYPE: { PARENT: "genericEntity", TYPE: "tank", COLOR: 17, SHAPE: [[-1.3,-1.2],[1.3,-1.2],[1.3,1.2],[-1.3,1.2]], MIRROR_MASTER_ANGLE: true },
         }
     ],

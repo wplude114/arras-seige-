@@ -87,13 +87,6 @@ Class.genericEntity = {
         LEVEL: -1
     }
 }
-Class.genericTankBody = {
-    PARENT: "genericEntity",
-    TYPE: "tank",
-    COLOR: "mirror",
-    CONTROLLERS: ["turretWithMotion"],
-    SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]],
-}
 Class.genericTank = {
     LABEL: "Unknown Class",
     TYPE: "tank",
@@ -130,12 +123,7 @@ Class.genericTank = {
         HETERO: 3,
     },
     GUNS: [],
-    TURRETS: [
-        {
-            POSITION: [17, 0, 0, 0, 0, 0],
-            TYPE: "genericTankBody",
-        }
-    ],
+    TURRETS: [],
     PROPS: [],
     ON: [],
     ARENA_CLOSER: false, // don't remove this, it stops dev basics going through walls
@@ -144,6 +132,18 @@ Class.genericTank = {
     RESET_EVENTS: true,
     HITS_OWN_TYPE: "hardOnlyTanks"
 }
+Class.genericTankBody = {
+    PARENT: "genericTank",
+    COLOR: "mirror",
+    CONTROLLERS: ["turretWithMotion"],
+    SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]],
+}
+Class.genericTank.TURRETS.push([
+        {
+            POSITION: [18, 0, 0, 0, 0, 0],
+            TYPE: "genericTankBody",
+        }
+    ]);
 Class.genericSmasher = {
     PARENT: "genericTank",
     DANGER: 7,

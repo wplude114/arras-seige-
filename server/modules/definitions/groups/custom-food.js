@@ -48,6 +48,7 @@ Class.protoDread = {
     PARENT: "protoD",
     LABEL: "Dianought",
 	VALUE: 63319,
+	REROOT_UPGRADE_TREE: "protoDread",
     TURRETS: [
         {
             POSITION: [7, 10, 0, 0, 160, 0],

@@ -98,7 +98,7 @@ Class.computerizedGem = {
     PARENT: "food",
     LABEL: "Computerized Gem",
 	VALUE: 5e4,
-    SIZE: 22,
+    SIZE: 26,
     SHAPE: 6,
     COLOR: 17,
     FACING_TYPE: ['spin', {speed: 0.02}],
@@ -112,7 +112,7 @@ Class.computerizedGem = {
             TYPE: "autoTankGun",
         },
         {
-            POSITION: [13, 0, 0, 0, 0, 1],
+            POSITION: [15, 0, 0, 0, 0, 1],
             TYPE: "gem",
         },
     ],

@@ -281,7 +281,7 @@ const maintainloop = () => {
     if (!naturallySpawnedBosses.length && bossTimer++ > Config.BOSS_SPAWN_COOLDOWN) {
         bossTimer = -Config.BOSS_SPAWN_DURATION;
         let selection = Config.BOSS_TYPES[ran.chooseChance(...Config.BOSS_TYPES.map((selection) => selection.chance))],
-            amount = ran.chooseChance(...selection.amount) + 1;
+            amount = ...selection.amount + 1;
         if (selection.message) {
             sockets.broadcast(selection.message);
         }

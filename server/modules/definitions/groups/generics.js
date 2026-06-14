@@ -133,7 +133,7 @@ Class.genericTank = {
     GUNS: [],
     TURRETS: [
         {
-            POSITION: [16, 0, 0, 0, 0, 0],
+            POSITION: [17, 0, 0, 0, 0, 0],
             TYPE: "genericTankBody",
         }
     ],

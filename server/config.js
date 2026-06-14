@@ -241,14 +241,35 @@ module.exports = {
     ],
 
     // The possible boss types that can spawn.
+    // "th", "ze", "ga", "ha", "de", "the","ares", "gersemi", "ezekiel", "eris", "selene","rokna","paladin", "freyja", "zaphkiel", "nyx", "theia"
     BOSS_TYPES: [
-    { // fodder3
-        bosses: ["eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner", "eliteTrapGuard", "eliteSkimmer","th", "ze", "ga", "ha", "de", "the","ares", "gersemi", "ezekiel", "eris", "selene","rokna","paladin", "freyja", "zaphkiel", "nyx", "theia", "julius", "genghis", "napoleon"],
-        amount: 5, chance: 50,
+    { // elite
+        bosses: ["eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner", "eliteTrapGuard", "eliteSkimmer"],
+        amount: 10, chance: 50,
     },
-    { // fodder4
+    { // telestial+ (-eternal, celestial)
+        bosses: ["th", "ze", "ga", "ha", "de", "the","ares", "gersemi", "ezekiel", "eris", "selene","rokna"],
+        amount: 7, chance: 35,
+    },
+    { // terrestrial+ (-eternal)
+        bosses: ["ares", "gersemi", "ezekiel", "eris", "selene","rokna","paladin", "freyja", "zaphkiel", "nyx", "theia"],
+        amount: 3, chance: 25,
+    },
+    { // celestial
+        bosses: ["paladin", "freyja", "zaphkiel", "nyx", "theia"],
+        amount: 7, chance: 10,
+    },
+    { // celestial+
+        bosses: ["paladin", "freyja", "zaphkiel", "nyx", "theia","legionaryCrasher", "odin", "kronos"],
+        amount: 4, chance: 10,
+    },
+    { // eternal
         bosses: ["legionaryCrasher", "odin", "kronos"],
         amount: 3, chance: 1,
+    },
+    { // eternal
+        bosses: ["legionaryCrasher", "odin", "kronos"],
+        amount: 10, chance: 0.1,
     },],
 
 

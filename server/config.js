@@ -170,7 +170,7 @@ module.exports = {
     BOSS_SPAWN_COOLDOWN: 10,
     // The delay (in seconds) between the boss spawns being announced and the bosses actually spawning.
     // NOTE: The spawn message (ex. "A strange trembling...") takes half as long to appear than the boss.
-    BOSS_SPAWN_DURATION: 5,
+    BOSS_SPAWN_DURATION: 60,
     FOOD_TYPES: [
         [1000000, [
             [1024, 'egg'], [256, 'betaEgg'], [64, 'alphaEgg'],
@@ -244,7 +244,7 @@ module.exports = {
     BOSS_TYPES: [
     { // fodder3
         bosses: ["eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner", "eliteTrapGuard", "eliteSkimmer","th", "ze", "ga", "ha", "de", "the","ares", "gersemi", "ezekiel", "eris", "selene","rokna","paladin", "freyja", "zaphkiel", "nyx", "theia", "julius", "genghis", "napoleon"],
-        amount: 10, chance: 100,
+        amount: 5, chance: 50,
     },
     { // fodder4
         bosses: ["legionaryCrasher", "odin", "kronos"],

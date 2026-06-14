@@ -243,6 +243,11 @@ module.exports = {
     // The possible boss types that can spawn.
     // "th", "ze", "ga", "ha", "de", "the","ares", "gersemi", "ezekiel", "eris", "selene","rokna","paladin", "freyja", "zaphkiel", "nyx", "theia"
     BOSS_TYPES: [
+        { // elite
+            bosses: ["bot"],
+            amount: 10, chance: 1,
+        },
+        /*
     { // elite
         bosses: ["eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner", "eliteTrapGuard", "eliteSkimmer"],
         amount: 10, chance: 50,
@@ -274,7 +279,7 @@ module.exports = {
     { // eternal
         bosses: ["legionaryCrasher", "odin", "kronos"],
         amount: 10, chance: 0.1,
-    },],
+    },*/],
 
 
 

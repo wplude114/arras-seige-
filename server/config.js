@@ -242,21 +242,13 @@ module.exports = {
 
     // The possible boss types that can spawn.
     BOSS_TYPES: [
-    { // fodder1
-        bosses: ["sentryGun", "sentrySwarm", "sentryTrap", "shinySentryGun", "shinySentrySwarm", "shinySentrySwarm", "sentinelMinigun", "sentinelLauncher", "sentinelCrossbow"],
-        amount: 49, chance: 15,
-    },
-    { // fodder2
-        bosses: ["sentryGun", "sentrySwarm", "sentryTrap", "shinySentryGun", "shinySentrySwarm", "shinySentrySwarm", "sentinelMinigun", "sentinelLauncher", "sentinelCrossbow"],
-        amount: 99, chance: 10,
-    },
     { // fodder3
         bosses: ["eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner", "eliteTrapGuard", "eliteSkimmer","th", "ze", "ga", "ha", "de", "the","ares", "gersemi", "ezekiel", "eris", "selene","rokna","paladin", "freyja", "zaphkiel", "nyx", "theia", "julius", "genghis", "napoleon"],
-        amount: 10, chance: 1,
+        amount: 10, chance: 100,
     },
     { // fodder4
         bosses: ["legionaryCrasher", "odin", "kronos"],
-        amount: 1, chance: 0.1,
+        amount: 3, chance: 1,
     },],
 
 

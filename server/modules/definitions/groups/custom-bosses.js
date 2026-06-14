@@ -277,10 +277,10 @@ Class.nestWatcher = {
 }
 
 // Telestials
-let Titon = new LayeredBoss("Ti", "Titan", "entrestrial", 5, "rainbow", "terrestrialTrapTurret", 4, 5);
+let Titon = new LayeredBoss("Ti", "Titan", "entrestrial", 5, "rainbow", ["tracker3gun", { INDEPENDENT: true, COLOR: -1 }], 9, 8);
 Titon.addLayer({turret: {
-    POSITION: [9, 8, 0, null, 120, 0],
-    TYPE: ["tracker3gun", { INDEPENDENT: true, COLOR: -1 } ],
+    POSITION: [10, 8, 0, null, 120, 1],
+    TYPE: ["eliteSpinnerCyclone", { INDEPENDENT: true, COLOR: -1 } ],
 }}, true, 10, 10);
 
 let thor = new LayeredBoss("th", "Thor", "entrestrial", 7, "purple", "terrestrialTrapTurret", 4, 5);
@@ -299,7 +299,7 @@ let gaia = new LayeredBoss("ga", "Gaia", "entrestrial", 5, "lightGreen", "terres
 gaia.addLayer({gun: {
     POSITION: [2, 7, -1.6, 8.85, 0, null, 0],
     PROPERTIES: {
-        SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.pounder, g.destroyer, {speed: 6.25, maxSpeed: 8}]),
+        SHOOT_SETTINGS: combineStats([g.drone, g.summoner, g.pounder, g.destroyer, {speed: 2, maxSpeed: 8}]),
         TYPE: ["autoswarm", {INDEPENDENT: true, COLOR: 'lightGreen', SHAPE: 5}],
         AUTOFIRE: true,
         SYNCS_SKILLS: true,

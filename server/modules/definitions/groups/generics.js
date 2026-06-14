@@ -129,11 +129,11 @@ Class.genericTank = {
         HETERO: 3,
     },
     GUNS: [],
-    TURRETS: [
+    TURRETS: [/*
         {
             POSITION: [this.SIZE + 3, 0, 0, 0, 0, 0],
             TYPE: "genericTankBody",
-        }
+        }*/
     ],
     PROPS: [],
     ON: [],

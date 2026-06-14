@@ -101,6 +101,15 @@ Class.computerizedGem = {
     SIZE: 26,
     SHAPE: 6,
     COLOR: 17,
+    BODY: {
+        DAMAGE: basePolygonDamage * 4,
+        DENSITY: 4,
+        HEALTH: 350,
+        PENETRATION: 2,
+        RESIST: 2,
+        PUSHABILITY: 0.25,
+        ACCELERATION: 0.015
+    },
     FACING_TYPE: ['spin', {speed: 0.02}],
 	CONTROLLERS: [["minion", {orbit: 50}]],
     TURRETS: [
@@ -112,7 +121,7 @@ Class.computerizedGem = {
             TYPE: "autoTankGun",
         },
         {
-            POSITION: [15, 0, 0, 0, 0, 1],
+            POSITION: [18, 0, 0, 0, 0, 1],
             TYPE: "gem",
         },
     ],

@@ -87,12 +87,27 @@ Class.genericEntity = {
         LEVEL: -1
     }
 }
+Class.GenericTankTreads = {
+    PARENT: "genericEntity",
+    TYPE: "tank",
+    COLOR: 17,
+    SHAPE: [[-1.3,-1.2],[1.3,-1.2],[1.3,1.2],[-1.3,1.2]],
+    MIRROR_MASTER_ANGLE: true,
+}
 Class.genericTankBody = {
     PARENT: "genericEntity",
     TYPE: "tank",
     COLOR: "mirror",
+    INDEPENDENT: true,
     CONTROLLERS: ["turretWithMotion"],
-    SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]]
+    FACING_TYPE: ["turnWithSpeed"],
+    SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]],
+    TURRETS: [
+        {
+            POSITION: [16, 0, 0, 0, 0, 0],
+            TYPE: "genericTankTreads",
+        }
+    ],
 }
 Class.genericTank = {
     LABEL: "Unknown Class",
@@ -132,7 +147,7 @@ Class.genericTank = {
     GUNS: [],
     TURRETS: [
         {
-            POSITION: [15, 0, 0, 0, 0, 0],
+            POSITION: [16, 0, 0, 0, 0, 0],
             TYPE: "genericTankBody",
         }
     ],

@@ -244,19 +244,19 @@ module.exports = {
     BOSS_TYPES: [
     { // elites I
         bosses: ["eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner", "eliteTrapGuard",],
-        amount: [5,1], chance: 20,
+        amount: 3, chance: 20,
     },
     { // sentinels
         bosses: ["sentinelMinigun", "sentinelLauncher", "sentinelCrossbow"],
-        amount: [20,5], chance: 15,
+        amount: 49, chance: 15,
     },
     { // telestials I
         bosses: ["th", "ze", "ga", "ha", "de", "the"],
-        amount: [2,1], chance: 15,
+        amount: 2, chance: 15,
     },
     { // telestials II
         bosses: ["th", "ze", "ga", "ha"],
-        amount: [5,3], chance: 10,
+        amount: 4, chance: 10,
     },],
 
 

@@ -98,10 +98,11 @@ Class.computerizedGem = {
     PARENT: "food",
     LABEL: "Computerized Gem",
 	VALUE: 5e4,
-    SIZE: 20,
+    SIZE: 22,
     SHAPE: 6,
     COLOR: 17,
     FACING_TYPE: ['spin', {speed: 0.02}],
+	CONTROLLERS: [["minion", {orbit: 50}]],
     TURRETS: [
         {
             POSITION: [7, 10, 0, 0, 160, 0],
@@ -111,7 +112,7 @@ Class.computerizedGem = {
             TYPE: "autoTankGun",
         },
         {
-            POSITION: [11, 0, 0, 0, 0, 1],
+            POSITION: [13, 0, 0, 0, 0, 1],
             TYPE: "gem",
         },
     ],

@@ -277,9 +277,9 @@ Class.nestWatcher = {
 }
 
 // Telestials
-let Titon = new LayeredBoss("Ti", "Titan", "entrestrial", 5, "rainbow", ["tracker3gun", { INDEPENDENT: true, COLOR: -1 }], 5, 8);
+let Titon = new LayeredBoss("Ti", "Titan", "entrestrial", 5, "rainbow", ["tracker3gun", { INDEPENDENT: true, COLOR: -1 }], 4, 8);
 Titon.addLayer({turret: {
-    POSITION: [10, 8, 0, null, 120, 1],
+    POSITION: [10, 8, 0, null, 120, 0],
     TYPE: ["barricadeTurret", { INDEPENDENT: true, COLOR: -1 } ],
 }}, true, 10, 10);
 

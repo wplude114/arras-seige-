@@ -242,21 +242,21 @@ module.exports = {
 
     // The possible boss types that can spawn.
     BOSS_TYPES: [
-    { // elites I
-        bosses: ["eliteDestroyer", "eliteGunner", "eliteBattleship", "eliteSpawner", "eliteTrapGuard",],
-        amount: 3, chance: 20,
-    },
-    { // sentinels
+    { // fodder1
         bosses: ["sentryGun", "sentrySwarm", "sentryTrap", "shinySentryGun", "shinySentrySwarm", "shinySentrySwarm", "sentinelMinigun", "sentinelLauncher", "sentinelCrossbow"],
-        amount: 99, chance: 15,
+        amount: 49, chance: 15,
     },
-    { // telestials I
-        bosses: ["th", "ze", "ga", "ha", "de", "the"],
-        amount: 2, chance: 15,
+    { // fodder2
+        bosses: ["sentryGun", "sentrySwarm", "sentryTrap", "shinySentryGun", "shinySentrySwarm", "shinySentrySwarm", "sentinelMinigun", "sentinelLauncher", "sentinelCrossbow"],
+        amount: 99, chance: 10,
     },
-    { // telestials II
-        bosses: ["th", "ze", "ga", "ha"],
-        amount: 4, chance: 10,
+    { // fodder3
+        bosses: ["eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner", "eliteTrapGuard", "eliteSkimmer","th", "ze", "ga", "ha", "de", "the","ares", "gersemi", "ezekiel", "eris", "selene","rokna","paladin", "freyja", "zaphkiel", "nyx", "theia", "julius", "genghis", "napoleon"],
+        amount: 10, chance: 1,
+    },
+    { // fodder4
+        bosses: ["legionaryCrasher", "odin", "kronos"],
+        amount: 1, chance: 0.1,
     },],
 
 

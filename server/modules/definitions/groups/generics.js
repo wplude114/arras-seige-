@@ -88,7 +88,7 @@ Class.genericEntity = {
     }
 }
 Class.tankBody = {
-    LABEL: "Tank Body",
+    LABEL: "Unknown Class",
     TYPE: "tank",
     DAMAGE_CLASS: 2,
     DANGER: 5,
@@ -99,13 +99,12 @@ Class.tankBody = {
         BRIGHTNESS_SHIFT: 0,
         ALLOW_BRIGHTNESS_INVERT: true,
     },
-    SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]],
     MOTION_TYPE: "motor",
     FACING_TYPE: "toTarget",
     SIZE: 12,
     MAX_CHILDREN: 0,
     DAMAGE_EFFECTS: false,
-    IGNORED_BY_AI: true,
+    IGNORED_BY_AI: false,
     SYNC_WITH_TANK: false,
     IS_IMMUNE_TO_TILES: false,
     REROOT_UPGRADE_TREE: "basic",
@@ -122,12 +121,22 @@ Class.tankBody = {
         PUSHABILITY: 1,
         HETERO: 3,
     },
+    GUNS: [],
+    TURRETS: [
+        {
+            POSITION: [18, 0, 0, 0, 0, 0],
+            TYPE: "tankBody",
+        }
+    ],
+    PROPS: [],
+    ON: [],
     ARENA_CLOSER: false, // don't remove this, it stops dev basics going through walls
-    GIVE_KILL_MESSAGE: false,
-    DRAW_HEALTH: false,
+    GIVE_KILL_MESSAGE: true,
+    DRAW_HEALTH: true,
     RESET_EVENTS: true,
     HITS_OWN_TYPE: "hardOnlyTanks",
     
+    SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]],
     CONTROLLERS: ["turretWithMotion"],
 }
 Class.genericTank = {
@@ -168,7 +177,7 @@ Class.genericTank = {
     GUNS: [],
     TURRETS: [
         {
-            POSITION: [18, 0, 0, 0, 0, 0],
+            POSITION: [18, 0, 0, 90, 0, 0],
             TYPE: "tankBody",
         }
     ],

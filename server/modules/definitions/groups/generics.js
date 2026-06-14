@@ -89,6 +89,7 @@ Class.genericEntity = {
 }
 Class.genericTankBody = {
     PARENT: "genericEntity",
+    TYPE: "tank",
     COLOR: "mirror",
     CONTROLLERS: ["turretWithMotion"],
     SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]]
@@ -129,11 +130,11 @@ Class.genericTank = {
         HETERO: 3,
     },
     GUNS: [],
-    TURRETS: [/*
+    TURRETS: [
         {
-            POSITION: [this.SIZE + 3, 0, 0, 0, 0, 0],
+            POSITION: [15, 0, 0, 0, 0, 0],
             TYPE: "genericTankBody",
-        }*/
+        }
     ],
     PROPS: [],
     ON: [],

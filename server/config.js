@@ -244,8 +244,8 @@ module.exports = {
     // "th", "ze", "ga", "ha", "de", "the","ares", "gersemi", "ezekiel", "eris", "selene","rokna","paladin", "freyja", "zaphkiel", "nyx", "theia"
     BOSS_TYPES: [
         { // elite
-            bosses: ["gem","jewel","hexagon","computerizedGem","GHexagon","the","rokna"],
-            amount: 10, chance: 1,
+            bosses: ["gem","jewel","hexagon","computerizedGem","GHexagon"],
+            amount: 30, chance: 1,
         },
         /*
     { // elite

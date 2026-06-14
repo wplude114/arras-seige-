@@ -101,8 +101,7 @@ Class.computerizedGem = {
     SHAPE: 6,
     COLOR: 17,
     FACING_TYPE: ['spin', {speed: 0.02}],
-	CONTROLLERS: [["minion", {orbit: 50}]],
-    BODY: {HEALTH: 50, DAMAGE: 3, FOV: 1.1},
+	//CONTROLLERS: ["minion"],
 	VALUE: 63319,
     TURRETS: [
         {
@@ -117,6 +116,9 @@ Class.computerizedGem = {
             TYPE: "gem",
         },
     ],
+    DRAW_HEALTH: true,
+    INTANGIBLE: false,
+    GIVE_KILL_MESSAGE: true,
 }
 Class.jewel = {
     PARENT: "food",

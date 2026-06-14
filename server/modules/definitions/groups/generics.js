@@ -122,12 +122,7 @@ Class.tankBody = {
         HETERO: 3,
     },
     GUNS: [],
-    TURRETS: [
-        {
-            POSITION: [18, 0, 0, 0, 0, 0],
-            TYPE: "tankBody",
-        }
-    ],
+    TURRETS: [],
     PROPS: [],
     ON: [],
     ARENA_CLOSER: false, // don't remove this, it stops dev basics going through walls

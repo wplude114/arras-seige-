@@ -251,6 +251,10 @@ module.exports = {
         bosses: ["th", "ze", "ga", "ha", "de", "the","ares", "gersemi", "ezekiel", "eris", "selene","rokna"],
         amount: 7, chance: 35,
     },
+    { // rogue
+      bosses: ["roguePalisade", "rogueArmada", "julius", "genghis", "napoleon"],
+        amount: 5, chance: 27
+    },
     { // terrestrial+ (-eternal)
         bosses: ["ares", "gersemi", "ezekiel", "eris", "selene","rokna","paladin", "freyja", "zaphkiel", "nyx", "theia"],
         amount: 3, chance: 25,

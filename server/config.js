@@ -247,7 +247,7 @@ module.exports = {
         amount: 3, chance: 20,
     },
     { // sentinels
-        bosses: ["sentinelMinigun", "sentinelLauncher", "sentinelCrossbow"],
+        bosses: ["sentryGun", "sentrySwarm", "sentryTrap", "shinySentryGun", "shinySentrySwarm", "shinySentrySwarm", "sentinelMinigun", "sentinelLauncher", "sentinelCrossbow"],
         amount: 49, chance: 15,
     },
     { // telestials I

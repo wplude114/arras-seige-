@@ -87,6 +87,12 @@ Class.genericEntity = {
         LEVEL: -1
     }
 }
+Class.genericTankBody = {
+    PARENT: "genericEntity",
+    COLOR: "mirror",
+    CONTROLLERS: ["turretWithMotion"],
+    SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]]
+}
 Class.genericTank = {
     LABEL: "Unknown Class",
     TYPE: "tank",
@@ -123,7 +129,12 @@ Class.genericTank = {
         HETERO: 3,
     },
     GUNS: [],
-    TURRETS: [],
+    TURRETS: [
+        {
+            POSITION: [this.SIZE + 3, 0, 0, 0, 0, 0],
+            TYPE: "genericTankBody",
+        }
+    ],
     PROPS: [],
     ON: [],
     ARENA_CLOSER: false, // don't remove this, it stops dev basics going through walls

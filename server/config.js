@@ -170,7 +170,7 @@ module.exports = {
     BOSS_SPAWN_COOLDOWN: 10,
     // The delay (in seconds) between the boss spawns being announced and the bosses actually spawning.
     // NOTE: The spawn message (ex. "A strange trembling...") takes half as long to appear than the boss.
-    BOSS_SPAWN_DURATION: 60,
+    BOSS_SPAWN_DURATION: 1,
     FOOD_TYPES: [
         [1000000, [
             [1024, 'egg'], [256, 'betaEgg'], [64, 'alphaEgg'],

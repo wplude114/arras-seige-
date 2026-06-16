@@ -4,6 +4,7 @@ const g = require('../gunvals.js');
 const {makeTurret} = require("../facilitators");
 
 Class.EKMenu = menu("EK Menu", "veryLightGrey", 0)
+Class.EKMenu.REROOT_UPGRADE_TREE = "EKMenu"
 Class.EKMenu.UPGRADES_TIER_0 = []
 
 g.half_reload = {reload: 2}

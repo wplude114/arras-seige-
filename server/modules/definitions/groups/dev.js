@@ -2846,8 +2846,8 @@ Class.flace = {
     SKILL_CAP: [dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl],
 }
 
-Class.developer.UPGRADES_TIER_0 = ["nav"]
-Class.misc.UPGRADES_TIER_0 = ["eggGenerator", "spectator", "addons"]
+Class.developer.UPGRADES_TIER_0 = ["nav", "spectator", "addons"]
+Class.misc.UPGRADES_TIER_0 = ["eggGenerator"]
 Class.nav.UPGRADES_TIER_0 = ["tanks", "bosses"] // makes things easier
     Class.tanks.UPGRADES_TIER_0 = ["basic", "protoDread", "unavailable", "literallyATank", "arenaCloser"]
         Class.unavailable.UPGRADES_TIER_0 = ["flail", "whirlwind"]

@@ -11,5 +11,3 @@ Class.castleBase = {
 console.log('[castleUpgrades] Created Castle Base (upgrades to telestial or terrestrial)');
 
 Class.addons.UPGRADES_TIER_0.push("castleBase");
-  Class.castleBase.UPGRADES_TIER_1 = Class.terrestrals.UPGRADES_TIER_0
-  Class.castleBase.UPGRADES_TIER_2 = Class.celestials.UPGRADES_TIER_0

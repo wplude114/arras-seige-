@@ -5,7 +5,6 @@ const {makeTurret} = require("../facilitators");
 
 Class.EKMenu = menu("EK Menu", "veryLightGrey", 0)
 Class.EKMenu.UPGRADES_TIER_0 = []
-Class.EKMenu.REROOT_UPGRADE_TREE = "EKMenu"
 
 g.half_reload = {reload: 2}
 g.half_recoil = {recoil: 0.5}

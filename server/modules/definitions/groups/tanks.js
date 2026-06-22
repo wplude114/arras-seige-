@@ -9,22 +9,9 @@ Class.basic = {
     LABEL: "Base",
     DANGER: 4,
     GUNS: [
-       /* {
-            POSITION: {
-                LENGTH: 18,
-                WIDTH: 8,
-                ASPECT: 1,
-                X: 0,
-                Y: 0,
-                ANGLE: 0,
-                DELAY: 0
-            },
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic]),
-                TYPE: "bullet",
-               // AUTOFIRE: false
-            }
-        }*/
+        {
+            POSITION: {LENGTH: 10,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+        },
     ]
 }
 
@@ -57,7 +44,7 @@ Class.tri = {
     PARENT: "genericTank",
     LABEL: "Tri",
     DANGER: 5,
-    FACING_TYPE: ["spin", { speed: -0.05, independent: true }],
+    FACING_TYPE: ["spin", { speed: 0.05, independent: true }],
     GUNS: [
        {
             POSITION: {LENGTH: 17,WIDTH: 6,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},

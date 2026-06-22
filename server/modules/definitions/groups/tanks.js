@@ -44,7 +44,7 @@ Class.barrel = {
 Class.mount = {
     PARENT: "genericTank",
     LABEL: "Mount",
-    TURRETS: [(Class.genericTank.TURRETS || [])] // note: make a facilitator for this (inherit turrets and push later)
+    TURRETS: [Class.genericTank.TURRETS] // note: make a facilitator for this (inherit turrets and push later)
 }
 Class.mount.TURRETS.push({ // push turrets so we still get body.
         POSITION: [6, 10, 0, 0, 190, 0],

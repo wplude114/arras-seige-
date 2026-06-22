@@ -15,7 +15,7 @@ Class.basic = {
     ]
 }
 
-
+// Base upgrades [TIER 1]
 Class.barrel = {
     PARENT: "genericTank",
     LABEL: "Basic",
@@ -55,6 +55,7 @@ Class.mount = {
     ]
 }
 
+// Basic upgrades [TIER 2]
 Class.tri = {
     PARENT: "genericTank",
     LABEL: "Tri",
@@ -119,5 +120,22 @@ Class.tri = {
     ]
 }
 
+// Mount upgrades [TIER 2]
+
+Class.flailR = {
+    PARENT: "genericFlail",
+    LABEL: "Flail",
+    TURRETS: [
+        ...Class.genericTank.TURRETS,  // pls make a facilitator for this, this is temp
+        {
+            POSITION: [6, 10, 0, 0, 0, 0],
+            TYPE: ["flailBolt2", {
+                INDEPENDENT: true
+            }]
+        }
+    ]
+}
+
 Class.basic.UPGRADES_TIER_1 = ["barrel", "mount"]
-Class.barrel.UPGRADES_TIER_2 = ["tri"]
+    Class.barrel.UPGRADES_TIER_2 = ["tri"]
+    Class.mount.UPGRADES_TIER_2 = ["flailR"]

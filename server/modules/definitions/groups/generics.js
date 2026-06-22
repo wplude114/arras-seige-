@@ -220,8 +220,26 @@ Class.smasherBody = {
     COLOR: 17,
     SHAPE: -5,
     MIRROR_MASTER_ANGLE: true,
-},
-        }],
+    }},],
+}
+Class.grinderBody = {
+    PARENT: "genericEntity",
+    LABEL: "Body",
+    INDEPENDENT: true,
+    FACING_TYPE: "turnWithSpeed",
+    MOTION_TYPE: "motor",
+    COLOR: "mirror",
+    
+    SHAPE: 5,
+    CONTROLLERS: ["turretWithMotion", "scaleWithMaster"],
+    TURRETS: [{ 
+            POSITION: [20,0,0,0,45],
+            TYPE: {
+    PARENT: "genericEntity",
+    COLOR: 17,
+    SHAPE: -5,
+    MIRROR_MASTER_ANGLE: true,
+    }},],
 }
 
 Class.genericSmasher = {
@@ -233,7 +251,11 @@ Class.genericSmasher = {
     BODY: {
         FOV: 1.05 * base.FOV,
         DENSITY: 2 * base.DENSITY
-    }
+    },
+    TURRETS: [{ 
+            POSITION: [17],
+            TYPE: "smaasherBody",
+        }],
 }
 Class.genericBoss = {
     PARENT: "genericTankNoBody",

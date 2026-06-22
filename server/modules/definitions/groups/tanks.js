@@ -122,6 +122,24 @@ Class.tri = {
 
 // Mount upgrades [TIER 2]
 
+Class.bar = {
+    PARENT: "genericTank",
+    LABEL: "Bar",
+    GUNS: [
+        {
+            POSITION: {LENGTH: 12,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+        },],
+    TURRETS: [
+        ...Class.genericTank.TURRETS,
+        {
+            POSITION: [8, 12, 0, 0, 180, 0],
+            TYPE: ["autoTankGun", {
+                INDEPENDENT: true
+            }]
+        }
+    ]
+}
+
 Class.flailR = {
     PARENT: "genericFlail",
     LABEL: "Flail",
@@ -136,6 +154,48 @@ Class.flailR = {
     ]
 }
 
+// Tier 3 stuff
+
+Class.triBar = {
+    PARENT: "genericTank",
+    LABEL: "Tri-Bar",
+    FACING_TYPE: ["spin", { speed: 0.05, independent: true }],
+    GUNS: [
+        {
+            POSITION: {LENGTH: 12,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+        },
+        {
+            POSITION: {LENGTH: 12,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 120,DELAY: 0},
+        },
+        {
+            POSITION: {LENGTH: 12,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: -120,DELAY: 0},
+        },],
+    TURRETS: [
+        ...Class.genericTank.TURRETS,
+        {
+            POSITION: [8, 12, 0, 0, 180, 0],
+            TYPE: ["autoTankGun", {
+                INDEPENDENT: true
+            }]
+        },
+        {
+            POSITION: [8, 12, 0, 0, 180, 120],
+            TYPE: ["autoTankGun", {
+                INDEPENDENT: true
+            }]
+        },
+        {
+            POSITION: [8, 12, 0, 0, 180, -120],
+            TYPE: ["autoTankGun", {
+                INDEPENDENT: true
+            }]
+        },]
+}
+
+// Upgrade tree
 Class.basic.UPGRADES_TIER_1 = ["barrel", "mount"]
     Class.barrel.UPGRADES_TIER_2 = ["tri"]
-    Class.mount.UPGRADES_TIER_2 = ["flailR"]
+    Class.mount.UPGRADES_TIER_2 = ["bar", "flailR"]
+
+        Class.bar.UPGRADES_TIER_3 = ["triBar"]
+        Class.tri.UPGRADES_TIER_3 = ["triBar"]

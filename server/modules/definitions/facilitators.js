@@ -525,7 +525,7 @@ exports.makeRadialAuto = (type, options = {}) => {
         turretIdentifier = options.turretIdentifier ?? `auto${type.LABEL}Gun`;
 
         Class[turretIdentifier] = {
-            PARENT: 'genericTankNoBodyNoBody',
+            PARENT: 'genericTankNoBody',
             LABEL: "",
             BODY: {
                 FOV: 2,
@@ -552,7 +552,7 @@ exports.makeRadialAuto = (type, options = {}) => {
     let turretAngle = options.angle ?? 0;
 
     return {
-        PARENT: 'genericTankNoBodyNoBody',
+        PARENT: 'genericTankNoBody',
         LABEL,
         FACING_TYPE: ["spin", {speed: options.rotation ?? 0.02}],
         DANGER: options.danger ?? (type.DANGER + 2),
@@ -605,7 +605,7 @@ exports.makeTurret = (type, options = {}) => {
     }
 
     return {
-        PARENT: 'genericTankNoBodyNoBody',
+        PARENT: 'genericTankNoBody',
         LABEL: options.label ?? "",
         COLOR: options.color ?? "grey",
         BODY: { FOV: options.fov ?? 2 },
@@ -622,7 +622,7 @@ exports.addAura = (damageFactor = 1, sizeFactor = 1, opacity = 0.3, auraColor) =
     let symbolType = isHeal ? "healerSymbol" : "auraSymbol";
     auraColor = auraColor ?? (isHeal ? 12 : 0);
     return {
-        PARENT: "genericTankNoBodyNoBody",
+        PARENT: "genericTankNoBody",
         INDEPENDENT: true,
         LABEL: "",
         COLOR: 17,

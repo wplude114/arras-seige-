@@ -91,7 +91,7 @@ Class.tankTreads = {
     PARENT: "genericEntity",
     TYPE: "tank",
     COLOR: 17,
-    SHAPE: [[-1.3,-1.5],[1.3,-1.5],[1.3,1.5],[-1.3,1.5]],
+    SHAPE: [[-1.5,-1.5],[1.5,-1.5],[1.5,1.5],[-1.5,1.5]],
     MIRROR_MASTER_ANGLE: true,
 }
 Class.tankBody = {
@@ -102,7 +102,7 @@ Class.tankBody = {
     MOTION_TYPE: "motor",
     COLOR: "mirror",
     
-    SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]],
+    SHAPE: [[-1.7,-1],[0,-1.3],[1.7,-1],[1.7,1],[0,1.3],[-1.7,1]],
     CONTROLLERS: ["turretWithMotion", "scaleWithMaster"],
     TURRETS: [{ 
             POSITION: [20],

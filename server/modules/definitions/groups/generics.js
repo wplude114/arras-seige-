@@ -150,12 +150,12 @@ Class.tankBody = {
     SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]],
     CONTROLLERS: ["turretWithMotion", "scaleWithMaster"],
     TURRETS: [{ 
-            POSITION: [18],
+            POSITION: [20],
             TYPE: "tankTreads",
         }],
 }
 Class.genericTank.TURRETS = [{ 
-            POSITION: [18],
+            POSITION: [17],
             TYPE: "tankBody",
         }]
 Class.genericTankNoBody = {

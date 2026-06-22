@@ -253,7 +253,7 @@ Class.genericSmasher = {
         DENSITY: 2 * base.DENSITY
     },
     TURRETS: [{ 
-            POSITION: [17],
+            POSITION: [20],
             TYPE: "smasherBody",
         }],
 }

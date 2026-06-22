@@ -2042,7 +2042,7 @@ class io_turretWithMotion extends IO {
 ioTypes.turretWithMotion = io_turretWithMotion
 Class.latTop = makeDeco(0)
 Class.latDeco1 = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     LABEL: "Tank Deco",
     FACING_TYPE: ["turnWithSpeed"],
     COLOR: "#5C533F",
@@ -2050,7 +2050,7 @@ Class.latDeco1 = {
     MIRROR_MASTER_ANGLE: true,
 }
 Class.latDeco2 = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     LABEL: "Tank Deco",
     FACING_TYPE: ["turnWithSpeed"],
     COLOR: "#5C533F",
@@ -2058,7 +2058,7 @@ Class.latDeco2 = {
     MIRROR_MASTER_ANGLE: true,
 }
 Class.latDeco3 = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     LABEL: "Tank Deco",
     FACING_TYPE: ["turnWithSpeed"],
     COLOR: "#3F3B2D",
@@ -2066,7 +2066,7 @@ Class.latDeco3 = {
     MIRROR_MASTER_ANGLE: true,
 }
 Class.latRight = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     LABEL: "Tank Side",
     FACING_TYPE: ["turnWithSpeed"],
     COLOR: "#96794E",
@@ -2104,7 +2104,7 @@ Class.latRight = {
     ]
 }
 Class.latLeft = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     LABEL: "Tank Side",
     FACING_TYPE: ["turnWithSpeed"],
     COLOR: "#96794E",
@@ -2142,7 +2142,7 @@ Class.latLeft = {
     ]
 }
 Class.latBase = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     LABEL: "Tank Base",
     CONTROLLERS: ["turretWithMotion"],
     COLOR: "#96794E",
@@ -2214,7 +2214,7 @@ Class.latBase = {
     ]
 }
 Class.literallyATank = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     DANGER: 6,
     BODY: {
         HEALTH: base.HEALTH * 1.2,
@@ -2278,7 +2278,7 @@ Class.flailBallSpike = {
     INDEPENDENT: true,
 }
 Class.flailBall = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     COLOR: "grey",
     HITS_OWN_TYPE: 'hard',
     INDEPENDENT: true,
@@ -2319,7 +2319,7 @@ Class.flailBall = {
     ]
 }
 Class.flailBolt1 = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     COLOR: "grey",
     INDEPENDENT: true,
     GUNS: [{
@@ -2331,7 +2331,7 @@ Class.flailBolt1 = {
     }],
 }
 Class.flailBolt2 = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     COLOR: "grey",
     INDEPENDENT: true,
     GUNS: [{
@@ -2343,7 +2343,7 @@ Class.flailBolt2 = {
     }],
 }
 Class.flailBolt3 = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     COLOR: "grey",
     GUNS: [{
         POSITION: [30, 5, 1, 8, 0, 0, 0]

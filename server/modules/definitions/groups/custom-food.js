@@ -4,7 +4,7 @@ const g = require('../gunvals.js');
 
 // turrets
 Class.mechanism = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     COLOR: -1,
     FACING_TYPE: ["spin", { speed: -0.02, independent: true }],
 	GUNS:[
@@ -35,7 +35,7 @@ Class.mechanism = {
 
 // dreads
 Class.protoD = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     LABEL: "Proto-Dread",
     SIZE: 28,
     SHAPE: 6,

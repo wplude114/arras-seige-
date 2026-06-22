@@ -39,6 +39,7 @@ Class.barrel = {
 Class.mount = {
     PARENT: "genericTank",
     LABEL: "Mount",
+    DANGER: 4,
     TURRETS: [
         ...Class.genericTank.TURRETS,
         {
@@ -48,6 +49,12 @@ Class.mount = {
             }]
         }
     ]
+}
+
+Class.smasher = {
+    PARENT: "genericSmasher",
+    LABEL: "Smasher",
+    DANGER: 4,
 }
 
 // Basic upgrades [TIER 2]
@@ -122,6 +129,20 @@ Class.tri = {
     ]
 }
 
+// Smasher upgrades [TIER 3]
+Class.sentry = {
+    PARENT: "genericSmasher",
+    LABEL: "Sentry",
+    DANGER: 5,
+    TURRETS: [
+        ...Class.genericSmasher.TURRETS,
+        {
+            POSITION: [8, 0, 0, 0, 360, 1],
+            TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]
+        }
+    ]
+}
+
 // Mount upgrades [TIER 2]
 
 Class.bar = {
@@ -189,8 +210,11 @@ Class.triBar = {
 
 // Upgrade tree
 Class.basic.UPGRADES_TIER_1 = ["barrel", "mount"]
+    Class.basic.UPGRADES_TIER_2 = ["smasher"]
+
     Class.barrel.UPGRADES_TIER_2 = ["tri"]
     Class.mount.UPGRADES_TIER_2 = ["bar", "flailR"]
+    Class.smasher.UPGRADES_TIER_3 = ["sentry"]
 
         Class.bar.UPGRADES_TIER_3 = ["triBar"]
         Class.tri.UPGRADES_TIER_3 = ["triBar"]

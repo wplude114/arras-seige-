@@ -1335,6 +1335,12 @@ var getClassUpgradeKey = function (number) {
             return "J";
         case 5:
             return "K";
+        case 6:
+            return "B";
+        case 7:
+            return "N";
+        case 8:
+            return "M";
         default:
             return null;
     }
@@ -1361,7 +1367,7 @@ let tiles,
         }
         for (let i = 0; i < hasUpgrades.length; i++) {
             let upgrade = hasUpgrades[i],
-                spacing = 2 * Math.max(1, upgrade.tier - tier),
+                spacing = 1 * Math.max(1, upgrade.tier - tier),
                 measure = measureSize(x, y + spacing, upgrade.upgradeColor ?? i, upgrade);
             branches.push([{ x, y: y + Math.sign(i) }, { x, y: y + spacing + 1 }]);
             if (i === hasUpgrades.length - 1 && !noUpgrades.length) {
@@ -1958,7 +1964,7 @@ function drawMinimapAndDebug(spacing, alcoveSize, GRAPHDATA) {
     if (global.metrics.rendertime < 10) orangeColor = true;
     // Text
     if (global.showDebug) {
-        drawText("Open Source Arras", x + len, y - 50 - 5 * 14 - 2, 15, "#1081E5", "right");
+        drawText("Erdlya Siege", x + len, y - 50 - 5 * 14 - 2, 15, "#d12a2a", "right");
         drawText("Prediction: " + Math.round(GRAPHDATA) + "ms : " + global.mspt + " mspt", x + len, y - 50 - 4 * 14, 10, color.guiwhite, "right");
         // drawText(`Bandwidth: ${gui.bandwidth.in} in, ${gui.bandwidth.out} out`, x + len, y - 50 - 3 * 14, 10, color.guiwhite, "right");
         drawText("Memory: " + global.metrics.rendergap.toFixed(1) + " Mib : " + "Class: " + gui.class, x + len, y - 50 - 3 * 14, 10, color.guiwhite, "right");
@@ -1966,10 +1972,10 @@ function drawMinimapAndDebug(spacing, alcoveSize, GRAPHDATA) {
         drawText("Server Speed: " + (100 * gui.fps).toFixed(2) + "% : Client Speed: " + global.metrics.rendertime + " FPS", x + len, y - 50 - 1 * 14, 10, orangeColor ? color.orange : color.guiwhite, "right");
         drawText(global.metrics.latency + " ms - " + global.serverName, x + len, y - 50, 10, color.guiwhite, "right");
     } else if (!global.GUIStatus.minimapReducedInfo) {
-        drawText("Open Source Arras", x + len, y - 50 - 2 * 14 - 2, 15, "#1081E5", "right");
+        drawText("Erdlya Siege", x + len, y - 50 - 2 * 14 - 2, 15, "#d12a2a", "right");
         drawText((100 * gui.fps).toFixed(2) + "% : " + global.metrics.rendertime + " FPS", x + len, y - 50 - 1 * 14, 10, orangeColor ? color.orange : color.guiwhite, "right");
         drawText(global.metrics.latency + " ms : " + global.metrics.updatetime + "Hz", x + len, y - 50, 10, color.guiwhite, "right");
-    } else drawText("Open Source Arras", x + len, y - 22 - 2 * 14 - 2, 15, "#1081E5", "right");
+    } else drawText("Erdlya Siege", x + len, y - 22 - 2 * 14 - 2, 15, "#d12a2a", "right");
 }
 
 function drawLeaderboard(spacing, alcoveSize, max) {
@@ -1977,7 +1983,7 @@ function drawLeaderboard(spacing, alcoveSize, max) {
     let lb = leaderboard.get();
     let vspacing = 4;
     let len = alcoveSize; // * global.screenWidth;
-    let height = 14;
+    let height = 10;
     let x = global.screenWidth - len - spacing;
     let y = spacing + height + 7;
     if (!lb.data.length) return;
@@ -2016,8 +2022,8 @@ function drawLeaderboard(spacing, alcoveSize, max) {
 function drawAvailableUpgrades(spacing, alcoveSize) {
     // Draw upgrade menu
     if (gui.upgrades.length > 0) {
-        let internalSpacing = 15;
-        let len = alcoveSize / 2;
+        let internalSpacing = 10;
+        let len = alcoveSize / 3;
         let height = len;
 
         // Animation processing
@@ -2041,7 +2047,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
         let clickableRatio = global.canvas.height / global.screenHeight / global.ratio;
         let lastBranch = -1;
         let upgradeHoverIndex = global.clickables.upgrade.check({ x: global.mouse.x, y: global.mouse.y });
-        upgradeSpin += 0.01;
+        upgradeSpin += 0.02;
 
         for (let i = 0; i < gui.upgrades.length; i++) {
             let upgrade = gui.upgrades[i];
@@ -2082,7 +2088,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
         // Draw dont upgrade button
         let h = 16,
             textScale = h - 6,
-            msg = "Don't Upgrade",
+            msg = "Hide Upgrades",
             m = measureText(msg, textScale) + 10;
         let buttonX = initialX + (rowWidth + len - initialX) / 2,
             buttonY = initialY + height + internalSpacing;
@@ -2095,26 +2101,26 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
         if (upgradeHoverIndex > -1 && upgradeHoverIndex < gui.upgrades.length && !global.mobile) {
             let picture = gui.upgrades[upgradeHoverIndex][2];
             if (picture.upgradeTooltip.length > 0) {
-                let boxWidth = measureText(picture.name, alcoveSize / 10),
+                let boxWidth = measureText(picture.name, alcoveSize / 17.5),
                     boxX = global.mouse.x * global.screenWidth / window.canvas.width + 2,
-                    boxY = global.mouse.y * global.screenHeight / window.canvas.height + 2,
-                    boxPadding = 6,
+                    boxY = global.mouse.y * global.screenHeight / window.canvas.height + 1,
+                    boxPadding = 2,
                     splitTooltip = picture.upgradeTooltip.split("\n"),
-                    textY = boxY + boxPadding + alcoveSize / 10;
+                    textY = boxY + boxPadding + alcoveSize / 17.5;
 
                 // Tooltip box width
-                for (let line of splitTooltip) boxWidth = Math.max(boxWidth, measureText(line, alcoveSize / 15));
+                for (let line of splitTooltip) boxWidth = Math.max(boxWidth, measureText(line, alcoveSize / 20));
 
                 // Draw tooltip box
                 gameDraw.setColor(ctx, color.dgrey);
-                ctx.lineWidth /= 1.5;
+                ctx.lineWidth /= 2;
                 drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, false);
                 drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, true);
-                ctx.lineWidth *= 1.5;
-                drawText(picture.name, boxX + boxPadding * 1.5, textY, alcoveSize / 10, color.guiwhite);
+                ctx.lineWidth *= 2;
+                drawText(picture.name, boxX + boxPadding * 1.5, textY, alcoveSize / 20, color.guiwhite);
                 for (let t of splitTooltip) {
                     textY += boxPadding + alcoveSize / 15
-                    drawText(t, boxX + boxPadding * 1.5, textY, alcoveSize / 15, color.guiwhite);
+                    drawText(t, boxX + boxPadding * 1.5, textY, alcoveSize / 20, color.guiwhite);
                 }
             }
         }

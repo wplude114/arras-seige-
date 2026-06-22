@@ -137,7 +137,7 @@ module.exports = {
     BOT_NAME_PREFIX: "",
 
     // The class that players and player-bots spawn as.
-    SPAWN_CLASS: 'developer',
+    SPAWN_CLASS: 'basic',
 
     // How every entity regenerates their health.
     REGENERATE_TICK: 200,
@@ -167,10 +167,10 @@ module.exports = {
     ENEMY_SPAWN_COOLDOWN_NEST: 600, // Cooldown (in game ticks) of nest enemies spawn attempts being made.
 
     // Cooldown (in seconds) of boss spawns being announced.
-    BOSS_SPAWN_COOLDOWN: 10,
+    BOSS_SPAWN_COOLDOWN: 10000000000,
     // The delay (in seconds) between the boss spawns being announced and the bosses actually spawning.
     // NOTE: The spawn message (ex. "A strange trembling...") takes half as long to appear than the boss.
-    BOSS_SPAWN_DURATION: 1,
+    BOSS_SPAWN_DURATION: 1000000000,
     FOOD_TYPES: [
         [1000000, [
             [1024, 'egg'], [256, 'betaEgg'], [64, 'alphaEgg'],

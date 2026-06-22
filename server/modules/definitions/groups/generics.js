@@ -132,12 +132,12 @@ Class.genericTank = {
     HITS_OWN_TYPE: "hardOnlyTanks"
 }
 Class.tankBody = {
-    PARENT: "genericTank",
+    PARENT: "genericEntity",
     LABEL: "Body",
     INDEPENDENT: true,
     MOTION_TYPE: "motor",
     FACING_TYPE: "toTarget",
-    TURRETS: [],
+    COLOR: "mirror",
     
     SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]],
     CONTROLLERS: ["turretWithMotion", "scaleWithMaster"],

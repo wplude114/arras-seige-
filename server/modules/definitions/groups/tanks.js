@@ -40,6 +40,18 @@ Class.barrel = {
         },
     ]
 }
+
+Class.mount = {
+    PARENT: "genericTank",
+    LABEL: "Mount",
+}
+Class.mount.TURRETS.push({ // push turrets so we still get body.
+        POSITION: [6, 10, 0, 0, 190, 0],
+        TYPE: ["genericEntity", {
+            INDEPENDENT: true
+        }]
+    })
+
 Class.tri = {
     PARENT: "genericTank",
     LABEL: "Tri",
@@ -104,5 +116,5 @@ Class.tri = {
     ]
 }
 
-Class.basic.UPGRADES_TIER_1 = ["barrel"]
+Class.basic.UPGRADES_TIER_1 = ["barrel", "mount"]
 Class.barrel.UPGRADES_TIER_2 = ["tri"]

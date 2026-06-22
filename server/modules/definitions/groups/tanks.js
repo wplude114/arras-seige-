@@ -44,13 +44,16 @@ Class.barrel = {
 Class.mount = {
     PARENT: "genericTank",
     LABEL: "Mount",
+    TURRETS: [
+        ...Class.genericTank.TURRETS,  // pls make a facilitator for this, this is temp
+        {
+            POSITION: [6, 10, 0, 0, 190, 0],
+            TYPE: ["genericEntity", {
+                INDEPENDENT: true
+            }]
+        }
+    ]
 }
-Class.mount.TURRETS.push({ // push turrets so we still get body.
-        POSITION: [6, 10, 0, 0, 190, 0],
-        TYPE: ["genericEntity", {
-            INDEPENDENT: true
-        }]
-    })
 
 Class.tri = {
     PARENT: "genericTank",

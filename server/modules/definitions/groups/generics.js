@@ -132,6 +132,13 @@ Class.genericTank = {
     RESET_EVENTS: true,
     HITS_OWN_TYPE: "hardOnlyTanks"
 }
+Class.tankTreads = {
+    PARENT: "genericEntity",
+    TYPE: "tank",
+    COLOR: 17,
+    SHAPE: [[-1.3,-1.2],[1.3,-1.2],[1.3,1.2],[-1.3,1.2]],
+    MIRROR_MASTER_ANGLE: true,
+}
 Class.tankBody = {
     PARENT: "genericEntity",
     LABEL: "Body",
@@ -142,6 +149,10 @@ Class.tankBody = {
     
     SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]],
     CONTROLLERS: ["turretWithMotion", "scaleWithMaster"],
+    TURRETS: [{ 
+            POSITION: [18],
+            TYPE: "tankTreads",
+        }],
 }
 Class.genericTank.TURRETS = [{ 
             POSITION: [18],

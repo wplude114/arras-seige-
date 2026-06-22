@@ -126,7 +126,7 @@ Class.flailR = {
     PARENT: "genericFlail",
     LABEL: "Flail",
     TURRETS: [
-        ...Class.genericTank.TURRETS,  // pls make a facilitator for this, this is temp
+        ...Class.genericTank.TURRETS,
         {
             POSITION: [6, 10, 0, 0, 0, 0],
             TYPE: ["flailBolt2", {
@@ -136,6 +136,6 @@ Class.flailR = {
     ]
 }
 
-Class.basic.UPGRADES_TIER_1 = ["barrel", "mount"]
+Class.basic.UPGRADES_TIER_1 = ["barrel", "mount", "lancer"]
     Class.barrel.UPGRADES_TIER_2 = ["tri"]
     Class.mount.UPGRADES_TIER_2 = ["flailR"]

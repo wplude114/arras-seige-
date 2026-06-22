@@ -193,7 +193,7 @@ Class.genericTankNoBody = {
     HITS_OWN_TYPE: "hardOnlyTanks"
 }
 Class.genericSmasher = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     DANGER: 7,
     IS_SMASHER: true,
     SKILL_CAP: [smshskl, 0, 0, 0, 0, smshskl, smshskl, smshskl, smshskl, smshskl],
@@ -204,7 +204,7 @@ Class.genericSmasher = {
     }
 }
 Class.genericBoss = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     TYPE: "miniboss",
     DANGER: 6,
     SKILL: skillSet({
@@ -422,7 +422,7 @@ Class.healAura = {
     },
 };
 Class.auraSymbol = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     CONTROLLERS: [["spin", {speed: -0.04}]],
     INDEPENDENT: true,
     COLOR: "teal",

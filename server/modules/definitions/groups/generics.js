@@ -87,6 +87,28 @@ Class.genericEntity = {
         LEVEL: -1
     }
 }
+Class.tankTreads = {
+    PARENT: "genericEntity",
+    TYPE: "tank",
+    COLOR: 17,
+    SHAPE: [[-1.3,-1.5],[1.3,-1.5],[1.3,1.5],[-1.3,1.5]],
+    MIRROR_MASTER_ANGLE: true,
+}
+Class.tankBody = {
+    PARENT: "genericEntity",
+    LABEL: "Body",
+    INDEPENDENT: true,
+    FACING_TYPE: "smoothWithMotion",
+    MOTION_TYPE: "motor",
+    COLOR: "mirror",
+    
+    SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]],
+    CONTROLLERS: ["turretWithMotion", "scaleWithMaster"],
+    TURRETS: [{ 
+            POSITION: [20],
+            TYPE: "tankTreads",
+        }],
+}
 Class.genericTank = {
     LABEL: "Unknown Class",
     TYPE: "tank",
@@ -123,7 +145,10 @@ Class.genericTank = {
         HETERO: 3,
     },
     GUNS: [],
-    TURRETS: [],
+    TURRETS: [{ 
+            POSITION: [17],
+            TYPE: "tankBody",
+        }],
     PROPS: [],
     ON: [],
     ARENA_CLOSER: false, // don't remove this, it stops dev basics going through walls
@@ -132,32 +157,6 @@ Class.genericTank = {
     RESET_EVENTS: true,
     HITS_OWN_TYPE: "hardOnlyTanks"
 }
-Class.tankTreads = {
-    PARENT: "genericEntity",
-    TYPE: "tank",
-    COLOR: 17,
-    SHAPE: [[-1.3,-1.5],[1.3,-1.5],[1.3,1.5],[-1.3,1.5]],
-    MIRROR_MASTER_ANGLE: true,
-}
-Class.tankBody = {
-    PARENT: "genericEntity",
-    LABEL: "Body",
-    INDEPENDENT: true,
-    FACING_TYPE: "smoothWithMotion",
-    MOTION_TYPE: "motor",
-    COLOR: "mirror",
-    
-    SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]],
-    CONTROLLERS: ["turretWithMotion", "scaleWithMaster"],
-    TURRETS: [{ 
-            POSITION: [20],
-            TYPE: "tankTreads",
-        }],
-}
-Class.genericTank.TURRETS = [{ 
-            POSITION: [17],
-            TYPE: "tankBody",
-        }]
 Class.genericTankNoBody = {
     LABEL: "Unknown Class",
     TYPE: "tank",

@@ -203,6 +203,13 @@ Class.genericTankNoBody = {
     HITS_OWN_TYPE: "hardOnlyTanks"
 }
 
+Class.smasherGrind = {
+    PARENT: "genericEntity",
+    TYPE: "tank",
+    COLOR: 17,
+    SHAPE: -5,
+    MIRROR_MASTER_ANGLE: true,
+}
 Class.smasherTankBody = {
     PARENT: "genericEntity",
     LABEL: "Body",
@@ -212,15 +219,9 @@ Class.smasherTankBody = {
     COLOR: "mirror",
     
     SHAPE: 5,
-    CONTROLLERS: ["turretWithMotion", "scaleWithMaster"],
     TURRETS: [{ 
             POSITION: [20],
-            TYPE: {
-    PARENT: "genericEntity",
-    COLOR: 17,
-    SHAPE: -5,
-    MIRROR_MASTER_ANGLE: true,
-    }},],
+            TYPE: "smasherGrind"},],
 }
 Class.grinderTankBody = {
     PARENT: "genericEntity",
@@ -231,15 +232,9 @@ Class.grinderTankBody = {
     COLOR: "mirror",
     
     SHAPE: 5,
-    CONTROLLERS: ["turretWithMotion", "scaleWithMaster"],
     TURRETS: [{ 
-            POSITION: [20,0,0,0,45],
-            TYPE: {
-    PARENT: "genericEntity",
-    COLOR: 17,
-    SHAPE: -5,
-    MIRROR_MASTER_ANGLE: true,
-    }},],
+            POSITION: [23,0,0,0,45],
+            TYPE: "smasherGrind"},],
 }
 
 Class.genericSmasher = {

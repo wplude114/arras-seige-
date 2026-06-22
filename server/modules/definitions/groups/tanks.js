@@ -60,6 +60,7 @@ Class.tri = {
     PARENT: "genericTank",
     LABEL: "Tri",
     DANGER: 5,
+    HAS_NO_RECOIL: true,
     FACING_TYPE: ["spin", { speed: 0.05, independent: true }],
     GUNS: [
        {
@@ -67,6 +68,7 @@ Class.tri = {
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
                 TYPE: "bullet",
+                HAS_NO_RECOIL: true
             }
         },
         {
@@ -74,6 +76,7 @@ Class.tri = {
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic]),
                 TYPE: "bullet",
+                HAS_NO_RECOIL: true
             }
         },
         {
@@ -86,6 +89,7 @@ Class.tri = {
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
                 TYPE: "bullet",
+                HAS_NO_RECOIL: true
             }
         },
         {
@@ -93,6 +97,7 @@ Class.tri = {
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic]),
                 TYPE: "bullet",
+                HAS_NO_RECOIL: true
             }
         },
         {
@@ -105,6 +110,7 @@ Class.tri = {
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.fake]),
                 TYPE: "bullet",
+                HAS_NO_RECOIL: true
             }
         },
         {
@@ -112,6 +118,7 @@ Class.tri = {
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic]),
                 TYPE: "bullet",
+                HAS_NO_RECOIL: true
             }
         },
         {
@@ -125,6 +132,7 @@ Class.tri = {
 Class.bar = {
     PARENT: "genericTank",
     LABEL: "Bar",
+    HAS_NO_RECOIL: true,
     GUNS: [
         {
             POSITION: {LENGTH: 17,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
@@ -133,7 +141,7 @@ Class.bar = {
         ...Class.genericTank.TURRETS,
         {
             POSITION: [8, 17, 0, 0, 360, 1],
-            TYPE: ["autoTankGun", {INDEPENDENT: true}]
+            TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]
         }
     ]
 }
@@ -172,15 +180,15 @@ Class.triBar = {
         ...Class.genericTank.TURRETS,
         {
             POSITION: [8, 17, 0, 0, 360, 1],
-            TYPE: ["autoTankGun", {INDEPENDENT: true}]
+            TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]
         },
         {
             POSITION: [8, 17, 0, 120, 360, 1],
-            TYPE: ["autoTankGun", {INDEPENDENT: true}]
+            TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]
         },
         {
             POSITION: [8, 17, 0, -120, 360, 1],
-            TYPE: ["autoTankGun", {INDEPENDENT: true}]
+            TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]
         },]
 }
 

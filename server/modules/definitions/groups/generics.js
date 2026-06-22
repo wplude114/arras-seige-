@@ -137,11 +137,11 @@ Class.tankBody = {
     INDEPENDENT: true,
     MOTION_TYPE: "motor",
     FACING_TYPE: "toTarget",
+    TURRETS: [],
     
     SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]],
     CONTROLLERS: ["turretWithMotion", "scaleWithMaster"],
 }
-// add after just for no inception..?
 Class.genericTank.TURRETS = [{ 
             POSITION: [18, 0, 0, 0, 0, 0],
             TYPE: "tankBody",

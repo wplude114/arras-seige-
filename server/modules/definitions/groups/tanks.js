@@ -45,9 +45,9 @@ Class.mount = {
     PARENT: "genericTank",
     LABEL: "Mount",
     TURRETS: [
-        ...Class.genericTank.TURRETS,  // pls make a facilitator for this, this is temp
+        ...Class.genericTank.TURRETS,
         {
-            POSITION: [6, 10, 0, 0, 190, 0],
+            POSITION: [7, 10, 0, 0, 190, 0],
             TYPE: ["genericEntity", {
                 INDEPENDENT: true
             }]
@@ -136,6 +136,6 @@ Class.flailR = {
     ]
 }
 
-Class.basic.UPGRADES_TIER_1 = ["barrel", "mount", "lancer"]
+Class.basic.UPGRADES_TIER_1 = ["barrel", "mount"]
     Class.barrel.UPGRADES_TIER_2 = ["tri"]
     Class.mount.UPGRADES_TIER_2 = ["flailR"]

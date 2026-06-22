@@ -254,7 +254,7 @@ Class.genericSmasher = {
     },
     TURRETS: [{ 
             POSITION: [17],
-            TYPE: "smaasherBody",
+            TYPE: "smasherBody",
         }],
 }
 Class.genericBoss = {

@@ -100,7 +100,7 @@ Class.genericTank = {
         ALLOW_BRIGHTNESS_INVERT: true,
     },
     SHAPE: 0,
-    FACING_TYPE: "smoothWithMotion",
+    FACING_TYPE: "toTarget",
     MOTION_TYPE: "motor",
     SIZE: 12,
     MAX_CHILDREN: 0,
@@ -136,7 +136,7 @@ Class.tankBody = {
     PARENT: "genericEntity",
     LABEL: "Body",
     INDEPENDENT: true,
-    FACING_TYPE: "toTarget",
+    FACING_TYPE: "smoothWithMotion",
     MOTION_TYPE: "motor",
     COLOR: "mirror",
     

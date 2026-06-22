@@ -485,7 +485,7 @@ exports.makeCeption = (type, name = -1, options = {}) => {
 }
 exports.makeDeco = (shape = 0, color = 16) => {
     return {
-        PARENT: "genericTankNoBodyNoBody",
+        PARENT: "genericTankNoBody",
         SHAPE: shape,
         COLOR: color,
     };

@@ -53,7 +53,7 @@ Class.trackerLancer = {
       POSITION: [25, 15, 0.001, 0, 0, 0, 0]
     }
   ],
-  TURRETS: [{
+  TURRETS: [...Class.genericTank.TURRETS,{
         POSITION: [10, 0, 0, 180, 360, 1],
         TYPE: [
             "tracker3gun",
@@ -66,7 +66,6 @@ Class.trackerLancer = {
     }]
 }
 
-Class.hawk = makeBird("lancer", "Hawk")
 Class.wasp = makeOver("lancer", "Wasp", {count: 1, independent: true, cycle: true})
 
-Class.lancer.UPGRADES_TIER_3 = ["hawk", "wasp", "trackerLancer"]
+Class.lancer.UPGRADES_TIER_3 = ["wasp", "trackerLancer"]

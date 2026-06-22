@@ -2272,7 +2272,7 @@ testLayeredBoss.addLayer({turret: {
 
 // FLAIL!!!
 Class.flailBallSpike = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     COLOR: "black",
     SHAPE: 6,
     INDEPENDENT: true,

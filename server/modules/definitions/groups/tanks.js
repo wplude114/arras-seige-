@@ -132,8 +132,8 @@ Class.bar = {
     TURRETS: [
         ...Class.genericTank.TURRETS,
         {
-            POSITION: [8, 17, 0, 0, 0, 1],
-            TYPE: ["autoTankGun"]
+            POSITION: [8, 17, 0, 0, 360, 1],
+            TYPE: ["autoTankGun", {INDEPENDENT: true}]
         }
     ]
 }
@@ -171,16 +171,16 @@ Class.triBar = {
     TURRETS: [
         ...Class.genericTank.TURRETS,
         {
-            POSITION: [8, 17, 0, 0, 0, 1],
-            TYPE: ["autoTankGun"]
+            POSITION: [8, 17, 0, 0, 360, 1],
+            TYPE: ["autoTankGun", {INDEPENDENT: true}]
         },
         {
-            POSITION: [8, 17, 0, 120, 0, 1],
-            TYPE: ["autoTankGun"]
+            POSITION: [8, 17, 0, 120, 360, 1],
+            TYPE: ["autoTankGun", {INDEPENDENT: true}]
         },
         {
-            POSITION: [8, 17, 0, -120, 0, 1],
-            TYPE: ["autoTankGun"]
+            POSITION: [8, 17, 0, -120, 360, 1],
+            TYPE: ["autoTankGun", {INDEPENDENT: true}]
         },]
 }
 

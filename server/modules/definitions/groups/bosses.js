@@ -507,7 +507,7 @@ Class.legionaryCrasherTop = {
     }, 3),
 }
 Class.legionaryCrasherSpawner = {
-    PARENT: 'genericTank',
+    PARENT: 'genericTankNoBodyNoBody',
     SHAPE: "",
     INDEPENDENT: true,
     GUNS: [{
@@ -1344,7 +1344,7 @@ Class.taureonCoreBase = {
     COLOR: '#00A2E8'
 };
 Class.taureonCore = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     LABEL: "Core Turret",
     SHAPE: 4.5,
     COLOR: '#99D9EA',
@@ -1377,7 +1377,7 @@ Class.taureonStar = {
     MIRROR_MASTER_ANGLE: true
 };
 Class.taureonRailgunTurret = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     COLOR: "grey",
     LABEL: "Railgun Turret",
     CONTROLLERS: ["nearestDifferentMaster", "onlyAcceptInArc"],
@@ -1395,7 +1395,7 @@ Class.taureonRailgunTurret = {
     }]
 };
 Class.taureonThruster = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     COLOR: "grey",
     LABEL: "Thruster",
     CONTROLLERS: ["onlyAcceptInArc"],
@@ -1425,7 +1425,7 @@ Class.taureonMissile = {
     },
     TURRETS: [{
         POSITION: [10, 0, 0, 0, 360, 1],
-        TYPE: ["genericTank", {COLOR: "grey"}],
+        TYPE: ["genericTankNoBody", {COLOR: "grey"}],
     }],
     GUNS: [{
         POSITION: [6, 12, 1.4, 8, 0, 180, 0],
@@ -1689,12 +1689,12 @@ Class.zephiBoss = {
 };
 
 Class.dogeiscutBody = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     COLOR: "grey",
     SHAPE: [[1,0],[-0.7,0.7],[-0.35,0],[-0.7,-0.7]]
 }
 Class.dogeiscutTurret = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     COLOR: "grey",
     GUNS: [ {
             POSITION: [ 50, 5, 2.5, 0, 0, 0, 0, ],
@@ -1709,17 +1709,17 @@ Class.dogeiscutTurret = {
     TURRETS: [
         {
             POSITION: [16, 0, 0, 0, 360, 1],
-            TYPE: ["genericTank",  { MIRROR_MASTER_ANGLE: true, COLOR: "#f6c6a2"}],
+            TYPE: ["genericTankNoBody",  { MIRROR_MASTER_ANGLE: true, COLOR: "#f6c6a2"}],
         },
         {
             POSITION: [12, 0, 0, 0, 360, 1],
-            TYPE: ["genericTank",  { MIRROR_MASTER_ANGLE: true, COLOR: "pink"}],
+            TYPE: ["genericTankNoBody",  { MIRROR_MASTER_ANGLE: true, COLOR: "pink"}],
         },
     ]
 }
 function createDogeiscutMissileTurret(color) {
     return {
-        PARENT: "genericTank",
+        PARENT: "genericTankNoBody",
         COLOR: "grey",
         GUNS: [ {
                 POSITION: [ 15, 8, 2.5, 0, 0, 180, 0, ],
@@ -1766,7 +1766,7 @@ function createDogeiscutMissile(color) {
             },
             {
                 POSITION: [12, 0, 0, 0, 360, 1],
-                TYPE: ["genericTank", {COLOR: "grey"}],
+                TYPE: ["genericTankNoBody", {COLOR: "grey"}],
             }
         ]
     }
@@ -1814,7 +1814,7 @@ Class.dogeiscutBomb = {
         TURRETS: [
             {
                 POSITION: [8, 0, 0, 0, 360, 1],
-                TYPE: ["genericTank", {COLOR: "grey"}],
+                TYPE: ["genericTankNoBody", {COLOR: "grey"}],
             }
         ]
     }
@@ -1981,13 +1981,13 @@ Class.dogeiscutBoss = {
         },
         {
             POSITION: [1, 10.5, 0, 0, 360, 0],
-            TYPE: ["genericTank",  {COLOR: "black"}],
+            TYPE: ["genericTankNoBody",  {COLOR: "black"}],
         },
     ]
 }
 Class.trplnrBossAuraBulletAura = addAura(1, 0.8)
 Class.trplnrBossAuraBullet = {
-    PARENT: 'genericTank',
+    PARENT: 'genericTankNoBody',
     LABEL: 'Nest',
     SHAPE: -4,
     PERSISTS_AFTER_DEATH: true,
@@ -2342,7 +2342,7 @@ Class.frostAuraLargeOutline = {
         "M 0 0 L 0.293 0.902 M 0 0 L -0.768 0.558 M 0 0 L -0.768 -0.558 M 0 0 L 0.293 -0.902",
 }
 Class.frostAuraSymbol = {
-	PARENT: "genericTank",
+	PARENT: "genericTankNoBody",
 	CONTROLLERS: [["spin", { speed: -0.04 }]],
 	INDEPENDENT: true,
     BORDERLESS: true,
@@ -2354,7 +2354,7 @@ Class.frostAuraSymbol = {
     }]
 }
 Class.frostAuraSymbolOutline = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
 	MIRROR_MASTER_ANGLE: true,
     DRAW_FILL: false,
 	SHAPE: "M 1 0 L 0.797 0.46 L 0.5 0.866 L 0 0.92 L -0.5 0.866 L -0.797 0.46 L -1 0 L -0.797 -0.46 L -0.5 -0.866 L 0 -0.92 L 0.5 -0.866 L 0.797 -0.46 L 1 0 Z" +
@@ -2364,7 +2364,7 @@ Class.frostAuraSymbolOutline = {
 function addIcosphereAura(damageFactor = 1, sizeFactor = 1, opacity = 0.3, auraSize = "Medium") {
 	let auraType = "frostAura" + auraSize;
 	return {
-		PARENT: "genericTank",
+		PARENT: "genericTankNoBody",
 		INDEPENDENT: true,
 		LABEL: "",
 		COLOR: 17,
@@ -2394,7 +2394,7 @@ Class.frostAuraBlockTop = {
 	MIRROR_MASTER_ANGLE: true,
 }
 Class.frostAuraBlockTurret = {
-	PARENT: "genericTank",
+	PARENT: "genericTankNoBody",
     INDEPENDENT: true,
 	COLOR: 17,
     CONTROLLERS: ["nearestDifferentMaster"],
@@ -2794,7 +2794,7 @@ class io_nearestDifferentMaster2 extends ioTypes.nearestDifferentMaster {
 }
 ioTypes.nearestDifferentMaster2 = io_nearestDifferentMaster2;
 Class.toothlessBase = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     LABEL: "NightFury",
 	UPGRADE_TOOLTIP: "A cute...",
     GLOW: {
@@ -2824,7 +2824,7 @@ Class.toothlessBase = {
     },
 }
 Class.toothlessBossTurret = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     LABEL: "",
     BODY: {
         FOV: 3,
@@ -2900,7 +2900,7 @@ Class.toothlessBossTurret = {
     }],
 };
 Class.toothlessBossDeco = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     LABEL: "",
     SHAPE: 3,
     SIZE: 10,
@@ -3010,7 +3010,7 @@ Class.MKTurretFactoryWithController = {
     ]
 }
 Class.MKTurretFactory = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     LABEL: "MKTurret factory",
     SKILL: [12, 12, 12, 12, 12, 12, 12, 12, 12, 12],
     COLOR: 16,
@@ -3059,7 +3059,7 @@ Class.MKTurretCarrierWithController = {
     ]
 }
 Class.MKTurretThruster = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     LABEL: "MKTurret Thruster",
     FACING_TYPE: "toTarget",
     IGNORED_BY_AI: true,
@@ -3080,7 +3080,7 @@ Class.MKTurretThruster = {
     }]
 }
 Class.MKTurret = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     FACING_TYPE: "toTarget",
     IGNORED_BY_AI: true,
     DAMAGE_EFFECTS: false,
@@ -3136,7 +3136,7 @@ Class.MKTurret = {
     ],
 }
 Class.AEMKShipBoss = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     LABEL: "MKShip",
     NAME: "Æ🚫Sports",
     SYNC_WITH_TANK: true,
@@ -3222,7 +3222,7 @@ Class.AEMKShipBoss = {
 }
 Class.helenaBossBaseAura = addAura(2, 2, 0)
 const helenaBossBase = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     COLOR: "crasher",
     UPGRADE_COLOR: "crasher",
     LABEL: "AV-512-F",
@@ -3255,7 +3255,7 @@ const helenaBossBase = {
 Class.helenaDpProp = makeDeco(3.5, "crasher")
 Class.helenaBossDpProp2 = makeDeco(3.5, "black")
 Class.helenaBossDpPropArmed = {
-    PARENT: "genericTank",
+    PARENT: "genericTankNoBody",
     COLOR: "crasher",
     SHAPE: 3,
     GUNS: weaponArray(

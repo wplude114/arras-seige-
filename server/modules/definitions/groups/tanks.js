@@ -127,15 +127,13 @@ Class.bar = {
     LABEL: "Bar",
     GUNS: [
         {
-            POSITION: {LENGTH: 15,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+            POSITION: {LENGTH: 17,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
         },],
     TURRETS: [
         ...Class.genericTank.TURRETS,
         {
-            POSITION: [8, 15, 0, 0, 0, 1],
-            TYPE: ["autoTankGun", {
-                INDEPENDENT: true
-            }]
+            POSITION: [8, 17, 0, 0, 0, 1],
+            TYPE: ["autoTankGun"]
         }
     ]
 }
@@ -162,33 +160,27 @@ Class.triBar = {
     FACING_TYPE: ["spin", { speed: 0.05, independent: true }],
     GUNS: [
         {
-            POSITION: {LENGTH: 15,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+            POSITION: {LENGTH: 17,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
         },
         {
-            POSITION: {LENGTH: 15,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 120,DELAY: 0},
+            POSITION: {LENGTH: 17,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 120,DELAY: 0},
         },
         {
-            POSITION: {LENGTH: 15,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: -120,DELAY: 0},
+            POSITION: {LENGTH: 17,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: -120,DELAY: 0},
         },],
     TURRETS: [
         ...Class.genericTank.TURRETS,
         {
-            POSITION: [8, 15, 0, 0, 0, 1],
-            TYPE: ["autoTankGun", {
-                INDEPENDENT: true
-            }]
+            POSITION: [8, 17, 0, 0, 0, 1],
+            TYPE: ["autoTankGun"]
         },
         {
-            POSITION: [8, 15, 0, 120, 0, 1],
-            TYPE: ["autoTankGun", {
-                INDEPENDENT: true
-            }]
+            POSITION: [8, 17, 0, 120, 0, 1],
+            TYPE: ["autoTankGun"]
         },
         {
-            POSITION: [8, 15, 0, -120, 0, 1],
-            TYPE: ["autoTankGun", {
-                INDEPENDENT: true
-            }]
+            POSITION: [8, 17, 0, -120, 0, 1],
+            TYPE: ["autoTankGun"]
         },]
 }
 

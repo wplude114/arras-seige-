@@ -132,6 +132,38 @@ Class.genericTank = {
     RESET_EVENTS: true,
     HITS_OWN_TYPE: "hardOnlyTanks"
 }
+Class.tankBody = {
+    LABEL: "Body",
+    TYPE: "tank",
+    DAMAGE_CLASS: 2,
+    COLOR: {
+        BASE: "mirror",
+        HUE_SHIFT: 0,
+        SATURATION_SHIFT: 1,
+        BRIGHTNESS_SHIFT: 0,
+        ALLOW_BRIGHTNESS_INVERT: true,
+    },
+    INDEPENDENT: true,
+    MOTION_TYPE: "motor",
+    FACING_TYPE: "toTarget",
+    MAX_CHILDREN: 0,
+    DAMAGE_EFFECTS: false,
+    IGNORED_BY_AI: true,
+    SYNC_WITH_TANK: false,
+    IS_IMMUNE_TO_TILES: false,
+    ARENA_CLOSER: false, // don't remove this, it stops dev basics going through walls
+    GIVE_KILL_MESSAGE: true,
+    DRAW_HEALTH: true,
+    RESET_EVENTS: true,
+    HITS_OWN_TYPE: "hardOnlyTanks",
+    
+    SHAPE: [[-1.5,-1],[0,-1.3],[1.5,-1],[1.5,1],[0,1.3],[-1.5,1]],
+    CONTROLLERS: ["turretWithMotion", "scaleWithMaster"],
+}
+Class.genericTank.TURRETS = [{
+            POSITION: [18, 0, 0, 90, 0, 0],
+            TYPE: "tankBody",
+        }]
 Class.genericSmasher = {
     PARENT: "genericTank",
     DANGER: 7,

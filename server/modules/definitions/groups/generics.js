@@ -203,7 +203,7 @@ Class.genericTankNoBody = {
     HITS_OWN_TYPE: "hardOnlyTanks"
 }
 
-Class.smasherBody = {
+Class.smasherTankBody = {
     PARENT: "genericEntity",
     LABEL: "Body",
     INDEPENDENT: true,
@@ -222,7 +222,7 @@ Class.smasherBody = {
     MIRROR_MASTER_ANGLE: true,
     }},],
 }
-Class.grinderBody = {
+Class.grinderTankBody = {
     PARENT: "genericEntity",
     LABEL: "Body",
     INDEPENDENT: true,
@@ -254,7 +254,7 @@ Class.genericSmasher = {
     },
     TURRETS: [{ 
             POSITION: [20],
-            TYPE: "smasherBody",
+            TYPE: "smasherTankBody",
         }],
 }
 Class.genericBoss = {

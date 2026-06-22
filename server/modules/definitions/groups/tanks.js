@@ -7,12 +7,7 @@ const g = require('../gunvals.js');
 Class.basic = {
     PARENT: "genericTank",
     LABEL: "Base",
-    DANGER: 0,
-    GUNS: [
-        {
-            POSITION: {LENGTH: 11,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
-        },
-    ]
+    DANGER: 1,
 }
 
 // Base upgrades [TIER 1]

@@ -185,7 +185,7 @@ Class.shottrapTurret = makeTurret({
     }]
 }, {limitFov: true, aiSettings: {SKYNET: true, FULL_VIEW: true, independent: true, extraStats: []}})
 Class.machineTripleTurret = {
-    PARENT: "genericTankNoBodyNoBody",
+    PARENT: "genericTankNoBody",
     FACING_TYPE: ["spin", {speed: 0.06}],
     INDEPENDENT: true,
     COLOR: -1,
@@ -473,7 +473,7 @@ Class.minigunNesterTurret = makeTurret({
     ],
 }, {canRepel: true, limitFov: true, color: 'mirror', extraStats: []})
 Class.triTrapGuardTurret = {
-    PARENT: "genericTankNoBodyNoBody",
+    PARENT: "genericTankNoBody",
     COLOR: -1,
     FACING_TYPE: ["spin", { independent: true }],
     GUNS: weaponArray([
@@ -496,7 +496,7 @@ Class.triTrapGuardTurret = {
     ], 3),
 }
 Class.eliteSpinnerCyclone = {
-    PARENT: "genericTankNoBodyNoBody",
+    PARENT: "genericTankNoBody",
     COLOR: -1,
     FACING_TYPE: ["spin", { speed: -0.1, independent: true }],
     GUNS: weaponArray([
@@ -989,7 +989,7 @@ Class.legionaryTwin = makeTurret({
 
 // Healer turrets
 Class.sanctuaryHealer = {
-    PARENT: "genericTankNoBodyNoBody",
+    PARENT: "genericTankNoBody",
     LABEL: "",
     COLOR: "grey",
     BODY: {
@@ -1002,7 +1002,7 @@ Class.sanctuaryHealer = {
     }],
 }
 Class.surgeonPillboxTurret = {
-    PARENT: "genericTankNoBodyNoBody",
+    PARENT: "genericTankNoBody",
     LABEL: "",
     COLOR: "grey",
     HAS_NO_RECOIL: true,
@@ -1053,7 +1053,7 @@ Class.baseSwarmTurret = makeTurret({
     ],
 }, {label: "Protector", independent: true, aiSettings: {NO_LEAD: true, LIKES_SHAPES: true}})
 Class.antiTankMachineGunArm = {
-    PARENT: "genericTankNoBodyNoBody",
+    PARENT: "genericTankNoBody",
     COLOR: "grey",
     CONTROLLERS: ["mapTargetToGoal"],
     SKILL_CAP: Array(10).fill(255),

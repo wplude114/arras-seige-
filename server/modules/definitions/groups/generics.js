@@ -136,7 +136,7 @@ Class.tankTreads = {
     PARENT: "genericEntity",
     TYPE: "tank",
     COLOR: 17,
-    SHAPE: [[-1.3,-1.2],[1.3,-1.2],[1.3,1.2],[-1.3,1.2]],
+    SHAPE: [[-1.3,-1.5],[1.3,-1.5],[1.3,1.5],[-1.3,1.5]],
     MIRROR_MASTER_ANGLE: true,
 }
 Class.tankBody = {

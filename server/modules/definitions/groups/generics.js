@@ -202,6 +202,28 @@ Class.genericTankNoBody = {
     RESET_EVENTS: true,
     HITS_OWN_TYPE: "hardOnlyTanks"
 }
+
+Class.smasherBody = {
+    PARENT: "genericEntity",
+    LABEL: "Body",
+    INDEPENDENT: true,
+    FACING_TYPE: "turnWithSpeed",
+    MOTION_TYPE: "motor",
+    COLOR: "mirror",
+    
+    SHAPE: 5,
+    CONTROLLERS: ["turretWithMotion", "scaleWithMaster"],
+    TURRETS: [{ 
+            POSITION: [20],
+            TYPE: {
+    PARENT: "genericEntity",
+    COLOR: 17,
+    SHAPE: -5,
+    MIRROR_MASTER_ANGLE: true,
+},
+        }],
+}
+
 Class.genericSmasher = {
     PARENT: "genericTankNoBody",
     DANGER: 7,

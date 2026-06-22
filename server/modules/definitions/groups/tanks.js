@@ -130,7 +130,7 @@ Class.tri = {
 }
 
 // Smasher upgrades [TIER 3]
-Class.sentry = {
+Class.newSentry = {
     PARENT: "genericSmasher",
     LABEL: "Sentry",
     DANGER: 5,
@@ -214,7 +214,7 @@ Class.basic.UPGRADES_TIER_1 = ["barrel", "mount"]
 
     Class.barrel.UPGRADES_TIER_2 = ["tri"]
     Class.mount.UPGRADES_TIER_2 = ["bar", "flailR"]
-    Class.smasher.UPGRADES_TIER_3 = ["sentry"]
+    Class.smasher.UPGRADES_TIER_3 = ["newSentry"]
 
         Class.bar.UPGRADES_TIER_3 = ["triBar"]
         Class.tri.UPGRADES_TIER_3 = ["triBar"]

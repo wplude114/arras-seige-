@@ -210,11 +210,9 @@ Class.triBar = {
 
 // Upgrade tree
 Class.basic.UPGRADES_TIER_1 = ["barrel", "mount"]
-    Class.basic.UPGRADES_TIER_2 = ["smasher"]
 
     Class.barrel.UPGRADES_TIER_2 = ["tri"]
     Class.mount.UPGRADES_TIER_2 = ["bar", "flailR"]
-    Class.smasher.UPGRADES_TIER_3 = ["newSentry"]
 
         Class.bar.UPGRADES_TIER_3 = ["triBar"]
         Class.tri.UPGRADES_TIER_3 = ["triBar"]

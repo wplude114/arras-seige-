@@ -16,7 +16,7 @@ Class.tankBody = {
     CONTROLLERS: ["turretWithMotion", "scaleWithMaster"],
     GUNS: [
       {
-            POSITION: {LENGTH: 8,WIDTH: 16,ASPECT: 1, X: 14,Y: 0,ANGLE: 90,DELAY: 0},
+            POSITION: {LENGTH: 16,WIDTH: 30,ASPECT: 1, X: 0,Y: 0,ANGLE: 90,DELAY: 0},
             PROPERTIES: {
               COLOR: 17
             }

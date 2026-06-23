@@ -1,12 +1,12 @@
 const { basePolygonDamage, basePolygonHealth } = require('../constants.js');
 const { makeCrasher, makeLaby, makePolygonTier } = require('../facilitators.js');
 
-Class.square = {
+Class.triangle = {
     PARENT: "food",
-    LABEL: "Square",
+    LABEL: "Triangle",
     VALUE: 30,
-    SHAPE: 20,
-    SIZE: 14,
+    SHAPE: 4,
+    SIZE: 10,
     COLOR: 8,
     BODY: {
         DAMAGE: basePolygonDamage,
@@ -19,13 +19,13 @@ Class.square = {
     INTANGIBLE: false,
 };
 
-Class.triangle = {
+Class.square = {
     PARENT: "food",
-    LABEL: "Triangle",
+    LABEL: "Square",
     VALUE: 120,
-    SHAPE: 4,
-    SIZE: 10,
-    COLOR: 7,
+    SHAPE: 3,
+    SIZE: 15,
+    COLOR: 8,
     BODY: {
         DAMAGE: basePolygonDamage,
         DENSITY: 6,

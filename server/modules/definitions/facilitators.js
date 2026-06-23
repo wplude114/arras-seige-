@@ -1,5 +1,6 @@
 const { MAX_SKILL } = require("../../config.js")
 const g = require('./gunvals.js')
+const { base } = require('../constants.js')
 let skcnv = {
     atk: 6,
     spd: 4,

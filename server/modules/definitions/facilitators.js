@@ -1000,16 +1000,17 @@ exports.makeRammer = (type) => {
 	type = ensureIsClass(type);
 	return {
 		PARENT: type,
-		SIZE: type.SIZE / 1.25,
+		SIZE: type.SIZE,
 		VALUE: type.VALUE * 1.35,
 		GIVE_KILL_MESSAGE: true,
+		HAS_NO_MASTER: true,
 		CONTROLLERS: ["nearestDifferentMaster", "mapTargetToGoal"],
 		AI: { NO_LEAD: true },
 		CRAVES_ATTENTION: true,
 		MOTION_TYPE: "motor",
 		PROPS: [{
-			POSITION: [ (type.SIZE/1.25) - 3, 0, 0, 0, 360, 1 ],
-			TYPE: [ type, { COLOR: "mirror", SHAPE: (type.SHAPE * -1) } ]
+			POSITION: [ type.SIZE/2, 0, 0, 0, 360, 1 ],
+			TYPE: [ type, { COLOR: "black" } ]
 		}],
 		LABEL: "Rammer " + type.LABEL
 	};

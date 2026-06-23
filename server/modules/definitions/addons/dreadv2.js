@@ -2,6 +2,7 @@ const { combineStats, addAura, makeAuto, weaponArray, dereference } = require('.
 const { smshskl, base } = require('../constants.js');
 const g = require('../gunvals.js');
 
+return console.log("DREADSV2 has been disabled.")
 const eggnoughtBody = {
 	SPEED: base.SPEED * 0.65,
 	HEALTH: base.HEALTH * 1.75,

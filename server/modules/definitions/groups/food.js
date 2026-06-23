@@ -5,7 +5,7 @@ Class.square = {
     PARENT: "food",
     LABEL: "Square",
     VALUE: 30,
-    SHAPE: 4,
+    SHAPE: 20,
     SIZE: 14,
     COLOR: 8,
     BODY: {
@@ -23,9 +23,9 @@ Class.triangle = {
     PARENT: "food",
     LABEL: "Triangle",
     VALUE: 120,
-    SHAPE: 3,
+    SHAPE: 4,
     SIZE: 10,
-    COLOR: 3,
+    COLOR: 7,
     BODY: {
         DAMAGE: basePolygonDamage,
         DENSITY: 6,
@@ -43,7 +43,7 @@ Class.pentagon = {
     VALUE: 400,
     SHAPE: 5,
     SIZE: 21,
-    COLOR: 12,
+    COLOR: 4,
     BODY: {
         DAMAGE: 1.5 * basePolygonDamage,
         DENSITY: 8,
@@ -61,7 +61,7 @@ Class.hexagon = {
     VALUE: 500,
     SHAPE: 6,
     SIZE: 25,
-    COLOR: 14,
+    COLOR: 2,
     BODY: {
         DAMAGE: 3 * basePolygonDamage,
         DENSITY: 8,

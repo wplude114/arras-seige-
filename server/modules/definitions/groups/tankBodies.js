@@ -58,7 +58,7 @@ Class.resurfacerBody = {
         {
             POSITION: {LENGTH: 4,WIDTH: 10,ASPECT: 1.4, X: 20,Y: 0,ANGLE: 180,DELAY: 0},
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, {reload: 0.3, range: 0.5, damage: 0.5, recoil: 3, shudder: 10}]),
+                SHOOT_SETTINGS: combineStats([g.basic, {reload: 0.3, range: 0.3, damage: 0.5, recoil: 3, shudder: 10, speed: 0.5}]),
                 TYPE: "trap",
                 ALT_FIRE: true
             }

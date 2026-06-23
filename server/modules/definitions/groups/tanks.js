@@ -270,7 +270,7 @@ Class.triBar = {
 Class.basic.UPGRADES_TIER_1 = ["barrel", "mount"]
 Class.basic.UPGRADES_TIER_3 = ["castle"]
 
-    Class.barrel.UPGRADES_TIER_2 = ["machineGun", "tri"]
+    Class.barrel.UPGRADES_TIER_2 = ["machineGun", "tri", "lobber"]
     Class.mount.UPGRADES_TIER_2 = ["bar", "flailR"]
 
         Class.bar.UPGRADES_TIER_3 = ["triBar"]

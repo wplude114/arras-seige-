@@ -324,7 +324,7 @@ Class.drone = {
     CONTROL_RANGE: 0,
     SHAPE: 3,
     MOTION_TYPE: "chase",
-    FACING_TYPE: "smoothToTarget",
+    FACING_TYPE: "turnWithSpeed",
     CONTROLLERS: [
         "nearestDifferentMaster",
         "canRepel",
@@ -379,10 +379,6 @@ Class.swarm = {
         PUSHABILITY: 0.6,
         FOV: 1.5,
     },
-    TURRETS: [{ 
-            POSITION: [17],
-            TYPE: "tankBody",
-        }],
     DIE_AT_RANGE: true,
     BUFF_VS_FOOD: true,
 };

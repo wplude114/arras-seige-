@@ -1,33 +1,13 @@
 const { basePolygonDamage, basePolygonHealth } = require('../constants.js');
-const { makeRelic, makeRare, makePrimordial, makeCrasher, makeLaby, makePolygonTier } = require('../facilitators.js');
-// EGGS
-Class.egg = {
-    PARENT: "food",
-    LABEL: "Egg",
-    VALUE: 10,
-    SHAPE: 0,
-    SIZE: 4.5,
-    COLOR: "veryLightGrey",
-    INTANGIBLE: true,
-    BODY: {
-        DAMAGE: 0,
-        DENSITY: 2,
-        HEALTH: 0.5 * basePolygonHealth,
-        PENETRATION: 1,
-        PUSHABILITY: 0,
-        ACCELERATION: 0.015
-    },
-    DRAW_HEALTH: false,
-};
+const { makeCrasher, makeLaby, makePolygonTier } = require('../facilitators.js');
 
-// SQUARES
 Class.square = {
     PARENT: "food",
     LABEL: "Square",
     VALUE: 30,
     SHAPE: 4,
     SIZE: 14,
-    COLOR: "gold",
+    COLOR: 8,
     BODY: {
         DAMAGE: basePolygonDamage,
         DENSITY: 4,
@@ -39,14 +19,13 @@ Class.square = {
     INTANGIBLE: false,
 };
 
-// TRIANGLES
 Class.triangle = {
     PARENT: "food",
     LABEL: "Triangle",
     VALUE: 120,
     SHAPE: 3,
     SIZE: 10,
-    COLOR: "orange",
+    COLOR: 3,
     BODY: {
         DAMAGE: basePolygonDamage,
         DENSITY: 6,
@@ -58,14 +37,13 @@ Class.triangle = {
     DRAW_HEALTH: true,
 };
 
-// PENTAGONS
 Class.pentagon = {
     PARENT: "food",
     LABEL: "Pentagon",
     VALUE: 400,
     SHAPE: 5,
     SIZE: 21,
-    COLOR: "purple",
+    COLOR: 12,
     BODY: {
         DAMAGE: 1.5 * basePolygonDamage,
         DENSITY: 8,
@@ -77,14 +55,32 @@ Class.pentagon = {
     DRAW_HEALTH: true,
 };
 
-// HEXAGONS
 Class.hexagon = {
     PARENT: "food",
     LABEL: "Hexagon",
     VALUE: 500,
     SHAPE: 6,
     SIZE: 25,
-    COLOR: "hexagon",
+    COLOR: 14,
+    BODY: {
+        DAMAGE: 3 * basePolygonDamage,
+        DENSITY: 8,
+        HEALTH: 20 * basePolygonHealth,
+        RESIST: 1.3,
+        SHIELD: 50 * basePolygonHealth,
+        PENETRATION: 1.1,
+        ACCELERATION: 0.003
+    },
+    DRAW_HEALTH: true,
+};
+
+Class.septagon = {
+    PARENT: "food",
+    LABEL: "Septagon",
+    VALUE: 730,
+    SHAPE: 7,
+    SIZE: 27,
+    COLOR: 1,
     BODY: {
         DAMAGE: 3 * basePolygonDamage,
         DENSITY: 8,

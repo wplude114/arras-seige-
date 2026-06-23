@@ -172,13 +172,15 @@ module.exports = {
     // NOTE: The spawn message (ex. "A strange trembling...") takes half as long to appear than the boss.
     BOSS_SPAWN_DURATION: 1000000000,
     FOOD_TYPES: [
-        [1000000, [
-            [100, 'triangle'], [50, "betaTriangleTEST"],
-            [50, 'square'],
-            [33, 'pentagon'],
-            [12, 'hexagon'],
-            [7, 'septagon'],
-            [3, 'octagon']
+        [1, [
+            [100, 'triangle'], [100/4, 'betaTriangle'], [100/8, 'alphaTriangle'],
+            [50, 'square'], [50/4, 'betaSquare'], [50/8, 'alphaSquare'],
+            [33, 'pentagon'], [33/4, 'betaPentagon'], [33/8, 'alphaPentagon'],
+            [12, 'hexagon'], [12/4, 'betaHexagon'], [12/8, 'alphaHexagon'],
+            [7, 'septagon'], [7/4, 'betaSeptagon'], [7/8, 'alphaSeptagon'],
+            [3, 'octagon'], [3/4, 'betaOctagon'], [3/8, 'alphaOctagon'],
+            [1, 'nonagon'], [1/4, 'betaNonagon'], [1/8, 'alphaNonagon'],
+            [0.35, 'decagon'], [1/4, 'betaDecagon'], [1/8, 'alphaDecagon'],
         ]],
     ],
 

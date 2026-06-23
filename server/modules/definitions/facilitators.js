@@ -1008,8 +1008,8 @@ exports.makeRammer = (type) => {
 		CRAVES_ATTENTION: true,
 		MOTION_TYPE: "motor",
 		PROPS: [{
-			POSITION: [ type.SIZE/1.5, 0, 0, 0, 360, 1 ],
-			TYPE: [ type, { COLOR: "mirror", SHAPE: (type.SHAPE*-1) } ]
+			POSITION: [ (type.SIZE/1.25) - 3, 0, 0, 0, 360, 1 ],
+			TYPE: [ type, { COLOR: "mirror", SHAPE: (type.SHAPE * -1) } ]
 		}],
 		LABEL: "Rammer " + type.LABEL
 	};

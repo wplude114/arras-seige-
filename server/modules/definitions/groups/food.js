@@ -18,7 +18,7 @@ Class.triangle = {
     DRAW_HEALTH: true,
     INTANGIBLE: false,
 };
-Class.betaTriangleTEST = makePolygonTier("triangle", 2);
+Class.betaTriangleTEST = makePolygonTier(Class.triangle, 2);
 
 Class.square = {
     PARENT: "food",

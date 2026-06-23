@@ -307,62 +307,6 @@ Class.sentinelMissile = {
         },
     ],
 }
-Class.kronosMissile = {
-    PARENT: "missile",
-    GUNS: [
-        {
-            POSITION: [4, 6, 1.6, 13, 0, 90, 0.5],
-            PROPERTIES: {
-                AUTOFIRE: true,
-                SHOOT_SETTINGS: combineStats([g.trap, g.lowPower, {reload: 2, speed: 1.3, maxSpeed: 1.3, range: 0.5}]),
-                TYPE: [ "trap", { PERSISTS_AFTER_DEATH: true } ],
-                STAT_CALCULATOR: "trap",
-            },
-        }, {
-            POSITION: [4, 6, 1.6, 13, 0, -90, 0.5],
-            PROPERTIES: {
-                AUTOFIRE: true,
-                SHOOT_SETTINGS: combineStats([g.trap, g.lowPower, {reload: 2, speed: 1.3, maxSpeed: 1.3, range: 0.5}]),
-                TYPE: [ "trap", { PERSISTS_AFTER_DEATH: true } ],
-                STAT_CALCULATOR: "trap",
-            },
-        }, {
-            POSITION: [14, 6, 1, 0, -2, 150, 0],
-            PROPERTIES: {
-                AUTOFIRE: true,
-                SHOOT_SETTINGS: combineStats([g.basic, g.lowPower, {speed: 1.3, maxSpeed: 1.3}]),
-                TYPE: [ "bullet", { PERSISTS_AFTER_DEATH: true } ],
-                STAT_CALCULATOR: "thruster",
-            },
-        }, {
-            POSITION: [14, 6, 1, 0, 2, 210, 0],
-            PROPERTIES: {
-                AUTOFIRE: true,
-                SHOOT_SETTINGS: combineStats([g.basic, g.lowPower, {speed: 1.3, maxSpeed: 1.3}]),
-                TYPE: [ "bullet", { PERSISTS_AFTER_DEATH: true } ],
-                STAT_CALCULATOR: "thruster",
-            },
-        }, {
-            POSITION: [13, 6, 1, 0, 0, 90, 0],
-        }, {
-            POSITION: [13, 6, 1, 0, 0, -90, 0],
-        },
-    ],
-}
-Class.autoSmasherMissile = {
-    PARENT: "missile",
-    HITS_OWN_TYPE: "never",
-    GUNS: [],
-    TURRETS: [
-        {
-            POSITION: [21.5, 0, 0, 0, 360, 0],
-            TYPE: "smasherBody",
-        }, {
-            POSITION: [12, 0, 0, 0, 360, 1],
-            TYPE: "autoSmasherMissileTurret",
-        },
-    ],
-}
 
 // Healer Projectiles
 Class.healerBullet = {

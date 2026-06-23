@@ -36,7 +36,7 @@ Class.boosterBody = {
     GUNS: [
         ...Class.tankBody.GUNS,
         {
-            POSITION: {LENGTH: 4,WIDTH: 8,ASPECT: 1, X: 13,Y: 0,ANGLE: 180,DELAY: 0},
+            POSITION: {LENGTH: 7,WIDTH: 10,ASPECT: 1, X: 13,Y: 0,ANGLE: 180,DELAY: 0},
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic]),
                 TYPE: "bullet",

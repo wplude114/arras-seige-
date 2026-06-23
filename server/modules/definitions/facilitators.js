@@ -1003,12 +1003,12 @@ exports.makeRammer = (type) => {
 		SIZE: type.SIZE / 1.25,
 		VALUE: type.VALUE * 1.35,
 		GIVE_KILL_MESSAGE: true,
-		CONTROLLERS: [],
+		CONTROLLERS: ["nearestDifferentMaster", "mapTargetToGoal"],
 		AI: { NO_LEAD: true },
 		CRAVES_ATTENTION: true,
 		MOTION_TYPE: "motor",
 		PROPS: [{
-			POSITION: [ type.SIZE/1.5 ],
+			POSITION: [ type.SIZE/1.5, 0, 0, 0, 360, 1 ],
 			TYPE: [ type, { COLOR: "mirror", SHAPE: (type.SHAPE*-1) } ]
 		}],
 		LABEL: "Rammer " + type.LABEL

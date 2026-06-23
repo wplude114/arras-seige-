@@ -157,6 +157,7 @@ Class.genericTank = {
     RESET_EVENTS: true,
     HITS_OWN_TYPE: "hardOnlyTanks"
 }
+Class.genericTank.TURRETS = []; // remove turret for testing!!
 Class.genericTankNoBody = {
     LABEL: "Unknown Class",
     TYPE: "tank",

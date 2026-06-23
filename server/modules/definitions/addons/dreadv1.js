@@ -1,6 +1,7 @@
 const { combineStats, makeAuto, weaponArray, makeTurret } = require('../facilitators.js');
 const { smshskl, base, basePolygonDamage, basePolygonHealth } = require('../constants.js');
 const g = require('../gunvals.js');
+return console.log("DREADSV1 has been disabled.")
 const dreadnoughtBody = {
     SPEED: base.SPEED * 0.6,
     HEALTH: base.HEALTH * 4,

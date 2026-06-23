@@ -4,7 +4,7 @@ require('./generics.js');
 const g = require('../gunvals.js');
 
 // body testing thing (ignore)
-Class.Base = { PARENT: "genericEntity", TURRETS: [{ POSITION: [17], TYPE: "tankBody" }] }
+Class.Base = { PARENT: "genericEntity", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }] }
 
 // Basic & starting upgrades
 Class.basic = {

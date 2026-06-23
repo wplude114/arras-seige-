@@ -449,7 +449,7 @@ Class.flailBall = {
     HITS_OWN_TYPE: 'hard',
     INDEPENDENT: true,
     PROPS: [{
-        POSITION: [21.5, 0, 0, 0, 360, 0],
+        POSITION: [21.5, 0, 0, 0, 360, -1],
         TYPE: "flailBallSpike",
     }],
     GUNS: [

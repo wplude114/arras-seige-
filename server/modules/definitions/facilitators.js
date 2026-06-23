@@ -998,7 +998,7 @@ exports.makeRare = (type, level) => {
 }
 exports.makeRammer = (type) => { // simple crasher rework :)
 	type = ensureIsClass(type);
-	return {PARENT: type, SHAPE: (type.SHAPE * -1), VALUE: type.VALUE * 1.35, CONTROLLERS: ["nearestDifferentMaster", "mapTargetToGoal"], MOTION_TYPE: "chase"};
+	return {PARENT: type, SHAPE: (type.SHAPE * -1), VALUE: type.VALUE * 1.35, CONTROLLERS: ["nearestDifferentMaster", "mapTargetToGoal"], MOTION_TYPE: "chase", LABEL: "Rammer " + type.LABEL};
 };
 exports.makeLaby = (type, level, baseScale = 1) => {
     type = ensureIsClass(type);

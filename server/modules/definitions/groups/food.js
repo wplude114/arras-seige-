@@ -1,5 +1,5 @@
 const { basePolygonDamage, basePolygonHealth } = require('../constants.js');
-const { makeCrasher, makeLaby, makePolygonTier } = require('../facilitators.js');
+const { makeCrasher, makeLaby } = require('../facilitators.js');
 
 Class.triangle = {
     PARENT: "food",
@@ -18,7 +18,7 @@ Class.triangle = {
     DRAW_HEALTH: true,
     INTANGIBLE: false,
 };
-Class.betaTriangleTEST = makePolygonTier(Class.triangle, 2);
+Class.betaTriangleTEST = makeLaby(Class.triangle, 2);
 
 Class.square = {
     PARENT: "food",

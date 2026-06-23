@@ -30,4 +30,23 @@ Class.tankBody = {
     ],
 }
 
+Class.boosterBody = {
+    PARENT: "tankBody",
+    INDEPENDENT: false,
+    GUNS: [
+        ...Class.tankBody.GUNS,
+        {
+            POSITION: {LENGTH: 4,WIDTH: 8,ASPECT: 1, X: 13,Y: 0,ANGLE: 180,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: "bullet",
+                ALT_FIRE: true
+            }
+        },
+    ],
+}
+
 Class.Base = { PARENT: "genericEntity", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }] }
+    Class.Booster = { PARENT: "genericEntity", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "boosterBody" }] }
+
+Class.Base.UPGRADES_TIER_2 = ["Booster"]

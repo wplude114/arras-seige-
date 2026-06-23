@@ -21,7 +21,6 @@ Class.egg = {
 };
 Class.betaEgg = makePolygonTier("egg", 1)
 Class.alphaEgg = makePolygonTier("egg", 2)
-Class.basic.UPGRADES_TIER_0.push("betaEgg") // this is *for testing* remove later
 Class.gem = {
     PARENT: "food",
     LABEL: "Gem",

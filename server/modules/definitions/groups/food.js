@@ -1,5 +1,5 @@
 const { basePolygonDamage, basePolygonHealth } = require('../constants.js');
-const { makeRelic, makeRare, makePrimordial, makeCrasher, makeLaby } = require('../facilitators.js');
+const { makeRelic, makeRare, makePrimordial, makeCrasher, makeLaby, makePolygonTier } = require('../facilitators.js');
 // EGGS
 Class.egg = {
     PARENT: "food",
@@ -19,61 +19,9 @@ Class.egg = {
     },
     DRAW_HEALTH: false,
 };
-Class.betaEgg = {
-    PARENT: "food",
-    LABEL: "Beta Egg",
-    VALUE: 100,
-    SHAPE: 0,
-    SIZE: 9.5,
-    COLOR: "veryLightGrey",
-    VARIES_IN_SIZE: false,
-    INTANGIBLE: true,
-    BODY: {
-        DAMAGE: 0,
-        DENSITY: 2,
-        HEALTH: 0.5 * basePolygonHealth,
-        PENETRATION: 1,
-        PUSHABILITY: 0,
-        ACCELERATION: 0.015
-    },
-    PROPS: [
-        {
-            POSITION: [10, 0, 0, 0, 1],
-            TYPE: [ "eggdeco", { INDEPENDENT: true, COLOR: -1} ],
-        },
-    ],
-    DRAW_HEALTH: false,
-};
-Class.alphaEgg = {
-    PARENT: "food",
-    LABEL: "Alpha Egg",
-    VALUE: 500,
-    SHAPE: 0,
-    SIZE: 14.5,
-    COLOR: "veryLightGrey",
-    VARIES_IN_SIZE: false,
-    INTANGIBLE: true,
-    BODY: {
-        DAMAGE: 0,
-        DENSITY: 2,
-        HEALTH: 0.5 * basePolygonHealth,
-        PENETRATION: 1,
-        PUSHABILITY: 0,
-        ACCELERATION: 0.015
-    },
-    PROPS: [
-        {
-            POSITION: [9, 0, 0, 0, 1],
-            TYPE: [ "eggdeco", { INDEPENDENT: true, COLOR: -1} ],
-        },
-        {
-            POSITION: [3, 0, 0, 0, 2],
-            TYPE: [ "eggdeco", { INDEPENDENT: true, COLOR: -1} ],
-        }
-    ],
-    DRAW_HEALTH: false,
-    GIVE_KILL_MESSAGE: true,
-};
+Class.betaEgg = makePolygonTier("egg", 1)
+Class.alphaEgg = makePolygonTier("egg", 2)
+Class.basic.UPGRADES_TIER_0.push("betaEgg") // this is *for testing* remove later
 Class.gem = {
     PARENT: "food",
     LABEL: "Gem",

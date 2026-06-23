@@ -171,18 +171,6 @@ Class.arenaCloser = {
     }]
 };
 
-// TRACKER-3
-Class.tracker3 = {
-  PARENT: "genericTank",
-  LABEL: "Tracker-3",
-  FACING_TYPE: ["spin", {speed: 0.02}],
-  SKILL_CAP: [0, 0, 0, 0, 0, smshskl, smshskl, smshskl, smshskl, smshskl],
-  TURRETS: weaponArray({
-        POSITION: [11, 8, 0, 0, 190, 0],
-        TYPE: ["tracker3gun", { INDEPENDENT: true }],
-    }, 3)
-};
-
 // BOTS
 Class.bot = {
     FACING_TYPE: "looseToTarget",

@@ -996,30 +996,9 @@ exports.makeRare = (type, level) => {
         GIVE_KILL_MESSAGE: true,
     }
 }
-exports.makePolygonTier = (type, tier = 1) => {
-    type = ensureIsClass(type);
-
-    tier = Math.max(1, Math.floor(Number(tier) || 1));
-    const prefixes = ["", "Beta ", "Alpha ", "Delta ", "Gamma ", "Omega "];
-    const prefix = prefixes[Math.min(tier - 1, prefixes.length - 1)] ?? "";
-
-    let output = {
-        PARENT: type,
-        SIZE: (type.SIZE || 0) + (type.SIZE*(tier/7.5)),
-        PROPS: type.PROPS ? [...type.PROPS] : [],
-        VALUE: (type.VALUE || 0) * (tier * 10),
-        LABEL: prefix + (type.LABEL || ""),
-    };
-
-    for (let i = 1; i < tier; i++) {
-        output.PROPS.push({
-            POSITION: [type.SIZE / (i + 1), 0, 0, (45 * i), 0, i + 1],
-            PROPERTIES: {
-                TYPE: type
-            }
-        });
-    }
-    return output;
+exports.makeRammer = (type) => { // simple crasher rework :)
+	type = ensureIsClass(type);
+	return {PARENT: type, SHAPE: (type.SHAPE * -1), VALUE: type.VALUE * 1.35, CONTROLLERS: ["nearestDifferentMaster", "mapTargetToGoal"], MOTION_TYPE: "chase"};
 };
 exports.makeLaby = (type, level, baseScale = 1) => {
     type = ensureIsClass(type);

@@ -1006,14 +1006,23 @@ exports.makeRammer = (type) => {
 		GIVE_KILL_MESSAGE: true,
 		HAS_NO_MASTER: true,
 		CONTROLLERS: ["nearestDifferentMaster", "mapTargetToGoal"],
-		AI: { NO_LEAD: true },
+  	    AI: {
+			NO_LEAD: true,
+	    },
+		BODY: {
+			FOV: 0.5,
+			ACCELERATION: 0.75,
+			DAMAGE: base.DAMAGE,
+			SPEED: 0.5 * base.SPEED,
+			HEALTH: 0.3 * base.HEALTH,
+        },
 		CRAVES_ATTENTION: true,
 		MOTION_TYPE: "motor",
 		PROPS: [{
-			POSITION: [ type.SIZE/2, 0, 0, 0, 360, 1 ],
+			POSITION: [ 5, 0, 0, 0, 360, 1 ],
 			TYPE: [ type, { COLOR: "black" } ]
 		}],
-		LABEL: "Rammer " + type.LABEL
+		LABEL: "Computerized " + type.LABEL
 	};
 };
 exports.makeLaby = (type, level, baseScale = 1) => {

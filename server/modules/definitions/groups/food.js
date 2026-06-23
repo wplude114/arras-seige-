@@ -1,5 +1,5 @@
 const { basePolygonDamage, basePolygonHealth } = require('../constants.js');
-const { makeCrasher, makeLaby } = require('../facilitators.js');
+const { makeCrasher, makeLaby, makeRammer } = require('../facilitators.js');
 
 Class.triangle = {
     PARENT: "food",
@@ -159,24 +159,32 @@ Class.decagon = {
 // triangle
 Class.betaTriangle = makeLaby(Class.triangle, 1);
 Class.alphaTriangle = makeLaby(Class.triangle, 2);
+Class.rammerTriangle = makeRammer(Class.triangle);
 // square
 Class.betaSquare = makeLaby(Class.square, 1);
 Class.alphaSquare = makeLaby(Class.square, 2);
+Class.rammerSquare = makeRammer(Class.square);
 // pentagon
 Class.betaPentagon = makeLaby(Class.pentagon, 1);
 Class.alphaPentagon = makeLaby(Class.pentagon, 2);
+Class.rammerPentagon = makeRammer(Class.pentagon);
 // hexagon
 Class.betaHexagon = makeLaby(Class.hexagon, 1);
 Class.alphaHexagon = makeLaby(Class.hexagon, 2);
+Class.rammerHexagon = makeRammer(Class.hexagon);
 // septagon
 Class.betaSeptagon = makeLaby(Class.septagon, 1);
 Class.alphaSeptagon = makeLaby(Class.septagon, 2);
+Class.rammerSeptagon = makeRammer(Class.septagon);
 // octagon
 Class.betaOctagon = makeLaby(Class.octagon, 1);
 Class.alphaOctagon = makeLaby(Class.octagon, 2);
+Class.rammerOctagon = makeRammer(Class.octagon);
 // nonagon
 Class.betaNonagon = makeLaby(Class.nonagon, 1);
 Class.alphaNonagon = makeLaby(Class.nonagon, 2);
+Class.rammerNonagon = makeRammer(Class.nonagon);
 // decagon
 Class.betaDecagon = makeLaby(Class.decagon, 1);
 Class.alphaDecagon = makeLaby(Class.decagon, 2);
+Class.rammerDecagon = makeRammer(Class.decagon);

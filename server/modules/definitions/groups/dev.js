@@ -85,27 +85,6 @@ Class.spectator = {
     }]
 }
 
-Class.generatorBase = {
-    PARENT: "genericTank",
-    LABEL: "Generator",
-    ALPHA: 0,
-    IGNORED_BY_AI: true,
-    CAN_BE_ON_LEADERBOARD: false,
-    ACCEPTS_SCORE: false,
-    DRAW_HEALTH: false,
-    HITS_OWN_TYPE: "never",
-    ARENA_CLOSER: true,
-    IS_IMMUNE_TO_TILES: true,
-    SKILL_CAP: [31, 0, 0, 0, 0, 0, 0, 0, 0, 31],
-    BODY: {
-        SPEED: 5,
-        FOV: 2.5,
-        DAMAGE: 0,
-        HEALTH: 1e100,
-        SHIELD: 1e100,
-        REGEN: 1e100,
-    },
-}
 Class.navdeco = makeDeco(-5);
 Class.nav = menu("Entities and values")
 Class.nav.PROPS = [
@@ -141,31 +120,6 @@ for (let i = 0; i < 16; i++) {
 
 Class.addons = menuvar2("Addon Entities", "black")
 Class.addons.UPGRADES_TIER_0 = []
-
-// misc tanks
-Class.volute = {
-    PARENT: "genericTank",
-    LABEL: "Volute",
-    DANGER: 6,
-    STAT_NAMES: statnames.desmos,
-    GUNS: [
-        {
-            POSITION: [20, 13, 0.8, 0, 0, 0, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.desmos, g.pounder]),
-                TYPE: ["bullet", {MOTION_TYPE: "desmos"}]
-            },
-        },
-        {
-            POSITION: [5, 10, 2.125, 1, -6.375, 90, 0],
-        },
-        {
-            POSITION: [5, 10, 2.125, 1, 6.375, -90, 0],
-        },
-    ],
-}
-
-Class.gunner3 = makeRadialAuto("auto4gun", {isTurret: true, danger: 7, size: 13, x: 6, label: "Gunner-3"})
 
 // Whirlwind
 Class.whirlwindDeco = makeDeco(6)

@@ -996,20 +996,20 @@ exports.makeRare = (type, level) => {
         GIVE_KILL_MESSAGE: true,
     }
 }
-exports.makePolygonTier = (shape, tier = 1, LABEL) => {
-	shape = ensureIsClass(shape);
+exports.makePolygonTier = (type, tier = 1) => {
+	type = ensureIsClass(type);
 	let output = {
-		PARENT: shape,
-		SIZE: shape.SIZE + (tier*3),
-		PROPS: shape.PROPS ? [...shape.PROPS] : [],
-		VALUE: shape.VALUE * (tier*10),
-		LABEL: LABEL ? LABEL : shape.LABEL + " [TIER " + String(tier) + "]"
+		PARENT: type,
+		SIZE: type.SIZE + (tier*3),
+		PROPS: type.PROPS ? [...type.PROPS] : [],
+		VALUE: type.VALUE * (tier*10),
+		LABEL: ["", "Beta ", "Alpha ", "Delta ", "Gamma ", "Omega "][tier-1] + type.LABEL,
 	}
         for (let i = 1; i < tier; i++) { 
             output.PROPS.push({
-				POSITION: [shape.SIZE / (i + 1), 0, 0, (45*i), 0, i+1],
+				POSITION: [type.SIZE / (i + 1), 0, 0, (45*i), 0, i+1],
 				PROPERTIES: {
-					TYPE: shape
+					TYPE: type
 				}
 			}) 
         }

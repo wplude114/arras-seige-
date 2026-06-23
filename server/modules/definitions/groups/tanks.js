@@ -51,6 +51,15 @@ Class.mount = {
     ]
 }
 
+Class.castle = {
+    PARENT: "genericTank",
+    LABEL: "Castle",
+    DANGER: 1,
+    SHAPE: 3,
+    HAS_NO_RECOIL: true,
+    FACING_TYPE: ["spin", { speed: 0.05, independent: true }],
+}
+
 Class.smasher = {
     PARENT: "genericSmasher",
     LABEL: "Smasher",
@@ -210,6 +219,7 @@ Class.triBar = {
 
 // Upgrade tree
 Class.basic.UPGRADES_TIER_1 = ["barrel", "mount"]
+Class.basic.UPGRADES_TIER_3 = ["castle"]
 
     Class.barrel.UPGRADES_TIER_2 = ["tri"]
     Class.mount.UPGRADES_TIER_2 = ["bar", "flailR"]

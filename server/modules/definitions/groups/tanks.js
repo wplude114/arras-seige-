@@ -163,6 +163,31 @@ Class.tri = {
     ]
 }
 
+Class.lobber = {
+    PARENT: "genericTank",
+    LABEL: "Lobber",
+    DANGER: 4,
+    GUNS: [
+       {
+            POSITION: {LENGTH: 17,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.pounder, g.fake]),
+                TYPE: "bullet",
+            }
+        },
+        {
+            POSITION: {LENGTH: 5,WIDTH: 10,ASPECT: 1.1, X: 14,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.pounder]),
+                TYPE: "bullet",
+            }
+        },
+        {
+            POSITION: {LENGTH: 12,WIDTH: 10,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+        },
+    ]
+}
+
 // Smasher upgrades [TIER 3]
 Class.newSentry = {
     PARENT: "genericSmasher",

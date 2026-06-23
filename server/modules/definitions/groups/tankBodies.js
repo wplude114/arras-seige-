@@ -6,7 +6,7 @@ const g = require('../gunvals.js');
 // Body
 Class.tankBody = {
     PARENT: "genericEntity",
-    UPGRADE_LABEL: "Body",
+    LABEL: "Body",
     INDEPENDENT: true,
     FACING_TYPE: "smoothWithMotion",
     MOTION_TYPE: "motor",
@@ -46,6 +46,25 @@ Class.boosterBody = {
         },
     ],
 }
+// booster upgrades
+Class.resurfacerBody = {
+    PARENT: "tankBody",
+    INDEPENDENT: false,
+    GUNS: [
+        ...Class.tankBody.GUNS,
+        {
+            POSITION: {LENGTH: 7,WIDTH: 10,ASPECT: 1, X: 13,Y: 0,ANGLE: 180,DELAY: 0},
+        },
+        {
+            POSITION: {LENGTH: 4,WIDTH: 10,ASPECT: 1.4, X: 20,Y: 0,ANGLE: 180,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, {reload: 0.3, range: 0.5, damage: 0.5, recoil: 3, shudder: 10}]),
+                TYPE: "trap",
+                ALT_FIRE: true
+            }
+        },
+    ],
+}
 Class.thrusterBody = {
     PARENT: "tankBody",
     INDEPENDENT: false,
@@ -54,7 +73,7 @@ Class.thrusterBody = {
         {
             POSITION: {LENGTH: 7,WIDTH: 12,ASPECT: 1.4, X: 13,Y: 0,ANGLE: 180,DELAY: 0},
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, {reload: 0.05, range: 0.1, damage: 0.375, recoil: 1.4, shudder: 15}]),
+                SHOOT_SETTINGS: combineStats([g.basic, {reload: 0.05, range: 0.1, damage: 0.25, recoil: 1.4, shudder: 15}]),
                 TYPE: "growBullet",
                 ALT_FIRE: true
             }
@@ -65,6 +84,7 @@ Class.thrusterBody = {
 Class.Base = { PARENT: "genericTank", UPGRADE_LABEL: "Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }] }
     Class.Booster = { PARENT: "genericTank", UPGRADE_LABEL: "Booster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "boosterBody" }] }
     Class.Thruster = { PARENT: "genericTank", UPGRADE_LABEL: "Thruster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "thrusterBody" }] }
+    Class.Resurfacer = { PARENT: "genericTank", UPGRADE_LABEL: "Resurfacer Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "resurfacerBody" }] }
 
 Class.Base.UPGRADES_TIER_2 = ["Booster"]
-    Class.Booster.UPGRADES_TIER_3 = ["Thruster"]
+    Class.Booster.UPGRADES_TIER_3 = ["Thruster", "Resurfacer"]

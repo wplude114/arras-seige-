@@ -264,7 +264,7 @@ Class.triBar = {
 }
 
 // Upgrade tree
-Class.basic.UPGRADES_TIER_1 = [["basic","Base"],"barrel", "mount"]
+Class.basic.UPGRADES_TIER_1 = ["barrel", "mount"]
 
     Class.barrel.UPGRADES_TIER_2 = ["machineGun", "tri", "lobber"]
     Class.mount.UPGRADES_TIER_2 = ["bar", "flailR"]

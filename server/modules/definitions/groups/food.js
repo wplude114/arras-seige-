@@ -5,9 +5,9 @@ Class.triangle = {
     PARENT: "food",
     LABEL: "Triangle",
     VALUE: 30,
-    SHAPE: 4,
+    SHAPE: 3,
     SIZE: 10,
-    COLOR: 8,
+    COLOR: 5,
     BODY: {
         DAMAGE: basePolygonDamage,
         DENSITY: 4,
@@ -23,9 +23,9 @@ Class.square = {
     PARENT: "food",
     LABEL: "Square",
     VALUE: 120,
-    SHAPE: 3,
+    SHAPE: 4,
     SIZE: 15,
-    COLOR: 8,
+    COLOR: 0,
     BODY: {
         DAMAGE: basePolygonDamage,
         DENSITY: 6,

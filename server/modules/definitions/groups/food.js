@@ -35,7 +35,7 @@ Class.betaTriangleTEST = {
     DRAW_HEALTH: true,
     INTANGIBLE: false,
     PROPS: [
-        {POSITION: [10,0,0,45,0,1]}
+        {POSITION: [10,0,0,45,0,1], TYPE: "triangle"}
     ]
 };
 

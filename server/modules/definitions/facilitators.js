@@ -184,6 +184,7 @@ exports.skillSet = (args) => {
 }
 
 // functions
+
 exports.dereference = type => {
     type = ensureIsClass(type);
 
@@ -994,6 +995,24 @@ exports.makeRare = (type, level) => {
         INTANGIBLE: type.INTANGIBLE,
         GIVE_KILL_MESSAGE: true,
     }
+}
+exports.makePolygonTier = (shape, tier = 1) => {
+	shape = ensureIsClass(shape);
+	let output = {
+		PARENT: shape,
+		SIZE: shape.SIZE + (tier*3),
+		PROPS: shape.PROPS ? [...shape.PROPS] : [],
+		VALUE: shape.VALUE + (tier*30) // lots of value
+	}
+        for (let i = 0; i < tier; i++) { 
+            output.PROPS.push({
+				POSITION: [shape.SIZE / (i + 1), 0, 0, (45*i), 0, i+1],
+				PROPERTIES: {
+					TYPE: shape
+				}
+			}) 
+        }
+        return output;
 }
 exports.makePrimordial = (type) => {
     type = ensureIsClass(type);

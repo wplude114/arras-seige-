@@ -1007,6 +1007,11 @@ exports.makeRammer = (type) => {
 		GIVE_KILL_MESSAGE: true,
 		HAS_NO_MASTER: true,
 		CONTROLLERS: ["nearestDifferentMaster", "mapTargetToGoal"],
+		BODY: {
+			...type.BODY,
+			   FOV: 0.5,
+			   ACCELERATION: 0.75
+		},
   	    AI: {
 			NO_LEAD: true,
 	    },

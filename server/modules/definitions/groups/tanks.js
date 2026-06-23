@@ -73,7 +73,7 @@ Class.machineGun = {
     DANGER: 5,
     GUNS: [
        {
-            POSITION: {LENGTH: 17,WIDTH: 7,ASPECT: 1.3, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+            POSITION: {LENGTH: 17,WIDTH: 7,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.machineGun, g.fake]),
                 TYPE: "bullet",
@@ -87,7 +87,7 @@ Class.machineGun = {
             }
         },
         {
-            POSITION: {LENGTH: 12,WIDTH: 9,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+            POSITION: {LENGTH: 12,WIDTH: 9,ASPECT: 1.5, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
         },
     ]
 }

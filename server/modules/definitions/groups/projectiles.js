@@ -313,26 +313,6 @@ Class.healerBullet = {
     PARENT: "bullet",
     HEALER: true,
 };
-Class.surgeonPillbox = {
-    PARENT: "trap",
-    LABEL: "Pillbox",
-    SHAPE: -6,
-    MOTION_TYPE: "motor",
-    CONTROLLERS: ["goToMasterTarget", "nearestDifferentMaster"],
-    INDEPENDENT: true,
-    BODY: {
-        SPEED: 1,
-        DENSITY: 5,
-        DAMAGE: 0
-    },
-    DIE_AT_RANGE: true,
-    TURRETS: [
-        {
-            POSITION: [11, 0, 0, 0, 360, 1],
-            TYPE: "surgeonPillboxTurret",
-        },
-    ],
-}
 
 // Drones
 Class.turretedDrone = makeAuto('drone', "Auto-Drone", {type: 'droneAutoTurret'})

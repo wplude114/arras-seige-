@@ -1712,7 +1712,7 @@ Class.flailBolt3 = {
 Class.developer.UPGRADES_TIER_0 = ["nav", "spectator", "addons"]
 Class.misc.UPGRADES_TIER_0 = ["eggGenerator"]
 Class.nav.UPGRADES_TIER_0 = ["tanks", "bosses"] // makes things easier
-    Class.tanks.UPGRADES_TIER_0 = ["basic", "protoDread", "literallyATank", "wirlwind"]
+    Class.tanks.UPGRADES_TIER_0 = ["basic", "protoDread", "literallyATank", "whirlwind"]
         Class.dominators.UPGRADES_TIER_0 = ["destroyerDominator", "gunnerDominator", "trapperDominator"]
         Class.sanctuaries.UPGRADES_TIER_0 = ["sanctuaryTier1", "sanctuaryTier2", "sanctuaryTier3", "sanctuaryTier4", "sanctuaryTier5", "sanctuaryTier6"]
 

@@ -999,7 +999,7 @@ exports.makeRare = (type, level) => {
 }
 exports.makeRammer = (type) => {
 	type = ensureIsClass(type);
-	return {
+	let output = {
 		PARENT: type,
 		TYPE: "crasher",
 		SIZE: type.SIZE,
@@ -1010,13 +1010,6 @@ exports.makeRammer = (type) => {
   	    AI: {
 			NO_LEAD: true,
 	    },
-		BODY: {
-			FOV: 0.5,
-			ACCELERATION: 0.75,
-			DAMAGE: base.DAMAGE,
-			SPEED: 0.5 * base.SPEED,
-			HEALTH: 0.3 * base.HEALTH,
-        },
 		CRAVES_ATTENTION: true,
 		MOTION_TYPE: "motor",
 		PROPS: [{
@@ -1025,6 +1018,9 @@ exports.makeRammer = (type) => {
 		}],
 		LABEL: "Computerized " + type.LABEL
 	};
+	output.BODY.FOV = 0.5
+	output.BODY.ACCELERATION = 0.75
+	return output;
 };
 exports.makeLaby = (type, level, baseScale = 1) => {
     type = ensureIsClass(type);

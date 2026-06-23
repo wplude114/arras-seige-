@@ -347,6 +347,10 @@ Class.drone = {
         RESIST: 1.5,
         FOV: 0.5,
     },
+    TURRETS: [{ 
+            POSITION: [17],
+            TYPE: "tankBody",
+        }],
     HITS_OWN_TYPE: "hard",
     DRAW_HEALTH: false,
     CLEAR_ON_MASTER_UPGRADE: true,
@@ -375,6 +379,10 @@ Class.swarm = {
         PUSHABILITY: 0.6,
         FOV: 1.5,
     },
+    TURRETS: [{ 
+            POSITION: [17],
+            TYPE: "tankBody",
+        }],
     DIE_AT_RANGE: true,
     BUFF_VS_FOOD: true,
 };

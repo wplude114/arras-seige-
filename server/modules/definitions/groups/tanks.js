@@ -67,6 +67,31 @@ Class.smasher = {
 }
 
 // Basic upgrades [TIER 2]
+Class.machineGun = {
+    PARENT: "genericTank",
+    LABEL: "Machine Gun",
+    DANGER: 5,
+    GUNS: [
+       {
+            POSITION: {LENGTH: 17,WIDTH: 7,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.machineGun, g.fake]),
+                TYPE: "bullet",
+            }
+        },
+        {
+            POSITION: {LENGTH: 5,WIDTH: 9,ASPECT: 1.3, X: 14,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.machineGun]),
+                TYPE: "bullet",
+            }
+        },
+        {
+            POSITION: {LENGTH: 12,WIDTH: 9,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+        },
+    ]
+}
+
 Class.tri = {
     PARENT: "genericTank",
     LABEL: "Tri",
@@ -153,7 +178,6 @@ Class.newSentry = {
 }
 
 // Mount upgrades [TIER 2]
-
 Class.bar = {
     PARENT: "genericTank",
     LABEL: "Bar",
@@ -221,7 +245,7 @@ Class.triBar = {
 Class.basic.UPGRADES_TIER_1 = ["barrel", "mount"]
 Class.basic.UPGRADES_TIER_3 = ["castle"]
 
-    Class.barrel.UPGRADES_TIER_2 = ["tri"]
+    Class.barrel.UPGRADES_TIER_2 = ["machineGun", "tri"]
     Class.mount.UPGRADES_TIER_2 = ["bar", "flailR"]
 
         Class.bar.UPGRADES_TIER_3 = ["triBar"]

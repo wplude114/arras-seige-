@@ -245,7 +245,6 @@ Class.triBar = {
 }
 
 // Upgrade tree
-Class.basic.UPGRADES_TIER_0 = ["egg","betaEgg","alphaEgg"] // sorry this is for testing
 Class.basic.UPGRADES_TIER_1 = ["barrel", "mount"]
 
     Class.barrel.UPGRADES_TIER_2 = ["machineGun", "tri", "lobber"]

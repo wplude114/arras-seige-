@@ -182,20 +182,6 @@ Class.lobber = {
     ]
 }
 
-// Smasher upgrades [TIER 3]
-Class.newSentry = {
-    PARENT: "genericSmasher",
-    LABEL: "Sentry",
-    DANGER: 5,
-    TURRETS: [
-        ...Class.genericSmasher.TURRETS,
-        {
-            POSITION: [8, 0, 0, 0, 360, 1],
-            TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]
-        }
-    ]
-}
-
 // Mount upgrades [TIER 2]
 Class.bar = {
     PARENT: "genericTank",

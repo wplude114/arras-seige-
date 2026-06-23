@@ -997,23 +997,29 @@ exports.makeRare = (type, level) => {
     }
 }
 exports.makePolygonTier = (type, tier = 1) => {
-	type = ensureIsClass(type);
-	let output = {
-		PARENT: type,
-		SIZE: type.SIZE + (tier*3),
-		PROPS: type.PROPS ? [...type.PROPS] : [],
-		VALUE: type.VALUE * (tier*10),
-		LABEL: ["", "Beta ", "Alpha ", "Delta ", "Gamma ", "Omega "][tier-1] + type.LABEL,
-	}
-        for (let i = 1; i < tier; i++) { 
-            output.PROPS.push({
-				POSITION: [type.SIZE / (i + 1), 0, 0, (45*i), 0, i+1],
-				PROPERTIES: {
-					TYPE: type
-				}
-			}) 
-        }
-        return output;
+    type = ensureIsClass(type);
+
+    tier = Math.max(1, Math.floor(Number(tier) || 1));
+    const prefixes = ["", "Beta ", "Alpha ", "Delta ", "Gamma ", "Omega "];
+    const prefix = prefixes[Math.min(tier - 1, prefixes.length - 1)] ?? "";
+
+    let output = {
+        PARENT: type,
+        SIZE: (type.SIZE || 0) (type.SIZE*(tier/7.5)),
+        PROPS: type.PROPS ? [...type.PROPS] : [],
+        VALUE: (type.VALUE || 0) * (tier * 10),
+        LABEL: prefix + (type.LABEL || ""),
+    };
+
+    for (let i = 1; i < tier; i++) {
+        output.PROPS.push({
+            POSITION: [type.SIZE / (i + 1), 0, 0, (45 * i), 0, i + 1],
+            PROPERTIES: {
+                TYPE: type
+            }
+        });
+    }
+    return output;
 };
 exports.makeLaby = (type, level, baseScale = 1) => {
     type = ensureIsClass(type);

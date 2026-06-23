@@ -18,26 +18,7 @@ Class.triangle = {
     DRAW_HEALTH: true,
     INTANGIBLE: false,
 };
-Class.betaTriangleTEST = {
-    PARENT: "food",
-    LABEL: "Beta Triangle",
-    VALUE: 300,
-    SHAPE: 3,
-    SIZE: 20,
-    COLOR: 5,
-    BODY: {
-        DAMAGE: basePolygonDamage,
-        DENSITY: 4,
-        HEALTH: basePolygonHealth*2,
-        PENETRATION: 2,
-        ACCELERATION: 0.0075
-    },
-    DRAW_HEALTH: true,
-    INTANGIBLE: false,
-    PROPS: [
-        {POSITION: [10,0,0,45], TYPE: "triangle"}
-    ]
-};
+Class.betaTriangleTEST = makePolygonTier("triangle", 2);
 
 Class.square = {
     PARENT: "food",

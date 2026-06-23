@@ -47,7 +47,6 @@ Class.superSplitterBullet = {
         },
     ]
 }
-Class.turretedBullet = makeAuto('bullet', "Auto-Bullet", {type: "bulletAutoTurret", size: 14, color: "veryLightGrey", angle: 0});
 Class.speedBullet = {
     PARENT: "bullet",
     MOTION_TYPE: "accel",

@@ -19,8 +19,8 @@ Class.egg = {
     },
     DRAW_HEALTH: false,
 };
-Class.betaEgg = makePolygonTier("egg", 1);
-Class.alphaEgg = makePolygonTier("egg", 2);
+Class.betaEgg = makePolygonTier(Class.egg, 1);
+Class.alphaEgg = makePolygonTier(Class.egg, 2);
 
 Class.gem = {
     PARENT: "food",
@@ -117,8 +117,8 @@ Class.square = {
     INTANGIBLE: false,
 };
 
-Class.betaSquare = makePolygonTier("square", 1);
-Class.alphaSquare = makePolygonTier("square", 2);
+Class.betaSquare = makePolygonTier(Class.square, 1);
+Class.alphaSquare = makePolygonTier(Class.square, 2);
 
 // TRIANGLES
 Class.triangle = {
@@ -139,8 +139,8 @@ Class.triangle = {
     DRAW_HEALTH: true,
 };
 
-Class.betaTriangle = makePolygonTier("triangle", 1);
-Class.alphaTriangle = makePolygonTier("triangle", 2);
+Class.betaTriangle = makePolygonTier(Class.triangle, 1);
+Class.alphaTriangle = makePolygonTier(Class.triangle, 2);
 
 // PENTAGONS
 Class.pentagon = {
@@ -161,8 +161,8 @@ Class.pentagon = {
     DRAW_HEALTH: true,
 };
 
-Class.betaPentagon = makePolygonTier("pentagon", 1);
-Class.alphaPentagon = makePolygonTier("pentagon", 2);
+Class.betaPentagon = makePolygonTier(Class.pentagon, 1);
+Class.alphaPentagon = makePolygonTier(Class.pentagon, 2);
 
 // HEXAGONS
 Class.hexagon = {

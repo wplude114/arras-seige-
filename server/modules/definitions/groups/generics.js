@@ -178,40 +178,6 @@ Class.genericTankNoBody = {
     HITS_OWN_TYPE: "hardOnlyTanks"
 }
 
-Class.smasherGrind = {
-    PARENT: "genericEntity",
-    TYPE: "tank",
-    COLOR: 17,
-    SHAPE: -5,
-    MIRROR_MASTER_ANGLE: true,
-}
-Class.smasherTankBody = {
-    PARENT: "genericEntity",
-    LABEL: "Body",
-    INDEPENDENT: true,
-    FACING_TYPE: "turnWithSpeed",
-    MOTION_TYPE: "motor",
-    COLOR: "mirror",
-    
-    SHAPE: 5,
-    TURRETS: [{ 
-            POSITION: [20],
-            TYPE: "smasherGrind"},],
-}
-Class.grinderTankBody = {
-    PARENT: "genericEntity",
-    LABEL: "Body",
-    INDEPENDENT: true,
-    FACING_TYPE: "turnWithSpeed",
-    MOTION_TYPE: "motor",
-    COLOR: "mirror",
-    
-    SHAPE: 5,
-    TURRETS: [{ 
-            POSITION: [23,0,0,0,45],
-            TYPE: "smasherGrind"},],
-}
-
 Class.genericSmasher = {
     PARENT: "genericTankNoBody",
     DANGER: 7,
@@ -222,10 +188,6 @@ Class.genericSmasher = {
         FOV: 1.05 * base.FOV,
         DENSITY: 2 * base.DENSITY
     },
-    TURRETS: [{ 
-            POSITION: [23],
-            TYPE: "smasherTankBody",
-        }],
 }
 Class.genericBoss = {
     PARENT: "genericTankNoBody",
@@ -322,10 +284,6 @@ Class.drone = {
         RESIST: 1.5,
         FOV: 0.5,
     },
-    TURRETS: [{ 
-            POSITION: [17],
-            TYPE: "tankBody",
-        }],
     HITS_OWN_TYPE: "hard",
     DRAW_HEALTH: false,
     CLEAR_ON_MASTER_UPGRADE: true,

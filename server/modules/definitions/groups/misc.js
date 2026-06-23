@@ -412,24 +412,6 @@ Class.baseProtector = {
         HETERO: 0,
     },
     FACING_TYPE: ["spin", {speed: 0.02}],
-    TURRETS: [
-        {
-            POSITION: [25, 0, 0, 0, 360, 0],
-            TYPE: "dominationBody",
-        },
-        ...weaponArray({
-            POSITION: [12, 7, 0, 45, 100, 0],
-            TYPE: "baseSwarmTurret",
-        }, 4)
-    ],
-    GUNS: weaponArray([
-        {
-            POSITION: [4.5, 11.5, -1.3, 6, 0, 45, 0],
-        },
-        {
-            POSITION: [4.5, 8.5, -1.5, 7, 0, 45, 0],
-        },
-    ], 4)
 };
 
 Class.mothership = {

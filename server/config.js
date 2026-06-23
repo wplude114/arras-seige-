@@ -152,7 +152,7 @@ module.exports = {
 
     // Allow foods to be spawned or not.
     // NOTE: Disabling it decreases lagness, also very useful if you don't need foods to be spawned.
-   ENABLE_FOOD: false,
+   ENABLE_FOOD: true,
 
     FOOD_CAP: 1, // Max normal food per normal tile.
     FOOD_SPAWN_CHANCE: 0.075, // Likeliness of normal food spawn attempts succeeding.
@@ -173,29 +173,19 @@ module.exports = {
     BOSS_SPAWN_DURATION: 1000000000,
     FOOD_TYPES: [
         [1000000, [
-            [1024, 'egg'],
-            [256, 'square'],
-            [64, 'triangle'],
-            [16, 'pentagon'],
+            [100, 'square'],
+            [50, 'triangle'],
+            [33, 'pentagon'],
+            [12, 'hexagon'],
+            [7, 'septagon']
         ]],
     ],
 
     // The possible nest food types that can spawn.
-    FOOD_TYPES_NEST: [
-        [1, [
-            [16, 'pentagon']
-        ]],
-    ],
+    FOOD_TYPES_NEST: [],
 
     // The possible nest enemy types that can spawn.
-    ENEMY_TYPES_NEST: [
-        [15, [
-            [1, 'crasher']
-        ]],
-        [5, [
-            [1, 'sentryGun'], [1, 'sentrySwarm'], [1, 'sentryTrap'], /* SHINY */ [0.1, 'shinySentryGun'], [0.1, 'shinySentrySwarm'], [0.1, 'shinySentryTrap'],
-        ]]
-    ],
+    ENEMY_TYPES_NEST: [],
 
     // The possible boss types that can spawn.
     // "th", "ze", "ga", "ha", "de", "the","ares", "gersemi", "ezekiel", "eris", "selene","rokna","paladin", "freyja", "zaphkiel", "nyx", "theia"

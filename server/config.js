@@ -172,7 +172,7 @@ module.exports = {
     // NOTE: The spawn message (ex. "A strange trembling...") takes half as long to appear than the boss.
     BOSS_SPAWN_DURATION: 1000000000,
     FOOD_TYPES: [
-        [1, [
+        [10, [
             [100, 'triangle'], [100/4, 'betaTriangle'], [100/8, 'alphaTriangle'],
             [50, 'square'], [50/4, 'betaSquare'], [50/8, 'alphaSquare'],
             [33, 'pentagon'], [33/4, 'betaPentagon'], [33/8, 'alphaPentagon'],
@@ -182,6 +182,16 @@ module.exports = {
             [1, 'nonagon'], [1/4, 'betaNonagon'], [1/8, 'alphaNonagon'],
             [0.35, 'decagon'], [1/4, 'betaDecagon'], [1/8, 'alphaDecagon'],
         ]],
+        [1, [
+            [100, 'rammerTriangle'],
+            [50, 'rammerSquare'],
+            [33, 'rammerPentagon'],
+            [12, 'rammerHexagon'],
+            [7, 'rammerSeptagon'],
+            [3, 'rammerOctagon'],
+            [1, 'rammerNonagon'],
+            [0.35, 'rammerDecagon']
+        ]]
     ],
 
     // The possible nest food types that can spawn.

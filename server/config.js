@@ -119,7 +119,7 @@ module.exports = {
     LEVEL_CHEAT_CAP: 45,
 
     // Amount of player-bots to spawn.
-    BOTS: 0,
+    BOTS: 4,
 
     // How much XP player-bots get per second until they reach LEVEL_CAP.
     BOT_XP: 0,
@@ -201,36 +201,8 @@ module.exports = {
     // "th", "ze", "ga", "ha", "de", "the","ares", "gersemi", "ezekiel", "eris", "selene","rokna","paladin", "freyja", "zaphkiel", "nyx", "theia"
     BOSS_TYPES: [
     { // elite
-        bosses: ["eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner", "eliteTrapGuard", "eliteSkimmer"],
+        bosses: ["crasher"],
         amount: 10, chance: 50,
-    },
-    { // telestial+ (-eternal, celestial)
-        bosses: ["th", "ze", "ga", "ha", "de", "the","ares", "gersemi", "ezekiel", "eris", "selene","rokna"],
-        amount: 7, chance: 35,
-    },
-    { // rogue
-      bosses: ["roguePalisade", "rogueArmada", "julius", "genghis", "napoleon"],
-        amount: 5, chance: 27
-    },
-    { // terrestrial+ (-eternal)
-        bosses: ["ares", "gersemi", "ezekiel", "eris", "selene","rokna","paladin", "freyja", "zaphkiel", "nyx", "theia"],
-        amount: 3, chance: 25,
-    },
-    { // celestial
-        bosses: ["paladin", "freyja", "zaphkiel", "nyx", "theia"],
-        amount: 7, chance: 10,
-    },
-    { // celestial+
-        bosses: ["paladin", "freyja", "zaphkiel", "nyx", "theia","legionaryCrasher", "odin", "kronos"],
-        amount: 4, chance: 10,
-    },
-    { // eternal
-        bosses: ["legionaryCrasher", "odin", "kronos"],
-        amount: 3, chance: 1,
-    },
-    { // eternal
-        bosses: ["legionaryCrasher", "odin", "kronos"],
-        amount: 10, chance: 0.1,
     },],
 
 

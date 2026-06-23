@@ -54,7 +54,7 @@ Class.thrusterBody = {
         {
             POSITION: {LENGTH: 7,WIDTH: 12,ASPECT: 1.4, X: 13,Y: 0,ANGLE: 180,DELAY: 0},
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic{reload: 0.25, range: 0.1, damage: 0.375, recoil: 1.5, shudder: 3}], ),
+                SHOOT_SETTINGS: combineStats([g.basic, {reload: 0.25, range: 0.1, damage: 0.375, recoil: 1.5, shudder: 3}]),
                 TYPE: "bullet",
                 ALT_FIRE: true
             }

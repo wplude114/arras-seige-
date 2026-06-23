@@ -493,66 +493,12 @@ Class.boomerang = {
         RANGE: 120,
     },
 }
-Class.assemblerTrap = {
-    PARENT: "setTrap",
-    LABEL: "Assembler Trap",
-    BODY: {
-        SPEED: 0.7,
-        ACCEL: 0.75
-    },
-    TURRETS: [
-        {
-            POSITION: [4, 0, 0, 0, 360, 1],
-            TYPE: 'assemblerDot'
-        }
-    ],
-    HITS_OWN_TYPE: 'assembler'
-}
 Class.shotTrapBox = {
     PARENT: 'unsetTrap',
     MOTION_TYPE: "glide",
 }
 
 // Pillboxes
-Class.pillbox = {
-    PARENT: "setTrap",
-    LABEL: "Pillbox",
-    INDEPENDENT: true,
-    DIE_AT_RANGE: true,
-    TURRETS: [
-        {
-            POSITION: [11, 0, 0, 0, 360, 1],
-            TYPE: "pillboxTurret",
-        },
-    ],
-}
-Class.unsetPillbox = {
-    PARENT: "unsetTrap",
-    LABEL: "Pillbox",
-    INDEPENDENT: true,
-    DIE_AT_RANGE: true,
-    TURRETS: [
-        {
-            POSITION: [11, 0, 0, 0, 360, 1],
-            TYPE: "pillboxTurret",
-        },
-    ],
-}
-Class.legionaryPillbox = {
-    PARENT: "unsetTrap",
-    LABEL: "Pillbox",
-    BODY: {
-        SPEED: 1,
-        DENSITY: 5,
-    },
-    DIE_AT_RANGE: true,
-    TURRETS: [
-        {
-            POSITION: [11, 0, 0, 0, 360, 1],
-            TYPE: "legionaryTwin",
-        },
-    ],
-}
 
 // Swarms
 Class.autoswarm = {

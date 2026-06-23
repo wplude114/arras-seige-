@@ -1018,8 +1018,6 @@ exports.makeRammer = (type) => {
 		}],
 		LABEL: "Computerized " + type.LABEL
 	};
-	output.BODY.FOV = 0.5
-	output.BODY.ACCELERATION = 0.75
 	return output;
 };
 exports.makeLaby = (type, level, baseScale = 1) => {

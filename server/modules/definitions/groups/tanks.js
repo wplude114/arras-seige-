@@ -3,6 +3,9 @@ const { base, statnames, dfltskl, smshskl } = require('../constants.js');
 require('./generics.js');
 const g = require('../gunvals.js');
 
+// body testing thing (ignore)
+Class.Base = { PARENT: "genericEntity", TURRETS: [{ POSITION: [17], TYPE: "tankBody" }] }
+
 // Basic & starting upgrades
 Class.basic = {
     PARENT: "genericTank",
@@ -58,12 +61,6 @@ Class.castle = {
     SHAPE: 3,
     HAS_NO_RECOIL: true,
     FACING_TYPE: ["spin", { speed: 0.05, independent: true }],
-}
-
-Class.smasher = {
-    PARENT: "genericSmasher",
-    LABEL: "Smasher",
-    DANGER: 4,
 }
 
 // Basic upgrades [TIER 2]
@@ -267,8 +264,7 @@ Class.triBar = {
 }
 
 // Upgrade tree
-Class.basic.UPGRADES_TIER_1 = ["barrel", "mount"]
-Class.basic.UPGRADES_TIER_3 = ["castle"]
+Class.basic.UPGRADES_TIER_1 = [["basic","Base"],"barrel", "mount"]
 
     Class.barrel.UPGRADES_TIER_2 = ["machineGun", "tri", "lobber"]
     Class.mount.UPGRADES_TIER_2 = ["bar", "flailR"]

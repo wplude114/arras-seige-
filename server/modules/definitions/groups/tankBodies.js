@@ -6,7 +6,7 @@ const g = require('../gunvals.js');
 // Body
 Class.tankBody = {
     PARENT: "genericEntity",
-    LABEL: "Body",
+    UPGRADE_LABEL: "Body",
     INDEPENDENT: true,
     FACING_TYPE: "smoothWithMotion",
     MOTION_TYPE: "motor",
@@ -46,7 +46,7 @@ Class.boosterBody = {
     ],
 }
 
-Class.Base = { PARENT: "genericEntity", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }] }
-    Class.Booster = { PARENT: "genericEntity", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "boosterBody" }] }
+Class.Base = { PARENT: "genericTank", UPGRADE_LABEL: "Booster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }] }
+    Class.Booster = { PARENT: "genericTank", UPGRADE_LABEL: "Booster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "boosterBody" }] }
 
 Class.Base.UPGRADES_TIER_2 = ["Booster"]

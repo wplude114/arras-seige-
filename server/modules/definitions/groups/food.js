@@ -53,6 +53,7 @@ Class.pentagon = {
         ACCELERATION: 0.0035
     },
     DRAW_HEALTH: true,
+    GIVE_KILL_MESSAGE: true,
 };
 
 Class.hexagon = {
@@ -72,6 +73,7 @@ Class.hexagon = {
         ACCELERATION: 0.003
     },
     DRAW_HEALTH: true,
+    GIVE_KILL_MESSAGE: true,
 };
 
 Class.septagon = {
@@ -91,6 +93,7 @@ Class.septagon = {
         ACCELERATION: 0.003
     },
     DRAW_HEALTH: true,
+    GIVE_KILL_MESSAGE: true,
 };
 
 Class.octagon = {
@@ -110,6 +113,7 @@ Class.octagon = {
         ACCELERATION: 0.003
     },
     DRAW_HEALTH: true,
+    GIVE_KILL_MESSAGE: true,
 };
 
 Class.nonagon = {
@@ -129,6 +133,7 @@ Class.nonagon = {
         ACCELERATION: 0.003
     },
     DRAW_HEALTH: true,
+    GIVE_KILL_MESSAGE: true,
 };
 
 Class.decagon = {
@@ -148,6 +153,7 @@ Class.decagon = {
         ACCELERATION: 0.003
     },
     DRAW_HEALTH: true,
+    GIVE_KILL_MESSAGE: true,
 };
 
 // triangle

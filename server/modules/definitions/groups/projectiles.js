@@ -314,8 +314,6 @@ Class.healerBullet = {
     HEALER: true,
 };
 
-// Drones
-Class.turretedDrone = makeAuto('drone', "Auto-Drone", {type: 'droneAutoTurret'})
 
 // Sunchips
 Class.sunchip = {

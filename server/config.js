@@ -173,11 +173,12 @@ module.exports = {
     BOSS_SPAWN_DURATION: 1000000000,
     FOOD_TYPES: [
         [1000000, [
-            [100, 'square'],
-            [50, 'triangle'],
+            [100, 'triangle'], [50, "betaTriangleTEST"],
+            [50, 'square'],
             [33, 'pentagon'],
             [12, 'hexagon'],
-            [7, 'septagon']
+            [7, 'septagon'],
+            [3, 'octagon']
         ]],
     ],
 

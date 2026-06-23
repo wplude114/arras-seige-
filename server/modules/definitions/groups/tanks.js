@@ -221,7 +221,7 @@ Class.bar = {
 }
 
 Class.flailR = {
-    PARENT: "genericFlail",
+    PARENT: "genericTank",
     LABEL: "Flail",
     TURRETS: [
         ...Class.genericTank.TURRETS,

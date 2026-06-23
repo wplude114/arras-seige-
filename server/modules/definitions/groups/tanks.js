@@ -90,7 +90,6 @@ Class.tri = {
     PARENT: "genericTank",
     LABEL: "Tri",
     DANGER: 5,
-    HAS_NO_RECOIL: true,
     FACING_TYPE: ["spin", { speed: 0.05, independent: true }],
     GUNS: [
        {
@@ -186,7 +185,6 @@ Class.lobber = {
 Class.bar = {
     PARENT: "genericTank",
     LABEL: "Bar",
-    HAS_NO_RECOIL: true,
     GUNS: [
         {
             POSITION: {LENGTH: 17,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},

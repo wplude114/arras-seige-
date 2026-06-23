@@ -30,6 +30,7 @@ Class.tankBody = {
     ],
 }
 
+// booster
 Class.boosterBody = {
     PARENT: "tankBody",
     INDEPENDENT: false,
@@ -38,7 +39,22 @@ Class.boosterBody = {
         {
             POSITION: {LENGTH: 7,WIDTH: 10,ASPECT: 1, X: 13,Y: 0,ANGLE: 180,DELAY: 0},
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic]),
+                SHOOT_SETTINGS: combineStats([g.basic, {reload: 0.35, range: 0, damage: 0, recoil: 1.5, shudder: 2}]),
+                TYPE: "bullet",
+                ALT_FIRE: true
+            }
+        },
+    ],
+}
+Class.thrusterBody = {
+    PARENT: "tankBody",
+    INDEPENDENT: false,
+    GUNS: [
+        ...Class.tankBody.GUNS,
+        {
+            POSITION: {LENGTH: 7,WIDTH: 12,ASPECT: 1.4, X: 13,Y: 0,ANGLE: 180,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic{reload: 0.25, range: 0.1, damage: 0.375, recoil: 1.5, shudder: 3}], ),
                 TYPE: "bullet",
                 ALT_FIRE: true
             }
@@ -46,7 +62,9 @@ Class.boosterBody = {
     ],
 }
 
-Class.Base = { PARENT: "genericTank", UPGRADE_LABEL: "Booster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }] }
+Class.Base = { PARENT: "genericTank", UPGRADE_LABEL: "Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }] }
     Class.Booster = { PARENT: "genericTank", UPGRADE_LABEL: "Booster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "boosterBody" }] }
+    Class.Thruster = { PARENT: "genericTank", UPGRADE_LABEL: "Thruster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "thrusterBody" }] }
 
 Class.Base.UPGRADES_TIER_2 = ["Booster"]
+    Class.Booster.UPGRADES_TIER_3 = ["Thruster"]

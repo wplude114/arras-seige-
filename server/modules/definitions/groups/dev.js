@@ -124,44 +124,8 @@ Class.misc.PROPS = [
 ]
 Class.bosses = menu("Bosses")
 Class.bosses.REROOT_UPGRADE_TREE = "bosses"
-Class.sentries = menu("Sentries", "pink", 3.5)
-Class.sentries.PROPS = [
-    {
-        POSITION: [9, 0, 0, 0, 360, 1],
-        TYPE: "genericEntity"
-    }
-]
-Class.elites = menu("Elites", "pink", 3.5)
-Class.mysticals = menu("Mysticals", "gold", 4)
-Class.nesters = menu("Nesters", "purple", 5.5)
-Class.rogues = menu("Rogues", "darkGrey", 6)
-Class.rammers = menu("Rammers", "aqua")
-Class.entrestrials = menu("Telestials", "gold", 5)
-Class.terrestrials = menu("Terrestrials", "orange", 7)
-Class.celestials = menu("Celestials", "lightGreen", 9)
-Class.eternals = menu("Eternals", "veryLightGrey", 11)
-Class.devBosses = menu("Developers", "lightGreen", 4)
-Class.devBosses.UPGRADE_COLOR = "rainbow"
 
 Class.tanks = menu("Tanks")
-Class.unavailable = menu("Unavailable")
-Class.dominators = menu("Dominators")
-Class.dominators.PROPS = [
-    {
-        POSITION: [22, 0, 0, 360, 0],
-        TYPE: "dominationBody",
-    }
-]
-Class.sanctuaries = menu("Sanctuaries")
-Class.sanctuaries.PROPS = [
-    {
-        POSITION: [22, 0, 0, 360, 0],
-        TYPE: "dominationBody",
-    }, {
-        POSITION: [13, 0, 0, 360, 1],
-        TYPE: "healerSymbol",
-    }
-]
 
 Class.levels = menu("Levels")
 Class.levels.UPGRADES_TIER_0 = []

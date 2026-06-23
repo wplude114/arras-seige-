@@ -18,7 +18,6 @@ Class.triangle = {
     DRAW_HEALTH: true,
     INTANGIBLE: false,
 };
-Class.betaTriangleTEST = makeLaby(Class.triangle, 2);
 
 Class.square = {
     PARENT: "food",
@@ -112,3 +111,66 @@ Class.octagon = {
     },
     DRAW_HEALTH: true,
 };
+
+Class.nonagon = {
+    PARENT: "food",
+    LABEL: "Nonagon",
+    VALUE: 1640,
+    SHAPE: 9,
+    SIZE: 40,
+    COLOR: 7,
+    BODY: {
+        DAMAGE: 8 * basePolygonDamage,
+        DENSITY: 23,
+        HEALTH: 67 * basePolygonHealth,
+        RESIST: 1.7,
+        SHIELD: 126 * basePolygonHealth,
+        PENETRATION: 1.1,
+        ACCELERATION: 0.003
+    },
+    DRAW_HEALTH: true,
+};
+
+Class.decagon = {
+    PARENT: "food",
+    LABEL: "Decagon",
+    VALUE: 2040,
+    SHAPE: 10,
+    SIZE: 51,
+    COLOR: "tangerine",
+    BODY: {
+        DAMAGE: 10 * basePolygonDamage,
+        DENSITY: 27,
+        HEALTH: 80 * basePolygonHealth,
+        RESIST: 2,
+        SHIELD: 273 * basePolygonHealth,
+        PENETRATION: 1.1,
+        ACCELERATION: 0.003
+    },
+    DRAW_HEALTH: true,
+};
+
+// triangle
+Class.betaTriangle = makeLaby(Class.triangle, 1);
+Class.alphaTriangle = makeLaby(Class.triangle, 2);
+// square
+Class.betaSquare = makeLaby(Class.square, 1);
+Class.alphaSquare = makeLaby(Class.square, 2);
+// pentagon
+Class.betaPentagon = makeLaby(Class.pentagon, 1);
+Class.alphaPentagon = makeLaby(Class.pentagon, 2);
+// hexagon
+Class.betaHexagon = makeLaby(Class.hexagon, 1);
+Class.alphaHexagon = makeLaby(Class.hexagon, 2);
+// septagon
+Class.betaSeptagon = makeLaby(Class.septagon, 1);
+Class.alphaSeptagon = makeLaby(Class.septagon, 2);
+// octagon
+Class.betaOctagon = makeLaby(Class.octagon, 1);
+Class.alphaOctagon = makeLaby(Class.octagon, 2);
+// nonagon
+Class.betaNonagon = makeLaby(Class.nonagon, 1);
+Class.alphaNonagon = makeLaby(Class.nonagon, 2);
+// decagon
+Class.betaDecagon = makeLaby(Class.decagon, 1);
+Class.alphaDecagon = makeLaby(Class.decagon, 2);

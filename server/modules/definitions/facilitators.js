@@ -1005,7 +1005,7 @@ exports.makePolygonTier = (type, tier = 1) => {
 
     let output = {
         PARENT: type,
-        SIZE: (type.SIZE || 0) (type.SIZE*(tier/7.5)),
+        SIZE: (type.SIZE || 0) + (type.SIZE*(tier/7.5)),
         PROPS: type.PROPS ? [...type.PROPS] : [],
         VALUE: (type.VALUE || 0) * (tier * 10),
         LABEL: prefix + (type.LABEL || ""),

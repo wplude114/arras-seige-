@@ -996,17 +996,21 @@ exports.makeRare = (type, level) => {
         GIVE_KILL_MESSAGE: true,
     }
 }
-exports.makeRammer = (type) => { // simple crasher rework :)
+exports.makeRammer = (type) => {
 	type = ensureIsClass(type);
 	return {
-		PARENT: type, // in case we miss something
-		SHAPE: (type.SHAPE * -1),
+		PARENT: type,
 		SIZE: type.SIZE / 1.25,
 		VALUE: type.VALUE * 1.35,
+		GIVE_KILL_MESSAGE: true,
 		CONTROLLERS: [],
-		AI: {NO_LEAD: true},
+		AI: { NO_LEAD: true },
 		CRAVES_ATTENTION: true,
 		MOTION_TYPE: "motor",
+		PROPS: [{
+			POSITION: [ type.SIZE/1.5 ],
+			TYPE: [ type, { COLOR: "mirror", SHAPE: (type.SHAPE*-1) } ]
+		}],
 		LABEL: "Rammer " + type.LABEL
 	};
 };

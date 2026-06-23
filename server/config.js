@@ -173,60 +173,17 @@ module.exports = {
     BOSS_SPAWN_DURATION: 1000000000,
     FOOD_TYPES: [
         [1000000, [
-            [1024, 'egg'], [256, 'betaEgg'], [64, 'alphaEgg'],
-            [256, 'square'], [64, 'betaSquare'], [16, 'alphaSquare'],
+            [1024, 'egg']
+            [256, 'square']
             [64, 'triangle'],
-            [16, 'pentagon'], [4, 'betaPentagon'], [1, 'alphaPentagon'], //[0.25, 'omegaPentagon']
+            [16, 'pentagon']
         ]],
-        [1000000/150000, [ // 1/150k i think
-            [1024, 'shinyEgg'],
-            [256, 'shinySquare'],
-            [64, 'shinyTriangle'],
-            [16, 'shinyPentagon'],
-        ]],
-        [1000000/1000000, [ // 1/1m i think
-            [1024, 'legendaryEgg'],
-            [256, 'legendarySquare'],
-            [64, 'legendaryTriangle'],
-            [16, 'legendaryPentagon'],
-        ]],
-        [1000000/3000000, [ // 1/3m i think
-            [1024, 'shadowEgg'],
-            [256, 'shadowSquare'],
-            [64, 'shadowTriangle'],
-            [16, 'shadowPentagon'],
-        ]],
-        [1000000/76000000, [ // 1/76m i think
-            [1024, 'rainbowEgg'],
-            [256, 'rainbowSquare'],
-            [64, 'rainbowTriangle'],
-            [16, 'rainbowPentagon'],
-        ]],
-        [1000000/152000000, [ // 1/152m i think
-            [1024, 'transEgg'],
-            [256, 'transSquare'],
-            [64, 'transTriangle'],
-            [16, 'transPentagon'],
-        ]],
-        [1000000/3420000000, [ // 1/3.42b i think
-            [100, 'cube'],
-            [10, 'dodecahedron'],
-            [1, 'icosahedron']
-        ]],
-        [1000000/7500000000, [ // 1/7.5b i think
-            [1024, 'primordialEgg'],
-            [256, 'primordialSquare'],
-            [64, 'primordialTriangle'],
-            [16, 'primordialPentagon'],
-        ]],
-        // Dont make any more fucking mutations, theres enough.
     ],
 
     // The possible nest food types that can spawn.
     FOOD_TYPES_NEST: [
         [1, [
-            [16, 'pentagon'], [ 4, 'betaPentagon'], [ 1, 'alphaPentagon'], [100000/75000000, "primordialPentagon"], //[0.25, 'omegaPentagon']
-            //                                                             1/75m i think i have no idea
+            [16, 'pentagon']
         ]],
     ],
 
@@ -243,11 +200,6 @@ module.exports = {
     // The possible boss types that can spawn.
     // "th", "ze", "ga", "ha", "de", "the","ares", "gersemi", "ezekiel", "eris", "selene","rokna","paladin", "freyja", "zaphkiel", "nyx", "theia"
     BOSS_TYPES: [
-        { // elite
-            bosses: ["gem","jewel","hexagon","computerizedGem","GHexagon"],
-            amount: 30, chance: 1,
-        },
-        /*
     { // elite
         bosses: ["eliteDestroyer", "eliteGunner", "eliteSprayer", "eliteBattleship", "eliteSpawner", "eliteTrapGuard", "eliteSkimmer"],
         amount: 10, chance: 50,
@@ -279,7 +231,7 @@ module.exports = {
     { // eternal
         bosses: ["legionaryCrasher", "odin", "kronos"],
         amount: 10, chance: 0.1,
-    },*/],
+    },],
 
 
 

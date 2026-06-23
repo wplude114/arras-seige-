@@ -19,8 +19,8 @@ Class.egg = {
     },
     DRAW_HEALTH: false,
 };
-Class.betaEgg = makePolygonTier("egg", 1)
-Class.alphaEgg = makePolygonTier("egg", 2)
+Class.betaEgg = makePolygonTier("egg", 1, "Beta Egg")
+Class.alphaEgg = makePolygonTier("egg", 2, "Alpha Egg")
 Class.gem = {
     PARENT: "food",
     LABEL: "Gem",

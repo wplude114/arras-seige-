@@ -136,12 +136,6 @@ Class.mysticals = menu("Mysticals", "gold", 4)
 Class.nesters = menu("Nesters", "purple", 5.5)
 Class.rogues = menu("Rogues", "darkGrey", 6)
 Class.rammers = menu("Rammers", "aqua")
-Class.rammers.PROPS = [
-    {
-        POSITION: [21.5, 0, 0, 360, -1],
-        TYPE: "smasherBody",
-    }
-]
 Class.entrestrials = menu("Telestials", "gold", 5)
 Class.terrestrials = menu("Terrestrials", "orange", 7)
 Class.celestials = menu("Celestials", "lightGreen", 9)
@@ -180,38 +174,6 @@ for (let i = 0; i < 16; i++) {
     };
     Class.levels.UPGRADES_TIER_0.push("level" + LEVEL);
 }
-
-Class.teams = menu("Teams")
-Class.teams.UPGRADES_TIER_0 = []
-for (let i = 1; i <= 8; i++) {
-    let TEAM = i;
-    Class["Team" + TEAM] = {
-        PARENT: "teams",
-        TEAM: -TEAM,
-        COLOR: getTeamColor(-TEAM),
-        LABEL: "Team " + TEAM
-    };
-    Class.teams.UPGRADES_TIER_0.push("Team" + TEAM);
-}
-Class['Team' + TEAM_DREADNOUGHTS] = {
-    PARENT: "teams",
-    TEAM: TEAM_DREADNOUGHTS,
-    COLOR: getTeamColor(TEAM_DREADNOUGHTS),
-    LABEL: "Dreads Team"
-};
-Class['Team' + TEAM_ROOM] = {
-    PARENT: "teams",
-    TEAM: TEAM_ROOM,
-    COLOR: "yellow",
-    LABEL: "Room Team"
-};
-Class['Team' + TEAM_ENEMIES] = {
-    PARENT: "teams",
-    TEAM: TEAM_ENEMIES,
-    COLOR: "yellow",
-    LABEL: "Enemies Team"
-};
-Class.teams.UPGRADES_TIER_0.push('Team' + TEAM_DREADNOUGHTS, 'Team' + TEAM_ROOM, 'Team' + TEAM_ENEMIES);
 
 Class.addons = menuvar2("Addon Entities", "black")
 Class.addons.UPGRADES_TIER_0 = []
@@ -676,21 +638,6 @@ Class.literallyATank = {
     ]
 }
 
-let testLayeredBoss = new LayeredBoss("testLayeredBoss", "Test Layered Boss", "terrestrial", 7, 3, "terrestrialTrapTurret", 5, 7, {SPEED: 10});
-testLayeredBoss.addLayer({gun: {
-    POSITION: [3.6, 7, -1.4, 8, 0, null, 0],
-    PROPERTIES: {
-        SHOOT_SETTINGS: combineStats([g.factory, { size: 0.5 }]),
-        TYPE: ["minion", {INDEPENDENT: true}],
-        AUTOFIRE: true,
-        SYNCS_SKILLS: true,
-    },
-}}, true, null, 16);
-testLayeredBoss.addLayer({turret: {
-    POSITION: [10, 7.5, 0, null, 160, 0],
-    TYPE: "crowbarTurret",
-}}, true);
-
 // FLAIL!!!
 Class.flailBallSpike = {
     PARENT: "genericTankNoBody",
@@ -703,9 +650,9 @@ Class.flailBall = {
     COLOR: "grey",
     HITS_OWN_TYPE: 'hard',
     INDEPENDENT: true,
-    TURRETS: [{
+    PROPS: [{
         POSITION: [21.5, 0, 0, 0, 360, 0],
-        TYPE: "flailBallSpike",
+        TYPE: makeDeco(6,"black"),
     }],
     GUNS: [
         { 

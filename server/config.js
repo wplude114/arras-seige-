@@ -155,8 +155,8 @@ module.exports = {
    ENABLE_FOOD: true,
 
     FOOD_CAP: 1, // Max normal food per normal tile.
-    FOOD_SPAWN_CHANCE: 0.075, // Likeliness of normal food spawn attempts succeeding.
-    FOOD_SPAWN_COOLDOWN: 300, // Cooldown (in game ticks) of food spawn attempts being made.
+    FOOD_SPAWN_CHANCE: 0.005, // Likeliness of normal food spawn attempts succeeding.
+    FOOD_SPAWN_COOLDOWN: 200, // Cooldown (in game ticks) of food spawn attempts being made.
 
     FOOD_CAP_NEST: 2, // Max nest food per nest tile.
     FOOD_SPAWN_CHANCE_NEST: 0.25, // Likeliness of nest food spawn attempts succeeding.

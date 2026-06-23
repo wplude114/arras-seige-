@@ -1000,6 +1000,7 @@ exports.makeRammer = (type) => {
 	type = ensureIsClass(type);
 	return {
 		PARENT: type,
+		TYPE: "crasher",
 		SIZE: type.SIZE,
 		VALUE: type.VALUE * 1.35,
 		GIVE_KILL_MESSAGE: true,

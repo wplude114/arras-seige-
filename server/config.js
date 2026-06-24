@@ -1,5 +1,3 @@
-// replace the static FOOD_TYPES block with this generator
-
 function generateFoodTypes() {
   const bases = [
     { base: 100, name: 'triangle' },
@@ -33,8 +31,7 @@ function generateFoodTypes() {
       entries.push([value, name]);
     }
   }
-
-  // You can wrap entries under a spawn-weight (10 in original file)
+  
   return [[10, entries]];
 }
 

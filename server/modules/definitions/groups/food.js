@@ -243,7 +243,7 @@ Class.tetradecagon = {
 let polyNames = [ "triangle", "square", "pentagon", "hexagon", "septagon", "octagon", "nonagon", "decagon", "undecagon", "dodecagon", "tridecagon" ]
 const tierNames = [ null, 'beta', 'alpha', 'gamma', 'delta', 'zeta' ];
 for (let tier = 1; tier < 6; tier++) {
-    let lastShape = null;
+    let nextShape = null;
     for (const polyLower of polyNames) {
         
         const food = polyLower;
@@ -260,11 +260,11 @@ for (let tier = 1; tier < 6; tier++) {
         Class[polyName] = makeLaby(baseClass, tier, (food == "triangle" && tier > 0) ? 0.5 : 1);
         if (tier > 3) { Class[polyName].CAN_BE_ON_LEADERBOARD = true }
         console.log("Created "+polyName)
+        
         if (!baseClass.UPGRADES_TIER_0) baseClass.UPGRADES_TIER_0 = [];
         baseClass.UPGRADES_TIER_0.push(Class[polyName])
-        if (!baseClass.UPGRADES_TIER_1) baseClass.UPGRADES_TIER_1 = [];
-        if (lastShape) baseClass.UPGRADES_TIER_1.push(Class[lastShape])
         
-        lastShape = food
+        if (!baseClass.UPGRADES_TIER_1) baseClass.UPGRADES_TIER_1 = [];
+        if (nextShape) baseClass.UPGRADES_TIER_1.push(Class[nextShape])
     }
 }

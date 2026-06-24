@@ -173,26 +173,26 @@ module.exports = {
     BOSS_SPAWN_DURATION: 1000000000,
     FOOD_TYPES: [
         [10, [
-            [100, 'triangle'], [100/4, 'betaTriangle'], [100/8, 'alphaTriangle'], [100/16, 'gammaTriangle'],
-            [50, 'square'], [50/4, 'betaSquare'], [50/8, 'alphaSquare'], [50/16, 'gammaSquare'],
-            [33, 'pentagon'], [33/4, 'betaPentagon'], [33/8, 'alphaPentagon'], [33/16, 'gammaPentagon'],
-            [12, 'hexagon'], [12/4, 'betaHexagon'], [12/8, 'alphaHexagon'], [12/16, 'gammaHexagon'],
-            [7, 'septagon'], [7/4, 'betaSeptagon'], [7/8, 'alphaSeptagon'], [7/16, 'gammaSeptagon'],
-            [3, 'octagon'], [3/4, 'betaOctagon'], [3/8, 'alphaOctagon'], [3/16, 'gammaOctagon'],
-            [1, 'nonagon'], [1/4, 'betaNonagon'], [1/8, 'alphaNonagon'], [1/16, 'gammaNonagon'],
-            [0.35, 'decagon'], [0.35/4, 'betaDecagon'], [0.35/8, 'alphaDecagon'], [0.35/16, 'gammaDecagon'],
-            [0.15, 'undecagon'], [0.15/4, 'betaUndecagon'], [0.15/8, 'alphaUndecagon'], [0.15/16, 'gammaUndecagon'],
+            [100 +1, 'triangle'], [100/4 +1, 'betaTriangle'], [100/8 +1, 'alphaTriangle'], [100/16 +1, 'gammaTriangle'],
+            [50 +1, 'square'], [50/4 +1, 'betaSquare'], [50/8 +1, 'alphaSquare'], [50/16 +1, 'gammaSquare'],
+            [33 +1, 'pentagon'], [33/4 +1, 'betaPentagon'], [33/8 +1, 'alphaPentagon'], [33/16 +1, 'gammaPentagon'],
+            [12 +1, 'hexagon'], [12/4 +1, 'betaHexagon'], [12/8 +1, 'alphaHexagon'], [12/16 +1, 'gammaHexagon'],
+            [7 +1, 'septagon'], [7/4 +1, 'betaSeptagon'], [7/8 +1, 'alphaSeptagon'], [7/16 +1, 'gammaSeptagon'],
+            [3 +1, 'octagon'], [3/4 +1, 'betaOctagon'], [3/8 +1, 'alphaOctagon'], [3/16 +1, 'gammaOctagon'],
+            [1 +1, 'nonagon'], [1/4 +1, 'betaNonagon'], [1/8 +1, 'alphaNonagon'], [1/16 +1, 'gammaNonagon'],
+            [0.35 +1, 'decagon'], [0.35/4 +1, 'betaDecagon'], [0.35/8 +1, 'alphaDecagon'], [0.35/16 +1, 'gammaDecagon'],
+            [0.15 +1, 'undecagon'], [0.15/4 +1, 'betaUndecagon'], [0.15/8 +1, 'alphaUndecagon'], [0.15/16 +1, 'gammaUndecagon'],
         ]],
         [1, [
-            [100, 'rammerTriangle'],
-            [50, 'rammerSquare'],
-            [33, 'rammerPentagon'],
-            [12, 'rammerHexagon'],
-            [7, 'rammerSeptagon'],
-            [3, 'rammerOctagon'],
-            [1, 'rammerNonagon'],
-            [0.35, 'rammerDecagon']
-            [0.15, 'rammerUndecagon']
+            [100 +1, 'rammerTriangle'],
+            [50 +1, 'rammerSquare'],
+            [33 +1, 'rammerPentagon'],
+            [12 +1, 'rammerHexagon'],
+            [7 +1, 'rammerSeptagon'],
+            [3 +1, 'rammerOctagon'],
+            [1 +1, 'rammerNonagon'],
+            [0.35 +1, 'rammerDecagon']
+            [0.15 +1, 'rammerUndecagon']
         ]]
     ],
 

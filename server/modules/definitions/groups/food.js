@@ -242,7 +242,7 @@ Class.tetradecagon = {
 
 let polyNames = [ "triangle", "square", "pentagon", "hexagon", "septagon", "octagon", "nonagon", "decagon", "undecagon", "dodecagon", "tridecagon" ]
 const tierNames = [ null, 'beta', 'alpha', 'gamma', 'delta', 'zeta' ];
-for (let tier = 1; tier < 8; tier++) {
+for (let tier = 1; tier < 6; tier++) {
     for (const polyLower of polyNames) {
 
         const food = polyLower;

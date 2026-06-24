@@ -268,6 +268,6 @@ for (let tier = 1; tier < 6; tier++) {
         if (!baseClass.UPGRADES_TIER_1) baseClass.UPGRADES_TIER_1 = [];
         if (nextShape) baseClass.UPGRADES_TIER_1 = [ Class[nextShape] ]
         
-        nextShape = (i + 1 < polyNames.length) ? polyNames[i + 1] : polyNames[0];
+        nextShape = (i + 1 < polyNames.length) ? polyNames[i + 1] : polyNames[1];
     }
 }

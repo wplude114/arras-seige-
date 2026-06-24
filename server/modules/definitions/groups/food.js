@@ -162,7 +162,7 @@ Class.undecagon = {
     VALUE: 20000,
     SHAPE: 11,
     SIZE: 70,
-    COLOR: 16,
+    COLOR: "egg",
     BODY: {
         DAMAGE: 20 * basePolygonDamage,
         DENSITY: 30,

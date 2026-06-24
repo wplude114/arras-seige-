@@ -19,8 +19,6 @@ Class.triangle = {
     INTANGIBLE: false,
 };
 
-Class.triangle.REBOOT_UPGRADE_TREE = "triangle"
-
 Class.square = {
     PARENT: "food",
     LABEL: "Square",
@@ -271,5 +269,8 @@ for (let tier = 1; tier < 6; tier++) {
         
         if (!baseClass.UPGRADES_TIER_1) baseClass.UPGRADES_TIER_1 = [];
         if (nextShape) baseClass.UPGRADES_TIER_1 = [Class[nextShape]]
+
+        if (!Class[polyName].UPGRADES_TIER_0) Class[polyName].UPGRADES_TIER_0 = [];
+        Class[polyName].UPGRADES_TIER_0 = [baseClass]
     }
 }

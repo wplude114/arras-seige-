@@ -132,63 +132,6 @@ Class.genericTank = {
     RESET_EVENTS: true,
     HITS_OWN_TYPE: "hardOnlyTanks"
 }
-Class.genericTankNoBody = {
-    LABEL: "Unknown Class",
-    TYPE: "tank",
-    DAMAGE_CLASS: 2,
-    DANGER: 5,
-    COLOR: {
-        BASE: "mirror",
-        HUE_SHIFT: 0,
-        SATURATION_SHIFT: 1,
-        BRIGHTNESS_SHIFT: 0,
-        ALLOW_BRIGHTNESS_INVERT: true,
-    },
-    SHAPE: 0,
-    FACING_TYPE: "toTarget",
-    MOTION_TYPE: "motor",
-    SIZE: 12,
-    MAX_CHILDREN: 0,
-    DAMAGE_EFFECTS: false,
-    IGNORED_BY_AI: false,
-    SYNC_WITH_TANK: false,
-    IS_IMMUNE_TO_TILES: false,
-    REROOT_UPGRADE_TREE: "basic",
-    BODY: {
-        ACCELERATION: base.ACCEL,
-        SPEED: base.SPEED,
-        HEALTH: base.HEALTH,
-        DAMAGE: base.DAMAGE,
-        PENETRATION: base.PENETRATION,
-        SHIELD: base.SHIELD,
-        REGEN: base.REGEN,
-        FOV: base.FOV,
-        DENSITY: base.DENSITY,
-        PUSHABILITY: 1,
-        HETERO: 3,
-    },
-    GUNS: [],
-    TURRETS: [],
-    PROPS: [],
-    ON: [],
-    ARENA_CLOSER: false, // don't remove this, it stops dev basics going through walls
-    GIVE_KILL_MESSAGE: true,
-    DRAW_HEALTH: true,
-    RESET_EVENTS: true,
-    HITS_OWN_TYPE: "hardOnlyTanks"
-}
-
-Class.genericSmasher = {
-    PARENT: "genericTankNoBody",
-    DANGER: 7,
-    IS_SMASHER: true,
-    SKILL_CAP: [smshskl, 0, 0, 0, 0, smshskl, smshskl, smshskl, smshskl, smshskl],
-    STAT_NAMES: statnames.smasher,
-    BODY: {
-        FOV: 1.05 * base.FOV,
-        DENSITY: 2 * base.DENSITY
-    },
-}
 Class.genericBoss = {
     PARENT: "genericTankNoBody",
     TYPE: "miniboss",
@@ -215,6 +158,7 @@ Class.genericBoss = {
 
 Class.food = {
     TYPE: "food",
+    DISPLAY_NAME: true,
     DAMAGE_CLASS: 1,
     CONTROLLERS: ["moveInCircles"],
     HITS_OWN_TYPE: "repel",

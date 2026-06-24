@@ -19,6 +19,8 @@ function generateFoodTypes() {
     { suffix: 'delta',  factor: 1 / 24 },
     { suffix: 'epsilon',  factor: 1 / 32 },
     { suffix: 'zeta',  factor: 1 / 50 },
+    { suffix: 'eta',  factor: 1 / 100 },
+    { suffix: 'theta',  factor: 1 / 500 },
   ];
 
   const entries = [];
@@ -26,7 +28,7 @@ function generateFoodTypes() {
 
   for (const b of bases) {
     for (const v of variants) {
-      const value = 1 + Math.round(b.base * v.factor); // add 1 incase of any numbers too low to use
+      const value = 1 + Math.round((b.base*1000) * v.factor); // multiply base by 1000 for super accurate rarities.
       const name = v.suffix ? v.suffix + cap(b.name) : b.name;
       entries.push([value, name]);
     }

@@ -102,6 +102,10 @@ Class.trainSegment = {
             }
         },
     ],
+    TURRETS: [{
+        POSITION: [40, 50, 0, 0, 360, 1],
+        TYPE: [ "barrel" ]
+    }],
 }
 Class.trainBolt = {
     PARENT: "genericTank",

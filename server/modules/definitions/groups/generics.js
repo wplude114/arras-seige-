@@ -228,6 +228,9 @@ Class.food = {
         PUSHABILITY: 1,
         REGEN: 0
     },
+    GUNS: [],
+    TURRETS: [],
+    PROPS: [],
     DAMAGE_EFFECTS: false,
     RATEFFECTS: false,
     HEALTH_WITH_LEVEL: false,

@@ -287,17 +287,6 @@ class io_boomerang extends IO {
         }
     }
 }
-class io_turretWithMotion extends IO {
-    constructor(b, opts = {}) {
-        super(b)
-    }
-    think(input) {
-        return {
-            target: this.body.master.velocity,
-            main: true,
-        };
-    }
-}
 class io_goToMasterTarget extends IO {
     constructor(body) {
         super(body)

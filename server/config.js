@@ -173,14 +173,15 @@ module.exports = {
     BOSS_SPAWN_DURATION: 1000000000,
     FOOD_TYPES: [
         [10, [
-            [100, 'triangle'], [100/4, 'betaTriangle'], [100/8, 'alphaTriangle'],
-            [50, 'square'], [50/4, 'betaSquare'], [50/8, 'alphaSquare'],
-            [33, 'pentagon'], [33/4, 'betaPentagon'], [33/8, 'alphaPentagon'],
-            [12, 'hexagon'], [12/4, 'betaHexagon'], [12/8, 'alphaHexagon'],
-            [7, 'septagon'], [7/4, 'betaSeptagon'], [7/8, 'alphaSeptagon'],
-            [3, 'octagon'], [3/4, 'betaOctagon'], [3/8, 'alphaOctagon'],
-            [1, 'nonagon'], [1/4, 'betaNonagon'], [1/8, 'alphaNonagon'],
-            [0.35, 'decagon'], [1/4, 'betaDecagon'], [1/8, 'alphaDecagon'],
+            [100, 'triangle'], [100/4, 'betaTriangle'], [100/8, 'alphaTriangle'], [100/16, 'gammaTriangle'],
+            [50, 'square'], [50/4, 'betaSquare'], [50/8, 'alphaSquare'], [50/16, 'gammaSquare'],
+            [33, 'pentagon'], [33/4, 'betaPentagon'], [33/8, 'alphaPentagon'], [33/16, 'gammaPentagon'],
+            [12, 'hexagon'], [12/4, 'betaHexagon'], [12/8, 'alphaHexagon'], [12/16, 'gammaHexagon'],
+            [7, 'septagon'], [7/4, 'betaSeptagon'], [7/8, 'alphaSeptagon'], [7/16, 'gammaSeptagon'],
+            [3, 'octagon'], [3/4, 'betaOctagon'], [3/8, 'alphaOctagon'], [3/16, 'gammaOctagon'],
+            [1, 'nonagon'], [1/4, 'betaNonagon'], [1/8, 'alphaNonagon'], [1/16, 'gammaNonagon'],
+            [0.35, 'decagon'], [0.35/4, 'betaDecagon'], [0.35/8, 'alphaDecagon'], [0.35/16, 'gammaDecagon'],
+            [0.075, 'undecagon'], [0.075/4, 'betaUndecagon'], [0.075/8, 'alphaUndecagon'], [0.075/16, 'gammaUndecagon'],
         ]],
         [1, [
             [100, 'rammerTriangle'],
@@ -191,6 +192,7 @@ module.exports = {
             [3, 'rammerOctagon'],
             [1, 'rammerNonagon'],
             [0.35, 'rammerDecagon']
+            [0.075, 'rammerUndecagon']
         ]]
     ],
 

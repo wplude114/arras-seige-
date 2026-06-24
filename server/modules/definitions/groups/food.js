@@ -243,8 +243,9 @@ Class.tetradecagon = {
 let polyNames = [ "triangle", "square", "pentagon", "hexagon", "septagon", "octagon", "nonagon", "decagon", "undecagon", "dodecagon", "tridecagon" ]
 const tierNames = [ null, 'beta', 'alpha', 'gamma', 'delta', 'zeta' ];
 for (let tier = 1; tier < 6; tier++) {
+    let lastShape = null;
     for (const polyLower of polyNames) {
-
+        
         const food = polyLower;
         let polyName = polyLower[0].toUpperCase() + polyLower.slice(1);
         const tierPrefix = tierNames[tier];
@@ -261,5 +262,9 @@ for (let tier = 1; tier < 6; tier++) {
         console.log("Created "+polyName)
         if (!baseClass.UPGRADES_TIER_0) baseClass.UPGRADES_TIER_0 = [];
         baseClass.UPGRADES_TIER_0.push(Class[polyName])
+        if (!baseClass.UPGRADES_TIER_0) baseClass.UPGRADES_TIER_1 = [];
+        if (lastShape) baseClass.UPGRADES_TIER_1.push(Class[lastShape])
+        
+        lastShape = food
     }
 }

@@ -274,10 +274,7 @@ for (let tier = 1; tier < 6; tier++) {
         Class[polyName].UPGRADES_TIER_0 = [baseClass]
     }
 }
-console.log()
-console.log("tiers complete generating variations..")
-console.log()
-console.log()
+
 // make variants
 for (let i = 0; i < polyNames.length; i++) {
         
@@ -299,4 +296,7 @@ for (let i = 0; i < polyNames.length; i++) {
 
         if (!baseClass.UPGRADES_TIER_0) baseClass.UPGRADES_TIER_0 = [];
         baseClass.UPGRADES_TIER_0.push(Class[polyName])
-    }
+
+        if (!Class[polyName].UPGRADES_TIER_0) Class[polyName].UPGRADES_TIER_0 = [];
+        Class[polyName].UPGRADES_TIER_0 = [baseClass]
+}

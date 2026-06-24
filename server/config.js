@@ -15,11 +15,11 @@ function generateFoodTypes() {
 
   const variants = [
     { suffix: '',       factor: 1 },
-    { suffix: 'beta',   factor: 1 / 4 },
-    { suffix: 'alpha',  factor: 1 / 8 },
-    { suffix: 'gamma',  factor: 1 / 16 },
-    { suffix: 'delta',  factor: 1 / 24 },
-    { suffix: 'zeta',  factor: 1 / 32 },
+    { suffix: 'beta',   factor: 1 / 50 },
+    { suffix: 'alpha',  factor: 1 / 250 },
+    { suffix: 'gamma',  factor: 1 / 500 },
+    { suffix: 'delta',  factor: 1 / 850 },
+    { suffix: 'zeta',  factor: 1 / 1000 },
   ];
 
   const entries = [];

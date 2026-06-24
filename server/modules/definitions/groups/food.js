@@ -18,6 +18,7 @@ Class.triangle = {
     DRAW_HEALTH: true,
     INTANGIBLE: false,
 };
+Class.triangle.REBOOT_UPGRADE_TREE = "triangle"
 
 Class.square = {
     PARENT: "food",

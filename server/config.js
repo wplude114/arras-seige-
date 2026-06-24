@@ -181,7 +181,7 @@ module.exports = {
             [3, 'octagon'], [3/4, 'betaOctagon'], [3/8, 'alphaOctagon'], [3/16, 'gammaOctagon'],
             [1, 'nonagon'], [1/4, 'betaNonagon'], [1/8, 'alphaNonagon'], [1/16, 'gammaNonagon'],
             [0.35, 'decagon'], [0.35/4, 'betaDecagon'], [0.35/8, 'alphaDecagon'], [0.35/16, 'gammaDecagon'],
-            [0.075, 'undecagon'], [0.075/4, 'betaUndecagon'], [0.075/8, 'alphaUndecagon'], [0.075/16, 'gammaUndecagon'],
+            [0.15, 'undecagon'], [0.15/4, 'betaUndecagon'], [0.15/8, 'alphaUndecagon'], [0.15/16, 'gammaUndecagon'],
         ]],
         [1, [
             [100, 'rammerTriangle'],
@@ -192,7 +192,7 @@ module.exports = {
             [3, 'rammerOctagon'],
             [1, 'rammerNonagon'],
             [0.35, 'rammerDecagon']
-            [0.075, 'rammerUndecagon']
+            [0.15, 'rammerUndecagon']
         ]]
     ],
 

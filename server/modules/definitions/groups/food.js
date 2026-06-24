@@ -274,3 +274,26 @@ for (let tier = 1; tier < 6; tier++) {
         Class[polyName].UPGRADES_TIER_0 = [baseClass]
     }
 }
+console.log()
+console.log("tiers complete generating variations..")
+console.log()
+console.log()
+// make variants
+for (let i = 0; i < polyNames.length; i++) {
+        
+        const polyLower = polyNames[i];
+        
+        const food = polyLower;
+        let polyName = polyLower[0].toUpperCase() + polyLower.slice(1);
+        const tierPrefix = "rammer"
+
+        const baseClass = Class[food];
+        if (!baseClass || typeof baseClass !== 'object') {
+            console.warn(`Skipping creation of ${tierPrefix ? tierPrefix : ''}${polyName}: base class Class[${food}] not found.`);
+            continue;
+        }
+
+        if (tierPrefix) polyName = tierPrefix + polyName;
+        Class[polyName] = makeRammer(baseClass);
+        console.log("[food.js] Created "+polyName)
+    }

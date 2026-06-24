@@ -192,7 +192,7 @@ for (let tier = 1; tier < 8; tier++) {
         }
 
         if (tierPrefix) polyName = tierPrefix + polyName;
-        Class[polyName] = makeLaby(baseClass, tier, (polyName == "Triangle" && tier > 0) ? 2/3 : 1);
+        Class[polyName] = makeLaby(baseClass, tier, (food == "triangle" && tier > 0) ? 2/3 : 1);
         console.log("Created " + polyName);
         console.log();
     }

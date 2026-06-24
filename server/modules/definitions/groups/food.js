@@ -262,7 +262,7 @@ for (let tier = 1; tier < 6; tier++) {
         console.log("Created "+polyName)
         if (!baseClass.UPGRADES_TIER_0) baseClass.UPGRADES_TIER_0 = [];
         baseClass.UPGRADES_TIER_0.push(Class[polyName])
-        if (!baseClass.UPGRADES_TIER_0) baseClass.UPGRADES_TIER_1 = [];
+        if (!baseClass.UPGRADES_TIER_1) baseClass.UPGRADES_TIER_1 = [];
         if (lastShape) baseClass.UPGRADES_TIER_1.push(Class[lastShape])
         
         lastShape = food

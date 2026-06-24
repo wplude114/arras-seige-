@@ -81,7 +81,7 @@ Class.thrusterBody = {
     ],
 }
 
-Class.trainBody = {
+Class.trainSegment = {
     PARENT: "tankBody",
     INDEPENDENT: true,
 }
@@ -94,7 +94,7 @@ Class.trainBolt = {
     }],
     TURRETS: [{
         POSITION: [40, 50, 0, 0, 360, 1],
-        TYPE: "trainBody"
+        TYPE: "trainSegment"
     }],
 }
 Class.trainBody = {

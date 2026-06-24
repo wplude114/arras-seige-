@@ -259,6 +259,7 @@ for (let tier = 1; tier < 6; tier++) {
         Class[polyName] = makeLaby(baseClass, tier, (food == "triangle" && tier > 0) ? 0.5 : 1);
         if (tier > 3) { Class[polyName].CAN_BE_ON_LEADERBOARD = true }
         console.log("Created "+polyName)
+        if (!baseClass.UPGRADES_TIER_0) baseClass.UPGRADES_TIER_0 = [];
         baseClass.UPGRADES_TIER_0.push(Class[polyName])
     }
 }

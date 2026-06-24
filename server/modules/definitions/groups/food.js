@@ -244,7 +244,8 @@ let polyNames = [ "triangle", "square", "pentagon", "hexagon", "septagon", "octa
 const tierNames = [ null, 'beta', 'alpha', 'gamma', 'delta', 'zeta' ];
 for (let tier = 1; tier < 6; tier++) {
     let nextShape = null;
-    for (const polyLower of polyNames) {
+    for (let i = 0; i < polyNames.length; i++) {
+        const polyLower = polyNames[i];
         
         const food = polyLower;
         let polyName = polyLower[0].toUpperCase() + polyLower.slice(1);
@@ -266,5 +267,9 @@ for (let tier = 1; tier < 6; tier++) {
         
         if (!baseClass.UPGRADES_TIER_1) baseClass.UPGRADES_TIER_1 = [];
         if (nextShape) baseClass.UPGRADES_TIER_1.push(Class[nextShape])
+        
+        if (!baseClass.REROOT_UPGRADE_TREE) baseClass.REROOT_UPGRADE_TREE = baseClass;
+        
+        nextShape = (i + 1 < polyNames.length) ? polyNames[i + 1] : null;
     }
 }

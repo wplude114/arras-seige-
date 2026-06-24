@@ -182,11 +182,10 @@ for (let tier = 1; tier < 8; tier++) {
     for (const polyLower of polyNames) {
 
         let polyName = polyLower[0].toUpperCase() + polyLower.slice(1);
+        let food = polyName[0].toLowerCase() + polyName.slice(1);
         const tierPrefix = tierNames[tier];
         if (tierPrefix) polyName = tierPrefix + polyName;
         console.log("Creating " + polyName)
-
-        let food = polyName[0].toLowerCase() + polyName.slice(1);
         console.log(food)
         console.log()
         //Class[polyName] = makeLaby(Class[food], tier); // create new shape

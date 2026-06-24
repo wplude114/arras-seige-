@@ -9,6 +9,8 @@ function generateFoodTypes() {
     { base: 1,   name: 'nonagon' },
     { base: 0.75,   name: 'decagon' },
     { base: 0.5,   name: 'undecagon' },
+    { base: 0.25,   name: 'dodecagon' },
+    { base: 0.1,   name: 'tridecagon' },
   ];
 
   const variants = [
@@ -18,9 +20,6 @@ function generateFoodTypes() {
     { suffix: 'gamma',  factor: 1 / 16 },
     { suffix: 'delta',  factor: 1 / 24 },
     { suffix: 'epsilon',  factor: 1 / 32 },
-    { suffix: 'zeta',  factor: 1 / 50 },
-    { suffix: 'eta',  factor: 1 / 100 },
-    { suffix: 'theta',  factor: 1 / 500 },
   ];
 
   const entries = [];

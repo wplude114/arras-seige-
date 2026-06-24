@@ -355,7 +355,7 @@ Class.healAura = {
     },
 };
 Class.auraSymbol = {
-    PARENT: "genericTankNoBody",
+    PARENT: "genericTank",
     CONTROLLERS: [["spin", {speed: -0.04}]],
     INDEPENDENT: true,
     COLOR: "teal",

@@ -1032,7 +1032,7 @@ exports.makeLaby = (type, level, baseScale = 1) => {
         strengthMultiplier = 5 ** level;
     return {
         PARENT: "food",
-        LABEL: ["", "β", "α", "γ", "δ", "ζ"][level] + "  " + type.LABEL,
+        LABEL: ["", "[ Beta ]", "[ Alpha ]", "[ Gamma ]", "[ Delta ]", "[ Zeta ]"][level] + "  " + type.LABEL,
         VALUE: type.VALUE * strengthMultiplier,
         SHAPE: type.SHAPE,
         SIZE: type.SIZE * baseScale / downscale ** level,

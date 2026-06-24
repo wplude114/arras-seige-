@@ -99,8 +99,8 @@ Class.trainBolt = {
 }
 Class.Train = {
     PARENT: "tankBody",
-    TURRETS: [...Class.tankBody.TURRETS,
-              { POSITION: [10, 15, 0, 180, 180, -10], TYPE: "trainBolt" }
+    TURRETS: [
+        { POSITION: [10, 15, 0, 180, 180, -10], TYPE: "trainBolt" }
     ]
 }
 

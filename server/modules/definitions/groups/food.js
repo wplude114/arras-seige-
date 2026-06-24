@@ -176,48 +176,13 @@ Class.undecagon = {
     GIVE_KILL_MESSAGE: true,
 };
 
-// triangle
-Class.betaTriangle = makeLaby(Class.triangle, 1);
-Class.alphaTriangle = makeLaby(Class.triangle, 2);
-Class.gammaTriangle = makeLaby(Class.triangle, 3);
-Class.rammerTriangle = makeRammer(Class.triangle);
-// square
-Class.betaSquare = makeLaby(Class.square, 1);
-Class.alphaSquare = makeLaby(Class.square, 2);
-Class.gammaSquare = makeLaby(Class.square, 3);
-Class.rammerSquare = makeRammer(Class.square);
-// pentagon
-Class.betaPentagon = makeLaby(Class.pentagon, 1);
-Class.alphaPentagon = makeLaby(Class.pentagon, 2);
-Class.gammaPentagon = makeLaby(Class.pentagon, 3);
-Class.rammerPentagon = makeRammer(Class.pentagon);
-// hexagon
-Class.betaHexagon = makeLaby(Class.hexagon, 1);
-Class.alphaHexagon = makeLaby(Class.hexagon, 2);
-Class.gammaHexagon = makeLaby(Class.hexagon, 3);
-Class.rammerHexagon = makeRammer(Class.hexagon);
-// septagon
-Class.betaSeptagon = makeLaby(Class.septagon, 1);
-Class.alphaSeptagon = makeLaby(Class.septagon, 2);
-Class.gammaSeptagon = makeLaby(Class.septagon, 3);
-Class.rammerSeptagon = makeRammer(Class.septagon);
-// octagon
-Class.betaOctagon = makeLaby(Class.octagon, 1);
-Class.alphaOctagon = makeLaby(Class.octagon, 2);
-Class.gammaOctagon = makeLaby(Class.octagon, 3);
-Class.rammerOctagon = makeRammer(Class.octagon);
-// nonagon
-Class.betaNonagon = makeLaby(Class.nonagon, 1);
-Class.alphaNonagon = makeLaby(Class.nonagon, 2);
-Class.gammaNonagon = makeLaby(Class.nonagon, 3);
-Class.rammerNonagon = makeRammer(Class.nonagon);
-// decagon
-Class.betaDecagon = makeLaby(Class.decagon, 1);
-Class.alphaDecagon = makeLaby(Class.decagon, 2);
-Class.gammaDecagon = makeLaby(Class.decagon, 3);
-Class.rammerDecagon = makeRammer(Class.decagon);
-// undecagon
-Class.betaUndecagon = makeLaby(Class.undecagon, 1);
-Class.alphaUndecagon = makeLaby(Class.undecagon, 2);
-Class.gammaUndecagon = makeLaby(Class.undecagon, 3);
-Class.rammerUndecagon = makeRammer(Class.undecagon);
+let polyNames = [ "egg", "square", "triangle", "pentagon", "hexagon", "septagon", "octagon", "nonagon", "decagon", "undecagon" ],
+for (let tier = 0; tier < 8; tier++) {
+    for (let poly in polyNames) {
+
+        let polyName = polyNames[poly];
+        polyName = polyName[0].toUpperCase() + polyName.slice(1);
+        console.log("Creating " + polyName)
+        //Class[polyName] = makeLaby(Class[food], tier, (polyName == "Triangle" && tier > 0) ? 2/3 : 1);
+    }
+}

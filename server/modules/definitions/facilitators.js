@@ -487,7 +487,7 @@ exports.makeCeption = (type, name = -1, options = {}) => {
 }
 exports.makeDeco = (shape = 0, color = 16) => {
     return {
-        PARENT: "genericTankNoBody",
+        PARENT: "genericTank",
         SHAPE: shape,
         COLOR: color,
     };
@@ -527,7 +527,7 @@ exports.makeRadialAuto = (type, options = {}) => {
         turretIdentifier = options.turretIdentifier ?? `auto${type.LABEL}Gun`;
 
         Class[turretIdentifier] = {
-            PARENT: 'genericTankNoBody',
+            PARENT: 'genericTank',
             LABEL: "",
             BODY: {
                 FOV: 2,
@@ -554,7 +554,7 @@ exports.makeRadialAuto = (type, options = {}) => {
     let turretAngle = options.angle ?? 0;
 
     return {
-        PARENT: 'genericTankNoBody',
+        PARENT: 'genericTank',
         LABEL,
         FACING_TYPE: ["spin", {speed: options.rotation ?? 0.02}],
         DANGER: options.danger ?? (type.DANGER + 2),
@@ -607,7 +607,7 @@ exports.makeTurret = (type, options = {}) => {
     }
 
     return {
-        PARENT: 'genericTankNoBody',
+        PARENT: 'genericTank',
         LABEL: options.label ?? "",
         COLOR: options.color ?? "grey",
         BODY: { FOV: options.fov ?? 2 },
@@ -624,7 +624,7 @@ exports.addAura = (damageFactor = 1, sizeFactor = 1, opacity = 0.3, auraColor) =
     let symbolType = isHeal ? "healerSymbol" : "auraSymbol";
     auraColor = auraColor ?? (isHeal ? 12 : 0);
     return {
-        PARENT: "genericTankNoBody",
+        PARENT: "genericTank",
         INDEPENDENT: true,
         LABEL: "",
         COLOR: 17,
@@ -824,7 +824,7 @@ class LayeredBoss {
         this.shape -= decreaseSides ? 2 : 0;
         this.layerSize -= layerScale ?? this.layerScale;
         let layer = {
-            PARENT: "genericTankNoBody",
+            PARENT: "genericTank",
             LABEL: "",
             SHAPE: this.shape,
             COLOR: -1,

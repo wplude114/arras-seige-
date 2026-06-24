@@ -1,3 +1,45 @@
+// replace the static FOOD_TYPES block with this generator
+
+function generateFoodTypes() {
+  const bases = [
+    { base: 100, name: 'triangle' },
+    { base: 50,  name: 'square' },
+    { base: 33,  name: 'pentagon' },
+    { base: 15,  name: 'hexagon' },
+    { base: 5,   name: 'septagon' },
+    { base: 2.5,   name: 'octagon' },
+    { base: 1,   name: 'nonagon' },
+    { base: 0.75,   name: 'decagon' },
+    { base: 0.5,   name: 'undecagon' },
+  ];
+
+  const variants = [
+    { suffix: '',       factor: 1 },
+    { suffix: 'beta',   factor: 1 / 4 },
+    { suffix: 'alpha',  factor: 1 / 8 },
+    { suffix: 'gamma',  factor: 1 / 16 },
+    { suffix: 'delta',  factor: 1 / 24 },
+    { suffix: 'epsilon',  factor: 1 / 32 },
+    { suffix: 'zeta',  factor: 1 / 50 },
+  ];
+
+  const entries = [];
+  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+
+  for (const b of bases) {
+    for (const v of variants) {
+      const value = 1 + Math.round(b.base * v.factor); // add 1 incase of any numbers too low to use
+      const name = v.suffix ? v.suffix + cap(b.name) : b.name;
+      entries.push([value, name]);
+    }
+  }
+
+  // You can wrap entries under a spawn-weight (10 in original file)
+  return [[10, entries]];
+}
+
+const FOOD_TYPES = generateFoodTypes();
+
 module.exports = {
     // Server
 
@@ -171,16 +213,7 @@ module.exports = {
     // The delay (in seconds) between the boss spawns being announced and the bosses actually spawning.
     // NOTE: The spawn message (ex. "A strange trembling...") takes half as long to appear than the boss.
     BOSS_SPAWN_DURATION: 1000000000,
-    FOOD_TYPES: [
-        [10, [
-            [1+(100), 'triangle'], [1+(100/4), 'betaTriangle'], [1+(100/8), 'alphaTriangle'], [1+(100/16), 'gammaTriangle'],
-            [1+(50), 'square'], [1+(50/4), 'betaSquare'], [1+(50/8), 'alphaSquare'], [1+(50/16), 'gammaSquare'],
-            [1+(20), 'pentagon'], [1+(20/4), 'betaPentagon'], [1+(20/8), 'alphaPentagon'], [1+(20/16), 'gammaPentagon'],
-            [1+(10), 'hexagon'], [1+(10/4), 'betaHexagon'], [1+(10/8), 'alphaHexagon'], [1+(10/16), 'gammaHexagon'],
-            [1+(3), 'septagon'], [1+(3/4), 'betaSeptagon'], [1+(3/8), 'alphaSeptagon'], [1+(3/16), 'gammaSeptagon'],
-            // i will add the rest later this is so boring
-        ]]
-    ],
+    FOOD_TYPES: FOOD_TYPES,
 
     // The possible nest food types that can spawn.
     FOOD_TYPES_NEST: [],

@@ -181,13 +181,13 @@ Class.whirlwind = {
 
 // FLAIL!!!
 Class.flailBallSpike = {
-    PARENT: "genericTankNoBody",
+    PARENT: "genericTank",
     COLOR: "black",
     SHAPE: 6,
     INDEPENDENT: true,
 }
 Class.flailBall = {
-    PARENT: "genericTankNoBody",
+    PARENT: "genericTank",
     COLOR: "grey",
     HITS_OWN_TYPE: 'hard',
     INDEPENDENT: true,
@@ -228,7 +228,7 @@ Class.flailBall = {
     ]
 }
 Class.flailBolt1 = {
-    PARENT: "genericTankNoBody",
+    PARENT: "genericTank",
     COLOR: "grey",
     INDEPENDENT: true,
     GUNS: [{
@@ -240,7 +240,7 @@ Class.flailBolt1 = {
     }],
 }
 Class.flailBolt2 = {
-    PARENT: "genericTankNoBody",
+    PARENT: "genericTank",
     COLOR: "grey",
     INDEPENDENT: true,
     GUNS: [{
@@ -252,7 +252,7 @@ Class.flailBolt2 = {
     }],
 }
 Class.flailBolt3 = {
-    PARENT: "genericTankNoBody",
+    PARENT: "genericTank",
     COLOR: "grey",
     GUNS: [{
         POSITION: [30, 5, 1, 8, 0, 0, 0]

@@ -18,6 +18,7 @@ Class.triangle = {
     DRAW_HEALTH: true,
     INTANGIBLE: false,
 };
+
 Class.triangle.REBOOT_UPGRADE_TREE = "triangle"
 
 Class.square = {
@@ -246,6 +247,8 @@ const tierNames = [ null, 'beta', 'alpha', 'gamma', 'delta', 'zeta' ];
 for (let tier = 1; tier < 6; tier++) {
     let nextShape = null;
     for (let i = 0; i < polyNames.length; i++) {
+        
+        nextShape = (i + 1 < polyNames.length) ? polyNames[i + 1] : polyNames[0];
         const polyLower = polyNames[i];
         
         const food = polyLower;
@@ -267,8 +270,6 @@ for (let tier = 1; tier < 6; tier++) {
         baseClass.UPGRADES_TIER_0.push(Class[polyName])
         
         if (!baseClass.UPGRADES_TIER_1) baseClass.UPGRADES_TIER_1 = [];
-        if (nextShape) baseClass.UPGRADES_TIER_1.push(Class[nextShape])
-        
-        nextShape = (i + 1 < polyNames.length) ? polyNames[i + 1] : null;
+        if (nextShape) baseClass.UPGRADES_TIER_1 = [Class[nextShape]]
     }
 }

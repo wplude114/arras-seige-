@@ -173,26 +173,12 @@ module.exports = {
     BOSS_SPAWN_DURATION: 1000000000,
     FOOD_TYPES: [
         [10, [
-            [100 +1, 'triangle'], [100/4 +1, 'betaTriangle'], [100/8 +1, 'alphaTriangle'], [100/16 +1, 'gammaTriangle'],
-            [50 +1, 'square'], [50/4 +1, 'betaSquare'], [50/8 +1, 'alphaSquare'], [50/16 +1, 'gammaSquare'],
-            [33 +1, 'pentagon'], [33/4 +1, 'betaPentagon'], [33/8 +1, 'alphaPentagon'], [33/16 +1, 'gammaPentagon'],
-            [12 +1, 'hexagon'], [12/4 +1, 'betaHexagon'], [12/8 +1, 'alphaHexagon'], [12/16 +1, 'gammaHexagon'],
-            [7 +1, 'septagon'], [7/4 +1, 'betaSeptagon'], [7/8 +1, 'alphaSeptagon'], [7/16 +1, 'gammaSeptagon'],
-            [3 +1, 'octagon'], [3/4 +1, 'betaOctagon'], [3/8 +1, 'alphaOctagon'], [3/16 +1, 'gammaOctagon'],
-            [1 +1, 'nonagon'], [1/4 +1, 'betaNonagon'], [1/8 +1, 'alphaNonagon'], [1/16 +1, 'gammaNonagon'],
-            [0.35 +1, 'decagon'], [0.35/4 +1, 'betaDecagon'], [0.35/8 +1, 'alphaDecagon'], [0.35/16 +1, 'gammaDecagon'],
-            [0.15 +1, 'undecagon'], [0.15/4 +1, 'betaUndecagon'], [0.15/8 +1, 'alphaUndecagon'], [0.15/16 +1, 'gammaUndecagon'],
-        ]],
-        [1, [
-            [100 +1, 'rammerTriangle'],
-            [50 +1, 'rammerSquare'],
-            [33 +1, 'rammerPentagon'],
-            [12 +1, 'rammerHexagon'],
-            [7 +1, 'rammerSeptagon'],
-            [3 +1, 'rammerOctagon'],
-            [1 +1, 'rammerNonagon'],
-            [0.35 +1, 'rammerDecagon']
-            [0.15 +1, 'rammerUndecagon']
+            [1+(100), 'triangle'], [1+(100/4), 'betaTriangle'], [1+(100/8), 'alphaTriangle'], [1+(100/16), 'gammaTriangle'],
+            [1+(50), 'square'], [1+(50/4), 'betaSquare'], [1+(50/8), 'alphaSquare'], [1+(50/16), 'gammaSquare'],
+            [1+(20), 'pentagon'], [1+(20/4), 'betaPentagon'], [1+(20/8), 'alphaPentagon'], [1+(20/16), 'gammaPentagon'],
+            [1+(10), 'hexagon'], [1+(10/4), 'betaHexagon'], [1+(10/8), 'alphaHexagon'], [1+(10/16), 'gammaHexagon'],
+            [1+(3), 'septagon'], [1+(3/4), 'betaSeptagon'], [1+(3/8), 'alphaSeptagon'], [1+(3/16), 'gammaSeptagon'],
+            // i will add the rest later this is so boring
         ]]
     ],
 

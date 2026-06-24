@@ -181,11 +181,18 @@ const tierNames = [ null, 'beta', 'alpha', 'gamma', 'delta', 'epsilon', 'zeta', 
 for (let tier = 1; tier < 8; tier++) {
     for (const polyLower of polyNames) {
 
+        const food = polyLower;
         let polyName = polyLower[0].toUpperCase() + polyLower.slice(1);
-        let food = polyName[0].toLowerCase() + polyName.slice(1);
         const tierPrefix = tierNames[tier];
+
+        const baseClass = Class[food];
+        if (!baseClass || typeof baseClass !== 'object') {
+            console.warn(`Skipping creation of ${tierPrefix ? tierPrefix : ''}${polyName}: base class Class[${food}] not found.`);
+            continue;
+        }
+
         if (tierPrefix) polyName = tierPrefix + polyName;
-        Class[polyName] = makeLaby(Class[food], tier);
+        Class[polyName] = makeLaby(baseClass, tier);
         console.log("Created " + polyName);
         console.log();
     }

@@ -1032,7 +1032,7 @@ exports.makeLaby = (type, level, baseScale = 1) => {
         strengthMultiplier = 5 ** level;
     return {
         PARENT: "food",
-        LABEL: "[" + ["", "Beta ", "Alpha ", "Gamma ", "Delta ", "Epsilon ", "Zeta ", "Eta ", "Theta"][level] + "] " + type.LABEL,
+        LABEL: "[ " + ["", "Beta", "Alpha", "Gamma", "Delta", "Zeta"][level] + " ] " + type.LABEL,
         VALUE: type.VALUE * strengthMultiplier,
         SHAPE: type.SHAPE,
         SIZE: type.SIZE * baseScale / downscale ** level,
@@ -1054,7 +1054,7 @@ exports.makeLaby = (type, level, baseScale = 1) => {
         TURRETS: type.TURRETS ?? [],
         PROPS: Array(level).fill().map((_, i) => ({
             POSITION: [20 * downscale ** (i + 1), 0, 0, !(i & 1) ? 180 / usableSHAPE : 0, 1],
-            TYPE: [type, { COLOR: 'mirror' }]
+            TYPE: [type]
         }))
     };
 }

@@ -521,6 +521,6 @@ Class.flailBolt3 = {
 }
 
 Class.developer.UPGRADES_TIER_0 = ["nav", "spectator", "addons"]
-Class.misc.UPGRADES_TIER_0 = ["tridecagon"]
+Class.misc.UPGRADES_TIER_0 = ["triangle"]
 Class.nav.UPGRADES_TIER_0 = ["tanks","misc"] // makes things easier
     Class.tanks.UPGRADES_TIER_0 = [['basic','Base'], ['whirlwind','Base'], ['literallyAMachineGun','Base']]

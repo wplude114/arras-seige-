@@ -182,6 +182,7 @@ for (let tier = 0; tier < 8; tier++) {
 
         let polyName = polyNames[poly];
         polyName = polyName[0].toUpperCase() + polyName.slice(1);
+        //polyName = null // note: make this add the tier (eg: "betaTriangle", "deltaSquare", "gammaDecagon")
         console.log("Creating " + polyName)
         //Class[polyName] = makeLaby(Class[food], tier, (polyName == "Triangle" && tier > 0) ? 2/3 : 1);
     }

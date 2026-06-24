@@ -82,8 +82,26 @@ Class.thrusterBody = {
 }
 
 Class.trainSegment = {
-    PARENT: "tankBody",
-    INDEPENDENT: true,
+     PARENT: "genericEntity",
+    LABEL: "Body",
+    INDEPENDENT: true,=
+    COLOR: "mirror",
+    
+    SHAPE: [[-1.7,-1],[0,-1.3],[1.7,-1],[1.7,1],[0,1.3],[-1.7,1]],=
+    GUNS: [
+      {
+            POSITION: {LENGTH: 15,WIDTH: 31,ASPECT: 1, X: 0,Y: 0,ANGLE: 90,DELAY: 0},
+            PROPERTIES: {
+              COLOR: 17
+            }
+        },
+      {
+            POSITION: {LENGTH: 15,WIDTH: 31,ASPECT: 1, X: 0,Y: 0,ANGLE: -90,DELAY: 0},
+            PROPERTIES: {
+              COLOR: 17
+            }
+        },
+    ],
 }
 Class.trainBolt = {
     PARENT: "genericTank",
@@ -105,14 +123,14 @@ Class.trainBody = {
 }
 
 // aura stuff goes here
-
-Class.Base = { PARENT: "genericTank", UPGRADE_LABEL: "", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }] }
+Class.genericBase = { PARENT: "genericTank", LABEL: null,  }
+Class.Base = { PARENT: "genericBase", UPGRADE_LABEL: "Base", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }] }
 Class.BaseD = { PARENT: "Base" }
-    Class.Booster = { PARENT: "genericTank", UPGRADE_LABEL: "Booster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "boosterBody" }] }
-    Class.Thruster = { PARENT: "genericTank", UPGRADE_LABEL: "Thruster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "thrusterBody" }] }
-    Class.Resurfacer = { PARENT: "genericTank", UPGRADE_LABEL: "Resurfacer Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "resurfacerBody" }] }
+    Class.Booster = { PARENT: "genericBase", UPGRADE_LABEL: "Booster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "boosterBody" }] }
+    Class.Thruster = { PARENT: "genericBase", UPGRADE_LABEL: "Thruster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "thrusterBody" }] }
+    Class.Resurfacer = { PARENT: "genericBase", UPGRADE_LABEL: "Resurfacer Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "resurfacerBody" }] }
 
-    Class.Train = { PARENT: "genericTank", UPGRADE_LABEL: "Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "trainBody" }] }
+    Class.Train = { PARENT: "genericBase", UPGRADE_LABEL: "Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "trainBody" }] }
 
 Class.Base.UPGRADES_TIER_2 = ["Booster",["BaseD","Train"]]
 Class.BaseD.UPGRADES_TIER_2 = ["Booster"]

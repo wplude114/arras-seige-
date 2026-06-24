@@ -106,7 +106,7 @@ Class.trainBody = {
 
 // aura stuff goes here
 
-Class.Base = { PARENT: "genericTank", UPGRADE_LABEL: null, TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }] }
+Class.Base = { PARENT: "genericTank", UPGRADE_LABEL: "", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }] }
 Class.BaseD = { PARENT: "Base" }
     Class.Booster = { PARENT: "genericTank", UPGRADE_LABEL: "Booster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "boosterBody" }] }
     Class.Thruster = { PARENT: "genericTank", UPGRADE_LABEL: "Thruster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "thrusterBody" }] }

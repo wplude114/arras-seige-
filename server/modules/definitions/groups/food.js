@@ -142,7 +142,7 @@ Class.decagon = {
     VALUE: 15000,
     SHAPE: 10,
     SIZE: 51,
-    COLOR: "tangerine",
+    COLOR: "egg",
     BODY: {
         DAMAGE: 10 * basePolygonDamage,
         DENSITY: 27,
@@ -162,7 +162,7 @@ Class.undecagon = {
     VALUE: 20000,
     SHAPE: 11,
     SIZE: 70,
-    COLOR: "egg",
+    COLOR: "tangerine",
     BODY: {
         DAMAGE: 20 * basePolygonDamage,
         DENSITY: 30,
@@ -172,6 +172,7 @@ Class.undecagon = {
         PENETRATION: 1.5,
         ACCELERATION: 0.003
     },
+    CAN_BE_ON_LEADERBOARD: true,
     DRAW_HEALTH: true,
     GIVE_KILL_MESSAGE: true,
 };
@@ -182,7 +183,7 @@ Class.dodecagon = {
     VALUE: 40000,
     SHAPE: 12,
     SIZE: 90,
-    COLOR: "gold",
+    COLOR: 3,
     BODY: {
         DAMAGE: 20 * basePolygonDamage,
         DENSITY: 30,
@@ -192,6 +193,7 @@ Class.dodecagon = {
         PENETRATION: 1.5,
         ACCELERATION: 0.003
     },
+    CAN_BE_ON_LEADERBOARD: true,
     DRAW_HEALTH: true,
     GIVE_KILL_MESSAGE: true,
 };
@@ -212,6 +214,28 @@ Class.tridecagon = {
         PENETRATION: 1.5,
         ACCELERATION: 0.003
     },
+    CAN_BE_ON_LEADERBOARD: true,
+    DRAW_HEALTH: true,
+    GIVE_KILL_MESSAGE: true,
+};
+
+Class.tetradecagon = {
+    PARENT: "food",
+    LABEL: "Tridecagon",
+    VALUE: 100000,
+    SHAPE: 14,
+    SIZE: 150,
+    COLOR: "square",
+    BODY: {
+        DAMAGE: 50 * basePolygonDamage,
+        DENSITY: 100,
+        HEALTH: 2000 * basePolygonHealth,
+        RESIST: 4,
+        SHIELD: 100 * basePolygonHealth,
+        PENETRATION: 1.5,
+        ACCELERATION: 0.003
+    },
+    CAN_BE_ON_LEADERBOARD: true,
     DRAW_HEALTH: true,
     GIVE_KILL_MESSAGE: true,
 };
@@ -233,7 +257,6 @@ for (let tier = 1; tier < 8; tier++) {
 
         if (tierPrefix) polyName = tierPrefix + polyName;
         Class[polyName] = makeLaby(baseClass, tier, (food == "triangle" && tier > 0) ? 0.35 : 1);
-        console.log("Created " + polyName);
-        console.log();
+        if (tier > 3) { Class[polyName].CAN_BE_ON_LEADERBOARD = true }
     }
 }

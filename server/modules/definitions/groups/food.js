@@ -177,13 +177,14 @@ Class.undecagon = {
 };
 
 let polyNames = [ "egg", "square", "triangle", "pentagon", "hexagon", "septagon", "octagon", "nonagon", "decagon", "undecagon" ]
+const tierNames = [ null, 'beta', 'alpha', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta' ];
 for (let tier = 0; tier < 8; tier++) {
-    for (let poly in polyNames) {
+    for (const polyLower of polyNames) {
 
-        let polyName = polyNames[poly];
-        polyName = polyName[0].toUpperCase() + polyName.slice(1);
-        //polyName = null // note: make this add the tier (eg: "betaTriangle", "deltaSquare", "gammaDecagon")
+        let polyName = polyLower[0].toUpperCase() + polyLower.slice(1);
+        const tierPrefix = tierNames[tier];
+        if (tierPrefix) polyName = tierPrefix + polyName;
         console.log("Creating " + polyName)
-        //Class[polyName] = makeLaby(Class[food], tier, (polyName == "Triangle" && tier > 0) ? 2/3 : 1);
+        Class[polyName] = makeLaby(Class[food], tier); // create new shape
     }
 }

@@ -133,7 +133,7 @@ Class.genericTank = {
     HITS_OWN_TYPE: "hardOnlyTanks"
 }
 Class.genericBoss = {
-    PARENT: "genericTankNoBody",
+    PARENT: "genericTank",
     TYPE: "miniboss",
     DANGER: 6,
     SKILL: skillSet({

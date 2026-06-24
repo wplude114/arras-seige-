@@ -176,7 +176,7 @@ Class.undecagon = {
     GIVE_KILL_MESSAGE: true,
 };
 
-let polyNames = [ "egg", "square", "triangle", "pentagon", "hexagon", "septagon", "octagon", "nonagon", "decagon", "undecagon" ]
+let polyNames = [ "triangle", "square", "pentagon", "hexagon", "septagon", "octagon", "nonagon", "decagon", "undecagon" ]
 const tierNames = [ null, 'beta', 'alpha', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta' ];
 for (let tier = 1; tier < 8; tier++) {
     for (const polyLower of polyNames) {

@@ -103,7 +103,7 @@ Class.trainSegment = {
         },
     ],
     TURRETS: [{
-        POSITION: [35, 0, 0, 0, 360, 1],
+        POSITION: [30, 0, 0, 0, 360, 1],
         TYPE: [ "barrel" ]
     }],
 }

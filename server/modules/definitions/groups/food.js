@@ -59,7 +59,7 @@ Class.pentagon = {
 Class.hexagon = {
     PARENT: "food",
     LABEL: "Hexagon",
-    VALUE: 500,
+    VALUE: 750,
     SHAPE: 6,
     SIZE: 25,
     COLOR: 2,
@@ -79,7 +79,7 @@ Class.hexagon = {
 Class.septagon = {
     PARENT: "food",
     LABEL: "Septagon",
-    VALUE: 730,
+    VALUE: 1500,
     SHAPE: 7,
     SIZE: 27,
     COLOR: 1,
@@ -99,7 +99,7 @@ Class.septagon = {
 Class.octagon = {
     PARENT: "food",
     LABEL: "Octagon",
-    VALUE: 1330,
+    VALUE: 4500,
     SHAPE: 8,
     SIZE: 36,
     COLOR: "lavender",
@@ -119,7 +119,7 @@ Class.octagon = {
 Class.nonagon = {
     PARENT: "food",
     LABEL: "Nonagon",
-    VALUE: 1640,
+    VALUE: 9200,
     SHAPE: 9,
     SIZE: 40,
     COLOR: 7,
@@ -139,7 +139,7 @@ Class.nonagon = {
 Class.decagon = {
     PARENT: "food",
     LABEL: "Decagon",
-    VALUE: 2040,
+    VALUE: 15000,
     SHAPE: 10,
     SIZE: 51,
     COLOR: "tangerine",
@@ -159,7 +159,7 @@ Class.decagon = {
 Class.undecagon = {
     PARENT: "food",
     LABEL: "Undecagon",
-    VALUE: 2340,
+    VALUE: 20000,
     SHAPE: 11,
     SIZE: 70,
     COLOR: 16,
@@ -176,8 +176,48 @@ Class.undecagon = {
     GIVE_KILL_MESSAGE: true,
 };
 
-let polyNames = [ "triangle", "square", "pentagon", "hexagon", "septagon", "octagon", "nonagon", "decagon", "undecagon" ]
-const tierNames = [ null, 'beta', 'alpha', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta' ];
+Class.dodecagon = {
+    PARENT: "food",
+    LABEL: "Dodecagon",
+    VALUE: 40000,
+    SHAPE: 12,
+    SIZE: 90,
+    COLOR: "gold",
+    BODY: {
+        DAMAGE: 20 * basePolygonDamage,
+        DENSITY: 30,
+        HEALTH: 150 * basePolygonHealth,
+        RESIST: 2.5,
+        SHIELD: 500 * basePolygonHealth,
+        PENETRATION: 1.5,
+        ACCELERATION: 0.003
+    },
+    DRAW_HEALTH: true,
+    GIVE_KILL_MESSAGE: true,
+};
+
+Class.tridecagon = {
+    PARENT: "food",
+    LABEL: "Tridecagon",
+    VALUE: 64000,
+    SHAPE: 13,
+    SIZE: 120,
+    COLOR: "triangle",
+    BODY: {
+        DAMAGE: 30 * basePolygonDamage,
+        DENSITY: 42,
+        HEALTH: 200 * basePolygonHealth,
+        RESIST: 2.5,
+        SHIELD: 1000 * basePolygonHealth,
+        PENETRATION: 1.5,
+        ACCELERATION: 0.003
+    },
+    DRAW_HEALTH: true,
+    GIVE_KILL_MESSAGE: true,
+};
+
+let polyNames = [ "triangle", "square", "pentagon", "hexagon", "septagon", "octagon", "nonagon", "decagon", "undecagon", "dodecagon", "tridecagon" ]
+const tierNames = [ null, 'beta', 'alpha', 'gamma', 'delta', 'epsilon' ];
 for (let tier = 1; tier < 8; tier++) {
     for (const polyLower of polyNames) {
 

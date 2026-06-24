@@ -274,23 +274,23 @@ for (let tier = 1; tier < 6; tier++) {
         Class[polyName].UPGRADES_TIER_0 = [baseClass]
 
         
-        Class[polyName].UPGRADES_TIER_2: [],
-        Class[polyName].UPGRADES_TIER_3: [],
-        Class[polyName].UPGRADES_TIER_4: [],
-        Class[polyName].UPGRADES_TIER_5: [],
-        Class[polyName].UPGRADES_TIER_6: [],
-        Class[polyName].UPGRADES_TIER_7: [],
-        Class[polyName].UPGRADES_TIER_8: [],
-        Class[polyName].UPGRADES_TIER_9: [],
+        Class[polyName].UPGRADES_TIER_2 =  []
+        Class[polyName].UPGRADES_TIER_3 = []
+        Class[polyName].UPGRADES_TIER_4 =  []
+        Class[polyName].UPGRADES_TIER_5 = []
+        Class[polyName].UPGRADES_TIER_6 =  []
+        Class[polyName].UPGRADES_TIER_7 = []
+        Class[polyName].UPGRADES_TIER_8 =  []
+        Class[polyName].UPGRADES_TIER_9 = []
         
-        baseClass.UPGRADES_TIER_2: [],
-        baseClass.UPGRADES_TIER_3: [],
-        baseClass.UPGRADES_TIER_4: [],
-        baseClass.UPGRADES_TIER_5: [],
-        baseClass.UPGRADES_TIER_6: [],
-        baseClass.UPGRADES_TIER_7: [],
-        baseClass.UPGRADES_TIER_8: [],
-        baseClass.UPGRADES_TIER_9: [],
+        baseClass.UPGRADES_TIER_2 = []
+        baseClass.UPGRADES_TIER_3 =  []
+        baseClass.UPGRADES_TIER_4 = []
+        baseClass.UPGRADES_TIER_5 =  []
+        baseClass.UPGRADES_TIER_6 = []
+        baseClass.UPGRADES_TIER_7 =  []
+        baseClass.UPGRADES_TIER_8 = []
+        baseClass.UPGRADES_TIER_9 =  []
         
         if (!Class[polyName].REBOOT_UPGRADE_TREE) Class[polyName].REBOOT_UPGRADE_TREE = "triangle"
         if (!baseClass.REBOOT_UPGRADE_TREE) baseClass.REBOOT_UPGRADE_TREE = "triangle"

@@ -123,7 +123,7 @@ Class.detonaterBody = {
     PROPS: [
         {
         POSITION: [5, 0, 0, 0, 360, 1],
-        TYPE: makeDeco(4.5);
+        TYPE: makeDeco(4.5)
     }
     ],
 }

@@ -27,7 +27,7 @@ function generateFoodTypes() {
 
   for (const b of bases) {
     for (const v of variants) {
-      const value = 1 + Math.round((b.base*10000) * v.factor); // multiply base by 1000 for super accurate rarities.
+      const value = 1 + Math.round((b.base*100000) * v.factor); // multiply base by 1000 for super accurate rarities.
       const name = v.suffix ? v.suffix + cap(b.name) : b.name;
       entries.push([value, name]);
     }

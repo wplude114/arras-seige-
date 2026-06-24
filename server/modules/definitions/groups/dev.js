@@ -124,24 +124,6 @@ Class.addons.UPGRADES_TIER_0 = []
 // Whirlwind
 Class.whirlwindDeco = makeDeco(6)
 Class.whirlwindDeco.CONTROLLERS = [["spin", { independent: true, speed: 0.128 }]]
-Class.tornadoDeco = makeDeco(4)
-Class.tornadoDeco.CONTROLLERS = [["spin", { independent: true, speed: 0.128 }]]
-Class.megaTornadoDeco = makeDeco([[0,-1],[0.5,0],[0,1],[-0.5,0]])
-Class.megaTornadoDeco.CONTROLLERS = [["spin", { independent: true }]]
-Class.thunderboltDeco = makeDeco(4)
-Class.thunderboltDeco.CONTROLLERS = [["spin", { independent: true, speed: 0.16 }]]
-Class.hurricaneDeco = makeDeco(8)
-Class.hurricaneDeco.CONTROLLERS = [["spin", { independent: true, speed: 0.128 }]]
-Class.typhoonDeco = makeDeco(10)
-Class.typhoonDeco.CONTROLLERS = [["spin", { independent: true, speed: 0.128 }]]
-Class.tempestDeco1 = makeDeco(3)
-Class.tempestDeco1.CONTROLLERS = [["spin", { independent: true, speed: 0.128 }]]
-Class.tempestDeco2 = makeDeco(3)
-Class.tempestDeco2.CONTROLLERS = [["spin", { independent: true, speed: -0.128 }]]
-Class.blizzardDeco1 = makeDeco(5)
-Class.blizzardDeco1.CONTROLLERS = [["spin", { independent: true, speed: 0.128 }]]
-Class.blizzardDeco2 = makeDeco(5)
-Class.blizzardDeco2.CONTROLLERS = [["spin", { independent: true, speed: -0.128 }]]
 
 Class.whirlwind = {
     PARENT: "genericTank",
@@ -178,6 +160,18 @@ Class.whirlwind = {
         return output
     })()
 }
+class io_turretWithMotion extends IO {
+    constructor(b, opts = {}) {
+        super(b)
+    }
+    think(input) {
+        return {
+            target: this.body.master.velocity,
+            main: true,
+        };
+    }
+}
+ioTypes.turretWithMotion = io_turretWithMotion
 
 // FLAIL!!!
 Class.flailBallSpike = {

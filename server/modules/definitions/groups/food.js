@@ -262,7 +262,7 @@ for (let tier = 1; tier < 6; tier++) {
         if (tierPrefix) polyName = tierPrefix + polyName;
         Class[polyName] = makeLaby(baseClass, tier, (food == "triangle" && tier > 0) ? 0.5 : 1);
         if (tier > 3) { Class[polyName].CAN_BE_ON_LEADERBOARD = true }
-        console.log("Created "+polyName)
+        console.log("[food.js] Created "+polyName + ". Creating upgrades now.")
         
         if (!baseClass.UPGRADES_TIER_0) baseClass.UPGRADES_TIER_0 = [];
         baseClass.UPGRADES_TIER_0.push(Class[polyName])
@@ -272,5 +272,8 @@ for (let tier = 1; tier < 6; tier++) {
 
         if (!Class[polyName].UPGRADES_TIER_0) Class[polyName].UPGRADES_TIER_0 = [];
         Class[polyName].UPGRADES_TIER_0 = [baseClass]
+        
+        if (!Class[polyName].REBOOT_UPGRADE_TREE) Class[polyName].REBOOT_UPGRADE_TREE = "triangle"
+        if (!baseClass.REBOOT_UPGRADE_TREE) baseClass.REBOOT_UPGRADE_TREE = "triangle"
     }
 }

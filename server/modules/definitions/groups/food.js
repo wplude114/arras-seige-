@@ -176,7 +176,7 @@ Class.undecagon = {
     GIVE_KILL_MESSAGE: true,
 };
 
-let polyNames = [ "egg", "square", "triangle", "pentagon", "hexagon", "septagon", "octagon", "nonagon", "decagon", "undecagon" ],
+let polyNames = [ "egg", "square", "triangle", "pentagon", "hexagon", "septagon", "octagon", "nonagon", "decagon", "undecagon" ]
 for (let tier = 0; tier < 8; tier++) {
     for (let poly in polyNames) {
 

@@ -84,7 +84,7 @@ Class.thrusterBody = {
 Class.trainSegment = {
      PARENT: "genericEntity",
     LABEL: "Body",
-    INDEPENDENT: true,=
+    INDEPENDENT: true,
     COLOR: "mirror",
     
     SHAPE: [[-1.7,-1],[0,-1.3],[1.7,-1],[1.7,1],[0,1.3],[-1.7,1]],=

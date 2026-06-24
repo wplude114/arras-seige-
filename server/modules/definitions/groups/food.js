@@ -296,4 +296,7 @@ for (let i = 0; i < polyNames.length; i++) {
         if (tierPrefix) polyName = tierPrefix + polyName;
         Class[polyName] = makeRammer(baseClass);
         console.log("[food.js] Created "+polyName)
+
+        if (!baseClass.UPGRADES_TIER_0) baseClass.UPGRADES_TIER_0 = [];
+        baseClass.UPGRADES_TIER_0.push(Class[polyName])
     }

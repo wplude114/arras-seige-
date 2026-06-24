@@ -81,12 +81,61 @@ Class.thrusterBody = {
     ],
 }
 
+// detonater
+Class.detonaterBody = {
+    PARENT: "tankBody",
+    INDEPENDENT: true,
+    GUNS: [
+        ...Class.tankBody.GUNS,
+         {
+            POSITION: {LENGTH: 0,WIDTH: 8,ASPECT: 1, X: 13,Y: 0,ANGLE: 45,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: ["bullet", { PERSISTS_AFTER_DEATH: true }],
+                SHOOT_ON_DEATH: true,
+            }
+        },
+         {
+            POSITION: {LENGTH: 0,WIDTH: 8,ASPECT: 1, X: 13,Y: 0,ANGLE: -45,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: ["bullet", { PERSISTS_AFTER_DEATH: true }],
+                SHOOT_ON_DEATH: true,
+            }
+        },
+         {
+            POSITION: {LENGTH: 0,WIDTH: 8,ASPECT: 1, X: 13,Y: 0,ANGLE: 135,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: ["bullet", { PERSISTS_AFTER_DEATH: true }],
+                SHOOT_ON_DEATH: true,
+            }
+        },
+         {
+            POSITION: {LENGTH: 0,WIDTH: 8,ASPECT: 1, X: 13,Y: 0,ANGLE: -135,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: ["bullet", { PERSISTS_AFTER_DEATH: true }],
+                SHOOT_ON_DEATH: true,
+            }
+        },
+    ],
+    PROPS: [
+        {
+        POSITION: [5, 0, 0, 0, 360, 1],
+        TYPE: makeDeco(4.5);
+    }
+    ],
+}
+
 // aura stuff goes here
 
 Class.Base = { PARENT: "genericTank", UPGRADE_LABEL: "Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }] }
+Class.BaseNoCombo = { PARENT: "Base" }
     Class.Booster = { PARENT: "genericTank", UPGRADE_LABEL: "Booster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "boosterBody" }] }
     Class.Thruster = { PARENT: "genericTank", UPGRADE_LABEL: "Thruster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "thrusterBody" }] }
     Class.Resurfacer = { PARENT: "genericTank", UPGRADE_LABEL: "Resurfacer Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "resurfacerBody" }] }
 
-Class.Base.UPGRADES_TIER_2 = ["Booster"]
+Class.Base.UPGRADES_TIER_2 = ["Booster", ["BaseNoCombo","detonaterBody"]]
+Class.BaseNoCombo.UPGRADES_TIER_2 = ["Booster"]
     Class.Booster.UPGRADES_TIER_3 = ["Thruster", "Resurfacer"]

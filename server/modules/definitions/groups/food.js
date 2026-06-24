@@ -62,7 +62,7 @@ Class.hexagon = {
     VALUE: 750,
     SHAPE: 6,
     SIZE: 25,
-    COLOR: "#8383e6",
+    COLOR: "#4c7dd9",
     BODY: {
         DAMAGE: 3 * basePolygonDamage,
         DENSITY: 8,

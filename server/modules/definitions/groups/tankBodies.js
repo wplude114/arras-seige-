@@ -43,31 +43,46 @@ Class.smasherBody = {
       {
             POSITION: {LENGTH: 15,WIDTH: 20,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180,DELAY: 0},
             PROPERTIES: {
-              COLOR: 17
+              COLOR: 17,
+                SHOOT_SETTINGS: combineStats([g.basic, { reload: 0.4, speed: 0.1, maxSpeed: 0.1, range: 0.1 }]),
+                TYPE: ["bullet", { ALPHA: 0 }],
+                AUTOFIRE: true
             }
         },
       {
             POSITION: {LENGTH: 15,WIDTH: 20,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72),DELAY: 0},
             PROPERTIES: {
-              COLOR: 17
+              COLOR: 17,
+                SHOOT_SETTINGS: combineStats([g.basic, { reload: 0.4, speed: 0.1, maxSpeed: 0.1, range: 0.1 }]),
+                TYPE: ["bullet", { ALPHA: 0 }],
+                AUTOFIRE: true
             }
         },
       {
             POSITION: {LENGTH: 15,WIDTH: 20,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72*2),DELAY: 0},
             PROPERTIES: {
-              COLOR: 17
+              COLOR: 17,
+                SHOOT_SETTINGS: combineStats([g.basic, { reload: 0.4, speed: 0.1, maxSpeed: 0.1, range: 0.1 }]),
+                TYPE: ["bullet", { ALPHA: 0 }],
+                AUTOFIRE: true
             }
         },
       {
             POSITION: {LENGTH: 15,WIDTH: 20,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72*3),DELAY: 0},
             PROPERTIES: {
-              COLOR: 17
+              COLOR: 17,
+                SHOOT_SETTINGS: combineStats([g.basic, { reload: 0.4, speed: 0.1, maxSpeed: 0.1, range: 0.1 }]),
+                TYPE: ["bullet", { ALPHA: 0 }],
+                AUTOFIRE: true
             }
         },
       {
             POSITION: {LENGTH: 15,WIDTH: 20,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72*4),DELAY: 0},
             PROPERTIES: {
-              COLOR: 17
+              COLOR: 17,
+                SHOOT_SETTINGS: combineStats([g.basic, { reload: 0.4, speed: 0.1, maxSpeed: 0.1, range: 0.1 }]),
+                TYPE: ["bullet", { ALPHA: 0 }],
+                AUTOFIRE: true
             }
         },
     ],

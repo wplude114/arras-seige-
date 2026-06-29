@@ -185,8 +185,8 @@ Class.flailBall = {
     COLOR: "grey",
     HITS_OWN_TYPE: 'hard',
     INDEPENDENT: true,
-    PROPS: [{
-        POSITION: [21.5, 0, 0, 0, 360, -1],
+    TURRETS: [{
+        POSITION: [21.5, 0, 0, 0, 360, -100],
         TYPE: "flailBallSpike",
     }],
     GUNS: [

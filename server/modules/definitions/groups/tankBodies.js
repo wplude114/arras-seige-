@@ -34,7 +34,7 @@ Class.smasherBody = {
     PARENT: "genericEntity",
     LABEL: "Body",
     INDEPENDENT: true,
-    FACING_TYPE: ['spin', {speed: 0.04}],
+    FACING_TYPE: ['spin', {speed: -0.06}],
     MOTION_TYPE: "motor",
     COLOR: "mirror",
     

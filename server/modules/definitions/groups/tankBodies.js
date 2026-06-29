@@ -34,12 +34,11 @@ Class.smasherBody = {
     PARENT: "genericEntity",
     LABEL: "Body",
     INDEPENDENT: true,
-    FACING_TYPE: "smoothWithMotion",
+    FACING_TYPE: ['spin', {speed: 0.04}],
     MOTION_TYPE: "motor",
     COLOR: "mirror",
     
     SHAPE: 5,
-    CONTROLLERS: ['spin', {speed: 0.02}],
     GUNS: [
       {
             POSITION: {LENGTH: 15,WIDTH: 31,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180,DELAY: 0},

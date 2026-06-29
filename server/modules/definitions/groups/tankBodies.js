@@ -30,6 +30,50 @@ Class.tankBody = {
     ],
 }
 
+Class.smasherBody = {
+    PARENT: "genericEntity",
+    LABEL: "Body",
+    INDEPENDENT: true,
+    FACING_TYPE: "smoothWithMotion",
+    MOTION_TYPE: "motor",
+    COLOR: "mirror",
+    
+    SHAPE: 5,
+    CONTROLLERS: ['spin', {speed: 0.02}],
+    GUNS: [
+      {
+            POSITION: {LENGTH: 15,WIDTH: 31,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180,DELAY: 0},
+            PROPERTIES: {
+              COLOR: 17
+            }
+        },
+      {
+            POSITION: {LENGTH: 15,WIDTH: 31,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72),DELAY: 0},
+            PROPERTIES: {
+              COLOR: 17
+            }
+        },
+      {
+            POSITION: {LENGTH: 15,WIDTH: 31,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72*2),DELAY: 0},
+            PROPERTIES: {
+              COLOR: 17
+            }
+        },
+      {
+            POSITION: {LENGTH: 15,WIDTH: 31,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72*3),DELAY: 0},
+            PROPERTIES: {
+              COLOR: 17
+            }
+        },
+      {
+            POSITION: {LENGTH: 15,WIDTH: 31,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72*4),DELAY: 0},
+            PROPERTIES: {
+              COLOR: 17
+            }
+        },
+    ],
+}
+
 // booster
 Class.boosterBody = {
     PARENT: "tankBody",
@@ -84,11 +128,12 @@ Class.thrusterBody = {
 // aura stuff goes here
 Class.genericBase = { PARENT: "genericTank", LABEL: null,  }
 Class.Base = { PARENT: "genericBase", UPGRADE_LABEL: "Base", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }] }
-Class.BaseD = { PARENT: "Base" }
-    Class.Booster = { PARENT: "genericBase", UPGRADE_LABEL: "Booster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "boosterBody" }] }
+
+    Class.Smasher = { PARENT: "genericBase", UPGRADE_LABEL: "Smasher", TURRETS: [{ POSITION: [20, 0, 0, 0, 360, -10], TYPE: "smasherBody" }] }
+
+     Class.Booster = { PARENT: "genericBase", UPGRADE_LABEL: "Booster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "boosterBody" }] }
     Class.Thruster = { PARENT: "genericBase", UPGRADE_LABEL: "Thruster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "thrusterBody" }] }
     Class.Resurfacer = { PARENT: "genericBase", UPGRADE_LABEL: "Resurfacer Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "resurfacerBody" }] }
 
 Class.Base.UPGRADES_TIER_2 = ["Booster"]
-Class.BaseD.UPGRADES_TIER_2 = ["Booster"]
     Class.Booster.UPGRADES_TIER_3 = ["Thruster", "Resurfacer"]

@@ -41,31 +41,31 @@ Class.smasherBody = {
     SHAPE: 5,
     GUNS: [
       {
-            POSITION: {LENGTH: 15,WIDTH: 31,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180,DELAY: 0},
+            POSITION: {LENGTH: 15,WIDTH: 20,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180,DELAY: 0},
             PROPERTIES: {
               COLOR: 17
             }
         },
       {
-            POSITION: {LENGTH: 15,WIDTH: 31,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72),DELAY: 0},
+            POSITION: {LENGTH: 15,WIDTH: 20,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72),DELAY: 0},
             PROPERTIES: {
               COLOR: 17
             }
         },
       {
-            POSITION: {LENGTH: 15,WIDTH: 31,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72*2),DELAY: 0},
+            POSITION: {LENGTH: 15,WIDTH: 20,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72*2),DELAY: 0},
             PROPERTIES: {
               COLOR: 17
             }
         },
       {
-            POSITION: {LENGTH: 15,WIDTH: 31,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72*3),DELAY: 0},
+            POSITION: {LENGTH: 15,WIDTH: 20,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72*3),DELAY: 0},
             PROPERTIES: {
               COLOR: 17
             }
         },
       {
-            POSITION: {LENGTH: 15,WIDTH: 31,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72*4),DELAY: 0},
+            POSITION: {LENGTH: 15,WIDTH: 20,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72*4),DELAY: 0},
             PROPERTIES: {
               COLOR: 17
             }

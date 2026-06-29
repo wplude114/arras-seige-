@@ -135,5 +135,5 @@ Class.Base = { PARENT: "genericBase", UPGRADE_LABEL: "Base", TURRETS: [{ POSITIO
     Class.Thruster = { PARENT: "genericBase", UPGRADE_LABEL: "Thruster Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "thrusterBody" }] }
     Class.Resurfacer = { PARENT: "genericBase", UPGRADE_LABEL: "Resurfacer Body", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "resurfacerBody" }] }
 
-Class.Base.UPGRADES_TIER_2 = ["Booster"]
+Class.Base.UPGRADES_TIER_2 = ["Booster", "Smasher"]
     Class.Booster.UPGRADES_TIER_3 = ["Thruster", "Resurfacer"]

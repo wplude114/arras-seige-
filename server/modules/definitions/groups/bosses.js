@@ -35,7 +35,7 @@ Class.boss_1 = {
         POSITION: [10,0,0,0,1],
         TYPE: "triangleRamDeco"
     },{
-        POSITION: [5,0,0,0,1],
+        POSITION: [6,0,0,0,1],
         TYPE: "triangleRamDeco2"
     }],
     GUNS: weaponArray([{
@@ -49,7 +49,12 @@ Class.boss_1 = {
             }
         },{
             POSITION: {LENGTH: 12,WIDTH: 13,ASPECT: 0.0001, X: 10,Y: 0,ANGLE: 0,DELAY: 0},
+        },{ // spike 2
+            POSITION: {LENGTH: 10,WIDTH: 20,ASPECT: 0.0001, X: 10,Y: 0,ANGLE: 45,DELAY: 0},
         }],3,0.33)
 };
 
-if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = []; Class.bosses.UPGRADES_TIER_0.push("boss_1");
+// menu stuff (i dont want to edit dev.js every time i add something)
+if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = []; // make sure it exists
+// actual stuff
+Class.bosses.UPGRADES_TIER_0.push("boss_1");

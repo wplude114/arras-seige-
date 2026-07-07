@@ -25,4 +25,4 @@ Class.boss_1 = {
     COLOR: 5,
 };
 
-Class.bosses.UPGRADES_TIER_0.push("boss_1");
+if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = []; Class.bosses.UPGRADES_TIER_0.push("boss_1");

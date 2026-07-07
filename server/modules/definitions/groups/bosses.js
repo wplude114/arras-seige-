@@ -19,7 +19,7 @@ Class.triangleRamDeco = makeDeco(3, 17);
 Class.triangleRamDeco2 = makeDeco(3, 5);
 
 Class.boss_1 = {
-    PARENT: "miniboss",
+    PARENT: "ramMiniboss",
     LABEL: "test boss 01",
     VALUE: 30,
     SHAPE: 3,

@@ -49,7 +49,7 @@ Class.boss_1 = {
             }
         },{
             POSITION: {LENGTH: 12,WIDTH: 14,ASPECT: 0.0001, X: 10,Y: 0,ANGLE: 0,DELAY: 0},
-        },3,0.33)
+        }],3,0.33)
 };
 
 // menu stuff (i dont want to edit dev.js every time i add something)

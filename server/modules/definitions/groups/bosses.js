@@ -25,7 +25,7 @@ Class.boss_1 = {
     COLOR: 5,
     PROPS: [{
         POSITION: [22,0,0,0,-1],
-        TYPE: makeDeco(3,17)
+        TYPE: makeDeco(3, 16)
     }]
 };
 

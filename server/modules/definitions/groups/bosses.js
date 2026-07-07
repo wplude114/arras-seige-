@@ -16,6 +16,7 @@ Class.ramMiniboss = {
     CONTROLLERS: ["nearestDifferentMaster", "canRepel", "mapTargetToGoal"],
 }
 Class.triangleRamDeco = makeDeco(3, 17);
+Class.triangleRamDeco2 = makeDeco(3, 5);
 
 Class.boss_1 = {
     PARENT: "miniboss",
@@ -34,9 +35,18 @@ Class.boss_1 = {
         POSITION: [10,0,0,0,1],
         TYPE: "triangleRamDeco"
     },{
-        POSITION: [10,0,0,0,1],
-        TYPE: makeDeco(0, 5)
+        POSITION: [5,0,0,0,1],
+        TYPE: "triangleRamDeco2"
     }],
+    GUNS: weaponAray([{
+            POSITION: {LENGTH: 12,WIDTH: 10,ASPECT: 0.0001, X: 10,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+              COLOR: 17,
+                SHOOT_SETTINGS: combineStats([g.basic, { reload: 0.4, speed: 0.1, maxSpeed: 0.1, range: 0.1 }]),
+                TYPE: ["bullet", { ALPHA: 0 }],
+                AUTOFIRE: true
+            }
+        }],3,0.33)
 };
 
 if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = []; Class.bosses.UPGRADES_TIER_0.push("boss_1");

@@ -39,7 +39,7 @@ Class.boss_1 = {
         TYPE: "triangleRamDeco2"
     }],
     GUNS: weaponArray([{
-            POSITION: {LENGTH: 12,WIDTH: 13,ASPECT: 0.0001, X: 10,Y: 0,ANGLE: 0,DELAY: 0},
+            POSITION: {LENGTH: 15,WIDTH: 13,ASPECT: 0.0001, X: 8,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
               COLOR: 17,
                 SHOOT_SETTINGS: combineStats([g.basic, { reload: 0.4, speed: 0.1, maxSpeed: 0.1, range: 0.1 }]),

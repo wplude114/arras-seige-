@@ -15,6 +15,7 @@ Class.ramMiniboss = {
     PARENT: "genericBoss",
     CONTROLLERS: ["nearestDifferentMaster", "canRepel", "mapTargetToGoal"],
 }
+Class.triangleRamDeco = makeDeco(3, 17);
 
 Class.boss_1 = {
     PARENT: "miniboss",
@@ -25,7 +26,7 @@ Class.boss_1 = {
     COLOR: 5,
     PROPS: [{
         POSITION: [22,0,0,0,-1],
-        TYPE: makeDeco(3, 16)
+        TYPE: "triangleRamDeco"
     }]
 };
 

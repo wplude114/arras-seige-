@@ -25,12 +25,18 @@ Class.boss_1 = {
     SIZE: 27,
     COLOR: 5,
     PROPS: [{
-        POSITION: [22,0,0,0,-1],
+        POSITION: [24],
         TYPE: makeDeco(0, 17)
     },{
-        POSITION: [24,0,0,0,-1],
+        POSITION: [24],
         TYPE: "triangleRamDeco"
-    }]
+    },{
+        POSITION: [10,0,0,0,1],
+        TYPE: "triangleRamDeco"
+    },{
+        POSITION: [10,0,0,0,1],
+        TYPE: makeDeco(0, 5)
+    }],
 };
 
 if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = []; Class.bosses.UPGRADES_TIER_0.push("boss_1");

@@ -116,49 +116,9 @@ Class.octagon = {
     GIVE_KILL_MESSAGE: true,
 };
 
-Class.nonagon = {
-    PARENT: "food",
-    LABEL: "Nonagon",
-    VALUE: 9200,
-    SHAPE: 9,
-    SIZE: 40,
-    COLOR: 7,
-    BODY: {
-        DAMAGE: 8 * basePolygonDamage,
-        DENSITY: 23,
-        HEALTH: 67 * basePolygonHealth,
-        RESIST: 1.7,
-        SHIELD: 126 * basePolygonHealth,
-        PENETRATION: 1.1,
-        ACCELERATION: 0.003
-    },
-    DRAW_HEALTH: true,
-    GIVE_KILL_MESSAGE: true,
-};
-
-Class.decagon = {
-    PARENT: "food",
-    LABEL: "Decagon",
-    VALUE: 15000,
-    SHAPE: 10,
-    SIZE: 51,
-    COLOR: "egg",
-    BODY: {
-        DAMAGE: 10 * basePolygonDamage,
-        DENSITY: 27,
-        HEALTH: 80 * basePolygonHealth,
-        RESIST: 2,
-        SHIELD: 273 * basePolygonHealth,
-        PENETRATION: 1.1,
-        ACCELERATION: 0.003
-    },
-    DRAW_HEALTH: true,
-    GIVE_KILL_MESSAGE: true,
-};
-
-let polyNames = [ "triangle", "square", "pentagon", "hexagon", "septagon", "octagon", "nonagon", "decagon" ]
-const tierNames = [ null, 'beta', 'alpha', 'gamma', 'delta', 'zeta' ];
-for (let tier = 1; tier < 6; tier++) {
+let polyNames = [ "triangle", "square", "pentagon", "hexagon", "septagon", "octagon" ]
+const tierNames = [ null, 'beta', 'alpha', 'gamma' ];
+for (let tier = 1; tier < tierNames.length; tier++) {
     let nextShape = null;
     for (let i = 0; i < polyNames.length; i++) {
         

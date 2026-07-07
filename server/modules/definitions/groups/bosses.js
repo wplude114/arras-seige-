@@ -4,6 +4,7 @@ const g = require('../gunvals.js');
 require('./generics.js');
 require('./tanks.js');
 require('./turrets.js');
+require('./dev.js');
 
 Class.miniboss = {
     PARENT: "genericBoss",
@@ -17,12 +18,11 @@ Class.ramMiniboss = {
 
 Class.boss_1 = {
     PARENT: "miniboss",
+    LABEL: "test boss 01",
     VALUE: 30,
     SHAPE: 3,
     SIZE: 27,
     COLOR: 5,
 };
 
-if (!Class.developer) Class.developer = {};
-if (!Class.developer.UPGRADES_TIER_0) Class.developer.UPGRADES_TIER_0 = [];
-Class.developer.UPGRADES_TIER_0.push("boss_1");
+Class.bosses.UPGRADES_TIER_0.push("boss_1");

@@ -23,6 +23,10 @@ Class.boss_1 = {
     SHAPE: 3,
     SIZE: 27,
     COLOR: 5,
+    PROPS: [{
+        POSITION: [22,0,0,0,-1],
+        TYPE: makeDeco(3,17)
+    }]
 };
 
 if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = []; Class.bosses.UPGRADES_TIER_0.push("boss_1");

@@ -48,10 +48,8 @@ Class.boss_1 = {
                 ALPHA: 0
             }
         },{
-            POSITION: {LENGTH: 12,WIDTH: 13,ASPECT: 0.0001, X: 10,Y: 0,ANGLE: 0,DELAY: 0},
-        },{ // spike 2
-            POSITION: {LENGTH: 10,WIDTH: 20,ASPECT: 0.0001, X: 10,Y: 0,ANGLE: 45,DELAY: 0},
-        }],3,0.33)
+            POSITION: {LENGTH: 12,WIDTH: 14,ASPECT: 0.0001, X: 10,Y: 0,ANGLE: 0,DELAY: 0},
+        },3,0.33)
 };
 
 // menu stuff (i dont want to edit dev.js every time i add something)

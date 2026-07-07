@@ -38,7 +38,7 @@ Class.boss_1 = {
         POSITION: [5,0,0,0,1],
         TYPE: "triangleRamDeco2"
     }],
-    GUNS: weaponAray([{
+    GUNS: weaponArray([{
             POSITION: {LENGTH: 12,WIDTH: 10,ASPECT: 0.0001, X: 10,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
               COLOR: 17,

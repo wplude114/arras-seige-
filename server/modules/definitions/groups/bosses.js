@@ -14,3 +14,13 @@ Class.ramMiniboss = {
     PARENT: "genericBoss",
     CONTROLLERS: ["nearestDifferentMaster", "canRepel", "mapTargetToGoal"],
 }
+
+Class.boss_1 = {
+    PARENT: "miniboss",
+    VALUE: 30,
+    SHAPE: 3,
+    SIZE: 27,
+    COLOR: 5,
+};
+
+Class.developer.UPGRADES_TIER_0.push("boss_1");

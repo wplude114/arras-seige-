@@ -26,6 +26,9 @@ Class.boss_1 = {
     COLOR: 5,
     PROPS: [{
         POSITION: [22,0,0,0,-1],
+        TYPE: makeDeco(0, 17)
+    },{
+        POSITION: [24,0,0,0,-1],
         TYPE: "triangleRamDeco"
     }]
 };

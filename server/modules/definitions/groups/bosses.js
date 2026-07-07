@@ -23,4 +23,6 @@ Class.boss_1 = {
     COLOR: 5,
 };
 
+if (!Class.developer) Class.developer = {};
+if (!Class.developer.UPGRADES_TIER_0) Class.developer.UPGRADES_TIER_0 = [];
 Class.developer.UPGRADES_TIER_0.push("boss_1");

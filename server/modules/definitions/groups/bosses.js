@@ -80,7 +80,7 @@ Class.distributer = {
     NAME: "",
     LABEL: "§#00ffd0§Distributer",
     UPGRADE_LABEL: "Distributer (MK II)",
-    UPGRADE_TOOLTIP: "A modified version of the §#37ff00§Ravager§reset§ with 6 sides.\n- bossMachineGun [x6]\n- (Mounted) bossMachineGun [x8]",
+    UPGRADE_TOOLTIP: "A modified version of the §#37ff00§Ravager§reset§ with so. Many. Bullets..\n- bossMachineGun [x5]\n- (Mounted) bossMachineGun [x7]",
     COLOR: "#00ffd0",
     UPGRADE_COLOR: "#db190b",
     SHAPE: 6,
@@ -100,7 +100,7 @@ Class.distributer = {
             POSITION: [4, 7, 0, 30, 200, 1],
             TYPE: ["bossMachineGun", {INDEPENDENT: false, HAS_NO_RECOIL: true, COLOR: "mirror"}]
         },
-    ],6)
+    ],5)
 }
 Class.distributer.TURRETS.push(
     {

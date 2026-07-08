@@ -32,7 +32,8 @@ function generateFoodTypes() {
 }
 
 const FOOD_TYPES = generateFoodTypes();
-const AVAILABLE_GAMEMODES = ['growth', 'tdm', 'ctf', 'ffa'];
+const AVAILABLE_GAMEMODES = ['growth', 'tdm', 'ffa'];
+let RANDOM_GAMEMODE = [AVAILABLE_GAMEMODES[Math.floor(Math.random() * AVAILABLE_GAMEMODES.length)]]
 
 module.exports = {
     // Server
@@ -59,7 +60,7 @@ module.exports = {
 
     // The \modules\setup\gamemodeconfigs\ files to load.
     // To change specific things about specific gamemodes (such as team count for tdm), edit their config file in \modules\setup\gamemodeconfigs\.
-    GAME_MODES: [AVAILABLE_GAMEMODES[Math.floor(Math.random() * AVAILABLE_GAMEMODES.length)]],
+    GAME_MODES: RANDOM_GAMEMODE,
 
     // The room files to load in the setup/rooms folder.
     // NOTE: If a /gamemodeconfig/ file "replaces" the value of ROOM_SETUP, it just adds its own ROOM_SETUP's content to this array.

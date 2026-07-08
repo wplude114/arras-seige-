@@ -53,7 +53,7 @@ Class.ravager = {
     NAME: "",
     LABEL: "§#37ff00§Ravager",
     UPGRADE_LABEL: "Ravager",
-    UPGRADE_TOOLTIP: "A weak §#db190b§Miniboss§reset§ with 5 machine gun turrets and a mounted triple turret.",
+    UPGRADE_TOOLTIP: "A weak §#db190b§Miniboss§reset§ \n- bossMachineGun [x5]\n - (Mounted) bossTripleGun [x1]",
     COLOR: "#37ff00",
     UPGRADE_COLOR: "#db190b",
     SHAPE: 5.5,
@@ -62,7 +62,7 @@ Class.ravager = {
     DISPLAY_NAME: false,
     BODY: {
         SPEED: base.SPEED*1.25,
-        HEALTH: base.HEALTH*0.75,
+        HEALTH: base.HEALTH*0.35,
         SHIELD: base.SHIELD*4,
     },
     TURRETS: turretArray([

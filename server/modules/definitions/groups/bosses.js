@@ -50,9 +50,10 @@ Class.boss_1 = {
 
 Class.ravager = {
     PARENT: "miniboss",
-    LABEL: "§#37ff00§[Miniboss]§reset§ Ravager",
-    COLOR: 1,
+    LABEL: "§#37ff00§[Miniboss] Ravager",
+    COLOR: "#37ff00",
     SHAPE: 5.5,
+    SIZE: 24
 }
 
 // menu stuff (i dont want to edit dev.js every time i add something)

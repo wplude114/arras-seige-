@@ -79,7 +79,7 @@ Class.distributer = {
     PARENT: "miniboss",
     NAME: "",
     LABEL: "§#00ffd0§Distributer",
-    UPGRADE_LABEL: "Distributer",
+    UPGRADE_LABEL: "Distributer (MK II)",
     UPGRADE_TOOLTIP: "A modified version of the §#37ff00§Ravager§reset§ with 6 sides.\n- bossMachineGun [x12]\n- (Mounted) bossTripleGun [x1]",
     COLOR: "#00ffd0",
     UPGRADE_COLOR: "#db190b",
@@ -108,4 +108,4 @@ Class.distributer.TURRETS.push(
 // menu stuff (i dont want to edit dev.js every time i add something)
 if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = []; // make sure it exists
 // actual stuff
-Class.bosses.UPGRADES_TIER_0.push("boss_1", "ravager");
+Class.bosses.UPGRADES_TIER_0.push("boss_1", "ravager", "distributer");

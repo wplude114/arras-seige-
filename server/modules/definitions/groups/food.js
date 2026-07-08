@@ -1,6 +1,6 @@
 const { basePolygonDamage, basePolygonHealth } = require('../constants.js');
 const g = require('../gunvals.js');
-require('../facilitators.js');
+const f = require('../facilitators.js');
 
 Class.triangle = {
     PARENT: "food",
@@ -137,7 +137,7 @@ for (let tier = 1; tier < tierNames.length; tier++) {
         }
 
         if (tierPrefix) polyName = tierPrefix + polyName;
-        Class[polyName] = makeLaby(baseClass, tier, (food == "triangle" && tier > 0) ? 0.5 : 1);
+        Class[polyName] = f.makeLaby(baseClass, tier, (food == "triangle" && tier > 0) ? 0.5 : 1);
         if (tier > 3) { Class[polyName].CAN_BE_ON_LEADERBOARD = true }
         console.log("[food.js] Created "+polyName + ". Creating upgrades now.")
         
@@ -154,8 +154,8 @@ for (let tier = 1; tier < tierNames.length; tier++) {
 
 // make variants
 const variants = [
-  { prefix: 'rammer', factory: baseClass => makeRammer(baseClass) },
-  { prefix: 'enchanced', factory: baseClass => makeSanc(baseClass) },
+  { prefix: 'rammer', factory: baseClass => f.makeRammer(baseClass) },
+  { prefix: 'enchanced', factory: baseClass => f.makeSanc(baseClass) },
   // { prefix: 'laby', factory: baseClass => makeLaby(baseClass, /*tier=*/1, /*mult=*/1) },
 ];
 
@@ -192,14 +192,14 @@ Class.enchancedSquare = { // only for square bc i dont like how it is!!!
     SHAPE: 4,
     SIZE: 13.6,
     GIVE_KILL_MESSAGE: true,
-    GUNS: weaponArray([
+    GUNS: f.weaponArray([
 			 {
             POSITION: {LENGTH: 13,WIDTH: 6,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
         },
         {
             POSITION: {LENGTH: 2,WIDTH: 6,ASPECT: 1.4, X: 13,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, {range: 0.3, damage: 0.2, recoil: 0, speed: 0.3}]),
+                SHOOT_SETTINGS: f.combineStats([g.basic, {range: 0.3, damage: 0.2, recoil: 0, speed: 0.3}]),
                 TYPE: "trap",
 				AUTOFIRE: true,
             }

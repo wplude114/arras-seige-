@@ -50,10 +50,10 @@ Class.boss_1 = {
 
 Class.ravager = {
     PARENT: "miniboss",
-    NAME: "§#37ff00§Ravager§reset§ ",
-    LABEL: "§#888§[Miniboss] §#37ff00§Ravager§reset§ ",
+    NAME: "",
+    LABEL: "§#ba1c11§[Miniboss] §#37ff00§Ravager§reset§ ",
     UPGRADE_LABEL: "Ravager",
-    UPGRADE_TOOLTIP: "A weak §#888§Miniboss§reset§ with 5 machine gun turrets and a mounted triple turret.",
+    UPGRADE_TOOLTIP: "A weak §#ba1c11§Miniboss§reset§ with 5 machine gun turrets and a mounted triple turret.",
     COLOR: "#37ff00",
     SHAPE: 5.5,
     SIZE: 32,

@@ -60,32 +60,6 @@ Class.baseProtector = {
     LABEL: "Base",
     UPGRADE_LABEL: "Base Protector",
     ON_MINIMAP: false,
-    SIZE: 64,
-    DAMAGE_CLASS: 0,
-    ACCEPTS_SCORE: false,
-    CAN_BE_ON_LEADERBOARD: false,
-    IGNORED_BY_AI: true,
-    HITS_OWN_TYPE: "pushOnlyTeam",
-    SKILL: skillSet({
-        rld: 1,
-        dam: 1,
-        pen: 1,
-        spd: 1,
-        str: 1,
-    }),
-    BODY: {
-        SPEED: 0,
-        HEALTH: 1e4,
-        DAMAGE: 10,
-        PENETRATION: 0.25,
-        SHIELD: 1e3,
-        REGEN: 100,
-        FOV: 1,
-        PUSHABILITY: 0,
-        RESIST: 10000,
-        HETERO: 0,
-    },
-    FACING_TYPE: ["spin", {speed: 0.02}],
 };
 
 Class.mothership = {

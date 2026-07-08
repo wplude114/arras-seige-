@@ -51,22 +51,26 @@ Class.boss_1 = {
 Class.ravager = {
     PARENT: "miniboss",
     NAME: "",
-    LABEL: "§#37ff00§Ravager§reset§ ",
+    LABEL: "§#37ff00§Ravager",
     UPGRADE_LABEL: "Ravager",
     UPGRADE_TOOLTIP: "A weak §#db190b§Miniboss§reset§ with 5 machine gun turrets and a mounted triple turret.",
     COLOR: "#37ff00",
     UPGRADE_COLOR: "#db190b",
     SHAPE: 5.5,
-    SIZE: 32,
+    SIZE: 40,
     DISPLAY_NAME: false,
     
     TURRETS: turretArray([
         {
-            POSITION: [8, 9, 0, 0, 150, -1],
+            POSITION: [7, 9, 0, 0, 150, -1],
             TYPE: ["autoMachineGun", {INDEPENDENT: false, HAS_NO_RECOIL: true}]
         },
     ],5)
 }
+Class.ravager.TURRETS.push({
+    POSITION: [10, 9, 0, 0, 150, 5],
+    TYPE: ["autoTankGun", {INDEPENDENT: false, HAS_NO_RECOIL: true}]
+});
 
 // menu stuff (i dont want to edit dev.js every time i add something)
 if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = []; // make sure it exists

@@ -83,7 +83,7 @@ Class.distributer = {
     UPGRADE_TOOLTIP: "A modified version of the §#37ff00§Ravager§reset§ with so. Many. Bullets..\n- bossMachineGun [x5]\n- (Mounted) bossMachineGun [x7]",
     COLOR: "#00ffd0",
     UPGRADE_COLOR: "#db190b",
-    SHAPE: 5.5,
+    SHAPE: -5.5,
     SIZE: 43,
     VALUE: 25e5,
     DISPLAY_NAME: false,
@@ -118,4 +118,5 @@ Class.distributer.TURRETS.push(
 // menu stuff (i dont want to edit dev.js every time i add something)
 if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = []; // make sure it exists
 // actual stuff
-Class.bosses.UPGRADES_TIER_0.push("boss_1", "ravager", "distributer");
+Class.bosses.UPGRADES_TIER_0.push("boss_1", "ravager");
+Class.ravager.UPGRADES_TIER_0 = ["distributer"]

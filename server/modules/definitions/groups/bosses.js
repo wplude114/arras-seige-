@@ -1,4 +1,4 @@
-const { combineStats, skillSet, makeAuto, addAura, LayeredBoss, makeDeco, weaponArray, setTurretProjectileRecoil } = require('../facilitators.js');
+const { combineStats, skillSet, makeAuto, addAura, LayeredBoss, makeDeco, weaponArray, turretArray, setTurretProjectileRecoil } = require('../facilitators.js');
 const { base, smshskl } = require('../constants.js');
 const g = require('../gunvals.js');
 require('./generics.js');
@@ -16,7 +16,8 @@ Class.ramMiniboss = {
     CONTROLLERS: ["nearestDifferentMaster", "canRepel", "mapTargetToGoal"],
 }
 Class.triangleRamDeco = makeDeco(3, 17);
-Class.triangleRamDeco2 = makeDeco(3, 5);
+Class.hexagonCoreDeco = makeDeco(6, 17);
+Class.triangleCoreDeco = makeDeco(3, 5);
 
 Class.boss_1 = {
     PARENT: "ramMiniboss",
@@ -33,10 +34,10 @@ Class.boss_1 = {
         TYPE: "triangleRamDeco"
     },{
         POSITION: [10,0,0,0,1],
-        TYPE: "triangleRamDeco"
+        TYPE: "hexagonCoreDeco"
     },{
-        POSITION: [6,0,0,0,1],
-        TYPE: "triangleRamDeco2"
+        POSITION: [10,0,0,0,1],
+        TYPE: "triangleCoreDeco"
     }],
     GUNS: weaponArray([{
             POSITION: {LENGTH: 12,WIDTH: 13,ASPECT: 0.0001, X: 10,Y: 0,ANGLE: 0,DELAY: 0},
@@ -49,7 +50,13 @@ Class.boss_1 = {
             }
         },{
             POSITION: {LENGTH: 12,WIDTH: 14,ASPECT: 0.0001, X: 10,Y: 0,ANGLE: 0,DELAY: 0},
-        }],3,0.33)
+        }],3,0.33),
+    TURRETS: turretArray([
+        {
+            POSITION: [8, 15, 0, 0, 360, 2],
+            TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]
+        },
+    ],6)
 };
 
 // menu stuff (i dont want to edit dev.js every time i add something)

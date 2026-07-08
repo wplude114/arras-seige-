@@ -75,48 +75,8 @@ Class.ravager.TURRETS.push(
         }   
 );
 
-Class.distributer = {
-    PARENT: "miniboss",
-    NAME: "",
-    LABEL: "§#00ffd0§Distributer",
-    UPGRADE_LABEL: "Distributer (MK II)",
-    UPGRADE_TOOLTIP: "A modified version of the §#37ff00§Ravager§reset§ with so. Many. Bullets..\n- bossMachineGun [x5]\n- (Mounted) bossMachineGun [x7]",
-    COLOR: "#00ffd0",
-    UPGRADE_COLOR: "#db190b",
-    SHAPE: -5.5,
-    SIZE: 43,
-    VALUE: 25e5,
-    DISPLAY_NAME: false,
-    TURRETS: turretArray([
-        {
-            POSITION: [6, 9, 0, 0, 150, -2],
-            TYPE: ["bossMachineGun", {INDEPENDENT: false, HAS_NO_RECOIL: true}]
-        },
-        {
-            POSITION: [3, 9, 0, 0, 0, -1],
-            TYPE: ["genericEntity", {INDEPENDENT: false, HAS_NO_RECOIL: true, COLOR: "mirror"}]
-        },
-        {
-            POSITION: [4, 7, 0, 30, 200, 1],
-            TYPE: ["bossMachineGun", {INDEPENDENT: false, HAS_NO_RECOIL: true, COLOR: "mirror"}]
-        },
-    ],5)
-}
-Class.distributer.TURRETS.push(
-    {
-        POSITION: [7, 0, 0, 180, 360, 1],
-        TYPE: ["bossMachineGun", {INDEPENDENT: false, HAS_NO_RECOIL: true}]
-    }   
-);
-Class.distributer.TURRETS.push(
-    {
-        POSITION: [5, 0, 0, 0, 360, 1],
-        TYPE: ["bossMachineGun", {INDEPENDENT: false, HAS_NO_RECOIL: true, COLOR: "mirror"}]
-    }   
-);
-
 // menu stuff (i dont want to edit dev.js every time i add something)
 if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = []; // make sure it exists
 // actual stuff
 Class.bosses.UPGRADES_TIER_0.push("boss_1", "ravager");
-Class.ravager.UPGRADES_TIER_0 = ["distributer"]
+Class.ravager.UPGRADES_TIER_0 = []

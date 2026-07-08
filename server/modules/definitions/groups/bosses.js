@@ -80,7 +80,7 @@ Class.distributer = {
     NAME: "",
     LABEL: "§#00ffd0§Distributer",
     UPGRADE_LABEL: "Distributer (MK II)",
-    UPGRADE_TOOLTIP: "A modified version of the §#37ff00§Ravager§reset§ with 6 sides.\n- bossMachineGun [x12]\n- (Mounted) bossTripleGun [x1]",
+    UPGRADE_TOOLTIP: "A modified version of the §#37ff00§Ravager§reset§ with 6 sides.\n- bossMachineGun [x12]\n- (Mounted) bossMachineGun [x2]",
     COLOR: "#00ffd0",
     UPGRADE_COLOR: "#db190b",
     SHAPE: 6,
@@ -93,16 +93,22 @@ Class.distributer = {
             TYPE: ["bossMachineGun", {INDEPENDENT: false, HAS_NO_RECOIL: true}]
         },
         {
-            POSITION: [4, 9, 0, 0, 100, -1],
+            POSITION: [4, 9, 0, 180, 100, -1],
             TYPE: ["bossMachineGun", {INDEPENDENT: false, HAS_NO_RECOIL: true, COLOR: "mirror"}]
         },
     ],6)
 }
 Class.distributer.TURRETS.push(
- {
-            POSITION: [7, 0, 0, 0, 360, 1],
-            TYPE: ["genericEntity", {INDEPENDENT: false, HAS_NO_RECOIL: true}]
-        }   
+    {
+        POSITION: [7, 0, 0, 180, 360, 1],
+        TYPE: ["bossMachineGun", {INDEPENDENT: false, HAS_NO_RECOIL: true}]
+    }   
+);
+Class.distributer.TURRETS.push(
+    {
+        POSITION: [5, 0, 0, 0, 360, 1],
+        TYPE: ["bossMachineGun", {INDEPENDENT: false, HAS_NO_RECOIL: true, COLOR: "mirror"}]
+    }   
 );
 
 // menu stuff (i dont want to edit dev.js every time i add something)

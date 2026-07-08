@@ -62,7 +62,7 @@ Class.ravager = {
     
     TURRETS: turretArray([
         {
-            POSITION: [7, 10, 0, 0, 130, -1],
+            POSITION: [7, 10, 0, 0, 150, -1],
             TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]
         },
     ],5)

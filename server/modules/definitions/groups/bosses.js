@@ -20,8 +20,9 @@ Class.hexagonCoreDeco = makeDeco(6.25, 17);
 Class.triangleCoreDeco = makeDeco(3.25, 5);
 
 Class.boss_1 = {
-    PARENT: "ramMiniboss",
+    PARENT: "miniboss",
     LABEL: "test boss 01",
+    INDEPENDENT: true,
     VALUE: 30,
     SHAPE: 3,
     SIZE: 27,
@@ -39,18 +40,6 @@ Class.boss_1 = {
         POSITION: [7,0,0,0,1],
         TYPE: "triangleCoreDeco"
     }],
-    GUNS: weaponArray([{
-            POSITION: {LENGTH: 12,WIDTH: 13,ASPECT: 0.0001, X: 10,Y: 0,ANGLE: 0,DELAY: 0},
-            PROPERTIES: {
-              COLOR: 17,
-                SHOOT_SETTINGS: combineStats([g.basic, { reload: 0.1, speed: 0.001, maxSpeed: 0.001, range: 0.05 }]),
-                TYPE: ["bullet", { ALPHA: 0 }],
-                AUTOFIRE: true,
-                ALPHA: 0
-            }
-        },{
-            POSITION: {LENGTH: 12,WIDTH: 14,ASPECT: 0.0001, X: 10,Y: 0,ANGLE: 0,DELAY: 0},
-        }],3,0.33),
     TURRETS: turretArray([
         {
             POSITION: [4, 10, 0, 0, 360, 2],

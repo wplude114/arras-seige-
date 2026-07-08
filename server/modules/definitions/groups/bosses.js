@@ -93,7 +93,7 @@ Class.distributer = {
             TYPE: ["bossMachineGun", {INDEPENDENT: false, HAS_NO_RECOIL: true}]
         },
         {
-            POSITION: [4, 7, 0, 45, 200, 1],
+            POSITION: [4, 7, 0, 30, 200, 1],
             TYPE: ["bossMachineGun", {INDEPENDENT: false, HAS_NO_RECOIL: true, COLOR: "mirror"}]
         },
     ],6)

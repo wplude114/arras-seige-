@@ -83,7 +83,7 @@ Class.distributer = {
     UPGRADE_TOOLTIP: "A modified version of the §#37ff00§Ravager§reset§ with so. Many. Bullets..\n- bossMachineGun [x5]\n- (Mounted) bossMachineGun [x7]",
     COLOR: "#00ffd0",
     UPGRADE_COLOR: "#db190b",
-    SHAPE: 6,
+    SHAPE: 5.5,
     SIZE: 43,
     VALUE: 25e5,
     DISPLAY_NAME: false,

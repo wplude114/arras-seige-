@@ -4,6 +4,7 @@ const g = require('../gunvals.js');
 require('./generics.js');
 require('./tanks.js');
 require('./turrets.js');
+require('./dev.js');
 
 Class.miniboss = {
     PARENT: "genericBoss",

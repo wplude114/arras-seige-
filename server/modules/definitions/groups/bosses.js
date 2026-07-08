@@ -69,8 +69,8 @@ Class.ravager = {
 }
 Class.ravager.TURRETS.push(
  {
-            POSITION: [7, 0, 0, 0, 150, 1],
-            TYPE: ["autoTankGun", {INDEPENDENT: false, HAS_NO_RECOIL: true, COLOR: "mirror"}]
+            POSITION: [7, 0, 0, 0, 360, 1],
+            TYPE: ["bossTripleGun", {INDEPENDENT: false, HAS_NO_RECOIL: true, COLOR: "mirror"}]
         }   
 );
 

@@ -59,6 +59,13 @@ Class.ravager = {
     SHAPE: 5.5,
     SIZE: 32,
     DISPLAY_NAME: true,
+    
+    TURRETS: turretArray([
+        {
+            POSITION: [4, 13, 0, 0, 130, 2],
+            TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]
+        },
+    ],5)
 }
 
 // menu stuff (i dont want to edit dev.js every time i add something)

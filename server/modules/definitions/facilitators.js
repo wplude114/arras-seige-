@@ -923,7 +923,7 @@ exports.makeSanc = (type) => {
 		VALUE: type.VALUE *	1.75,
 		SIZE: type.SIZE *	0.8,
 		GIVE_KILL_MESSAGE: true,
-		LABEL: "Enhanced " + type.LABEL, // either a bad name or good name :)
+		LABEL: "Enchanced " + type.LABEL, // either a bad name or good name :)
 		GUNS: exports.weaponArray([
 			 {
             POSITION: {LENGTH: 13,WIDTH: 6,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},

@@ -919,11 +919,11 @@ exports.makeSanc = (type) => {
 	type = ensureIsClass(type);
 	let output = {
 		PARENT: type,
-		SHAPE: type.SHAPE + 0.5,
-		VALUE: type.VALUE * 1.75,
-		SIZE: type.SIZE*1.2,
+		SHAPE: type.SHAPE +	0.5,
+		VALUE: type.VALUE *	1.75,
+		SIZE: type.SIZE *	0.8,
 		GIVE_KILL_MESSAGE: true,
-		LABEL: "PLACEHOLDER NAME", // grr i cant name things!!
+		LABEL: "Enhanced " + type.LABEL, // either a bad name or good name :)
 		GUNS: exports.weaponArray([
 			 {
             POSITION: {LENGTH: 13,WIDTH: 6,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},

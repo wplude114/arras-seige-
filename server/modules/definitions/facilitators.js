@@ -930,7 +930,7 @@ exports.makeSanc = (type) => {
         {
             POSITION: {LENGTH: 4,WIDTH: 10,ASPECT: 1.4, X: 20,Y: 0,ANGLE: 0,DELAY: 0},
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, {range: 0.3, damage: 0.3, recoil: 3, shudder: 10, speed: 0.5}]),
+                SHOOT_SETTINGS: exports.combineStats([g.basic, {range: 0.3, damage: 0.3, recoil: 3, shudder: 10, speed: 0.5}]),
                 TYPE: "trap",
 				AUTO_FIRE: true,
             }

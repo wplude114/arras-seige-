@@ -75,6 +75,36 @@ Class.ravager.TURRETS.push(
         }   
 );
 
+Class.distributer = {
+    PARENT: "miniboss",
+    NAME: "",
+    LABEL: "§#00ffd0§Distributer",
+    UPGRADE_LABEL: "Distributer",
+    UPGRADE_TOOLTIP: "A modified version of the §#37ff00§Ravager§reset§ with 6 sides.\n- bossMachineGun [x12]\n- (Mounted) bossTripleGun [x1]",
+    COLOR: "#00ffd0",
+    UPGRADE_COLOR: "#db190b",
+    SHAPE: 6,
+    SIZE: 43,
+    VALUE: 25e5,
+    DISPLAY_NAME: false,
+    TURRETS: turretArray([
+        {
+            POSITION: [6, 9, 0, 0, 150, -2],
+            TYPE: ["bossMachineGun", {INDEPENDENT: false, HAS_NO_RECOIL: true}]
+        },
+        {
+            POSITION: [4, 9, 0, 0, 100, -1],
+            TYPE: ["bossMachineGun", {INDEPENDENT: false, HAS_NO_RECOIL: true, COLOR: "mirror"}]
+        },
+    ],6)
+}
+Class.distributer.TURRETS.push(
+ {
+            POSITION: [7, 0, 0, 0, 360, 1],
+            TYPE: ["genericEntity", {INDEPENDENT: false, HAS_NO_RECOIL: true}]
+        }   
+);
+
 // menu stuff (i dont want to edit dev.js every time i add something)
 if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = []; // make sure it exists
 // actual stuff

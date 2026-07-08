@@ -2,6 +2,7 @@ const { combineStats, makeDeco, weaponArray, makeTurret } = require('../facilita
 const { base } = require('../constants.js');
 const g = require('../gunvals.js');
 
+// tank guns
 Class.autoTankGun = makeTurret({
     GUNS: [
         {
@@ -13,6 +14,8 @@ Class.autoTankGun = makeTurret({
         },
     ],
 }, {canRepel: true, limitFov: true, fov: 3})
+
+// boss guns
 Class.bossMachineGun = makeTurret({
     GUNS: [
         {
@@ -24,3 +27,28 @@ Class.bossMachineGun = makeTurret({
         },
     ],
 }, {canRepel: true, limitFov: true, fov: 2})
+Class.bossTripleGun = makeTurret({
+    GUNS: [
+        {
+            POSITION: [20, 10, 1, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.flankGuard, {damage: 0.5}]),
+                TYPE: "bullet",
+            },
+        },
+        {
+            POSITION: [16, 10, 1, 0, 7, 0, 0.333],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.flankGuard, {damage: 0.5}]),
+                TYPE: "bullet",
+            },
+        },
+        {
+            POSITION: [16, 10, 1, 0, -7, 0, 0.666],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.flankGuard, {damage: 0.5}]),
+                TYPE: "bullet",
+            },
+        },
+    ],
+}, {canRepel: true, limitFov: true, fov: 3})

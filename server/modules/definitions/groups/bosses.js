@@ -62,11 +62,11 @@ Class.ravager = {
     
     TURRETS: turretArray([
         {
-            POSITION: [4, 9, 0, 0, 150, -1],
+            POSITION: [5, 9, 0, 0, 150, -1],
             TYPE: ["autoMachineGun", {INDEPENDENT: false, HAS_NO_RECOIL: true}]
         },
     ],5)
-};
+}
 
 // menu stuff (i dont want to edit dev.js every time i add something)
 if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = []; // make sure it exists

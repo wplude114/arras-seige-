@@ -154,7 +154,7 @@ for (let tier = 1; tier < tierNames.length; tier++) {
 // make variants
 const variants = [
   { prefix: 'rammer', factory: baseClass => makeRammer(baseClass) },
-  { prefix: 'enhanced', factory: baseClass => makeSanc(baseClass) },
+  { prefix: 'enchanced', factory: baseClass => makeSanc(baseClass) },
   // { prefix: 'laby', factory: baseClass => makeLaby(baseClass, /*tier=*/1, /*mult=*/1) },
 ];
 

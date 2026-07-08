@@ -58,12 +58,12 @@ Class.ravager = {
     UPGRADE_COLOR: "#db190b",
     SHAPE: 5.5,
     SIZE: 32,
-    DISPLAY_NAME: true,
+    DISPLAY_NAME: false,
     
     TURRETS: turretArray([
         {
-            POSITION: [7, 10, 0, 0, 150, -1],
-            TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]
+            POSITION: [8, 9, 0, 0, 150, -1],
+            TYPE: ["autoMachineGun", {INDEPENDENT: false, HAS_NO_RECOIL: true}]
         },
     ],5)
 }

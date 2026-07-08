@@ -10,6 +10,7 @@ function generateFoodTypes() {
 
   const variants = [
     { suffix: 'rammer',   factor: 1 / 10 },
+    { suffix: 'enchanced',   factor: 1 / 24 },
     
     { suffix: '',       factor: 1 },
     { suffix: 'beta',   factor: 1 / 50 },

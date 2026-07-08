@@ -13,3 +13,14 @@ Class.autoTankGun = makeTurret({
         },
     ],
 }, {canRepel: true, limitFov: true, fov: 3})
+Class.autoMachineGun = makeTurret({
+    GUNS: [
+        {
+            POSITION: [20, 10, 1.4, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.flankGuard, g.machine]),
+                TYPE: "bullet",
+            },
+        },
+    ],
+}, {canRepel: true, limitFov: true, fov: 3})

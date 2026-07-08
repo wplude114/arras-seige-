@@ -183,3 +183,25 @@ for (let i = 0; i < polyNames.length; i++) {
     Class[polyName].UPGRADES_TIER_0 = [baseClass];
   }
 }
+
+Class.enchancedSquare = { // only for square bc i dont like how it is!!!
+    PARENT: "square",
+    LABEL: "Enchanced Square",
+    VALUE: 210,
+    SHAPE: 4,
+    SIZE: 13.6,
+    GIVE_KILL_MESSAGE: true,
+    GUNS: weaponArray([
+			 {
+            POSITION: {LENGTH: 13,WIDTH: 6,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
+        },
+        {
+            POSITION: {LENGTH: 2,WIDTH: 6,ASPECT: 1.4, X: 13,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, {range: 0.3, damage: 0.2, recoil: 0, speed: 0.3}]),
+                TYPE: "trap",
+				AUTOFIRE: true,
+            }
+        },
+		],4,0.25),
+};

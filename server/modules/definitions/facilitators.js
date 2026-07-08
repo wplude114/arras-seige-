@@ -801,6 +801,32 @@ exports.weaponArray = (weapons, count, delayIncrement = 0, delayOverflow = false
     }
     return output;
 }
+exports.turretArray = (turrets, count, angleOffset = 0) => {
+    // Creates an array of turrets arranged in a circle
+    // turrets: single turret object or array of turret objects
+    // count: number of copies to create
+    // angleOffset: optional starting angle offset
+    if (!Array.isArray(turrets)) {
+        turrets = [turrets]
+    }
+    
+    let output = [];
+    for (let turret of turrets) {
+        for (let i = 0; i < count; i++) {
+            let angle = (360 / count) * i + angleOffset;
+            let newTurret = exports.dereference(turret);
+            
+            if (Array.isArray(newTurret.POSITION)) {
+                newTurret.POSITION[3] = (newTurret.POSITION[3] ?? 0) + angle;
+            } else {
+                newTurret.POSITION.ANGLE = (newTurret.POSITION.ANGLE ?? 0) + angle;
+            }
+            
+            output.push(newTurret);
+        }
+    }
+    return output;
+}
 class LayeredBoss {
     constructor(identifier, NAME, PARENT = "celestial", SHAPE = 9, COLOR = 0, trapTurretType = "baseTrapTurret", trapTurretSize = 6.5, layerScale = 5, BODY, SIZE, VALUE) {
         this.identifier = identifier ?? NAME.charAt(0).toLowerCase() + NAME.slice(1);

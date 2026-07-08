@@ -23,7 +23,7 @@ Class.boss_1 = {
     PARENT: "miniboss",
     LABEL: "test boss 01",
     INDEPENDENT: true,
-    VALUE: 30,
+    VALUE: 35e5,
     SHAPE: 3,
     SIZE: 27,
     COLOR: 5,

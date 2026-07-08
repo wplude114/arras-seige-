@@ -1,10 +1,10 @@
 const { combineStats, skillSet, makeAuto, addAura, LayeredBoss, makeDeco, weaponArray, turretArray, setTurretProjectileRecoil } = require('../facilitators.js');
 const { base, smshskl } = require('../constants.js');
 const g = require('../gunvals.js');
+const dev = require('./dev.js');
 require('./generics.js');
 require('./tanks.js');
 require('./turrets.js');
-require('./dev.js');
 
 Class.miniboss = {
     PARENT: "genericBoss",
@@ -62,6 +62,6 @@ Class.ravager = {
 }
 
 // menu stuff (i dont want to edit dev.js every time i add something)
-if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = []; // make sure it exists
+//if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = []; // make sure it exists
 // actual stuff
-Class.bosses.UPGRADES_TIER_0.push("boss_1", "ravager");
+dev.bosses.UPGRADES_TIER_0.push("boss_1", "ravager");

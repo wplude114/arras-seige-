@@ -48,7 +48,14 @@ Class.boss_1 = {
     ],3)
 };
 
+Class.ravager = {
+    PARENT: "miniboss",
+    LABEL: "§#37ff00§[Miniboss]§reset§ Ravager",
+    COLOR: 1,
+    SHAPE: 5.5,
+}
+
 // menu stuff (i dont want to edit dev.js every time i add something)
 if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = []; // make sure it exists
 // actual stuff
-Class.bosses.UPGRADES_TIER_0.push("boss_1");
+Class.bosses.UPGRADES_TIER_0.push("boss_1", "ravager");

@@ -28,8 +28,8 @@ Class.boss_1 = {
     SIZE: 27,
     COLOR: 5,
     PROPS: [{
-        POSITION: [24],
-        TYPE: makeDeco(0, 17)
+        POSITION: [30],
+        TYPE: "hexagonCoreDeco"
     },{
         POSITION: [24],
         TYPE: "triangleRamDeco"

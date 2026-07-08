@@ -58,8 +58,13 @@ Class.ravager = {
     UPGRADE_COLOR: "#db190b",
     SHAPE: 5.5,
     SIZE: 40,
+    VALUE: 25e4,
     DISPLAY_NAME: false,
-    
+    BODY: {
+        SPEED: base.SPEED*1.25,
+        HEALTH: base.HEALTH*0.75,
+        SHIELD: base.SHIELD*4,
+    },
     TURRETS: turretArray([
         {
             POSITION: [6, 9, 0, 0, 150, -1],

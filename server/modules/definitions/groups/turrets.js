@@ -16,7 +16,7 @@ Class.autoTankGun = makeTurret({
 Class.autoMachineGun = makeTurret({
     GUNS: [
         {
-            POSITION: [17, 10, 1.7, 0, 0, 0, 0],
+            POSITION: [16, 10, 1.85, 0, 0, 0, 0],
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.flankGuard, g.machineGun]),
                 TYPE: "bullet",

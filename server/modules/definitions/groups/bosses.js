@@ -28,7 +28,7 @@ Class.boss_1 = {
     SIZE: 27,
     COLOR: 5,
     PROPS: [{
-        POSITION: [30],
+        POSITION: [25],
         TYPE: "hexagonCoreDeco"
     },{
         POSITION: [24],

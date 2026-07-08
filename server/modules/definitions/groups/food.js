@@ -1,5 +1,5 @@
 const { basePolygonDamage, basePolygonHealth } = require('../constants.js');
-const { makeLaby, makeRammer } = require('../facilitators.js');
+const { makeLaby, makeRammer, makeSanc } = require('../facilitators.js');
 
 Class.triangle = {
     PARENT: "food",
@@ -152,27 +152,34 @@ for (let tier = 1; tier < tierNames.length; tier++) {
 }
 
 // make variants
+const variants = [
+  { prefix: 'rammer', factory: baseClass => makeRammer(baseClass) },
+  { prefix: 'enhanced', factory: baseClass => makeSanc(baseClass) },
+  // { prefix: 'laby', factory: baseClass => makeLaby(baseClass, /*tier=*/1, /*mult=*/1) },
+];
+
 for (let i = 0; i < polyNames.length; i++) {
-        
-        const polyLower = polyNames[i];
-        
-        const food = polyLower;
-        let polyName = polyLower[0].toUpperCase() + polyLower.slice(1);
-        const tierPrefix = "rammer"
+  const polyLower = polyNames[i];
+  const baseClass = Class[polyLower];
+  if (!baseClass || typeof baseClass !== 'object') {
+    console.warn(`Skipping variants for ${polyLower}: base class Class[${polyLower}] not found.`);
+    continue;
+  }
 
-        const baseClass = Class[food];
-        if (!baseClass || typeof baseClass !== 'object') {
-            console.warn(`Skipping creation of ${tierPrefix ? tierPrefix : ''}${polyName}: base class Class[${food}] not found.`);
-            continue;
-        }
+  const baseDisplayName = polyLower[0].toUpperCase() + polyLower.slice(1);
 
-        if (tierPrefix) polyName = tierPrefix + polyName;
-        Class[polyName] = makeRammer(baseClass);
-        console.log("[food.js] Created "+polyName)
+  for (const variant of variants) {
+    // build the new class name and create it using the provided factory
+    const polyName = variant.prefix + baseDisplayName;
+    Class[polyName] = variant.factory(baseClass);
 
-        if (!baseClass.UPGRADES_TIER_0) baseClass.UPGRADES_TIER_0 = [];
-        baseClass.UPGRADES_TIER_0.push(Class[polyName])
+    console.log(`[food.js] Created ${polyName}`);
 
-        if (!Class[polyName].UPGRADES_TIER_0) Class[polyName].UPGRADES_TIER_0 = [];
-        Class[polyName].UPGRADES_TIER_0 = [baseClass]
+    // preserve upgrade relationships like original loop did
+    if (!baseClass.UPGRADES_TIER_0) baseClass.UPGRADES_TIER_0 = [];
+    baseClass.UPGRADES_TIER_0.push(Class[polyName]);
+
+    if (!Class[polyName].UPGRADES_TIER_0) Class[polyName].UPGRADES_TIER_0 = [];
+    Class[polyName].UPGRADES_TIER_0 = [baseClass];
+  }
 }

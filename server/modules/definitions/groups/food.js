@@ -1,5 +1,5 @@
 const { basePolygonDamage, basePolygonHealth } = require('../constants.js');
-const { makeLaby, makeRammer, makeSanc } = require('../facilitators.js');
+const { weaponArray, makeLaby, makeRammer, makeSanc } = require('../facilitators.js');
 
 Class.triangle = {
     PARENT: "food",

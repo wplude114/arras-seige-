@@ -22,6 +22,7 @@ Class.triangleCoreDeco = makeDeco(3.25, 5);
 Class.boss_1 = {
     PARENT: "miniboss",
     LABEL: "test boss 01",
+    UPGRADE_TOOLTIP: "A §#db190b§Miniboss§reset§ made to test turrets and designs.\n- autoTankGun [x3]",
     INDEPENDENT: true,
     VALUE: 35e5,
     SHAPE: 3,
@@ -53,7 +54,7 @@ Class.ravager = {
     NAME: "",
     LABEL: "§#37ff00§Ravager",
     UPGRADE_LABEL: "Ravager",
-    UPGRADE_TOOLTIP: "A weak §#db190b§Miniboss§reset§ \n- bossMachineGun [x5]\n - (Mounted) bossTripleGun [x1]",
+    UPGRADE_TOOLTIP: "A weak §#db190b§Miniboss§reset§.\n- bossMachineGun [x5]\n - (Mounted) bossTripleGun [x1]",
     COLOR: "#37ff00",
     UPGRADE_COLOR: "#db190b",
     SHAPE: 5.5,

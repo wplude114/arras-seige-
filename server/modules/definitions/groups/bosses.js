@@ -62,11 +62,17 @@ Class.ravager = {
     
     TURRETS: turretArray([
         {
-            POSITION: [5, 9, 0, 0, 150, -1],
+            POSITION: [6, 9, 0, 0, 150, -1],
             TYPE: ["bossMachineGun", {INDEPENDENT: false, HAS_NO_RECOIL: true}]
         },
     ],5)
 }
+Class.ravager.TURRETS.push(
+ {
+            POSITION: [7, 0, 0, 0, 150, 1],
+            TYPE: ["autoTankGun", {INDEPENDENT: false, HAS_NO_RECOIL: true, COLOR: "mirror"}]
+        }   
+);
 
 // menu stuff (i dont want to edit dev.js every time i add something)
 if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = []; // make sure it exists

@@ -32,7 +32,7 @@ function generateFoodTypes() {
 }
 
 const FOOD_TYPES = generateFoodTypes();
-const AVAILABLE_GAMEMODES = ['growth', 'tdm', 'maze', 'ffa'];
+const AVAILABLE_GAMEMODES = ['growth', 'maze', 'ffa'];
 let RANDOM_GAMEMODE = [AVAILABLE_GAMEMODES[Math.floor(Math.random() * AVAILABLE_GAMEMODES.length)]]
 
 module.exports = {

@@ -16,8 +16,8 @@ Class.ramMiniboss = {
     CONTROLLERS: ["nearestDifferentMaster", "canRepel", "mapTargetToGoal"],
 }
 Class.triangleRamDeco = makeDeco(3, 17);
-Class.hexagonCoreDeco = makeDeco(6, 17);
-Class.triangleCoreDeco = makeDeco(3.5, 5);
+Class.hexagonCoreDeco = makeDeco(6.25, 17);
+Class.triangleCoreDeco = makeDeco(3, 5);
 
 Class.boss_1 = {
     PARENT: "ramMiniboss",
@@ -36,7 +36,7 @@ Class.boss_1 = {
         POSITION: [10,0,0,0,1],
         TYPE: "hexagonCoreDeco"
     },{
-        POSITION: [10,0,0,0,1],
+        POSITION: [7,0,0,0,1],
         TYPE: "triangleCoreDeco"
     }],
     GUNS: weaponArray([{
@@ -53,7 +53,7 @@ Class.boss_1 = {
         }],3,0.33),
     TURRETS: turretArray([
         {
-            POSITION: [4, 10, 0, 0, 360, 2],
+            POSITION: [4, 7, 0, 0, 360, 2],
             TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]
         },
     ],6)

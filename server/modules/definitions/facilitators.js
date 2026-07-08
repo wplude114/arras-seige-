@@ -915,6 +915,30 @@ exports.makeRammer = (type) => {
 	};
 	return output;
 };
+exports.makeSanc = (type) => {
+	type = ensureIsClass(type);
+	let output = {
+		PARENT: type,
+		VALUE: type.VALUE * 1.75,
+		SIZE: type.SIZE*1.2,
+		GIVE_KILL_MESSAGE: true,
+		LABEL: "PLACEHOLDER NAME", // grr i cant name things!!
+		GUNS: exports.weaponArray([
+			 {
+            POSITION: {LENGTH: 7,WIDTH: 10,ASPECT: 1, X: 13,Y: 0,ANGLE: 0,DELAY: 0},
+        },
+        {
+            POSITION: {LENGTH: 4,WIDTH: 10,ASPECT: 1.4, X: 20,Y: 0,ANGLE: 0,DELAY: 0},
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, {range: 0.3, damage: 0.3, recoil: 3, shudder: 10, speed: 0.5}]),
+                TYPE: "trap",
+				AUTO_FIRE: true,
+            }
+        },
+		],type.SHAPE,1/type.SHAPE)
+	};
+	return output;
+};
 exports.makeLaby = (type, level, baseScale = 1) => {
     type = ensureIsClass(type);
     let usableSHAPE = Math.max(type.SHAPE, 3),

@@ -2113,7 +2113,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
 
             global.clickables.upgrade.place(i, x * clickableRatio, y * clickableRatio, len * clickableRatio, height * clickableRatio);
             let upgradeKey = getClassUpgradeKey(upgradeNum);
-
+            
             drawEntityIcon(model, x, y, len, height, 1, upgradeSpin, 0.6, colorIndex++, !global.mobile ? upgradeKey : false, !global.mobile ? upgradeNum == upgradeHoverIndex : false);
 
             ticker++;
@@ -2151,7 +2151,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
                 ctx.lineWidth /= 2;
                 //drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, false);
                 //drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, true);
-                drawRoundedRect(boxX, boxY, len, boxWidth + boxPadding * 3, 0.20, false);
+                drawRoundedRect(boxX, boxY, len, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, 10, false);
                 ctx.lineWidth *= 2;
                 drawText(picture.name, boxX + boxPadding * 1.5, textY, alcoveSize / 20, color.guiwhite);
                 for (let t of splitTooltip) {

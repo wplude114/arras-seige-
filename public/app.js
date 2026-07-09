@@ -2222,6 +2222,7 @@ function drawMobileJoysticks() {
 }
 
 function makeButton(index, x, y, width, height, text, clickableRatio) {
+    return
     // Set the clickable's position
     global.clickables.mobileButtons.place(index, x * clickableRatio, y * clickableRatio, width * clickableRatio, height * clickableRatio);
 
@@ -2242,7 +2243,7 @@ function makeButton(index, x, y, width, height, text, clickableRatio) {
     // Draw the borders (rounded stroke)
     ctx.strokeStyle = color.black;
     ctx.lineWidth = 3;
-    //drawRoundedRect(x, y, width, height, btnRadius, true);
+    drawRoundedRect(x, y, width, height, btnRadius, true);
 }
 
 function makeButtons(buttons, startX, startY, baseSize, clickableRatio, spacing) {

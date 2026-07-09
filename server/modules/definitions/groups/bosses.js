@@ -73,6 +73,6 @@ Class.egg_ravager = {
     ]
 }
 
-if (!Class.bosses) Class.bosses = {PARENT: "genericTank"};
+if (!Class.bosses) Class.bosses = {PARENT: "genericTank", UPGRADES_TIER_0 = []};
 // actual stuff
 Class.bosses.UPGRADES_TIER_0.push("egg_ravager","ravager");

@@ -40,14 +40,20 @@
                         </div>
                         <div class="slider startMenuSlidingContent">
                             <div class="horizontalSelector" id="optionMenuTabs"><span class="active">Appearance</span><span>Options</span><span class="desktopControlTab">Controls</span><span>Links</span></div>
-                            <div class="optionsHeader">| Token |</div>
+                            <div class="optionsHeader">Token*</div>
                             <input type="text" class="conceal" tabindex="3" placeholder="Token Here!" id="playerKeyInput" maxlength="64" />
                             <div id="tabAppearance">
-                                <div class="optionsHeader">Themes</div>
+                                <div class="optionsHeader">Customization</div>
+                                <select id="optColors" tabindex="-1">
+                                    <option value="normal">Light Colors</option>
+                                </select>
                                 <select id="optMobile" tabindex="-1">
                                     <option value="mobile">Mobile</option>
                                     <option value="mobileWithBigJoysticks">Mobile + Big joysticks</option>
                                     <option value="desktop">Desktop</option>
+                                </select>
+                                <select id="optBorders" tabindex="-1">
+                                    <option value="normal">Soft Borders</option>
                                 </select>
                                 <table>
                                     <tr>
@@ -181,6 +187,7 @@
                                     <a tabindex="-1" href="https://glitch.com/edit/#!/arras-template">Old Official Private Server Template</a>
                                 </div>
                             </div>
+                            <div class="optionsHeader">*Tokens are not required.</div>
                         </div>
                     </div>
                     <div style="position: relative; bottom: -10px;">

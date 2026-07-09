@@ -323,7 +323,7 @@ const maintainloop = () => {
 
     // then add new bots if arena is open
     if (!global.arenaClosed && bots.length < Config.BOTS) {
-        let botName = Config.BOT_NAME_PREFIX + ran.chooseBotName(),
+        let botName = "§#888§ Fallen Tank",
             team = Config.MODE === "tdm" ? getWeakestTeam() : undefined,
             limit = 20, // give up after 20 attempts and just pick whatever is currently chosen
             loc;

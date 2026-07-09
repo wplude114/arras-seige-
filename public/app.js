@@ -1221,7 +1221,11 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
         ? gameDraw.modifyColor(picture.upgradeColor)
         : gameDraw.getColor(getIconColor(colorIndex));
     let bigRadius = 5; // adjust percent to taste
+    ctx.globalAlpha = 0.7;
     drawRoundedRect(x, y, len, height, bigRadius, false);
+    ctx.globalAlpha = 0.1;
+    ctx.fillStyle = color.black;
+    drawRoundedRect(x, y*1.4, len, height*0.6, bigRadius, false);
 
     // Shading for hover
     if (hover) {

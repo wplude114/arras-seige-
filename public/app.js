@@ -868,9 +868,9 @@ function drawGuiLine(x1, y1, x2, y2) {
 
 function drawBar(x1, x2, y, width, color) {
     ctx.save();
-    ctx.lineCap = 'butt'; // or 'square'
+    ctx.lineCap = 'square';
     ctx.beginPath();
-    ctx.moveTo(x1+5, y);
+    ctx.moveTo(x1-5, y);
     ctx.lineTo(x2+5, y);
     ctx.lineWidth = width;
     ctx.strokeStyle = color;

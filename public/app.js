@@ -2016,7 +2016,7 @@ function drawMinimapAndDebug(spacing, alcoveSize, GRAPHDATA) {
 function drawLeaderboard(spacing, alcoveSize, max) {
     // Draw leaderboard
     let lb = leaderboard.get();
-    let vspacing = 4;
+    let vspacing = 7;
     let len = alcoveSize; // * global.screenWidth;
     let height = 10;
     let x = global.screenWidth - len - spacing;
@@ -2045,7 +2045,7 @@ function drawLeaderboard(spacing, alcoveSize, max) {
         drawText(entry.label + (": " + util.handleLargeNumber(Math.round(entry.score))), x + len / 2, y + height / 2, height - 5, nameColor == "#ffffff" ? color.guiwhite : nameColor, "center", true);
         // Mini-image
         let scale = height / entry.position.axis,
-            xx = x - 1.5 * height - scale * entry.position.middle.x * Math.SQRT1_2,
+            xx = (x - 1.5 * height - scale * entry.position.middle.x * Math.SQRT1_2) - 5,
             yy = y + 0.5 * height - scale * entry.position.middle.y * Math.SQRT1_2,
             baseColor = entry.color;
         drawEntity(baseColor, xx, yy, entry.image, 1 / scale, 1, (scale * scale) / entry.image.size, 1, -Math.PI / 4, true);
@@ -2125,10 +2125,8 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
             let picture = gui.upgrades[upgradeHoverIndex][2];
             if (picture.upgradeTooltip.length > 0) {
                 let boxWidth = measureText(picture.name, alcoveSize / 17.5),
-                    //boxX = global.mouse.x * global.screenWidth / window.canvas.width + 10,
-                    //boxY = global.mouse.y * global.screenHeight / window.canvas.height + 1,
-                    boxX = initialX,
-                    boxY = (initialY + height + internalSpacing * 2),
+                    boxX = global.mouse.x * global.screenWidth / window.canvas.width + 10,
+                    boxY = global.mouse.y * global.screenHeight / window.canvas.height + 7,
                     boxPadding = 5,
                     splitTooltip = picture.upgradeTooltip.split("\n"),
                     textY = boxY + boxPadding + alcoveSize / 17.5;

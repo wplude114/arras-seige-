@@ -2151,7 +2151,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
                 ctx.lineWidth /= 2;
                 //drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, false);
                 //drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, true);
-                drawRoundedRect(boxX, boxY, len, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, 10, false);
+                drawRoundedRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, 10, false);
                 ctx.lineWidth *= 2;
                 drawText(picture.name, boxX + boxPadding * 1.5, textY, alcoveSize / 20, color.guiwhite);
                 for (let t of splitTooltip) {

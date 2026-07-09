@@ -2125,7 +2125,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
             let picture = gui.upgrades[upgradeHoverIndex][2];
             if (picture.upgradeTooltip.length > 0) {
                 let boxWidth = measureText(picture.name, alcoveSize / 10),
-                    boxX = initialX + (height + internalSpacing) * (global.columnCount+1),
+                    boxX = initialX + (height + internalSpacing) * global.columnCount,
                     boxY = initialY,
                     boxPadding = 5,
                     splitTooltip = picture.upgradeTooltip.split("\n"),
@@ -2230,7 +2230,8 @@ function makeButton(index, x, y, width, height, text, clickableRatio) {
     drawRoundedRect(x, y, width, height, btnRadius, false);
     ctx.globalAlpha = 0.1;
     ctx.fillStyle = color.black;
-    drawRoundedRect(x, y, width*0.6, height, btnRadius, false);
+    drawRoundedRect(x, y, width*0.6, height * 0.4, btnRadius, false);
+    ctx.globalAlpha = 1;
 
     ctx.globalAlpha = 0.1;
     ctx.fillStyle = color.black;

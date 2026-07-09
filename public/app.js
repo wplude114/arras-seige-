@@ -2125,7 +2125,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
             textScale = h - 6,
             msg = "Hide Upgrades",
             m = measureText(msg, textScale) + 10;
-        let buttonX = initialX + (rowWidth + len - initialX) / 2,
+        let buttonX = initialX,
             buttonY = initialY + height + internalSpacing;
         drawBar(buttonX - m / 2, buttonX + m / 2, buttonY + h / 2, h + settings.graphical.barChunk, color.black);
         drawBar(buttonX - m / 2, buttonX + m / 2, buttonY + h / 2, h, color.white);
@@ -2155,7 +2155,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
                 //drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, true);
                 drawRoundedRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, 10, false);
                 ctx.lineWidth *= 2;
-                drawText(picture.name, boxX + boxPadding * 1.5, textY, alcoveSize / 20, color.guiwhite);
+                drawText(picture.name, boxX + boxPadding * 1.5, textY, alcoveSize / 10, color.guiwhite);
                 for (let t of splitTooltip) {
                     textY += boxPadding + alcoveSize / 15
                     drawText(t, boxX + boxPadding * 1.5, textY, alcoveSize / 20, color.guiwhite);

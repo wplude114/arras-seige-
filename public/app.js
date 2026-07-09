@@ -10,7 +10,6 @@ import * as socketStuff from "./lib/socketInit.js";
 (async function (util, global, settings, Canvas, color, gameDraw, socketStuff) {
 const gameName = 'Project Solace';
 const nameColor = '#888';
-const minimapEnabled = true; // DO NOT DISABLE
 let { socketInit, gui, leaderboard, minimap, moveCompensation, lag, getNow } = socketStuff;
 // fetch("changelog.md", { cache: "no-cache" })
 // .then((response) => response.text())
@@ -1904,7 +1903,6 @@ function drawSelfInfo(spacing, alcoveSize, max) {
 function drawMinimapAndDebug(spacing, alcoveSize, GRAPHDATA) {
     // Draw minimap and FPS monitors
     //minimap stuff starts here
-    if (minimapEnabled === true) {
     
     let orangeColor = false;
     let len = alcoveSize; // * global.screenWidth;
@@ -1988,8 +1986,6 @@ function drawMinimapAndDebug(spacing, alcoveSize, GRAPHDATA) {
     if (global.mobile) {
         x = global.screenWidth - spacing - len;
         y = global.screenHeight - spacing;
-    }
-    
     }
     if (global.showDebug) {
         drawGuiRect(x, y - 40, len, 30);

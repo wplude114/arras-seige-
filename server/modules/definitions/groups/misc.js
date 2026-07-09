@@ -148,6 +148,7 @@ Class.arenaCloser = {
 // BOTS
 Class.bot = {
     FACING_TYPE: "looseToTarget",
+    SIZE: Class.genericTank.SIZE*1.7,
     CONTROLLERS: ["nearestDifferentMaster", "mapAltToFire", "minion", "fleeAtLowHealth", ["mapFireToAlt", { onlyIfHasAltFireGun: true }], ["wanderAroundMap", { immitatePlayerMovement: true, lookAtGoal: true }]],
 };
 

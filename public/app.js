@@ -8,8 +8,8 @@ import { color } from "./lib/color.js";
 import { gameDraw } from "./lib/gameDraw.js";
 import * as socketStuff from "./lib/socketInit.js";
 (async function (util, global, settings, Canvas, color, gameDraw, socketStuff) {
-const gameName = 'Project Sirus';
-const nameColor = '#e0b62b';
+const gameName = 'diep.io but also arras.io';
+const nameColor = '#888';
 let { socketInit, gui, leaderboard, minimap, moveCompensation, lag, getNow } = socketStuff;
 // fetch("changelog.md", { cache: "no-cache" })
 // .then((response) => response.text())

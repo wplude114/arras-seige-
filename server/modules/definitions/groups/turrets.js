@@ -20,7 +20,7 @@ Class.autoTankTracker = makeTurret({
             POSITION: [20, 10, 1, 0, 0, 0, 0],
         },
         {
-            POSITION: [10, 13, 0.25, 18, 0, 0, 0],
+            POSITION: [11, 14, 0.5, 19, 0, 0, 0],
         },
     ],
 }, {canRepel: true, limitFov: true, fov: 4})

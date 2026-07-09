@@ -13,6 +13,7 @@ Class.miniboss = {
 }
 Class.bossEgg = {
     PARENT: "genericBoss",
+    LABEL: "Egg",
     CONTROLLERS: ["wanderAroundMap", "fleeAtLowHealth"],
     BODY: {
         SPEED: 0.2,
@@ -22,7 +23,7 @@ Class.bossEgg = {
         REGEN: 0.05,
         DENSITY: 0.01,
     },
-    BROADCAST_MESSAGE: "An egg has hatched!",
+    BROADCAST_MESSAGE: null,
 }
 Class.ramMiniboss = {
     PARENT: "genericBoss",
@@ -56,11 +57,10 @@ Class.ravager.TURRETS.push(
 );
 Class.egg_ravager = {
     PARENT: "bossEgg",
-    SHAPE: -5,
+    SHAPE: -7,
     SIZE: 16,
-    LABEL: "§#37ff00§Ravager§reset§ Egg",
+    COLOR: "#37ff00",
     GUNS: [
-        {
             {
             POSITION: [0, 40, 1, 0, 0, 0, 0],
             PROPERTIES: {
@@ -70,7 +70,6 @@ Class.egg_ravager = {
                 ALPHA: 1
             }
         },
-        }
     ]
 }
 

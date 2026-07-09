@@ -1237,13 +1237,13 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     // Draw Tank
     drawEntity(baseColor, entityX, entityY, picture, 1, 1, scale / picture.size, lineWidthMult, angle, true);
 
-    // Tank name
-    drawText(picture.upgradeName ?? picture.name, x + (len / 2), y + height * 0.92, height / 7, color.guiwhite, "center");
-
     // Border stroke (rounded)
     ctx.strokeStyle = color.black;
     ctx.lineWidth = 3 * lineWidthMult;
     drawRoundedRect(x, y, len, height, bigRadius, true);
+    
+    // Tank name
+    drawText(picture.upgradeName ?? picture.name, x + (len / 2), y + height * 1.1, height / 7, color.guiwhite, "center");
 }
 
 

@@ -26,7 +26,7 @@ var color = {
         "brown": "#895918",
         "cyan": "#13808e",
         "paletteSize": 20,
-        "border": 0.1
+        "border": 0.9
     },
     "dark": {
         "teal": "#6ecedc",

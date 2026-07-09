@@ -2124,9 +2124,9 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
         if (upgradeHoverIndex > -1 && upgradeHoverIndex < gui.upgrades.length && !global.mobile) {
             let picture = gui.upgrades[upgradeHoverIndex][2];
             if (picture.upgradeTooltip.length > 0) {
-                let boxWidth = measureText(picture.name, alcoveSize / 17.5),
-                    boxX = global.mouse.x * global.screenWidth / window.canvas.width + 10,
-                    boxY = global.mouse.y * global.screenHeight / window.canvas.height + 7,
+                let boxWidth = measureText(picture.name, alcoveSize / 10),
+                    boxX = initialX + internalSpacing * 3,
+                    boxY = initialY,
                     boxPadding = 5,
                     splitTooltip = picture.upgradeTooltip.split("\n"),
                     textY = boxY + boxPadding + alcoveSize / 17.5;

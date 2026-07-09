@@ -205,10 +205,10 @@ module.exports = {
     ENEMY_SPAWN_COOLDOWN_NEST: 600, // Cooldown (in game ticks) of nest enemies spawn attempts being made.
 
     // Cooldown (in seconds) of boss spawns being announced.
-    BOSS_SPAWN_COOLDOWN: 10000000000,
+    BOSS_SPAWN_COOLDOWN: 5,
     // The delay (in seconds) between the boss spawns being announced and the bosses actually spawning.
     // NOTE: The spawn message (ex. "A strange trembling...") takes half as long to appear than the boss.
-    BOSS_SPAWN_DURATION: 1000000000,
+    BOSS_SPAWN_DURATION: 5,
     FOOD_TYPES: FOOD_TYPES,
 
     // The possible nest food types that can spawn.
@@ -218,11 +218,10 @@ module.exports = {
     ENEMY_TYPES_NEST: [],
 
     // The possible boss types that can spawn.
-    // "th", "ze", "ga", "ha", "de", "the","ares", "gersemi", "ezekiel", "eris", "selene","rokna","paladin", "freyja", "zaphkiel", "nyx", "theia"
     BOSS_TYPES: [
-    { // elite
-        bosses: ["crasher"],
-        amount: 10, chance: 50,
+    {
+        bosses: ["ravager"],
+        amount: [1,2], chance: 5,
     },],
 
 

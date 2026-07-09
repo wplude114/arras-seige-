@@ -10,7 +10,6 @@ function generateFoodTypes() {
 
   const variants = [
     { suffix: 'rammer',   factor: 1 / 10 },
-    { suffix: 'enchanced',   factor: 1 / 24 },
     
     { suffix: '',       factor: 1 },
     { suffix: 'beta',   factor: 1 / 50 },
@@ -196,13 +195,13 @@ module.exports = {
     FOOD_SPAWN_CHANCE: 0.005, // Likeliness of normal food spawn attempts succeeding.
     FOOD_SPAWN_COOLDOWN: 200, // Cooldown (in game ticks) of food spawn attempts being made.
 
-    FOOD_CAP_NEST: 2, // Max nest food per nest tile.
-    FOOD_SPAWN_CHANCE_NEST: 0.25, // Likeliness of nest food spawn attempts succeeding.
-    FOOD_SPAWN_COOLDOWN_NEST: 450, // Cooldown (in game ticks) of nest food spawn attempts being made.
+    FOOD_CAP_NEST: 1, // Max nest food per nest tile.
+    FOOD_SPAWN_CHANCE_NEST: 0.005, // Likeliness of nest food spawn attempts succeeding.
+    FOOD_SPAWN_COOLDOWN_NEST: 200, // Cooldown (in game ticks) of nest food spawn attempts being made.
 
-    ENEMY_CAP_NEST: 1, // Max nest enemies per nest tile.
-    ENEMY_SPAWN_CHANCE_NEST: 0.9, // Likeliness of nest enemies spawn attempts succeeding.
-    ENEMY_SPAWN_COOLDOWN_NEST: 600, // Cooldown (in game ticks) of nest enemies spawn attempts being made.
+    ENEMY_CAP_NEST: 0, // Max nest enemies per nest tile.
+    ENEMY_SPAWN_CHANCE_NEST: 0.00000001, // Likeliness of nest enemies spawn attempts succeeding.
+    ENEMY_SPAWN_COOLDOWN_NEST: 60000, // Cooldown (in game ticks) of nest enemies spawn attempts being made.
 
     // Cooldown (in seconds) of boss spawns being announced.
     BOSS_SPAWN_COOLDOWN: 5,
@@ -212,7 +211,7 @@ module.exports = {
     FOOD_TYPES: FOOD_TYPES,
 
     // The possible nest food types that can spawn.
-    FOOD_TYPES_NEST: [],
+    FOOD_TYPES_NEST:  FOOD_TYPES,
 
     // The possible nest enemy types that can spawn.
     ENEMY_TYPES_NEST: [],

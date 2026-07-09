@@ -2232,7 +2232,7 @@ function makeButton(index, x, y, width, height, text, clickableRatio) {
     drawRoundedRect(x, y, width, height, btnRadius, false);
     ctx.globalAlpha = 0.1;
     ctx.fillStyle = color.black;
-    drawRoundedRect(x, y + height * 0.6, width, height * 0.4, btnRadius * 0.6, false);
+    drawGuiRect(x, y + height * 0.6, width, height * 0.4);
     ctx.globalAlpha = 1;
 
     ctx.globalAlpha = 0.1;

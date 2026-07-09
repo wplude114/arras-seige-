@@ -156,7 +156,7 @@ module.exports = {
     LEVEL_CHEAT_CAP: 45,
 
     // Amount of player-bots to spawn.
-    BOTS: 4,
+    BOTS: 0,
 
     // How much XP player-bots get per second until they reach LEVEL_CAP.
     BOT_XP: 0,
@@ -174,7 +174,7 @@ module.exports = {
     BOT_NAME_PREFIX: "§#888§[Fallen]§reset§ ",
 
     // The class that players and player-bots spawn as.
-    BOT_SPAWN_CLASS: 'developer',
+    BOT_SPAWN_CLASS: 'basic',
     SPAWN_CLASS: ['basic','Base'],
 
     // How every entity regenerates their health.

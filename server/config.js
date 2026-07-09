@@ -220,7 +220,7 @@ module.exports = {
     BOSS_TYPES: [
     {
         bosses: ["ravager"],
-        amount: 1, chance: 5,
+        amount: 0, chance: 5,
     },],
 
 

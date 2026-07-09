@@ -855,11 +855,15 @@ function drawRoundedRect(x, y, length, height, radius, stroke = false) {
 }
 
 function drawGuiLine(x1, y1, x2, y2) {
+    ctx.save();
     ctx.beginPath();
-    ctx.lineTo(Math.round(x1) + 0.5, Math.round(y1) + 0.5);
+    ctx.moveTo(Math.round(x1) + 0.5, Math.round(y1) + 0.5);
     ctx.lineTo(Math.round(x2) + 0.5, Math.round(y2) + 0.5);
-    ctx.closePath();
+    // Use round joins and caps so corners where lines meet are rounded
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
     ctx.stroke();
+    ctx.restore();
 }
 
 function drawBar(x1, x2, y, width, color) {

@@ -1220,7 +1220,7 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     ctx.fillStyle = picture.upgradeColor != null
         ? gameDraw.modifyColor(picture.upgradeColor)
         : gameDraw.getColor(getIconColor(colorIndex));
-    let bigRadius = Math.min(len, height) * 0.20; // adjust percent to taste
+    let bigRadius = 5; // adjust percent to taste
     drawRoundedRect(x, y, len, height, bigRadius, false);
 
     // Shading for hover
@@ -2142,7 +2142,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
                     //boxY = global.mouse.y * global.screenHeight / window.canvas.height + 1,
                     boxX = initialX,
                     boxY = (initialY + height + internalSpacing * 2),
-                    boxPadding = 2,
+                    boxPadding = 5,
                     splitTooltip = picture.upgradeTooltip.split("\n"),
                     textY = boxY + boxPadding + alcoveSize / 17.5;
 
@@ -2154,7 +2154,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
                 ctx.lineWidth /= 2;
                 //drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, false);
                 //drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, true);
-                drawRoundedRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, 10, false);
+                drawRoundedRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, 5, false);
                 ctx.lineWidth *= 2;
                 drawText(picture.name, boxX + boxPadding * 1.5, textY, alcoveSize / 15, color.guiwhite);
                 for (let t of splitTooltip) {

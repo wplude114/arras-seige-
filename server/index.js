@@ -260,7 +260,7 @@ const gameloop = () => {
     }
 };
 
-setTimeout(closeArena, 24 * 60 * 60 * 1000); // Restart every 2 hours
+setTimeout(closeArena, (24 * 60 * 60 * 1000)/2); // Restart every hour
 
 global.naturallySpawnedBosses = [];
 global.bots = [];
@@ -285,7 +285,7 @@ const maintainloop = () => {
         if (selection.message) {
             sockets.broadcast(selection.message);
         }
-        sockets.broadcast(amount > 1 ? "Visitors are coming." : "A visitor is coming.");
+        //sockets.broadcast(amount > 1 ? "Visitors are coming." : "A visitor is coming.");
         setSyncedTimeout(() => {
             let names = ran.chooseBossName(selection.nameType, amount);
 
@@ -304,7 +304,7 @@ const maintainloop = () => {
                 boss.on('dead', () => util.remove(naturallySpawnedBosses, naturallySpawnedBosses.indexOf(boss)));
             }
 
-            sockets.broadcast(`${util.listify(names)} ${names.length == 1 ? 'has' : 'have'} arrived!`);
+            //sockets.broadcast(`${util.listify(names)} ${names.length == 1 ? 'has' : 'have'} arrived!`);
         }, Config.BOSS_SPAWN_DURATION * 30);
     }
 

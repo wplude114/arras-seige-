@@ -2125,8 +2125,9 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
             textScale = h - 6,
             msg = "Hide Upgrades",
             m = measureText(msg, textScale) + 10;
-        let buttonX = initialX,
-            buttonY = initialY + height + internalSpacing;
+        // NO BUTTON >:(
+        let buttonX = 99999,
+            buttonY = 999999;
         drawBar(buttonX - m / 2, buttonX + m / 2, buttonY + h / 2, h + settings.graphical.barChunk, color.black);
         drawBar(buttonX - m / 2, buttonX + m / 2, buttonY + h / 2, h, color.white);
         drawText(msg, buttonX, buttonY + h / 2, textScale, color.guiwhite, "center", true);

@@ -219,7 +219,7 @@ module.exports = {
     // The possible boss types that can spawn.
     BOSS_TYPES: [
     {
-        bosses: ["ravager"],
+        bosses: ["egg_ravager"],
         amount: 0, chance: 5,
     },],
 

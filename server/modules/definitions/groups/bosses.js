@@ -62,12 +62,12 @@ Class.egg_ravager = {
     COLOR: "#37ff00",
     GUNS: [
             {
-            POSITION: [0, 40, 1, 0, 0, 0, 0],
+            POSITION: [0, 40],
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic]),
                 TYPE: ["ravager", { PERSISTS_AFTER_DEATH: true }],
                 SHOOT_ON_DEATH: true,
-                ALPHA: 1
+                ALPHA: 0
             }
         },
     ]

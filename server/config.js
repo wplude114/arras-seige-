@@ -1,17 +1,17 @@
 function generateFoodTypes() {
   const bases = [
-    { base: 100, name: 'triangle' },
-    { base: 50,  name: 'square' },
-    { base: 33,  name: 'pentagon' },
+    { base: 1, name: 'triangle' },
+    { base: 0.66,  name: 'square' },
+    { base: 0.33,  name: 'pentagon' },
   ];
 
   const variants = [
     { suffix: 'rammer',   factor: 1 / 10 },
     
     { suffix: '',       factor: 1 },
-    { suffix: 'beta',   factor: 1 / 50 },
-    { suffix: 'alpha',  factor: 1 / 250 },
-    { suffix: 'gamma',  factor: 1 / 500 },
+    { suffix: 'beta',   factor: 1 / 20 },
+    { suffix: 'alpha',  factor: 1 / 50 },
+    { suffix: 'gamma',  factor: 1 / 100 },
   ];
 
   const entries = [];

@@ -3,9 +3,6 @@ function generateFoodTypes() {
     { base: 100, name: 'triangle' },
     { base: 50,  name: 'square' },
     { base: 33,  name: 'pentagon' },
-    { base: 15,  name: 'hexagon' },
-    { base: 5,   name: 'septagon' },
-    { base: 2.5,   name: 'octagon' },
   ];
 
   const variants = [

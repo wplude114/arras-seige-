@@ -2232,11 +2232,6 @@ function makeButton(index, x, y, width, height, text, clickableRatio) {
     drawRoundedRect(x, y, width, height, btnRadius, false);
     ctx.globalAlpha = 0.1;
     ctx.fillStyle = color.black;
-    drawGuiRect(x, y + height * 0.6, width, height * 0.4);
-    ctx.globalAlpha = 1;
-
-    ctx.globalAlpha = 0.1;
-    ctx.fillStyle = color.black;
     drawRoundedRect(x, y + height * 0.6, width, height * 0.4, btnRadius * 0.6, false);
 
     ctx.globalAlpha = 1;
@@ -2247,7 +2242,7 @@ function makeButton(index, x, y, width, height, text, clickableRatio) {
     // Draw the borders (rounded stroke)
     ctx.strokeStyle = color.black;
     ctx.lineWidth = 3;
-    drawRoundedRect(x, y, width, height, btnRadius, true);
+    //drawRoundedRect(x, y, width, height, btnRadius, true);
 }
 
 function makeButtons(buttons, startX, startY, baseSize, clickableRatio, spacing) {

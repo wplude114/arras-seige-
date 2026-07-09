@@ -108,7 +108,7 @@ Class.genericTank = {
     IGNORED_BY_AI: false,
     SYNC_WITH_TANK: false,
     IS_IMMUNE_TO_TILES: false,
-    REROOT_UPGRADE_TREE: "basic",
+    REROOT_UPGRADE_TREE: ["basic", "Base"],
     BODY: {
         ACCELERATION: base.ACCEL,
         SPEED: base.SPEED,

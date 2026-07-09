@@ -150,7 +150,7 @@ module.exports = {
     LEVEL_CAP: 45,
 
     // Maximum level via the level-up key and auto-level-up.
-    LEVEL_CHEAT_CAP: 45,
+    LEVEL_CHEAT_CAP: 0,
 
     // Amount of player-bots to spawn.
     BOTS: 0,

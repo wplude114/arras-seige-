@@ -2141,7 +2141,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
                     //boxX = global.mouse.x * global.screenWidth / window.canvas.width + 10,
                     //boxY = global.mouse.y * global.screenHeight / window.canvas.height + 1,
                     boxX = initialX,
-                    boxY = (initialY + height + internalSpacing * 2) + 10,
+                    boxY = (initialY + height + internalSpacing * 2),
                     boxPadding = 2,
                     splitTooltip = picture.upgradeTooltip.split("\n"),
                     textY = boxY + boxPadding + alcoveSize / 17.5;
@@ -2156,7 +2156,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
                 //drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, true);
                 drawRoundedRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, 10, false);
                 ctx.lineWidth *= 2;
-                drawText(picture.name, boxX + boxPadding * 1.5, textY, alcoveSize / 10, color.guiwhite);
+                drawText(picture.name, boxX + boxPadding * 1.5, textY, alcoveSize / 15, color.guiwhite);
                 for (let t of splitTooltip) {
                     textY += boxPadding + alcoveSize / 15
                     drawText(t, boxX + boxPadding * 1.5, textY, alcoveSize / 20, color.guiwhite);

@@ -331,7 +331,7 @@ const maintainloop = () => {
             loc = getSpawnableArea(team);
         } while (limit-- && dirtyCheck(loc, 50))
         let o = new Entity(loc);
-        o.define(Config.SPAWN_CLASS);
+        o.define(Config.BOT_SPAWN_CLASS);
         o.define({ CONTROLLERS: ["nearestDifferentMaster"] });
         o.refreshBodyAttributes();
         o.skill.score = Config.BOT_START_XP;

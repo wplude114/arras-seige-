@@ -828,6 +828,22 @@ function drawGuiCircle(x, y, radius, stroke = false) {
         ctx.fill();
     }
 }
+function drawRoundedRect(x, y, width, height, radius, stroke = false) {
+    let r = Math.max(0, Math.min(radius, Math.min(width, height) / 2));
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.lineTo(x + width - r, y);
+    ctx.arcTo(x + width, y, x + width, y + r, r);
+    ctx.lineTo(x + width, y + height - r);
+    ctx.arcTo(x + width, y + height, x + width - r, y + height, r);
+    ctx.lineTo(x + r, y + height);
+    ctx.arcTo(x, y + height, x, y + height - r, r);
+    ctx.lineTo(x, y + r);
+    ctx.arcTo(x, y, x + r, y, r);
+    ctx.closePath();
+    if (stroke) ctx.stroke();
+    else ctx.fill();
+}
 
 function drawGuiLine(x1, y1, x2, y2) {
     ctx.beginPath();
@@ -838,13 +854,10 @@ function drawGuiLine(x1, y1, x2, y2) {
 }
 
 function drawBar(x1, x2, y, width, color) {
-    ctx.beginPath();
-    ctx.lineTo(x1, y);
-    ctx.lineTo(x2, y);
-    ctx.lineWidth = width;
-    ctx.strokeStyle = color;
-    ctx.closePath();
-    ctx.stroke();
+    ctx.save();
+    ctx.fillStyle = color;
+    ctx.fillRect(x1, y - width / 2, x2 - x1, width);
+    ctx.restore();
 }
 // Sub-drawing functions
 const drawPolyImgs = [];
@@ -1184,14 +1197,15 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     entityY -= scale * yShift;
 
     // Draw box
-    ctx.globalAlpha = alpha;
-    ctx.fillStyle = picture.upgradeColor != null
-        ? gameDraw.modifyColor(picture.upgradeColor)
-        : gameDraw.getColor(getIconColor(colorIndex));
-    drawGuiRect(x, y, len, height);
-    ctx.globalAlpha = 0.25 * alpha;
-    ctx.fillStyle = color.black;
-    drawGuiRect(x, y + height * 0.6, len, height * 0.4);
+    // Draw box (rounded)
+let bigRadius = Math.min(len, height) * 0.30; // 30% — adjust for bigger/smaller rounding
+ctx.globalAlpha = alpha;
+ctx.fillStyle = picture.upgradeColor != null ? gameDraw.modifyColor(picture.upgradeColor) : gameDraw.getColor(getIconColor(colorIndex));
+drawRoundedRect(x, y, len, height, bigRadius, false);
+
+ctx.globalAlpha = 0.25 * alpha;
+ctx.fillStyle = color.black;
+drawRoundedRect(x, y + height * 0.6, len, height * 0.4, bigRadius * 0.6, false);
     // Shading for hover
     if (hover) {
         ctx.globalAlpha = 0.15 * alpha;

@@ -2228,11 +2228,11 @@ function makeButton(index, x, y, width, height, text, clickableRatio) {
     // Draw boxes (rounded)
     ctx.globalAlpha = 0.5;
     ctx.fillStyle = color.grey;
-    let btnRadius = Math.min(width, height) * 0.18; // adjust to taste
+    let btnRadius = 5; // adjust to taste
     drawRoundedRect(x, y, width, height, btnRadius, false);
     ctx.globalAlpha = 0.1;
     ctx.fillStyle = color.black;
-    drawRoundedRect(x, y, width*0.6, height * 0.4, btnRadius, false);
+    drawRoundedRect(x, y + height * 0.6, width, height * 0.4, btnRadius * 0.6, false);
     ctx.globalAlpha = 1;
 
     ctx.globalAlpha = 0.1;

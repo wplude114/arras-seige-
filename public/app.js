@@ -2229,22 +2229,25 @@ function makeButton(index, x, y, width, height, text, clickableRatio) {
     // Set the clickable's position
     global.clickables.mobileButtons.place(index, x * clickableRatio, y * clickableRatio, width * clickableRatio, height * clickableRatio);
 
-    // Draw boxes
+    // Draw boxes (rounded)
     ctx.globalAlpha = 0.5;
     ctx.fillStyle = color.grey;
-    drawGuiRect(x, y, width, height);
+    let btnRadius = Math.min(width, height) * 0.18; // adjust to taste
+    drawRoundedRect(x, y, width, height, btnRadius, false);
+
     ctx.globalAlpha = 0.1;
     ctx.fillStyle = color.black;
-    drawGuiRect(x, y + height * 0.6, width, height * 0.4);
+    drawRoundedRect(x, y + height * 0.6, width, height * 0.4, btnRadius * 0.6, false);
+
     ctx.globalAlpha = 1;
 
     // Draw text
     drawText(text, x + width / 2, y + height * 0.5, height * 0.6, color.guiwhite, "center", true);
 
-    // Draw the borders
+    // Draw the borders (rounded stroke)
     ctx.strokeStyle = color.black;
     ctx.lineWidth = 3;
-    drawGuiRect(x, y, width, height, true);
+    drawRoundedRect(x, y, width, height, btnRadius, true);
 }
 
 function makeButtons(buttons, startX, startY, baseSize, clickableRatio, spacing) {

@@ -96,7 +96,7 @@ module.exports = {
                     +"This is a test version, nothing here is final.",
     
     // How long a popup message lasts before fading out in milliseconds.
-    MESSAGE_DISPLAY_TIME: 10_000,
+    MESSAGE_DISPLAY_TIME: 5_000,
 
     // How long you have to wait to respawn in seconds.
     RESPAWN_TIMEOUT: 0,
@@ -144,10 +144,10 @@ module.exports = {
     MAX_UPGRADE_TIER: 9,
 
     // Level difference between each tier.
-    TIER_MULTIPLIER: 15,
+    TIER_MULTIPLIER: 10,
 
     // Maximum normally achievable level.
-    LEVEL_CAP: 45,
+    LEVEL_CAP: 50,
 
     // Maximum level via the level-up key and auto-level-up.
     LEVEL_CHEAT_CAP: 0,
@@ -202,7 +202,7 @@ module.exports = {
     ENEMY_SPAWN_COOLDOWN_NEST: 1, // Cooldown (in game ticks) of nest enemies spawn attempts being made.
 
     // Cooldown (in seconds) of boss spawns being announced.
-    BOSS_SPAWN_COOLDOWN: 75,
+    BOSS_SPAWN_COOLDOWN: 120,
     // The delay (in seconds) between the boss spawns being announced and the bosses actually spawning.
     // NOTE: The spawn message (ex. "A strange trembling...") takes half as long to appear than the boss.
     BOSS_SPAWN_DURATION: 5,

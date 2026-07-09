@@ -2120,19 +2120,6 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
             upgradeNum++;
         }
 
-        // Draw dont upgrade button
-        let h = 16,
-            textScale = h - 6,
-            msg = "Hide Upgrades",
-            m = measureText(msg, textScale) + 10;
-        // NO BUTTON >:(
-        let buttonX = 99999,
-            buttonY = 999999;
-        drawBar(buttonX - m / 2, buttonX + m / 2, buttonY + h / 2, h + settings.graphical.barChunk, color.black);
-        drawBar(buttonX - m / 2, buttonX + m / 2, buttonY + h / 2, h, color.white);
-        drawText(msg, buttonX, buttonY + h / 2, textScale, color.guiwhite, "center", true);
-        global.clickables.skipUpgrades.place(0, (buttonX - m / 2) * clickableRatio, buttonY * clickableRatio, m * clickableRatio, h * clickableRatio);
-
         // Upgrade tooltip
         if (upgradeHoverIndex > -1 && upgradeHoverIndex < gui.upgrades.length && !global.mobile) {
             let picture = gui.upgrades[upgradeHoverIndex][2];

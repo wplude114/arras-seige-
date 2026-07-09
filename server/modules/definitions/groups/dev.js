@@ -34,7 +34,7 @@ Class.developer = {
         REGEN: 1e100,
     },
 }
-Class.developer.REROOT_UPGRADE_TREE = "developer"
+//Class.developer.REROOT_UPGRADE_TREE = "developer"
 Class.spectator = {
     PARENT: "genericTank",
     LABEL: "Spectator",

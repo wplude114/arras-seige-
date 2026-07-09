@@ -8,7 +8,8 @@ import { color } from "./lib/color.js";
 import { gameDraw } from "./lib/gameDraw.js";
 import * as socketStuff from "./lib/socketInit.js";
 (async function (util, global, settings, Canvas, color, gameDraw, socketStuff) {
-const gameName = 'AlterArras';
+const gameName = 'Project Sirus';
+const nameColor = '#00ff00';
 let { socketInit, gui, leaderboard, minimap, moveCompensation, lag, getNow } = socketStuff;
 // fetch("changelog.md", { cache: "no-cache" })
 // .then((response) => response.text())
@@ -1964,7 +1965,7 @@ function drawMinimapAndDebug(spacing, alcoveSize, GRAPHDATA) {
     if (global.metrics.rendertime < 10) orangeColor = true;
     // Text
     if (global.showDebug) {
-        drawText(gameName, x + len, y - 50 - 5 * 14 - 2, 15, "#d12a2a", "right");
+        drawText(gameName, x + len, y - 50 - 5 * 14 - 2, 15, nameColor, "right");
         drawText("Prediction: " + Math.round(GRAPHDATA) + "ms : " + global.mspt + " mspt", x + len, y - 50 - 4 * 14, 10, color.guiwhite, "right");
         // drawText(`Bandwidth: ${gui.bandwidth.in} in, ${gui.bandwidth.out} out`, x + len, y - 50 - 3 * 14, 10, color.guiwhite, "right");
         drawText("Memory: " + global.metrics.rendergap.toFixed(1) + " Mib : " + "Class: " + gui.class, x + len, y - 50 - 3 * 14, 10, color.guiwhite, "right");
@@ -1972,7 +1973,7 @@ function drawMinimapAndDebug(spacing, alcoveSize, GRAPHDATA) {
         drawText("Server Speed: " + (100 * gui.fps).toFixed(2) + "% : Client Speed: " + global.metrics.rendertime + " FPS", x + len, y - 50 - 1 * 14, 10, orangeColor ? color.orange : color.guiwhite, "right");
         drawText(global.metrics.latency + " ms - " + global.serverName, x + len, y - 50, 10, color.guiwhite, "right");
     } else if (!global.GUIStatus.minimapReducedInfo) {
-        drawText(gameName, x + len, y - 50 - 2 * 14 - 2, 15, "#d12a2a", "right");
+        drawText(gameName, x + len, y - 50 - 2 * 14 - 2, 15, nameColor, "right");
         drawText((100 * gui.fps).toFixed(2) + "% : " + global.metrics.rendertime + " FPS", x + len, y - 50 - 1 * 14, 10, orangeColor ? color.orange : color.guiwhite, "right");
         drawText(global.metrics.latency + " ms : " + global.metrics.updatetime + "Hz", x + len, y - 50, 10, color.guiwhite, "right");
     } else drawText("Erdlya Siege", x + len, y - 22 - 2 * 14 - 2, 15, "#d12a2a", "right");

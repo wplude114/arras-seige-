@@ -2129,7 +2129,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
                     boxY = initialY + height + internalSpacing * 2,
                     boxPadding = 5,
                     splitTooltip = picture.upgradeTooltip.split("\n"),
-                    textY = boxY + boxPadding + alcoveSize / 17.5;
+                    textY = boxY + boxPadding + alcoveSize / 10;
 
                 // Tooltip box width
                 for (let line of splitTooltip) boxWidth = Math.max(boxWidth, measureText(line, alcoveSize / 20));
@@ -2140,8 +2140,9 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
                 //drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, false);
                 //drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, true);
                 drawRoundedRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, 5, false);
+                drawRoundedRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, 5, false);
                 ctx.lineWidth *= 2;
-                drawText(picture.name, boxX + boxPadding * 1.5, textY+3, alcoveSize / 10, color.guiwhite);
+                drawText(picture.name, boxX + boxPadding * 1.5, textY, alcoveSize / 10, color.guiwhite);
                 for (let t of splitTooltip) {
                     textY += boxPadding + alcoveSize / 15
                     drawText(t, boxX + boxPadding * 1.5, textY, alcoveSize / 20, color.guiwhite);

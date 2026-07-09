@@ -828,21 +828,30 @@ function drawGuiCircle(x, y, radius, stroke = false) {
         ctx.fill();
     }
 }
-function drawRoundedRect(x, y, width, height, radius, stroke = false) {
-    let r = Math.max(0, Math.min(radius, Math.min(width, height) / 2));
+function drawRoundedRect(x, y, length, height, radius, stroke = false) {
+    // ensure radius is not larger than half the smallest side
+    const r = Math.max(0, Math.min(radius, Math.min(length, height) / 2));
+    ctx.save();
     ctx.beginPath();
     ctx.moveTo(x + r, y);
-    ctx.lineTo(x + width - r, y);
-    ctx.arcTo(x + width, y, x + width, y + r, r);
-    ctx.lineTo(x + width, y + height - r);
-    ctx.arcTo(x + width, y + height, x + width - r, y + height, r);
+    ctx.lineTo(x + length - r, y);
+    ctx.arcTo(x + length, y, x + length, y + r, r);
+    ctx.lineTo(x + length, y + height - r);
+    ctx.arcTo(x + length, y + height, x + length - r, y + height, r);
     ctx.lineTo(x + r, y + height);
     ctx.arcTo(x, y + height, x, y + height - r, r);
     ctx.lineTo(x, y + r);
     ctx.arcTo(x, y, x + r, y, r);
     ctx.closePath();
-    if (stroke) ctx.stroke();
-    else ctx.fill();
+    if (stroke) {
+        // Smooth stroke joins and caps for rounded corners
+        ctx.lineJoin = 'round';
+        ctx.lineCap = 'round';
+        ctx.stroke();
+    } else {
+        ctx.fill();
+    }
+    ctx.restore();
 }
 
 function drawGuiLine(x1, y1, x2, y2) {
@@ -1201,21 +1210,19 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     entityX -= scale * xShift;
     entityY -= scale * yShift;
 
-    // Draw box
     // Draw box (rounded)
-let bigRadius = Math.min(len, height) * 0.30; // 30% — adjust for bigger/smaller rounding
-ctx.globalAlpha = alpha;
-ctx.fillStyle = picture.upgradeColor != null ? gameDraw.modifyColor(picture.upgradeColor) : gameDraw.getColor(getIconColor(colorIndex));
-drawRoundedRect(x, y, len, height, bigRadius, false);
+    ctx.globalAlpha = alpha;
+    ctx.fillStyle = picture.upgradeColor != null
+        ? gameDraw.modifyColor(picture.upgradeColor)
+        : gameDraw.getColor(getIconColor(colorIndex));
+    let bigRadius = Math.min(len, height) * 0.30; // adjust percent to taste
+    drawRoundedRect(x, y, len, height, bigRadius, false);
 
-ctx.globalAlpha = 0.25 * alpha;
-ctx.fillStyle = color.black;
-drawRoundedRect(x, y + height * 0.6, len, height * 0.4, bigRadius * 0.6, false);
     // Shading for hover
     if (hover) {
         ctx.globalAlpha = 0.15 * alpha;
         ctx.fillStyle = color.guiwhite;
-        drawGuiRect(x, y, len, height);
+        drawRoundedRect(x, y, len, height, bigRadius, false);
     }
     ctx.globalAlpha = 1;
 
@@ -1229,10 +1236,13 @@ drawRoundedRect(x, y + height * 0.6, len, height * 0.4, bigRadius * 0.6, false);
     if (upgradeKey) {
         drawText("[" + upgradeKey + "]", x + len - 4, y + height - 6, height / 8 - 5, color.guiwhite, "right");
     }
+
+    // Border stroke (rounded)
     ctx.strokeStyle = color.black;
     ctx.lineWidth = 3 * lineWidthMult;
-    drawGuiRect(x, y, len, height, true); // Border
+    drawRoundedRect(x, y, len, height, bigRadius, true);
 }
+
 
 // Start animation
 window.requestAnimFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame || (callback => setTimeout(callback, 1000 / 60));

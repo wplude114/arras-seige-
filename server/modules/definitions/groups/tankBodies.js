@@ -148,11 +148,12 @@ Class.Base = { PARENT: "genericBase", UPGRADE_LABEL: "Base", TURRETS: [{ POSITIO
             UPGRADE_LABEL: "Mechanism",
             TURRETS: [
                 { POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" },
-                {POSITION: [6,5,0,0,360,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]},
-                {POSITION: [6,5,0,120,360,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]},
-                {POSITION: [6,5,0,-120,360,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]},
-            ],
-            }
+                {POSITION: [6,-5,0,0,360,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]},
+                {POSITION: [6,-5,0,120,360,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]},
+                {POSITION: [6,-5,0,-120,360,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]},
+            ]
+        }
+        Class.Tracker = { PARENT: "genericBase", UPGRADE_LABEL: "Tracker", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }, {POSITION: [7,0,0,180,360,15], TYPE: ["autoTankTracker", {INDEPENDENT: true}]}] }
 
     Class.Smasher = { PARENT: "genericBase", UPGRADE_LABEL: "Smasher", TURRETS: [{ POSITION: [22, 0, 0, 0, 360, -10], TYPE: "smasherBody" }] }
 
@@ -164,4 +165,4 @@ Class.Base.UPGRADES_TIER_2 = ["Booster", "Smasher"]
 Class.Base.UPGRADES_TIER_3 = ["Automation"]
 
     Class.Booster.UPGRADES_TIER_3 = ["Thruster", "Resurfacer"]
-    Class.Automation.UPGRADES_TIER_3 = ["Mechanism"]
+    Class.Automation.UPGRADES_TIER_3 = ["Mechanism", "Tracker"]

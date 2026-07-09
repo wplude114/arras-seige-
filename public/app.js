@@ -1225,7 +1225,7 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     drawRoundedRect(x, y, len, height, bigRadius, false);
     ctx.globalAlpha = 0.1;
     ctx.fillStyle = color.black;
-    drawRoundedRect(x, y*1.4, len, height*0.6, bigRadius, false);
+    drawRoundedRect(x, y+(y*0.5), len, height*0.5, bigRadius, false);
 
     // Shading for hover
     if (hover) {

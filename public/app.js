@@ -2149,8 +2149,9 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
                 // Draw tooltip box
                 gameDraw.setColor(ctx, color.dgrey);
                 ctx.lineWidth /= 2;
-                drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, false);
-                drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, true);
+                //drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, false);
+                //drawGuiRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, true);
+                drawRoundedRect(boxX, boxY, len, boxWidth + boxPadding * 3, 0.20, false);
                 ctx.lineWidth *= 2;
                 drawText(picture.name, boxX + boxPadding * 1.5, textY, alcoveSize / 20, color.guiwhite);
                 for (let t of splitTooltip) {

@@ -1243,7 +1243,7 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     drawRoundedRect(x, y, len, height, bigRadius, true);
     
     // Tank name
-    drawText(picture.upgradeName ?? picture.name, x + (len / 2), y + height * 1.1, height / 7, color.guiwhite, "center");
+    drawText(picture.upgradeName ?? picture.name, x + (len / 2), y + height * 1.13, height / 8, color.guiwhite, "center");
 }
 
 

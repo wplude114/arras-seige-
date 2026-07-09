@@ -138,10 +138,16 @@ Class.thrusterBody = {
         },
     ],
 }
+{
+            POSITION: [8, 17, 0, 0, 200, 1],
+            TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]
+        }
 
 // aura stuff goes here
 Class.genericBase = { PARENT: "genericTank", LABEL: null,  }
 Class.Base = { PARENT: "genericBase", UPGRADE_LABEL: "Base", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }] }
+
+    Class.Automation = { PARENT: "genericBase", UPGRADE_LABEL: "Automation", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }, {POSITION: [8,0,0,0,360,15]}] }
 
     Class.Smasher = { PARENT: "genericBase", UPGRADE_LABEL: "Smasher", TURRETS: [{ POSITION: [22, 0, 0, 0, 360, -10], TYPE: "smasherBody" }] }
 
@@ -150,4 +156,6 @@ Class.Base = { PARENT: "genericBase", UPGRADE_LABEL: "Base", TURRETS: [{ POSITIO
     Class.Resurfacer = { PARENT: "genericBase", UPGRADE_LABEL: "Resurfacer", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "resurfacerBody" }] }
 
 Class.Base.UPGRADES_TIER_2 = ["Booster", "Smasher"]
+Class.Base.UPGRADES_TIER_3 = ["Automation"]
+
     Class.Booster.UPGRADES_TIER_3 = ["Thruster", "Resurfacer"]

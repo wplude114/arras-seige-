@@ -148,9 +148,9 @@ Class.Base = { PARENT: "genericBase", UPGRADE_LABEL: "Base", TURRETS: [{ POSITIO
             LABEL: "Mechanism",
             TURRETS: [
                 { POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" },
-                {POSITION: [6,5,0,60,360,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]},
-                {POSITION: [6,5,0,120+60,360,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]},
-                {POSITION: [6,5,0,-120+60,360,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]},
+                {POSITION: [6,5,0,60,70,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]},
+                {POSITION: [6,5,0,120+60,70,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]},
+                {POSITION: [6,5,0,-120+60,70,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]},
             ]
         }
         Class.Tracker = { PARENT: "genericBase", LABEL: "Tracker", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }, {POSITION: [7,0,0,180,360,15], TYPE: ["autoTankTracker", {INDEPENDENT: true}]}] }

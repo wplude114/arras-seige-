@@ -204,7 +204,7 @@ module.exports = {
     ENEMY_SPAWN_COOLDOWN_NEST: 1, // Cooldown (in game ticks) of nest enemies spawn attempts being made.
 
     // Cooldown (in seconds) of boss spawns being announced.
-    BOSS_SPAWN_COOLDOWN: 5,
+    BOSS_SPAWN_COOLDOWN: 75,
     // The delay (in seconds) between the boss spawns being announced and the bosses actually spawning.
     // NOTE: The spawn message (ex. "A strange trembling...") takes half as long to appear than the boss.
     BOSS_SPAWN_DURATION: 5,
@@ -219,8 +219,8 @@ module.exports = {
     // The possible boss types that can spawn.
     BOSS_TYPES: [
     {
-        bosses: ["egg_ravager"],
-        amount: 0, chance: 5,
+        bosses: ["ravager"],
+        amount: [0,1], chance: 5,
     },],
 
 

@@ -1238,12 +1238,7 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     drawEntity(baseColor, entityX, entityY, picture, 1, 1, scale / picture.size, lineWidthMult, angle, true);
 
     // Tank name
-    drawText(picture.upgradeName ?? picture.name, x + (upgradeKey ? 0.9 * len : len) / 2, y + height * 0.94, height / 10, color.guiwhite, "center");
-
-    // Upgrade key
-    if (upgradeKey) {
-        drawText("[" + upgradeKey + "]", x + len - 4, y + height - 6, height / 8 - 5, color.guiwhite, "right");
-    }
+    drawText(picture.upgradeName ?? picture.name, len / 2, y + height * 0.94, height / 10, color.guiwhite, "center");
 
     // Border stroke (rounded)
     ctx.strokeStyle = color.black;
@@ -2128,7 +2123,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
         if (upgradeHoverIndex > -1 && upgradeHoverIndex < gui.upgrades.length && !global.mobile) {
             let picture = gui.upgrades[upgradeHoverIndex][2];
             if (picture.upgradeTooltip.length > 0) {
-                let boxWidth = measureText(picture.name, alcoveSize / 10),
+                let boxWidth = measureText(picture.upgradeName ?? picture.name, alcoveSize / 10),
                     boxX = initialX,
                     boxY = initialY + height + internalSpacing * 2,
                     boxPadding = 5,
@@ -2146,7 +2141,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
                 drawRoundedRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, 5, false);
                 drawRoundedRect(boxX, boxY, boxWidth + boxPadding * 3, alcoveSize * (splitTooltip.length + 1) / 10 + boxPadding * 3, 5, false);
                 ctx.lineWidth *= 2;
-                drawText(picture.name, boxX + boxPadding * 1.5, textY, alcoveSize / 10, color.guiwhite);
+                drawText(picture.upgradeName ?? picture.name, boxX + boxPadding * 1.5, textY, alcoveSize / 10, color.guiwhite);
                 for (let t of splitTooltip) {
                     textY += boxPadding + alcoveSize / 15
                     drawText(t, boxX + boxPadding * 1.5, textY, alcoveSize / 20, color.guiwhite);

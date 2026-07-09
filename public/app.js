@@ -1219,7 +1219,7 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     let bigRadius = 5; // adjust percent to taste
     ctx.globalAlpha = 0.25;
     ctx.fillStyle = color.black;
-    drawRoundedRect(x, y+(height*0.1), len, height, bigRadius*2, false);
+    drawRoundedRect(x, y+(height*0.05), len, height, bigRadius*3, false);
     ctx.globalAlpha = 1;
     ctx.fillStyle = picture.upgradeColor != null
         ? gameDraw.modifyColor(picture.upgradeColor)

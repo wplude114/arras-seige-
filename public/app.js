@@ -10,7 +10,7 @@ import * as socketStuff from "./lib/socketInit.js";
 (async function (util, global, settings, Canvas, color, gameDraw, socketStuff) {
 const gameName = 'Project Solace';
 const nameColor = '#888';
-const minimapEnabled = false;
+const minimapEnabled = true; // DO NOT DISABLE
 let { socketInit, gui, leaderboard, minimap, moveCompensation, lag, getNow } = socketStuff;
 // fetch("changelog.md", { cache: "no-cache" })
 // .then((response) => response.text())

@@ -14,6 +14,16 @@ Class.autoTankGun = makeTurret({
         },
     ],
 }, {canRepel: true, limitFov: true, fov: 3})
+Class.autoTankTracker = makeTurret({
+    GUNS: [
+        {
+            POSITION: [20, 10, 1, 0, 0, 0, 0],
+        },
+        {
+            POSITION: [10, 13, 0.25, 18, 0, 0, 0],
+        },
+    ],
+}, {canRepel: true, limitFov: true, fov: 4})
 
 // boss guns
 Class.bossMachineGun = makeTurret({

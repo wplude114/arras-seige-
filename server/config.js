@@ -66,11 +66,11 @@ module.exports = {
     // NOTE: If a /gamemodeconfig/ file "replaces" the value of ROOM_SETUP, it just adds its own ROOM_SETUP's content to this array.
     // NOTE: Files starting with `map_` are maps. files starting with `overlay_` are overlays that get added on.
     // NOTE: These prefixes are only for categorisation, a room file would work the same regardless of its prefix. APS++ does nothing based on file name prefixes.
-    ROOM_SETUP: ['empty'],
+    ROOM_SETUP: ['map_apspp_default'],
 
     // The dimensions of a single tile on the map.
-    TILE_WIDTH: 200,
-    TILE_HEIGHT: 200,
+    TILE_WIDTH: 300,
+    TILE_HEIGHT: 300,
 
 
 
@@ -200,8 +200,8 @@ module.exports = {
     FOOD_SPAWN_COOLDOWN_NEST: 200, // Cooldown (in game ticks) of nest food spawn attempts being made.
 
     ENEMY_CAP_NEST: 0, // Max nest enemies per nest tile.
-    ENEMY_SPAWN_CHANCE_NEST: 0.00000001, // Likeliness of nest enemies spawn attempts succeeding.
-    ENEMY_SPAWN_COOLDOWN_NEST: 60000, // Cooldown (in game ticks) of nest enemies spawn attempts being made.
+    ENEMY_SPAWN_CHANCE_NEST: 0.001, // Likeliness of nest enemies spawn attempts succeeding.
+    ENEMY_SPAWN_COOLDOWN_NEST: 1, // Cooldown (in game ticks) of nest enemies spawn attempts being made.
 
     // Cooldown (in seconds) of boss spawns being announced.
     BOSS_SPAWN_COOLDOWN: 5,
@@ -214,13 +214,13 @@ module.exports = {
     FOOD_TYPES_NEST:  FOOD_TYPES,
 
     // The possible nest enemy types that can spawn.
-    ENEMY_TYPES_NEST: [],
+    ENEMY_TYPES_NEST: FOOD_TYPES,
 
     // The possible boss types that can spawn.
     BOSS_TYPES: [
     {
         bosses: ["ravager"],
-        amount: [1,2], chance: 5,
+        amount: 1, chance: 5,
     },],
 
 

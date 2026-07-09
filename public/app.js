@@ -979,7 +979,7 @@ function drawPoly(context, centerX, centerY, radius, sides, angle = 0, borderles
         context.closePath();
         if (!borderless) context.stroke();
         if (fill) context.fill();
-        context.lineJoin = "round";
+        context.lineJoin = "miter";
     } catch (e) { // this actually prevents to panic the client. so we will just call "resizeEvent()".
         resizeEvent();
         console.error("Uh oh, 'CanvasRenderingContext2D' has gotton an error! Error: " + e);

@@ -86,7 +86,7 @@ Class.spectator = {
 }
 
 Class.navdeco = makeDeco(-5);
-Class.nav = menu("Entities and values")
+Class.nav = menu("Entities")
 Class.nav.PROPS = [
     {
         POSITION: [12, 0, 0, 0, 360, 1],

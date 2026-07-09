@@ -11,43 +11,23 @@ Class.miniboss = {
     CONTROLLERS: ["nearestDifferentMaster", "minion", "canRepel"],
     AI: { NO_LEAD: true },
 }
+Class.bossEgg = {
+    PARENT: "genericBoss",
+    CONTROLLERS: ["wanderAroundMap", "fleeAtLowHealth"],
+    BODY: {
+        SPEED: 0.2,
+        HEALTH: base.HEALTH*20,
+        DAMAGE: 0.01,
+        PENETRATION: 0.01,
+        REGEN: 0.05,
+        DENSITY: 0.01,
+    },
+    BROADCAST_MESSAGE: "An egg has hatched!",
+}
 Class.ramMiniboss = {
     PARENT: "genericBoss",
     CONTROLLERS: ["nearestDifferentMaster", "canRepel", "mapTargetToGoal"],
 }
-Class.triangleRamDeco = makeDeco(3, 17);
-Class.hexagonCoreDeco = makeDeco(6.25, 17);
-Class.triangleCoreDeco = makeDeco(3.25, 5);
-
-Class.boss_1 = {
-    PARENT: "miniboss",
-    LABEL: "test boss 01",
-    UPGRADE_TOOLTIP: "A §#db190b§Miniboss§reset§ made to test turrets and designs.\n- autoTankGun [x3]",
-    INDEPENDENT: true,
-    VALUE: 35e5,
-    SHAPE: 3,
-    SIZE: 27,
-    COLOR: 5,
-    PROPS: [{
-        POSITION: [25],
-        TYPE: "hexagonCoreDeco"
-    },{
-        POSITION: [24],
-        TYPE: "triangleRamDeco"
-    },{
-        POSITION: [10,0,0,0,1],
-        TYPE: "hexagonCoreDeco"
-    },{
-        POSITION: [7,0,0,0,1],
-        TYPE: "triangleCoreDeco"
-    }],
-    TURRETS: turretArray([
-        {
-            POSITION: [4, 10, 0, 0, 360, 2],
-            TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]
-        },
-    ],3)
-};
 
 Class.ravager = {
     PARENT: "miniboss",
@@ -74,9 +54,26 @@ Class.ravager.TURRETS.push(
             TYPE: ["bossTripleGun", {INDEPENDENT: false, HAS_NO_RECOIL: true, COLOR: "mirror"}]
         }   
 );
+Class.egg_ravager = {
+    PARENT: "bossEgg",
+    SHAPE: -5,
+    SIZE: 16,
+    LABEL: "§#37ff00§Ravager§reset§ Egg",
+    GUNS: [
+        {
+            {
+            POSITION: [0, 40, 1, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: ["ravager", { PERSISTS_AFTER_DEATH: true }],
+                SHOOT_ON_DEATH: true,
+                ALPHA: 1
+            }
+        },
+        }
+    ]
+}
 
-// menu stuff (i dont want to edit dev.js every time i add something)
-if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = []; // make sure it exists
+if (!Class.bosses) Class.bosses = {PARENT: "genericTank"};
 // actual stuff
-Class.bosses.UPGRADES_TIER_0.push("boss_1", "ravager");
-Class.ravager.UPGRADES_TIER_0 = []
+Class.bosses.UPGRADES_TIER_0.push("egg_ravager","ravager");

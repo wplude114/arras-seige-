@@ -49,7 +49,7 @@ nestTick = tile => {
     }
 },
 
-nestColor = {BASE: "purple", BRIGHTNESS_SHIFT: 0, SATURATION_SHIFT: 0},
+nestColor = {BASE: "guiwhite", BRIGHTNESS_SHIFT: 0, SATURATION_SHIFT: 0},
 nest = new Tile({
     color: nestColor,
     data: {

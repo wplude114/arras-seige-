@@ -142,10 +142,10 @@ Class.thrusterBody = {
 Class.genericBase = { PARENT: "genericTank", LABEL: null,  }
 Class.Base = { PARENT: "genericBase", UPGRADE_LABEL: "Base", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }] }
 
-    Class.Automation = { PARENT: "genericBase", UPGRADE_LABEL: "Automation", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }, {POSITION: [8,0,0,180,360,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]}] }
+    Class.Automation = { PARENT: "genericBase", LABEL: "Automation", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }, {POSITION: [8,0,0,180,360,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]}] }
         Class.Mechanism = {
             PARENT: "genericBase",
-            UPGRADE_LABEL: "Mechanism",
+            LABEL: "Mechanism",
             TURRETS: [
                 { POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" },
                 {POSITION: [6,5,0,60,360,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]},
@@ -153,13 +153,13 @@ Class.Base = { PARENT: "genericBase", UPGRADE_LABEL: "Base", TURRETS: [{ POSITIO
                 {POSITION: [6,5,0,-120+60,360,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]},
             ]
         }
-        Class.Tracker = { PARENT: "genericBase", UPGRADE_LABEL: "Tracker", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }, {POSITION: [7,0,0,180,360,15], TYPE: ["autoTankTracker", {INDEPENDENT: true}]}] }
+        Class.Tracker = { PARENT: "genericBase", LABEL: "Tracker", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }, {POSITION: [7,0,0,180,360,15], TYPE: ["autoTankTracker", {INDEPENDENT: true}]}] }
 
-    Class.Smasher = { PARENT: "genericBase", UPGRADE_LABEL: "Smasher", TURRETS: [{ POSITION: [22, 0, 0, 0, 360, -10], TYPE: "smasherBody" }] }
+    Class.Smasher = { PARENT: "genericBase", LABEL: "Smasher", TURRETS: [{ POSITION: [22, 0, 0, 0, 360, -10], TYPE: "smasherBody" }] }
 
-    Class.Booster = { PARENT: "genericBase", UPGRADE_LABEL: "Booster", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "boosterBody" }] }
-        Class.Thruster = { PARENT: "genericBase", UPGRADE_LABEL: "Thruster", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "thrusterBody" }] }
-        Class.Resurfacer = { PARENT: "genericBase", UPGRADE_LABEL: "Resurfacer", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "resurfacerBody" }] }
+    Class.Booster = { PARENT: "genericBase", LABEL: "Booster", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "boosterBody" }] }
+        Class.Thruster = { PARENT: "genericBase", LABEL: "Thruster", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "thrusterBody" }] }
+        Class.Resurfacer = { PARENT: "genericBase", LABEL: "Resurfacer", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "resurfacerBody" }] }
 
 Class.Base.UPGRADES_TIER_2 = ["Booster", "Smasher"]
 Class.Base.UPGRADES_TIER_3 = ["Automation"]

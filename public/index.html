@@ -40,12 +40,11 @@
                         </div>
                         <div class="slider startMenuSlidingContent">
                             <div class="horizontalSelector" id="optionMenuTabs"><span class="active">Appearance</span><span>Options</span><span class="desktopControlTab">Controls</span><span>Links</span></div>
+                            <input type="text" class="conceal" tabindex="3" placeholder="Token Here!" id="playerKeyInput" maxlength="64" />
                             <div id="tabAppearance">
                                 <div class="optionsHeader">Themes</div>
                                 <select id="optColors" tabindex="-1">
                                     <option value="normal">Light Colors</option>
-                                    <option value="classic">Classic</option>
-                                    <option value="custom">Custom</option>
                                 </select>
                                 <select id="optMobile" tabindex="-1">
                                     <option value="mobile">Mobile</option>
@@ -54,9 +53,6 @@
                                 </select>
                                 <select id="optBorders" tabindex="-1">
                                     <option value="normal">Soft Borders</option>
-                                    <option value="dark">Dark Borders</option>
-                                    <option value="neon">Neon Mode</option>
-                                    <option value="glass">Glass Mode</option>
                                 </select>
                                 <input type="hidden" placeholder="Insert Custom Theme" id="optCustom" />
                                 <table>
@@ -122,7 +118,6 @@
                                             <td><div></div></td>
                                             <td class="greyText"><div><e>*</e> = Needs token</div></td>
                                             <td><div></div></td>
-                                          <input type="text" class="conceal" tabindex="3" placeholder="Token Here!" id="playerKeyInput" maxlength="64" />
                                         </tr>
                                         <tr>
                                             <td><div><b data-key="KEY_AUTO_FIRE">E</b><span> - </span>Auto-fire</div></td>

@@ -2215,22 +2215,6 @@ class Entity extends EventEmitter {
             if (!this.dontSendDeathMessage) {
                 this.sendMessage(killText + ".");
             }
-            // If I'm the leader, broadcast it:
-            if (this.id === room.topPlayerID) {
-                let usurptText = this.name === "" ? "The leader" : this.name;
-                if (notJustFood) {
-                    usurptText += " has been usurped by";
-                    for (let i = 0; i < killers.length; i++) {
-                        usurptText += " ";
-                        usurptText += killers[i].name === "" ? "an unnamed player" : killers[i].name;
-                        usurptText += " and";
-                    }
-                    usurptText = usurptText.slice(0, -4) + "!";
-                } else {
-                    usurptText += " fought a polygon... and the polygon won.";
-                }
-                sockets.broadcast(usurptText);
-            }
             this.setKillers(killers);
             // Kill it
             return 1;

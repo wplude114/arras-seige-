@@ -2125,7 +2125,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
             let picture = gui.upgrades[upgradeHoverIndex][2];
             if (picture.upgradeTooltip.length > 0) {
                 let boxWidth = measureText(picture.name, alcoveSize / 10),
-                    boxX = initialX + width + internalSpacing * (global.columnCount+1),
+                    boxX = initialX + height + internalSpacing * (global.columnCount+1),
                     boxY = initialY,
                     boxPadding = 5,
                     splitTooltip = picture.upgradeTooltip.split("\n"),

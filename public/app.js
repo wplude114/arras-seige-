@@ -1037,8 +1037,8 @@ const drawEntity = (baseColor, x, y, instance, ratio, alpha = 1, scale = 1, line
     } else {
         if (fade * alpha < 0.5) return;
     }
-    context.lineCap = "round";
-    context.lineJoin = "round";
+    context.lineCap = "miter";
+    context.lineJoin = "miter";
     context.lineWidth = initStrokeWidth
 
     let upperTurretsIndex = source.turrets.length;

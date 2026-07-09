@@ -11,20 +11,6 @@ Class.miniboss = {
     CONTROLLERS: ["nearestDifferentMaster", "minion", "canRepel"],
     AI: { NO_LEAD: true },
 }
-Class.bossEgg = {
-    PARENT: "genericBoss",
-    LABEL: "Egg",
-    CONTROLLERS: ["wanderAroundMap", "fleeAtLowHealth"],
-    BODY: {
-        SPEED: 0.2,
-        HEALTH: base.HEALTH*20,
-        DAMAGE: 0.01,
-        PENETRATION: 0.01,
-        REGEN: 0.05,
-        DENSITY: 0.01,
-    },
-    BROADCAST_MESSAGE: null,
-}
 Class.ramMiniboss = {
     PARENT: "genericBoss",
     CONTROLLERS: ["nearestDifferentMaster", "canRepel", "mapTargetToGoal"],
@@ -55,24 +41,7 @@ Class.ravager.TURRETS.push(
             TYPE: ["bossTripleGun", {INDEPENDENT: false, HAS_NO_RECOIL: true, COLOR: "mirror"}]
         }   
 );
-Class.egg_ravager = {
-    PARENT: "bossEgg",
-    SHAPE: -7,
-    SIZE: 16,
-    COLOR: "#37ff00",
-    GUNS: [
-            {
-            POSITION: [0, 40],
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic]),
-                TYPE: ["ravager", { PERSISTS_AFTER_DEATH: true }],
-                SHOOT_ON_DEATH: true,
-                ALPHA: 0
-            }
-        },
-    ]
-}
 
 if (!Class.bosses) Class.bosses = {}; if (!Array.isArray(Class.bosses.UPGRADES_TIER_0)) Class.bosses.UPGRADES_TIER_0 = [];
 // actual stuff
-Class.bosses.UPGRADES_TIER_0.push("egg_ravager","ravager");
+Class.bosses.UPGRADES_TIER_0.push("ravager");

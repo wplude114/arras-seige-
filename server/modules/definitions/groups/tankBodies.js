@@ -30,64 +30,6 @@ Class.tankBody = {
     ],
 }
 
-Class.smasherBody = {
-    PARENT: "genericEntity",
-    LABEL: "Body",
-    INDEPENDENT: true,
-    FACING_TYPE: ['spin', {speed: -0.06}],
-    MOTION_TYPE: "motor",
-    COLOR: "mirror",
-    
-    SHAPE: 5,
-    GUNS: [
-      {
-            POSITION: {LENGTH: 15,WIDTH: 20,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180,DELAY: 0},
-            PROPERTIES: {
-              COLOR: 17,
-                SHOOT_SETTINGS: combineStats([g.basic, { reload: 0.4, speed: 0.1, maxSpeed: 0.1, range: 0.1 }]),
-                TYPE: ["bullet", { ALPHA: 0 }],
-                AUTOFIRE: true
-            }
-        },
-      {
-            POSITION: {LENGTH: 15,WIDTH: 20,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72),DELAY: 0},
-            PROPERTIES: {
-              COLOR: 17,
-                SHOOT_SETTINGS: combineStats([g.basic, { reload: 0.4, speed: 0.1, maxSpeed: 0.1, range: 0.1 }]),
-                TYPE: ["bullet", { ALPHA: 0 }],
-                AUTOFIRE: true
-            }
-        },
-      {
-            POSITION: {LENGTH: 15,WIDTH: 20,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72*2),DELAY: 0},
-            PROPERTIES: {
-              COLOR: 17,
-                SHOOT_SETTINGS: combineStats([g.basic, { reload: 0.4, speed: 0.1, maxSpeed: 0.1, range: 0.1 }]),
-                TYPE: ["bullet", { ALPHA: 0 }],
-                AUTOFIRE: true
-            }
-        },
-      {
-            POSITION: {LENGTH: 15,WIDTH: 20,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72*3),DELAY: 0},
-            PROPERTIES: {
-              COLOR: 17,
-                SHOOT_SETTINGS: combineStats([g.basic, { reload: 0.4, speed: 0.1, maxSpeed: 0.1, range: 0.1 }]),
-                TYPE: ["bullet", { ALPHA: 0 }],
-                AUTOFIRE: true
-            }
-        },
-      {
-            POSITION: {LENGTH: 15,WIDTH: 20,ASPECT: 0.0001, X: 0,Y: 0,ANGLE: 180-(72*4),DELAY: 0},
-            PROPERTIES: {
-              COLOR: 17,
-                SHOOT_SETTINGS: combineStats([g.basic, { reload: 0.4, speed: 0.1, maxSpeed: 0.1, range: 0.1 }]),
-                TYPE: ["bullet", { ALPHA: 0 }],
-                AUTOFIRE: true
-            }
-        },
-    ],
-}
-
 // booster
 Class.boosterBody = {
     PARENT: "tankBody",
@@ -155,14 +97,11 @@ Class.Base = { PARENT: "genericBase", UPGRADE_LABEL: "Base", TURRETS: [{ POSITIO
         }
         Class.Tracker = { PARENT: "genericBase", UPGRADE_TOOLTIP: "Placeholder", LABEL: "Tracker", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }, {POSITION: [7,0,0,180,360,15], TYPE: ["autoTankTracker", {INDEPENDENT: true}]}] }
 
-    Class.Smasher = { PARENT: "genericBase", UPGRADE_TOOLTIP: "Placeholder", LABEL: "Smasher", TURRETS: [{ POSITION: [22, 0, 0, 0, 360, -10], TYPE: "smasherBody" }] }
-
     Class.Booster = { PARENT: "genericBase", UPGRADE_TOOLTIP: "Placeholder", LABEL: "Booster", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "boosterBody" }] }
         Class.Thruster = { PARENT: "genericBase", UPGRADE_TOOLTIP: "Placeholder", LABEL: "Thruster", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "thrusterBody" }] }
         Class.Resurfacer = { PARENT: "genericBase", UPGRADE_TOOLTIP: "Placeholder", LABEL: "Resurfacer", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "resurfacerBody" }] }
 
-Class.Base.UPGRADES_TIER_2 = ["Booster", "Smasher"]
-Class.Base.UPGRADES_TIER_3 = ["Automation"]
+Class.Base.UPGRADES_TIER_2 = ["Booster", "Automation"]
 
     Class.Booster.UPGRADES_TIER_3 = ["Thruster", "Resurfacer"]
     Class.Automation.UPGRADES_TIER_3 = ["Mechanism", "Tracker"]

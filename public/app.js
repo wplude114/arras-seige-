@@ -2097,9 +2097,9 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
                 if (upgradeBranch != lastBranch) {
                     if (upgradeBranchLabel.length > 0) {
                         drawText(" " + upgradeBranchLabel, xStart, y + internalSpacing * 2, internalSpacing * 2.3, color.guiwhite, "left", false);
-                        y += internalSpacing;
+                        y += internalSpacing*1.5;
                     }
-                    y += internalSpacing;
+                    y += internalSpacing*1.5;
                     colorIndex = 0;
                 }
                 lastBranch = upgradeBranch;

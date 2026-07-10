@@ -9,5 +9,16 @@ Class.tennisBird = {
 	SHAPE: "https://cdn.discordapp.com/emojis/1447472307663802479.webp?size=40", // offical emoji in arrascord, wont break anytime soon :)
 	HITS_OWN_TYPE: 'hard',
 }
+Class.tennisBird.REBOOT_UPGRADE_TREE = "tennisBird"
+Class.tennisBirdUPG = {
+	PARENT: "genericTank",
+	LABEL: "Tennis Bird",
+	UPGRADE_TOOLTIP: '"1447472307663802479.webp"',
+	SHAPE: "https://cdn.discordapp.com/emojis/1447472307663802479.webp?size=40", // offical emoji in arrascord, wont break anytime soon :)
+	HITS_OWN_TYPE: 'hard',
+}
+Class.tennisBirdUPG.REBOOT_UPGRADE_TREE = "tennisBird"
 
+// upgrades
 Class.addons.UPGRADES_TIER_0.push("tennisBird");
+Class.tennisBird.UPGRADES_TIER_0 = ["tennisBirdUPG", "tennisBirdUPG", "tennisBirdUPG", "tennisBirdUPG", "tennisBirdUPG", "tennisBirdUPG", "tennisBirdUPG", "tennisBirdUPG", "tennisBirdUPG", "tennisBirdUPG", "tennisBirdUPG", "tennisBirdUPG", "tennisBirdUPG", "tennisBirdUPG", "tennisBirdUPG", "tennisBirdUPG"];

@@ -1216,7 +1216,7 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     entityY -= scale * yShift;
 
     // Draw box (rounded)
-    let bigRadius = 5; // adjust percent to taste
+    let bigRadius = 10; // adjust percent to taste
     ctx.globalAlpha = alpha;
     ctx.fillStyle = picture.upgradeColor != null
         ? gameDraw.modifyColor(picture.upgradeColor)
@@ -1243,7 +1243,8 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     drawRoundedRect(x, y, len, height, bigRadius, true);
     
     // Tank name
-    drawText(picture.upgradeName ?? picture.name, x + (len / 2), y + (height*0.95), height / 9.5, color.guiwhite, "center");
+    let textSize = height / 9
+    drawText(picture.upgradeName ?? picture.name, x + (len / 2), y + (height-(textSize+(textSize/3))), textSize, color.guiwhite, "center");
 }
 
 

@@ -14,6 +14,7 @@ Class.basic = {
 Class.barrel = {
     PARENT: "genericTank",
     LABEL: "Basic",
+    UPGRADE_TOOLTIP: "Basicly a basic!",
     DANGER: 4,
     GUNS: [
        {
@@ -39,6 +40,7 @@ Class.barrel = {
 Class.mount = {
     PARENT: "genericTank",
     LABEL: "Mount",
+    UPGRADE_TOOLTIP: "Placeholder",
     DANGER: 4,
     TURRETS: [
         ...Class.genericTank.TURRETS,
@@ -54,6 +56,7 @@ Class.mount = {
 Class.castle = {
     PARENT: "genericTank",
     LABEL: "Castle",
+    UPGRADE_TOOLTIP: "HOW DID YOU FIND ME",
     DANGER: 1,
     SHAPE: 3,
     HAS_NO_RECOIL: true,
@@ -64,6 +67,7 @@ Class.castle = {
 Class.machineGun = {
     PARENT: "genericTank",
     LABEL: "Machine Gun",
+    UPGRADE_TOOLTIP: "As if normal shooting speed wasnt enough..",
     DANGER: 5,
     GUNS: [
        {
@@ -89,6 +93,7 @@ Class.machineGun = {
 Class.tri = {
     PARENT: "genericTank",
     LABEL: "Tri",
+    UPGRADE_TOOLTIP: "Can't aim, can kill!",
     DANGER: 5,
     FACING_TYPE: ["spin", { speed: 0.05, independent: true }],
     GUNS: [
@@ -159,6 +164,7 @@ Class.tri = {
 Class.lobber = {
     PARENT: "genericTank",
     LABEL: "Lobber",
+    UPGRADE_TOOLTIP: "Lobber.",
     DANGER: 4,
     GUNS: [
        {
@@ -185,6 +191,7 @@ Class.lobber = {
 Class.bar = {
     PARENT: "genericTank",
     LABEL: "Bar",
+    UPGRADE_TOOLTIP: "Placeholder",
     GUNS: [
         {
             POSITION: {LENGTH: 17,WIDTH: 8,ASPECT: 1, X: 0,Y: 0,ANGLE: 0,DELAY: 0},
@@ -201,6 +208,7 @@ Class.bar = {
 Class.flailR = {
     PARENT: "genericTank",
     LABEL: "Flail",
+    UPGRADE_TOOLTIP: "Placeholder",
     TURRETS: [
         ...Class.genericTank.TURRETS,
         {
@@ -217,6 +225,7 @@ Class.flailR = {
 Class.triBar = {
     PARENT: "genericTank",
     LABEL: "Tri-Bar",
+    UPGRADE_TOOLTIP: "Please don't get mechanism with this.",
     FACING_TYPE: ["spin", { speed: 0.05, independent: true }],
     GUNS: [
         {

@@ -2096,7 +2096,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
                 y += height + internalSpacing;
                 if (upgradeBranch != lastBranch) {
                     if (upgradeBranchLabel.length > 0) {
-                        drawText(" " + upgradeBranchLabel, xStart, y + internalSpacing * 2, internalSpacing * 2.3, color.guiwhite, "left", false);
+                        drawText(" TANKS" + upgradeBranchLabel, xStart, y + internalSpacing * 2, internalSpacing * 2.3, color.guiwhite, "left", false);
                         y += internalSpacing*1.5;
                     }
                     y += internalSpacing*1.5;

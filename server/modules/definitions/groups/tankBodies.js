@@ -84,9 +84,9 @@ Class.thrusterBody = {
 Class.genericBase = { PARENT: "genericTank", LABEL: null,  }
 Class.Base = { PARENT: "genericBase", UPGRADE_LABEL: "Base", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }] }
 
-    Class.Automation = { PARENT: "genericBase", UPGRADE_TOOLTIP: "Placeholder", LABEL: "Automation", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }, {POSITION: [8,0,0,180,360,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]}] }
+    Class.Automation = { PARENT: "genericBase", UPGRADE_TOOLTIP: "I am a beast!!", LABEL: "Automation", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }, {POSITION: [8,0,0,180,360,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]}] }
         Class.Mechanism = {
-            PARENT: "genericBase", UPGRADE_TOOLTIP: "Placeholder",
+            PARENT: "genericBase", UPGRADE_TOOLTIP: "Trice the turrets!",
             LABEL: "Mechanism",
             TURRETS: [
                 { POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" },
@@ -95,11 +95,11 @@ Class.Base = { PARENT: "genericBase", UPGRADE_LABEL: "Base", TURRETS: [{ POSITIO
                 {POSITION: [6,5,0,-120+60,360,15], TYPE: ["autoTankGun", {INDEPENDENT: true, HAS_NO_RECOIL: true}]},
             ]
         }
-        Class.Tracker = { PARENT: "genericBase", UPGRADE_TOOLTIP: "Placeholder", LABEL: "Tracker", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }, {POSITION: [7,0,0,180,360,15], TYPE: ["autoTankTracker", {INDEPENDENT: true}]}] }
+        Class.Tracker = { PARENT: "genericBase", UPGRADE_TOOLTIP: "Why is this here..", LABEL: "Tracker", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }, {POSITION: [7,0,0,180,360,15], TYPE: ["autoTankTracker", {INDEPENDENT: true}]}] }
 
-    Class.Booster = { PARENT: "genericBase", UPGRADE_TOOLTIP: "Placeholder", LABEL: "Booster", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "boosterBody" }] }
+    Class.Booster = { PARENT: "genericBase", UPGRADE_TOOLTIP: "It's just like running!", LABEL: "Booster", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "boosterBody" }] }
         Class.Thruster = { PARENT: "genericBase", UPGRADE_TOOLTIP: "Placeholder", LABEL: "Thruster", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "thrusterBody" }] }
-        Class.Resurfacer = { PARENT: "genericBase", UPGRADE_TOOLTIP: "Placeholder", LABEL: "Resurfacer", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "resurfacerBody" }] }
+        Class.Resurfacer = { PARENT: "genericBase", UPGRADE_TOOLTIP: "One of the only trap shooting guns in the game?!", LABEL: "Resurfacer", TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "resurfacerBody" }] }
 
 Class.Base.UPGRADES_TIER_2 = ["Booster", "Automation"]
 

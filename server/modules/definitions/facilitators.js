@@ -724,6 +724,7 @@ exports.menu = (name = -1, color = -1, shape = 0) => {
         UPGRADE_COLOR: color == -1 ? undefined : color,
         SHAPE: shape,
         IGNORED_BY_AI: true,
+		TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }],
     };
 }
 exports.menuvar2 = (name = -1, color = -1, shape = 0) => {
@@ -765,6 +766,7 @@ exports.menuvar2 = (name = -1, color = -1, shape = 0) => {
         UPGRADE_COLOR: color == -1 ? undefined : color,
         SHAPE: shape,
         IGNORED_BY_AI: true,
+		TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }],
     };
 }
 exports.weaponArray = (weapons, count, delayIncrement = 0, delayOverflow = false) => {

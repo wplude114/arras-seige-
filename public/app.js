@@ -2099,7 +2099,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
                         drawText(" " + upgradeBranchLabel, xStart, y + internalSpacing * 2, internalSpacing * 2.3, color.guiwhite, "left", false);
                         y += 1.5 * internalSpacing;
                     }
-                    y += 1.5 * internalSpacing;
+                    //y += 1.5 * internalSpacing;
                     colorIndex = 0;
                 }
                 lastBranch = upgradeBranch;

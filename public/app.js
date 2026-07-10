@@ -1221,7 +1221,7 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     ctx.fillStyle = picture.upgradeColor != null
         ? gameDraw.modifyColor(picture.upgradeColor)
         : gameDraw.getColor(getIconColor(colorIndex));
-    drawRoundedRect(x, y, len+5, height, bigRadius, false);
+    drawRoundedRect(x, y, len, height, bigRadius, false);
     ctx.globalAlpha = 0.1;
     ctx.fillStyle = color.black;
     drawRoundedRect(x, y+(height*0.6), len, height*0.4, bigRadius, false);
@@ -2058,7 +2058,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
     if (gui.upgrades.length > 0) {
         let internalSpacing = 10;
         let height = alcoveSize / 3;
-        let len = height*1.25; // update: they are rectangles now
+        let len = height*1.35; // update: they are rectangles now
 
         // Animation processing
         global.columnCount = Math.max(global.mobile ? 6 : 5, Math.floor(gui.upgrades.length ** 0.55));

@@ -263,6 +263,7 @@ Class.flailBolt2 = {
 Class.flailBolt3 = {
     PARENT: "genericTank",
     COLOR: "grey",
+	UPGRADES_TIER_0: ["developer"],
     GUNS: [{
         POSITION: [30, 5, 1, 8, 0, 0, 0]
     }],
@@ -271,7 +272,7 @@ Class.flailBolt3 = {
         TYPE: "flailBolt2"
     }],
 }
-flailBolt3.UPGRADES_TIER_0 = ["developer"];
+
 Class.developer.REROOT_UPGRADE_TREE = "developer" // pls work
 
 Class.developer.UPGRADES_TIER_0 = ["nav", "spectator", "addons"]

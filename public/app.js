@@ -1244,7 +1244,7 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     
     // Tank name
     let textSize = height / 9
-    drawText(picture.upgradeName ?? picture.name, x + (len / 2), y + (height-(textSize+(textSize/3))), textSize, color.guiwhite, "center");
+    drawText(picture.upgradeName ?? picture.name, x + (len / 2), y + (height-(textSize+(textSize/8.5))), textSize, color.guiwhite, "center");
 }
 
 

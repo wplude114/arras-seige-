@@ -9,7 +9,12 @@ Class.developer = {
     PARENT: "genericTank",
     LABEL: "Developer",
     BODY: {
-        FOV: 2,
+        SHIELD: 1000,
+        REGEN: 10,
+        HEALTH: 100,
+        DAMAGE: 10,
+        DENSITY: 20,
+        FOV: 1.5,
     },
     SKILL_CAP: Array(10).fill(dfltskl),
     IGNORED_BY_AI: true,
@@ -24,17 +29,27 @@ Class.developer = {
     ALPHA: [0, 1],
     HITS_OWN_TYPE: "hardOnlyTanks",
     NECRO: false,
-	BODY: {
-        PUSHABILITY: 0,
-        SPEED: 5,
-        FOV: 2.5,
-        DAMAGE: 0,
-        HEALTH: 1e100,
-        SHIELD: 1e100,
-        REGEN: 1e100,
-    },
+    SHAPE: [
+        [-1, -0.8],
+        [-0.8, -1],
+        [0.8, -1],
+        [1, -0.8],
+        [0.2, 0],
+        [1, 0.8],
+        [0.8, 1],
+        [-0.8, 1],
+        [-1, 0.8],
+    ],
+    GUNS: [
+        {
+            POSITION: [18, 10, -1.4, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.op]),
+                TYPE: "developerBullet"
+            }
+        }
+    ]
 }
-//Class.developer.REROOT_UPGRADE_TREE = "developer"
 Class.spectator = {
     PARENT: "genericTank",
     LABEL: "Spectator",
@@ -256,6 +271,8 @@ Class.flailBolt3 = {
         TYPE: "flailBolt2"
     }],
 }
+flailBolt3.UPGRADES_TIER_0 = ["developer"];
+Class.developer.REROOT_UPGRADE_TREE = "developer" // pls work
 
 Class.developer.UPGRADES_TIER_0 = ["nav", "spectator", "addons"]
 Class.nav.UPGRADES_TIER_0 = ["tanks","misc","bosses"] // makes things easier

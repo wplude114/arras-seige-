@@ -23,7 +23,7 @@ Class.tennisBirdUPG = {
 	SHAPE: "https://cdn.discordapp.com/emojis/1447472307663802479.webp?size=40",
 	HITS_OWN_TYPE: 'hard',
 	GUNS: [
-		{POSITION: [0,13], PROPERTIES: {SHOOT_SETTINGS: combineStats([g.basic,{reload: 0.03}]),TYPE: "tennisBirdProjectile",}}
+		{POSITION: [0,13], PROPERTIES: {SHOOT_SETTINGS: combineStats([g.basic,{reload: 0.5, range: 10, speed: 0}]),TYPE: "tennisBirdProjectile",}}
 	]
 }
 Class.tennisBirdUPG.REBOOT_UPGRADE_TREE = "tennisBird"

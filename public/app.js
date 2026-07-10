@@ -1221,10 +1221,10 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     ctx.fillStyle = picture.upgradeColor != null
         ? gameDraw.modifyColor(picture.upgradeColor)
         : gameDraw.getColor(getIconColor(colorIndex));
-    drawRoundedRect(x, y, len, height, bigRadius, false);
+    drawRoundedRect(x, y, len+5, height, bigRadius, false);
     ctx.globalAlpha = 0.1;
     ctx.fillStyle = color.black;
-    drawRoundedRect(x, y+(height*0.6), len, height*0.4, bigRadius, false);
+    drawRoundedRect(x, y+(height*0.6), len+5, height*0.4, bigRadius, false);
 
     // Shading for hover
     if (hover) {
@@ -1235,15 +1235,15 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     ctx.globalAlpha = 1;
 
     // Draw Tank
-    drawEntity(baseColor, entityX, entityY, picture, 1, 1, scale / picture.size, lineWidthMult, angle, true);
+    drawEntity(baseColor, entityX+2.5, entityY, picture, 1, 1, scale / picture.size, lineWidthMult, angle, true);
 
     // Border stroke (rounded)
     ctx.strokeStyle = color.black;
     ctx.lineWidth = 3 * lineWidthMult;
-    drawRoundedRect(x, y, len, height, bigRadius, true);
+    drawRoundedRect(x, y, len+5, height, bigRadius, true);
     
     // Tank name
-    drawText(picture.upgradeName ?? picture.name, x + (len / 2), y + (height*0.95), height / 9.5, color.guiwhite, "center");
+    drawText(picture.upgradeName ?? picture.name, x + (len+5 / 2), y + (height*0.95), height / 9.5, color.guiwhite, "center");
 }
 
 
@@ -2378,15 +2378,15 @@ let getKills = () => {
         }
     }
     return (
-        (destruction === 0 ? "🌼"
-        : destruction < 4 ? "🎯"
-        : destruction < 8 ? "💥"
-        : destruction < 15 ? "💢"
-        : destruction < 25 ? "🔥"
-        : destruction < 50 ? "💣"
-        : destruction < 75 ? "👺"
-        : destruction < 100 ? "🌶️" : "💯"
-        ) + " " + (!killCountTexts.length ? "A true pacifist" :
+        (destruction === 0 ? "F"
+        : destruction < 4 ? "E"
+        : destruction < 8 ? "D"
+        : destruction < 15 ? "C"
+        : destruction < 25 ? "B"
+        : destruction < 50 ? "A"
+        : destruction < 75 ? "S"
+        : destruction < 100 ? "S+" : "S++"
+        ) + " - " + (!killCountTexts.length ? "[Pacifist]" :
             killCountTexts.length == 1 ? killCountTexts.join(" and ") :
                 killCountTexts.slice(0, -1).join(", ") + " and " + killCountTexts[killCountTexts.length - 1])
     );
@@ -2394,24 +2394,22 @@ let getKills = () => {
 let getDeath = () => {
     let txt = "";
     if (global.finalKillers.length) {
-        txt = "🔪 Succumbed to";
+        txt = "Succumbed to";
         for (let e of global.finalKillers) {
             txt += " " + util.addArticle(util.getEntityImageFromMockup(e).name) + " and";
         }
         txt = txt.slice(0, -4);
     } else {
-        txt += "🤷 Well that was kinda dumb huh";
+        txt += "Well that was kinda dumb huh";
     }
-    return txt;
+    return "";
 };
 let getTips = () => {
-    let txt = "❓ ";
+    let txt = "";
     if (global.finalKillers.length) {
-        txt += "lol you died";
-    } else if (!global.autolvlUp) {
-        txt += "Enable auto-level up in the options menu to get level 45";
+        txt += "You ded.";
     } else {
-        txt += "Kill players and polygons to get more score";
+        txt += "Kill players and polygons to get more score!";
     }
     return txt;
 };
@@ -2441,11 +2439,11 @@ const gameDrawDead = () => {
         drawText(global.player.name + "'s Score: ", x - 170, y - 30, 24, color.guiwhite);
     }
     drawText(util.formatLargeNumber(Math.round(global.finalScore.get())), x - 170, y + 25, 50, color.guiwhite);
-    drawText("⌚ Survived for " + util.timeForHumans(Math.round(global.finalLifetime.get())), x - 170, y + 55, 16, color.guiwhite);
+    drawText("Survived for " + util.timeForHumans(Math.round(global.finalLifetime.get())), x - 170, y + 55, 16, color.guiwhite);
     drawText(getKills(), x - 170, y + 77, 16, color.guiwhite);
     drawText(getDeath(), x - 170, y + 99, 16, color.guiwhite);
     drawText(getTips(), x - 170, y + 122, 16, color.guiwhite);
-    drawText("🦆 The server was " + +(100 * gui.fps).toFixed(0) + "%" + " active", x - 170, y + 144, 16, color.guiwhite);
+    drawText("The server was " + +(100 * gui.fps).toFixed(0) + "%" + " active", x - 170, y + 144, 16, color.guiwhite);
     drawText(global.cannotRespawn ? global.respawnTimeout ? "(" + global.respawnTimeout + " Secon" + `${global.respawnTimeout <= 1 ? 'd' : 'ds'} ` + "left to respawn)" : "(you cannot respawn!)" : global.mobile ? "(tap to respawn)" : "(press enter to respawn)", x, y + 189, 16, color.guiwhite, "center");
     ctx.translate(0, shift * global.screenHeight);
 };
@@ -2468,7 +2466,7 @@ const gameDrawOldDead = () => {
     drawText("You died!", x, y - 80, 16, color.guiwhite, "center");
     drawText("Level " + gui.__s.getLevel() + " " + picture.name, x - 170, y - 30, 24, color.guiwhite);
     drawText("Final score: " + util.formatLargeNumber(Math.round(global.finalScore.get())), x - 170, y + 25, 50, color.guiwhite);
-    drawText("⌚ Survived for " + util.timeForHumans(Math.round(global.finalLifetime.get())), x - 170, y + 55, 16, color.guiwhite);
+    drawText("Survived for " + util.timeForHumans(Math.round(global.finalLifetime.get())), x - 170, y + 55, 16, color.guiwhite);
     drawText(getKills(), x - 170, y + 77, 16, color.guiwhite);
     drawText(getDeath(), x - 170, y + 99, 16, color.guiwhite);
     drawText("(press enter to respawn)", x, y + 125, 16, color.guiwhite, "center");
@@ -2481,7 +2479,7 @@ const gameDrawBeforeStart = () => {
     let shift = global.enableSlideAnimation ? animations.connecting.get() : animations.connecting.getNoLerp();
     ctx.translate(0, -shift * global.screenHeight);
     drawText("Connecting...", global.screenWidth / 2, global.screenHeight / 2, 30, color.guiwhite, "center");
-    drawText(global.message, global.screenWidth / 2, global.screenHeight / 2 + 30, 15, color.lgreen, "center");
+    drawText(global.message, global.screenWidth / 2, global.screenHeight / 2 + 30, 15, color.guiwhite, "center");
     drawText(global.tips, global.screenWidth / 2, global.screenHeight / 2 + 90, 15, color.guiwhite, "center");
     ctx.translate(0, shift * global.screenHeight);
 };
@@ -2513,8 +2511,8 @@ function animloop() {
     global.player.renderv += (global.player.view - global.player.renderv) / 10;
     var ratio = settings.graphical.screenshotMode ? 2 : util.getRatio();
     // Set the drawing style
-    ctx.lineCap = "round";
-    ctx.lineJoin = "round";
+    ctx.lineCap = "miter";
+    ctx.lineJoin = "miter";
     // Draw the game
     if (global.gameStart && !global.disconnected) {
         global.time = getNow();

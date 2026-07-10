@@ -2093,13 +2093,13 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
             // Draw either in the next row or next column
             if (ticker === global.columnCount || upgradeBranch != lastBranch) {
                 x = xStart;
-                //y += height + internalSpacing;
+                y += height + internalSpacing;
                 if (upgradeBranch != lastBranch) {
                     if (upgradeBranchLabel.length > 0) {
                         drawText(" " + upgradeBranchLabel, xStart, y + internalSpacing * 2, internalSpacing * 2.3, color.guiwhite, "left", false);
-                        y += 1.5 * internalSpacing;
+                        y += internalSpacing;
                     }
-                    y += 1.5 * internalSpacing;
+                    y += internalSpacing;
                     colorIndex = 0;
                 }
                 lastBranch = upgradeBranch;

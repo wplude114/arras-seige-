@@ -2057,9 +2057,9 @@ function drawLeaderboard(spacing, alcoveSize, max) {
 function drawAvailableUpgrades(spacing, alcoveSize) {
     // Draw upgrade menu
     if (gui.upgrades.length > 0) {
-        let internalSpacing = 10;
+        let internalSpacing = 20;
         let height = alcoveSize / 3;
-        let len = height*1.5; // update: they are rectangles now
+        let len = height*1.3; // update: they are rectangles now
 
         // Animation processing
         global.columnCount = Math.max(global.mobile ? 6 : 5, Math.floor(gui.upgrades.length ** 0.55));

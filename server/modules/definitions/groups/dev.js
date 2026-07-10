@@ -48,7 +48,8 @@ Class.developer = {
                 TYPE: "developerBullet"
             }
         }
-    ]
+    ],
+	TURRETS: [{ POSITION: [17, 0, 0, 0, 360, -10], TYPE: "tankBody" }],
 }
 Class.spectator = {
     PARENT: "genericTank",

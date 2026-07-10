@@ -1224,7 +1224,7 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     drawRoundedRect(x, y, len+5, height, bigRadius, false);
     ctx.globalAlpha = 0.1;
     ctx.fillStyle = color.black;
-    drawRoundedRect(x, y+(height*0.6), len+5, height*0.4, bigRadius, false);
+    drawRoundedRect(x, y+(height*0.6), len, height*0.4, bigRadius, false);
 
     // Shading for hover
     if (hover) {
@@ -1235,15 +1235,15 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     ctx.globalAlpha = 1;
 
     // Draw Tank
-    drawEntity(baseColor, entityX+2.5, entityY, picture, 1, 1, scale / picture.size, lineWidthMult, angle, true);
+    drawEntity(baseColor, entityX, entityY, picture, 1, 1, scale / picture.size, lineWidthMult, angle, true);
 
     // Border stroke (rounded)
     ctx.strokeStyle = color.black;
     ctx.lineWidth = 3 * lineWidthMult;
-    drawRoundedRect(x, y, len+5, height, bigRadius, true);
+    drawRoundedRect(x, y, len, height, bigRadius, true);
     
     // Tank name
-    drawText(picture.upgradeName ?? picture.name, x + (len+5 / 2), y + (height*0.95), height / 9.5, color.guiwhite, "center");
+    drawText(picture.upgradeName ?? picture.name, x + (len / 2), y + (height*0.95), height / 9.5, color.guiwhite, "center");
 }
 
 
@@ -2057,8 +2057,8 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
     // Draw upgrade menu
     if (gui.upgrades.length > 0) {
         let internalSpacing = 10;
-        let len = alcoveSize / 3;
-        let height = len;
+        let height = alcoveSize / 3;
+        let len = height*1.25; // update: they are rectangles now
 
         // Animation processing
         global.columnCount = Math.max(global.mobile ? 6 : 5, Math.floor(gui.upgrades.length ** 0.55));

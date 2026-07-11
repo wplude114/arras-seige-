@@ -6,13 +6,6 @@ const g = require('../gunvals.js');
 // Basic & starting upgrades
 Class.basic = {
     PARENT: "genericTank",
-    LABEL: "Base",
-    DANGER: 1,
-}
-
-// Base upgrades [TIER 1]
-Class.barrel = {
-    PARENT: "genericTank",
     LABEL: "Basic",
     UPGRADE_TOOLTIP: "Basicly a basic!",
     DANGER: 4,
@@ -37,6 +30,7 @@ Class.barrel = {
     ]
 }
 
+// Base upgrades [TIER 1]
 Class.mount = {
     PARENT: "genericTank",
     LABEL: "Mount",
@@ -254,7 +248,5 @@ Class.triBar = {
 }
 
 // Upgrade tree
-Class.basic.UPGRADES_TIER_0 = ["barrel"]
-
-    Class.barrel.UPGRADES_TIER_1 = ["machineGun", "tri", "lobber"]
+Class.basic.UPGRADES_TIER_1 = ["machineGun", "tri", "lobber"]
         Class.tri.UPGRADES_TIER_2 = ["triBar"]

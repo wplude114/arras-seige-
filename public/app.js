@@ -1216,7 +1216,7 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     entityY -= scale * yShift;
 
     // Draw box (rounded)
-    let bigRadius = height/10; // adjust percent to taste
+    let bigRadius = height*0.2; // adjust percent to taste
     ctx.globalAlpha = alpha;
     ctx.fillStyle = picture.upgradeColor != null
         ? gameDraw.modifyColor(picture.upgradeColor)

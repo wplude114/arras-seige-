@@ -1216,7 +1216,7 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
     entityY -= scale * yShift;
 
     // Draw box (rounded)
-    let bigRadius = height*0.2; // adjust percent to taste
+    let bigRadius = height*0.15; // adjust percent to taste
     ctx.globalAlpha = alpha;
     ctx.fillStyle = picture.upgradeColor != null
         ? gameDraw.modifyColor(picture.upgradeColor)
@@ -2078,7 +2078,7 @@ function drawAvailableUpgrades(spacing, alcoveSize) {
         let initialY = y;
         let ticker = 0;
         let upgradeNum = 0;
-        let colorIndex = 0;
+        let colorIndex = 4;
         let clickableRatio = global.canvas.height / global.screenHeight / global.ratio;
         let lastBranch = -1;
         let upgradeHoverIndex = global.clickables.upgrade.check({ x: global.mouse.x, y: global.mouse.y });
